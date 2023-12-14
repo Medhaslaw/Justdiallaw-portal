@@ -1,0 +1,682 @@
+.Add_Invoice {
+    padding: 5.5vw 2vw 3vw 2vw;
+    background-color: #f2f1f7;
+
+    .pagination-header {
+        nav {
+            .breadcrumb {
+                margin: 0 0 1vw;
+                font-family: 'Manrope';
+                font-weight: 500;
+
+                li {
+                    font-size: .75vw;
+                    color: #414146;
+                    font-weight: 500;
+                    padding-left: .3vw;
+
+                    a {
+                        color: #414146;
+                        font-size: .75vw;
+                        font-weight: 400;
+                    }
+                }
+
+                .breadcrumb-item+.breadcrumb-item::before {
+                    padding-right: .3vw;
+                    color: #666;
+                }
+            }
+
+
+        }
+
+    }
+
+    .invoice_heading {
+        h1 {
+            font-size: 1.2vw;
+            font-weight: 800;
+            color: #000;
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+
+    .mat_card_invoice {
+        padding: 0 !important;
+        margin-top: 1vw;
+
+        .add_new_topic {
+
+
+            .dialog_title {
+                box-shadow: 0.05vw 0.01vw 0.31vw 0.2vw #66666629;
+                position: relative;
+
+                h1 {
+                    font-size: 1vw;
+                    color: #222;
+                    padding: 1.5vw 0;
+                    margin: 0;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 600;
+
+                }
+
+                button.cancel_btn {
+                    border: inherit;
+                    background-color: inherit;
+                    position: absolute;
+                    top: 0.8vw;
+                    right: 1vw;
+
+                    i {
+                        color: #e86d1f;
+                        font-size: 1.5vw;
+                    }
+                }
+
+
+            }
+
+            .dialog_content {
+                padding: 1vw;
+                margin: 0;
+                overflow: hidden;
+
+                .add_invoice_form {
+                    padding: 0 1.5vw;
+
+                    .mat_label {
+                        color: #707074;
+                        font-size: 1.1vw;
+                        padding: 0;
+                        margin: 0 0 0.5vw 1vw;
+                        font-weight: 500;
+
+                        span {
+                            color: red;
+                        }
+                    }
+
+                    .mat_form_filed {
+                        width: 100% !important;
+                        margin-bottom: 2vw;
+
+                        .mat_input {
+                            border: 0.1vw solid #e3e3e3;
+                            padding: 1.1vw;
+                            font-size: 0.9VW;
+                            border-radius: 0.2VW;
+                            background-color: #f9f9f9;
+                            width: 30vw;
+                        }
+
+                        .mat_input1 {
+                            width: 32.3vw;
+                        }
+
+                    }
+
+                }
+
+                .sub_btn {
+                    font-size: 1.1vw;
+                    font-weight: 500;
+                    color: #fff;
+                    padding: 1.2vw 5vw;
+                    background-color: #e86d1f;
+                    border: inherit;
+                    margin-top: 1.5vw;
+                    border-radius: 5vw;
+                }
+
+                .cancel_btn {
+                    color: #999999;
+                    font-size: 1.1vw;
+                    font-weight: 500;
+                    background-color: inherit;
+                    border: 0.1vw solid #666;
+                    margin-top: 1.5vw;
+                    border-radius: 5vw;
+                    padding: 1.1vw 5vw;
+                }
+
+            }
+        }
+    }
+
+}
+
+
+.file-upload-button {
+    border-radius: 0.2vw;
+    padding: 0vw;
+    overflow: hidden;
+    width: 8vw;
+    border: 0.1vw solid #ccc !important;
+    height: 3vw;
+    position: absolute;
+    top: 0.5vw;
+    right: 0;
+    background: #1d439f;
+    color: #fff;
+    font-size: 0.85vw;
+    font-weight: 600;
+
+    &::after {
+        content: '';
+        color: #000;
+        font-size: 1vw;
+        text-align: center;
+    }
+
+    .upload-file[type="file"] {
+
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        padding: 1.1vw !important;
+        cursor: pointer;
+    }
+
+}
+
+.file-info {
+    color: #999;
+    font-family: Lato;
+    margin-left: 0.5rem;
+}
+
+.upload-file {
+
+    padding: 0;
+    width: 100%;
+    height: 3vw;
+
+    .upload-img {
+        position: relative;
+        border-bottom: 0.1vw solid #ccc;
+        padding: 1.67vw;
+
+        p {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            bottom: 1vw;
+        }
+
+        h5 {
+            margin-top: 1vw;
+            margin-left: 1vw;
+            font-size: 0.75vw;
+            font-weight: 500;
+            color: #575759;
+        }
+    }
+
+    input::placeholder {
+        font-size: 0.75vw;
+        font-weight: 500;
+    }
+
+    .upload-photo {
+        margin-left: 1vw;
+
+        h5 {
+            margin-top: 1vw;
+            margin-left: 1vw;
+            font-size: 0.75vw;
+            font-weight: 500;
+            color: #575759;
+        }
+    }
+}
+
+h6 {
+    color: red;
+}
+
+
+
+@media (max-width: 575.98px){
+    .Add_Invoice{
+        padding: 20px 10px !important;
+        .pagination-header{
+            margin-bottom: 20px;
+            nav{
+                .breadcrumb{
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item::before{
+                        font-size: 12px;
+                        margin: 0 2px 0 0;
+                        
+                    }
+                }
+            }
+        }
+        .invoice_heading{
+            margin-top: 0px;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .mat_card_invoice{
+            padding: 15px !important;
+            .dialog_title{
+                box-shadow: none !important;
+                h1{
+                    padding: 0;
+                    margin: 0 0 10px !important;
+                    font-size: 20px !important;
+                }
+            }
+            .add_invoice_form{
+                .mat_label{
+                    font-size: 14px !important;
+                    margin: 0 0 5px !important;
+                }
+                .mat_label_1{
+                    font-size: 14px !important;
+                    margin: 0 0 5px !important;
+                }
+                .radio_mat_btn{
+                    .mat_radio{
+                       
+                        .radio_btn{
+                            margin: 5px 5px 5px 0 !important;
+                            font-size: 14px !important;
+                            width: auto !important;
+                        }
+                    }
+                }
+                .mat_form_filed{
+                    .mat_input{
+                        border: 1px solid #e3e3e3 !important;
+                        padding: 15px !important;
+                        font-size: 15px !important;
+                        border-radius: 5px !important;
+                        background-color: #f9f9f9;
+                        width: 89% !important;
+                    }
+                    .mat_input1{
+                        width: 100% !important;
+                    }
+                }
+            }
+            .sub_btn{
+                font-size: 14px !important;
+                padding: 10px 30px !important;
+                margin-top: 0 !important;
+                border-radius: 50px !important;
+            }
+            .cancel_btn{
+                font-size: 14px !important;
+                padding: 10px 30px !important;
+                margin-top: 0 !important;
+                border-radius: 50px !important;
+            }
+        }
+    }
+
+    .upload-file{
+        height: auto;
+        margin: 0 0 20px;
+        .upload-img{
+            border-bottom: 1px solid #ccc;
+            padding: 20px;
+        }
+        .file-upload-button{
+            border-radius: 4px;
+            padding: 10px;
+            width: auto;
+            border: 1px solid #ccc !important;
+            height: auto;
+            top: 4px;
+            right: 0;
+            font-size: 12px;
+        }
+      
+    }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+ .Add_Invoice{
+        padding: 20px 10px !important;
+        .pagination-header{
+            margin-bottom: 20px;
+            nav{
+                .breadcrumb{
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item::before{
+                        font-size: 12px;
+                        margin: 0 2px 0 0;
+                        
+                    }
+                }
+            }
+        }
+        .invoice_heading{
+            margin-top: 0px;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .mat_card_invoice{
+            padding: 15px !important;
+            .dialog_title{
+                box-shadow: none !important;
+                h1{
+                    padding: 0;
+                    margin: 0 0 10px !important;
+                    font-size: 20px !important;
+                }
+            }
+            .add_invoice_form{
+                .mat_label{
+                    font-size: 14px !important;
+                    margin: 0 0 5px !important;
+                }
+                .mat_label_1{
+                    font-size: 14px !important;
+                    margin: 0 0 5px !important;
+                }
+                .radio_mat_btn{
+                    .mat_radio{
+                       
+                        .radio_btn{
+                            margin: 5px 5px 5px 0 !important;
+                            font-size: 14px !important;
+                            width: auto !important;
+                        }
+                    }
+                }
+                .mat_form_filed{
+                    .mat_input{
+                        border: 1px solid #e3e3e3 !important;
+                        padding: 15px !important;
+                        font-size: 15px !important;
+                        border-radius: 5px !important;
+                        background-color: #f9f9f9;
+                        width: 89% !important;
+                    }
+                    .mat_input1{
+                        width: 100% !important;
+                    }
+                }
+            }
+            .sub_btn{
+                font-size: 14px !important;
+                padding: 10px 30px !important;
+                margin-top: 0 !important;
+                border-radius: 50px !important;
+            }
+            .cancel_btn{
+                font-size: 14px !important;
+                padding: 10px 30px !important;
+                margin-top: 0 !important;
+                border-radius: 50px !important;
+            }
+        }
+    }
+
+    .upload-file{
+        height: auto;
+        margin: 0 0 20px;
+        .upload-img{
+            border-bottom: 1px solid #ccc;
+            padding: 20px;
+        }
+        .file-upload-button{
+            border-radius: 4px;
+            padding: 10px;
+            width: auto;
+            border: 1px solid #ccc !important;
+            height: auto;
+            top: 4px;
+            right: 0;
+            font-size: 12px;
+        }
+      
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .Add_Invoice{
+        padding: 20px 10px !important;
+        .pagination-header{
+            margin-bottom: 20px;
+            nav{
+                .breadcrumb{
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item::before{
+                        font-size: 12px;
+                        margin: 0 2px 0 0;
+                        
+                    }
+                }
+            }
+        }
+        .invoice_heading{
+            margin-top: 0px;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .mat_card_invoice{
+            padding: 15px !important;
+            .dialog_title{
+                box-shadow: none !important;
+                h1{
+                    padding: 0;
+                    margin: 0 0 10px !important;
+                    font-size: 20px !important;
+                }
+            }
+            .add_invoice_form{
+                .mat_label{
+                    font-size: 14px !important;
+                    margin: 0 0 5px !important;
+                }
+                .mat_label_1{
+                    font-size: 14px !important;
+                    margin: 0 0 5px !important;
+                }
+                .radio_mat_btn{
+                    .mat_radio{
+                       
+                        .radio_btn{
+                            margin: 5px 5px 5px 0 !important;
+                            font-size: 14px !important;
+                            width: auto !important;
+                        }
+                    }
+                }
+                .mat_form_filed{
+                    .mat_input{
+                        border: 1px solid #e3e3e3 !important;
+                        padding: 15px !important;
+                        font-size: 15px !important;
+                        border-radius: 5px !important;
+                        background-color: #f9f9f9;
+                        width: 89% !important;
+                    }
+                    .mat_input1{
+                        width: 100% !important;
+                    }
+                }
+            }
+            .sub_btn{
+                font-size: 14px !important;
+                padding: 10px 30px !important;
+                margin-top: 0 !important;
+                border-radius: 50px !important;
+            }
+            .cancel_btn{
+                font-size: 14px !important;
+                padding: 10px 30px !important;
+                margin-top: 0 !important;
+                border-radius: 50px !important;
+            }
+        }
+    }
+
+    .upload-file{
+        height: auto;
+        margin: 0 0 20px;
+        .upload-img{
+            border-bottom: 1px solid #ccc;
+            padding: 20px;
+            p{
+                width: 60%;
+            }
+        }
+        .file-upload-button{
+            border-radius: 4px;
+            padding: 10px;
+            width: auto;
+            border: 1px solid #ccc !important;
+            height: auto;
+            top: 4px;
+            right: 0;
+            font-size: 12px;
+        }
+      
+    }
+
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+
+    .Add_Invoice{
+        padding: 20px 10px !important;
+        .pagination-header{
+            margin-bottom: 20px;
+            nav{
+                .breadcrumb{
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item::before{
+                        font-size: 12px;
+                        margin: 0 2px 0 0;
+                        
+                    }
+                }
+            }
+        }
+        .invoice_heading{
+            margin-top: 0px;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .mat_card_invoice{
+            padding: 15px !important;
+            .dialog_title{
+                box-shadow: none !important;
+                h1{
+                    padding: 0;
+                    margin: 0 0 10px !important;
+                    font-size: 20px !important;
+                }
+            }
+            .add_invoice_form{
+                .mat_label{
+                    font-size: 14px !important;
+                    margin: 0 0 5px !important;
+                }
+                .mat_label_1{
+                    font-size: 14px !important;
+                    margin: 0 0 5px !important;
+                }
+                .radio_mat_btn{
+                    .mat_radio{
+                       
+                        .radio_btn{
+                            margin: 5px 5px 5px 0 !important;
+                            font-size: 14px !important;
+                            width: auto !important;
+                        }
+                    }
+                }
+                .mat_form_filed{
+                    .mat_input{
+                        border: 1px solid #e3e3e3 !important;
+                        padding: 15px !important;
+                        font-size: 15px !important;
+                        border-radius: 5px !important;
+                        background-color: #f9f9f9;
+                        width: 89% !important;
+                    }
+                    .mat_input1{
+                        width: 100% !important;
+                    }
+                }
+            }
+            .sub_btn{
+                font-size: 14px !important;
+                padding: 10px 30px !important;
+                margin-top: 0 !important;
+                border-radius: 50px !important;
+            }
+            .cancel_btn{
+                font-size: 14px !important;
+                padding: 10px 30px !important;
+                margin-top: 0 !important;
+                border-radius: 50px !important;
+            }
+        }
+    }
+
+    .upload-file{
+        height: auto;
+        margin: 0 0 20px;
+        .upload-img{
+            border-bottom: 1px solid #ccc;
+            padding: 20px;
+            p{
+                width: 60%;
+            }
+        }
+        .file-upload-button{
+            border-radius: 4px;
+            padding: 10px;
+            width: auto;
+            border: 1px solid #ccc !important;
+            height: auto;
+            top: 4px;
+            right: 0;
+            font-size: 12px;
+        }
+      
+    }
+
+}

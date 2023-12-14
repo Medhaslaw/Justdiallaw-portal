@@ -1,0 +1,92 @@
+<div class="add_new_topic">
+    <div class="row m-0">
+        <div class="col-md-12 p-0">
+            <div  class="dialog_title d-flex justify-content-between">
+                <h1>Case Close</h1>
+
+                <h3 ><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+                
+            </div>
+            <div class="form_meet  closed_fileds">
+                <div mat-dialog-content class="dialog_content radio_btn">
+                  <div class="mat_card_invoice">
+                    <form class="add_invoice_form add_invoice_form_close" [formGroup]="closedCasesForm"  #myform="ngForm">
+                       
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-1">
+                                    <div class="form_alert">
+                                        <mat-label class="mat_label"> Close Of Date<span>*</span></mat-label>
+                                        <mat-form-field class="mat_form_filed ">
+                                            <!-- <input matInput [matDatepicker]="picker"  (dateInput)="getDate($event)" formControlName="date" -->
+                                             <input matInput [matDatepicker]="picker"  formControlName="case_close_date"
+                                                 class="mat_input">
+                                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    <h6>
+                                        <span *ngIf="closedCasesForm.controls['case_close_date'].hasError('required') && myform.submitted">Close Of Date is required</span>
+                                      </h6>
+                                  </div>
+
+                                  
+                              </div>
+    
+                              <div class="mb-1">
+                                <div class="form_alert">
+                                    <label class="mat_label"> Case Status<span>*</span></label>
+                                    <mat-form-field class="mat_form_filed close_caseform">
+                                        <mat-select  class="mat_input mat_input_1 " formControlName="case_status">
+                                            <mat-option  value=" Completed">
+                                                Completed
+                                            </mat-option>
+                                            <mat-option  value="client not responding">
+                                                Client not responding
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+    
+                                <h6>
+                                    <span *ngIf="closedCasesForm.controls['case_status'].hasError('required') && myform.submitted">Case Status is required</span>
+                                  </h6>
+                              </div>
+                              </div>
+                              
+    
+                                  <div class="mb-1">
+                                    <div class="form_alert">
+                                        <label class="mat_label">Summary <span>*</span></label>
+                                        <mat-form-field class="mat_form_filed">
+                                            <textarea matInput   class="mat_input"  formControlName="case_description"  cols="5" rows="3"></textarea>
+                                        </mat-form-field>
+                                    <h6>
+                                        <span *ngIf="closedCasesForm.controls['case_description'].hasError('required') && myform.submitted">Summary is required</span>
+                                      </h6>
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                        
+                       
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row  justify-content-center">
+                                    <div class="col-md-7">
+                                        <button mat-button (click)="closeCase()" class="sub_btn">Submit</button>
+                                      
+                                    </div>
+                                   
+                                </div>
+                            </div>                        
+                        </div>
+                    </form>
+                  </div>
+                   
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+

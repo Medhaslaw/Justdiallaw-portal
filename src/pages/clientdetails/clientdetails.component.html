@@ -1,0 +1,193 @@
+<div class="header" id="myHeader">
+
+<app-sub-nav></app-sub-nav>
+
+
+</div>
+
+<div class="appoinment-confirmed">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="confirmed-heading ">
+                            <h2>Lawyer Appointment</h2>
+                        </div>
+                        <mat-card>
+                            <mat-card-content>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="schedule-date">
+                                            <p><mat-icon>calendar_today </mat-icon>On <b>Jun 17,2022</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="schedule-date">
+                                            <p><mat-icon>alarm_on</mat-icon>At <b>11:00 AM</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="schedule-date">
+                                            <button mat-raised-button>Change Date & Time</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+        
+                            </mat-card-content>
+                        </mat-card>
+        
+                        <mat-card>
+                            <mat-card-content>
+                               <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="lawyer-img">
+                                            <img src="../../assets/img/lawyer-details.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="lawyer-details">
+                                            <h1>Mitchell M</h1>
+                                            <p>Employment & Labor Law</p>
+                                            <p>22 years experience overall</p>
+                                            <div class="percent-bar"><i class="bi bi-hand-thumbs-up"></i> <div class="badge">93%</div> <p>312 Satisfied customers</p></div>
+                                            <button mat-raised-button>Get Direction <mat-icon>send</mat-icon></button>
+                                        </div>
+                                    </div>
+                               </div>
+        
+                            </mat-card-content>
+                            <hr>
+                            <div class="lawyer_contact">
+                                <h3>Lawyer Details</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="call-us">
+                                            <h4><mat-icon > phone_callback</mat-icon>Call us</h4>
+                                            <a>+91 709 658 4158</a><br>
+                                            <a>+91 889 564 8126</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="call-us">
+                                            <h4><mat-icon >mail</mat-icon>Email</h4>
+                                            <a>mitchell@gmail.com</a><br>
+                                            <a>advocate@gmail.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="confirmed-heading ">
+                            <h2>Client Details</h2>
+                        </div>
+                        <form [formGroup]="clientForm" class="add_invoice_form sign_up_1">
+                            
+                            <div class="col-md-12 margin_top">
+                                <label for="fname"> First Name*</label>
+                                <mat-form-field class="mat_form_filed">
+                                   <mat-label class="mat_label">First Name</mat-label> 
+                                    <input matInput type="text" class="mat_input" formControlName="fname">
+                                </mat-form-field>
+                                <div *ngIf="clientForm.controls['fname'].invalid && (clientForm.controls['fname'].touched)" class="alert alert-danger">
+                                    <div *ngIf="clientForm.controls['fname'].errors">
+                                        First Name Required
+                                    </div>
+                                 </div>
+                                
+                            </div>
+
+                            <div class="col-md-12 margin_top">
+                                <label for="fname"> Last Name*</label>
+                                <mat-form-field class="mat_form_filed">
+                                   <mat-label class="mat_label">Last Name</mat-label> 
+                                    <input matInput type="text" class="mat_input" formControlName="lname">
+                                </mat-form-field>
+                                <div *ngIf="clientForm.controls['lname'].invalid && (clientForm.controls['lname'].touched)" class="alert alert-danger">
+                                    <div *ngIf="clientForm.controls['lname'].errors">
+                                        Last Name Required
+                                    </div>
+                                 </div>
+                                
+                            </div>
+
+                            <div class="col-md-12 margin_top">
+                                <label for="fname"> Email*</label>
+                                <mat-form-field class="mat_form_filed">
+                                   <mat-label class="mat_label">Email</mat-label> 
+                                    <input matInput type="text" class="mat_input" formControlName="email">
+                                </mat-form-field>
+                                <div *ngIf="clientForm.controls['email'].invalid && (clientForm.controls['email'].touched)" class="alert alert-danger">
+                                    <div *ngIf="clientForm.controls['email'].errors">
+                                        Email Id Required
+                                    </div>
+                                 </div>
+                                
+                            </div>
+
+                            <div class="col-md-12 margin_top">
+                                <label for="fname"> Phone Number*</label>
+                                <mat-form-field class="mat_form_filed">
+                                   <mat-label class="mat_label">Phone Number</mat-label> 
+                                    <input matInput type="text" class="mat_input" formControlName="phonenumber">
+                                </mat-form-field>
+                                <div *ngIf="clientForm.controls['phonenumber'].invalid && (clientForm.controls['phonenumber'].touched)" class="alert alert-danger">
+                                    <div *ngIf="clientForm.controls['phonenumber'].errors">
+                                        Phone Number Required
+                                    </div>
+                                 </div>
+                                
+                            </div>
+                            <div class="col-md-12 margin_top">
+                                <label for="fname"> Zip Code*</label>
+                                <mat-form-field class="mat_form_filed">
+                                   <mat-label class="mat_label">Zip Code</mat-label> 
+                                    <input matInput type="text" class="mat_input" formControlName="zipcode">
+                                </mat-form-field>
+                                <div *ngIf="clientForm.controls['zipcode'].invalid && (clientForm.controls['zipcode'].touched)" class="alert alert-danger">
+                                    <div *ngIf="clientForm.controls['zipcode'].errors">
+                                        Zip Code Required
+                                    </div>
+                                 </div>
+                                
+                            </div>
+                            <div class="col-md-12 margin_top">
+                                <label for="fname"> Tell us about your legal need*</label>
+                                <mat-form-field class="mat_form_filed">
+                                   <mat-label class="mat_label">Type Message</mat-label> 
+                                    <textarea matInput type="text" class="mat_input" formControlName="message" rows="5"></textarea>
+                                </mat-form-field>
+                                <div *ngIf="clientForm.controls['message'].invalid && (clientForm.controls['message'].touched)" class="alert alert-danger">
+                                    <div *ngIf="clientForm.controls['message'].errors">
+                                        Message Required
+                                    </div>
+                                 </div>
+                                
+                            </div>
+
+                            <div class="col-md-12">
+                                <button mat-raised-button type="submit" (click)="save()">Send Message</button>
+                            </div>
+                            
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<app-footer></app-footer>

@@ -1,0 +1,58 @@
+<div class="add_new_topic">
+    <div class="row m-0">
+        <div class="col-md-12 p-0">
+            <div mat-dialog-title class="dialog_title">
+                <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+                <h1>File Upload</h1>
+            
+            </div>
+            <div mat-dialog-content class="dialog_content">
+                <form class="add_invoice_form" [formGroup]="addFileFrom"  #myform="ngForm"  >
+                   
+                    <div class="row">
+
+                        <div class="col-md-12"  >
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">File Name <span>*</span></label>
+                                <input type="text" class="form-control" formControlName="client_file_name"  placeholder="File Name">
+                              </div>
+                         
+                        </div>
+
+                        <div class="col-md-12" >
+                            <div class="mb-3">
+                                <!-- <label for="exampleFormControlInput1" class="form-label">Upload File <span>*</span></label> -->
+                                
+                                <div class="upload-file">
+                                    <div class="upload-img d-flex">
+                                        <button class="file-upload-button">
+                                            <input type="file" class="upload-file" 
+                                                (change)="onFileChanged($event)" />
+                                            Browse File
+                                        </button>
+                                
+                                        <p>{{fileName}}</p> 
+                                    </div>
+                                </div>
+                              
+                              </div>
+                        </div>
+                    </div>
+                 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row  justify-content-center">
+                                <div class="col-md-7">
+                                    <button mat-button class="su_bt" (click)="addFile()" >Send File</button>
+                                  
+                                </div>
+                    
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

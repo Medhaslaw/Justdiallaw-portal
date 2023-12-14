@@ -1,0 +1,84 @@
+<div class="header" id="myHeader">
+    <app-sub-nav></app-sub-nav>
+</div>
+
+
+<div class="blog-header">
+    <div class="blog-bg-content">
+        <div class="wel-jus-law">
+            <h2>Blog</h2>
+            <p>WELCOME TO JUST DIAL LAW</p>
+            <h3> <a routerLink="/home"> Home</a><i class="bi bi-arrow-right"></i> <span class="about-span"> Blog</span></h3>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="serch-lawyer">
+                <div class="input-group search-box">
+
+                    <input type="text" (keydown.enter)="search()" class="form-control" placeholder="Search Categories" [(ngModel)]="searchItem">
+                    <button class="search_btn" type="submit" mat-button (click)="search()">Search <i
+                            class="bi bi-search"></i></button>
+
+                </div>
+            </div>
+            <div class="top-categoris">
+                <h3>Categories</h3>
+            </div>
+
+            <div class="col-md-11 col-sm-12 col-lg-10 cl-xl-9 lawyer-reg-inputs">
+
+                <div class="text-center">
+                    <button mat-button [ngClass]="{'selectedBtn2': filterCategory ==  ''}" (click)="allBlogs()">All Blogs</button>
+                    <button mat-button *ngFor="let category of allCategory" [ngClass]="{'selectedBtn': filterCategory == category.id}" (click)="selectCategorys(category.id)">{{category.category_name}}</button>
+                </div>
+
+            </div>
+
+            <div class="all-blogs">
+                <div class="container">
+                    <div class="row justify-content-center blog-row d-flex">
+                        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 all-details" *ngFor="let obj of allBlogsObj ">
+
+
+                            <mat-card class="example-card" (click)="viewBlog(obj)">
+                                <img src="{{obj.blog_image_url}}">
+                                <mat-card-content>
+                                    <div class="blog-blocks d-flex">
+                                        <div class="category-block">
+                                            <h6>{{obj.category.category_name}}</h6>
+                                        </div>
+                                        <!-- <div class="views-count" *ngIf="obj.views_count > 0 ">
+                                            <h6>{{obj.views_count}} Views</h6>
+                                        </div> -->
+                                    </div>
+                                    <div class="text">
+                                        <h2>{{obj.title}}</h2>
+                                        <p [innerHTML]="obj.content.slice(0, 300) | safeHtml"></p>
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-actions>
+
+                                </mat-card-actions>
+                            </mat-card>
+
+                        </div>
+
+                        <div class="col-md-12 found_error" *ngIf="allBlogsObj.length == 0">
+                            <p>No Blogs found</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

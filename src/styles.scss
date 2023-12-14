@@ -1,0 +1,2437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@font-face {
+    font-family: "Circular Std Book";
+    src: url("assets/fonts/860c3ec7bbc5da3e97233ccecafe512e.eot");
+    src: url("assets/fonts/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"), url("assets/fonts/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"), url("assets/fonts/860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"), url("assets/fonts/860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"), url("assets/fonts/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg");
+}
+
+@font-face {
+    font-family: "Circular Std Black";
+    src: url("assets/fonts/f1a22f6f15d272c7aa56da8b2c91f5e5.eot");
+    src: url("assets/fonts/f1a22f6f15d272c7aa56da8b2c91f5e5.eot?#iefix") format("embedded-opentype"), url("assets/fonts/f1a22f6f15d272c7aa56da8b2c91f5e5.woff2") format("woff2"), url("assets/fonts/f1a22f6f15d272c7aa56da8b2c91f5e5.woff") format("woff"), url("assets/fonts/f1a22f6f15d272c7aa56da8b2c91f5e5.ttf") format("truetype"), url("assets/fonts/f1a22f6f15d272c7aa56da8b2c91f5e5.svg#Circular Std Black") format("svg");
+}
+
+@font-face {
+    font-family: "Circular Std Bold";
+    src: url("assets/fonts/961a181da27e7cbc072ec2fb5bbfe2a9.eot");
+    src: url("assets/fonts/961a181da27e7cbc072ec2fb5bbfe2a9.eot?#iefix") format("embedded-opentype"), url("assets/fonts/961a181da27e7cbc072ec2fb5bbfe2a9.woff2") format("woff2"), url("assets/fonts/961a181da27e7cbc072ec2fb5bbfe2a9.woff") format("woff"), url("assets/fonts/961a181da27e7cbc072ec2fb5bbfe2a9.ttf") format("truetype"), url("assets/fonts/961a181da27e7cbc072ec2fb5bbfe2a9.svg#Circular Std Bold") format("svg");
+}
+
+@font-face {
+    font-family: "Circular Std Medium";
+    src: url("assets/fonts/9475d6a0b79c164f9f605673714e75d9.eot");
+    src: url("assets/fonts/9475d6a0b79c164f9f605673714e75d9.eot?#iefix") format("embedded-opentype"), url("assets/fonts/9475d6a0b79c164f9f605673714e75d9.woff2") format("woff2"), url("assets/fonts/9475d6a0b79c164f9f605673714e75d9.woff") format("woff"), url("assets/fonts/9475d6a0b79c164f9f605673714e75d9.ttf") format("truetype"), url("assets/fonts/9475d6a0b79c164f9f605673714e75d9.svg#Circular Std Medium") format("svg");
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 5vw;
+}
+
+::-webkit-scrollbar {
+    width: 0.5vw;
+    background-color: #fff;
+    border-radius: 5vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b9bfc8;
+    border-radius: 5vw;
+}
+
+.desk-none {
+    display: none;
+}
+
+.mobile-none {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    line-height: initial !important;
+}
+
+button {
+    line-height: 100% !important;
+}
+
+hr {
+    padding: 0;
+    margin: 0.8vw 0 !important;
+    border-top: 0.1vw solid #666 !important;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400;
+}
+
+a {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+button {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+a {
+    cursor: pointer;
+}
+
+.img {
+    img {
+        width: 100%;
+    }
+}
+
+.middle {
+    height: 100%;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-bar {
+    .bootstrap-select>.dropdown-toggle {
+        padding-right: 1.7vw;
+        height: 5.3vh;
+        background-color: #fff;
+        border-color: #8c8c8c;
+    }
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+        width: 13.5vw;
+        margin-right: 1vw;
+    }
+    .btn-default.active.focus,
+    .btn-default.active:focus,
+    .btn-default.active:hover,
+    .btn-default:active.focus,
+    .btn-default:active:focus,
+    .btn-default:active:hover,
+    .open>.dropdown-toggle.btn-default.focus,
+    .open>.dropdown-toggle.btn-default:focus,
+    .open>.dropdown-toggle.btn-default:hover {
+        background-color: #fff;
+        border-color: #8c8c8c;
+    }
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 1vw;
+    }
+    .container {
+        padding: 0 .85vw !important;
+        width: 86vw !important;
+        margin: 0 auto;
+        max-width: 86vw !important;
+    }
+    .row>* {
+        padding-left: .84vw !important;
+        padding-right: .84vw !important;
+    }
+    .row {
+        margin: 0 -.9vw !important;
+    }
+}
+
+.dropdown-toggle::after {
+    border: 0 !important;
+    border-bottom: .15vw solid !important;
+    border-right: .15vw solid !important;
+    transform: rotateZ(45deg);
+    display: inline-block;
+    width: .6vw;
+    height: .6vw;
+    margin-left: 1vw !important;
+}
+
+.reviews {
+    .reviews-card {
+        .navs {
+            border: inherit;
+            background: #eaeaea;
+            color: #797b7d;
+            font-size: 2vw;
+            border-radius: 100%;
+            height: 3.5vw;
+            width: 3.5vw;
+            line-height: 1vw;
+            position: absolute;
+            z-index: 99999;
+        }
+        .navs.previous {
+            right: -9.3vw;
+            top: 7vw;
+        }
+        .navs.next {
+            left: -9.3vw;
+            top: 7vw;
+        }
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.time-slot {
+    mat-tab-group {
+        mat-tab-header {
+            background-color: #01204e !important;
+            border-radius: 0.3vw;
+            height: 3.5vw;
+            .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+                border-color: #fff;
+            }
+            .mat-tab-header-pagination-chevron {
+                border-color: #fff;
+                border-width: 0.15vw 0.15vw 0 0;
+                height: 0.45vw;
+                width: 0.45vw;
+            }
+            .mat-ink-bar,
+            .mat-ink-bar {
+                background-color: #e86d1f !important;
+            }
+            .mat-tab-label {
+                // height: 3.8vw;
+                // width: 9vw;
+                opacity: inherit;
+            }
+            .mat-tab-header-pagination {
+                min-width: 2vw;
+            }
+        }
+        .mat-tab-label-content {
+            color: #fff;
+        }
+    }
+}
+
+.client_form {
+    mat-form-field {
+        .mat-select-arrow {
+            color: #fff !important;
+        }
+        .mat-select-value {
+            color: rgb(255 255 255 / 87%);
+            font-size: 0.85vw !important;
+        }
+        .mat-select-placeholder {
+            color: #fff !important;
+            -webkit-text-fill-color: #fff !important;
+        }
+    }
+}
+
+.mat-typography {
+    font: unset;
+}
+
+.mat-form-field-underline::before {
+    display: none !important;
+}
+
+// mat-form-field {
+//     line-height: inherit !important;
+//     width: 8vw !important;
+//     .mat-form-field-wrapper {
+//         padding: 0;
+//     }
+//     .mat-form-field-underline {
+//         display: none !important;
+//     }
+//     .mat-form-field-wrapper {
+//         padding: 0 !important;
+//         margin: 0 !important;
+//     }
+//     .mat-form-field-flex:hover .mat-form-field-underline {
+//         background-color: inherit !important;
+//     }
+//     .mat-form-field-infix {
+//         padding: 0 1vw !important;
+//         border: inherit !important;
+//     }
+//     .mat-select {
+//         width: 6.5vw;
+//     }
+//     .mat-select-arrow {
+//         border-left: 0.3vw solid transparent;
+//         border-right: 0.3vw solid transparent;
+//         border-top: 0.3vw solid;
+//         margin: 0 0.4vw;
+//     }
+// }
+.login_1 {
+    .mat-form-field-infix {
+        padding: 0 !important;
+    }
+}
+
+.select_form {
+    .mat-form-field-infix {
+        padding: 0 0.5vw !important;
+        border: inherit !important;
+        width: 11.7vw;
+    }
+}
+
+.sign_up {
+    .mat-form-field-infix {
+        padding: 0 0vw !important;
+        border: inherit !important;
+    }
+}
+
+.side_bar {
+    .mat-form-field-infix {
+        padding: 0 !important;
+        border: inherit !important;
+    }
+    .mat-form-field-label {
+        left: 1vw !important;
+        top: 1.6vw !important;
+    }
+    .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+    .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+        display: none !important;
+    }
+}
+
+.add_invoice_form {
+    .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+    .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+        display: none !important;
+    }
+    .mat-form-field-label {
+        left: 0.8vw !important;
+        top: 1.4vw !important;
+    }
+}
+
+.add_invoice_form1 {
+    .mat-form-field-label {
+        left: 3.5vw !important;
+        top: 1.6vw !important;
+        font-size: 1vw;
+        color: #000;
+    }
+}
+
+.consultant {
+    mat-checkbox {
+        .mat-checkbox-frame {
+            border-color: #fff !important;
+        }
+        .mat-checkbox-inner-container {
+            height: 0.8vw;
+            width: 0.8vw;
+            margin-right: 0.8vw !important;
+        }
+        .mat-checkbox-label {
+            font-size: 0.85vw;
+            line-height: inherit !important;
+        }
+    }
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+        background-color: #e86d1f !important;
+    }
+    .mat-select-arrow {
+        color: #fff;
+    }
+    .mat-select-value {
+        color: #fff;
+    }
+}
+
+.sort-filed {
+    mat-form-field {
+        .mat-select-arrow {
+            color: #666;
+        }
+        .mat-select-value {
+            color: #666;
+        }
+        .mat-form-field-infix {
+            padding: 0 2vw 0 0.5vw !important;
+        }
+        .mat-select {
+            width: 9.5vw;
+        }
+    }
+}
+
+.enq_tabs {
+    .mat-expansion-indicator::after {
+        border-width: 0 0.15vw 0.15vw 0 !important;
+        padding: 0.2vw !important;
+        color: #fff !important;
+    }
+}
+
+.mat_card_invoice {
+    .mat-form-field-infix {
+        padding: 0 !important;
+    }
+}
+
+.mat_card_invoice {
+    mat-tab-group {
+        .mat-tab-labels {
+            width: 30vw;
+            .mat-tab-label {
+                height: 3vw;
+            }
+            .mat-tab-label-content {
+                font-size: 1.1vw;
+                font-weight: 600;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .mat-tab-body {
+            padding: 2vw 1vw;
+        }
+    }
+}
+
+.mat-dialog-container {
+    padding: 0 !important;
+    width: 40vw !important;
+}
+
+.cdk-overlay-pane.payment-modal {
+    .mat-dialog-container {
+        width: 50vw !important;
+    }
+}
+
+.mat_radio {
+    .mat-radio-outer-circle {
+        // width: 0.9vw;
+        // height: 0.9vw;
+        border-color: #e86d1f !important;
+    }
+    .mat-radio-inner-circle {
+        // width: 0.9vw;
+        // height: 0.9vw;
+        background-color: #e86d1f !important;
+    }
+    .mat-radio-container {
+        // width: 0.9vw;
+        // width: 0.9vw;
+    }
+    .mat-radio-label-content {
+        padding-left: 0.5vw;
+    }
+}
+
+.std_end {
+    .mat-form-field-infix {
+        padding: 0 !important;
+        width: 13vw !important;
+    }
+    .mat-form-field-label-wrapper {
+        left: 2vw;
+        top: 0.2vw;
+    }
+    .mat-date-range-input-container {
+        justify-content: end;
+    }
+}
+
+.mat-drawer-content.mat-drawer-content.user-content {
+    margin-left: 26vw !important;
+}
+
+.lawyer_sidemenu {
+    .mat-drawer-content {
+        margin-top: 4vw;
+    }
+}
+
+.otp_form1 {
+    .add_invoice_form .mat-form-field-label {
+        left: 1vw !important;
+        top: 1.6vw !important;
+    }
+}
+
+.sign_up_1 {
+    .mat-form-field-infix {
+        padding: 0 !important;
+    }
+}
+
+.mat_accordation {
+    .mat-expansion-indicator::after {
+        color: #fff !important;
+    }
+}
+
+.steper {
+    .mat-step-header .mat-step-icon-selected,
+    .mat-step-header .mat-step-icon-state-done,
+    .mat-step-header .mat-step-icon-state-edit {
+        background-color: #0b0b31;
+    }
+    .mat-stepper-vertical-line::before {
+        left: -4px;
+    }
+    mat-stepper {
+        background-color: inherit;
+        .mat-step-header {
+            width: 20vw;
+            padding: 1.5vw;
+            margin: 0;
+            pointer-events: none !important;
+            h1 {
+                color: #0b0b31;
+                padding: 0;
+                font-size: 1.2vw;
+                font-weight: 500;
+                margin: 0 0 0 2vw;
+            }
+        }
+    }
+}
+
+.login-modal {
+    width: 24vw !important;
+    position: relative !important;
+    .mat-dialog-content {
+        overflow: hidden !important;
+        padding: 0 !important;
+    }
+    .mat-dialog-container {
+        overflow: hidden !important;
+    }
+}
+
+.otp_check {
+    margin: 0 auto !important;
+    .otp-input {
+        font-size: 0.9vw !important;
+    }
+    .ng-otp-input-wrapper {
+        text-align: center !important;
+    }
+}
+
+.register_process {
+    .mat-chip-list-wrapper .mat-standard-chip {
+        font-size: 0.9vw;
+        font-weight: 500;
+    }
+}
+
+.progress_bar {
+    circle-progress {
+        height: 8vh;
+    }
+}
+
+.CommentModal {
+    width: 25vw !important;
+    border-radius: 1vw !important;
+    position: relative !important;
+    .mat-dialog-content {
+        overflow: hidden !important;
+        // padding: 0 !important;
+    }
+    .mat-dialog-container {
+        overflow: hidden !important;
+    }
+    .prctising {
+        .mat-datepicker-toggle {
+            .mat-icon-button {
+                position: absolute;
+                right: 1vw;
+            }
+        }
+    }
+}
+
+.lawyers_invoice,
+.lawyers-dashboard,
+.enquiries,
+.Add_Invoice {
+    min-height: 91vh;
+    padding: 3vw 2vw !important;
+}
+
+.ng-star-inserted {
+    font-size: 0.8vw;
+}
+
+// @media (min-width: 280px) and (max-width: 455.98px) {
+//     .time-slot {
+//         mat-tab-group {
+//             mat-tab-header {
+//                 height: 12vw !important;
+//             }
+//         }
+//     }
+//     .time-slot {
+//         mat-tab-group {
+//             mat-tab-header {
+//                 mat-tab-label {
+//                     height: 0;
+//                     width: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media (min-width: 500px) and (max-width: 767.98px) {
+//     .time-slot {
+//         mat-tab-group {
+//             mat-tab-header {
+//                 height: 12vw !important;
+//             }
+//         }
+//     }
+//     .time-slot {
+//         mat-tab-group {
+//             mat-tab-header {
+//                 mat-tab-label {
+//                     height: 0;
+//                     width: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+.lawyers_tabs {
+    .mat-tab-label {
+        color: #0b0b31 !important;
+        font-size: 1vw !important;
+        font-weight: 500 !important;
+    }
+    .mat-ink-bar {
+        background-color: #ff5722 !important;
+    }
+}
+
+.lawyers_tabs {
+    .mat-tab-body-content {
+        overflow: inherit !important;
+    }
+}
+
+// .lawyerCalendar{
+//     .fc-scroller.fc-scroller-liquid-absolute {
+//         overflow: inherit !important;
+//     }
+// }
+.lawyerCalendar {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    h2#fc-dom-1 {
+        color: #0b0b31;
+    }
+    button.fc-today-button.fc-button.fc-button-primary {
+        background-color: #0b0b31;
+    }
+    button.fc-button.fc-button-primary {
+        background-color: #0b0b31 !important;
+    }
+    a.fc-col-header-cell-cushion {
+        text-decoration: none;
+        color: #0b0b31;
+    }
+    .fc-daygrid-day-number {
+        color: #0b0b31;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    // .fc-daygrid-day-frame{
+    //     width: 3vw;
+    //     height: 3vw;
+    // }
+}
+
+
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: transparent !important;
+}
+
+.search-bar {
+    ng-multiselect-dropdown {
+        .multiselect-item-checkbox input[type=checkbox]+div:before {
+            border: 2px solid transparent !important;
+            display: none !important;
+        }
+        .multiselect-dropdown .dropdown-btn .selected-item-container .selected-item {
+            border: 1px solid #ffffff !important;
+            background: #ffffff !important;
+            outline: none !important;
+             :hover {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+        .multiselect-item-checkbox input[type=checkbox]:checked+div:before {
+            background: transparent !important;
+        }
+        .multiselect-dropdown {
+            width: 13.5vw;
+            margin-right: 1vw;
+            height: 5.3vh;
+            .dropdown-btn {
+                background: #fff;
+                height: 5.6vh;
+                padding: 0.57vw 0.7vw !important;
+                border: 0 !important;
+                border-radius: 0.2vw !important;
+                .selected-item-container {
+                    .selected-item {
+                        padding: 0 0 !important;
+                        border-radius: 0 !important;
+                        box-shadow: none !important;
+                        a{
+                            display: none !important;
+                        }
+                    }
+                }
+                span {
+                    color: #606060 !important;
+                    font-size: 1vw;
+                    font-weight: 500;
+                    width: auto;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .dropdown-multiselect__caret {
+                    width: auto !important;
+                    height: auto !important;
+                    line-height: 100% !important;
+                    padding: 0 !important;
+                    transform: inherit !important;
+                    top: .5vw !important;
+                    right: 0.2vw !important;
+                     ::before {
+                        border-width: 0.4vw 0.4vw 0 !important;
+                    }
+                }
+                .dropdown-multiselect__caret:before {
+                    border-width: 0.4vw 0.4vw 0 !important;
+                    border: 0 !important;
+                    border-bottom: 0.15vw solid !important;
+                    border-right: 0.15vw solid !important;
+                    transform: rotateZ(45deg);
+                    display: inline-block;
+                    width: 0.6vw;
+                    height: 0.6vw;
+                    margin-left: 1vw !important;
+                    top: 0 !important;
+                    color: #444 !important;
+                    right: 0.2vw !important;
+                }
+            }
+            .dropdown-list {
+                .filter-textbox {
+                    input {
+                        padding: 0 !important;
+                        font-size: 12px;
+                    }
+                }
+                .multiselect-item-checkbox {
+                    div:after {
+                        display: none !important;
+                    }
+                    div {
+                        padding-left: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    .dropdown-list {
+        margin-top: 0.1vw !important;
+        padding-top: 0 !important;
+        box-shadow: 0 .1vw 1.4vw #9595958f !important;
+        border: .1vw solid #fafafa !important;
+        ul {
+            max-height: 18vw;
+        }
+        .filter-textbox {
+            padding: .6vw 1vw;
+            font-size: .95vw;
+        }
+        li {
+            padding: 0.7vw 0.5vw !important;
+            font-size: .95vw;
+        }
+    }
+}
+
+.select-servie {
+    width: 15vw;
+    border-right: 1px solid #d7d7d7 !important;
+    padding-right: 1vw;
+    margin: .5vw 0;
+    ng-multiselect-dropdown {
+        .multiselect-item-checkbox input[type=checkbox]+div:before {
+            border: 2px solid transparent !important;
+            display: none !important;
+        }
+        .multiselect-dropdown .dropdown-btn .selected-item-container .selected-item {
+            border: 0 solid #ffffff !important;
+            background: #fff0 !important;
+            outline: none !important;
+             :hover {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+        .multiselect-item-checkbox input[type=checkbox]:checked+div:before {
+            background: transparent !important;
+        }
+        .multiselect-dropdown {
+            width: 100%;
+            margin-right: 1vw;
+            height: auto;
+            .dropdown-btn {
+                height: auto;
+                padding: .5vw 1vw !important;
+                border: 0 !important;
+                border-radius: 0 !important;
+                // &:last-child {
+                //     border-right: 0 !important;
+                // }
+                .selected-item-container {
+                    .selected-item {
+                        padding: 0 0 !important;
+                        border-radius: 0 !important;
+                        box-shadow: none !important;
+                        margin: 0 !important;
+                        a{
+                            display: none !important;
+                        }
+                    }
+                }
+                span {
+                    color: #606060 !important;
+                    font-size: 1.2vw;
+                    font-weight: 300;
+                    width: auto;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .dropdown-multiselect__caret {
+                    width: auto !important;
+                    height: auto !important;
+                    line-height: 100% !important;
+                    padding: 0 !important;
+                    transform: inherit !important;
+                    top: .5vw !important;
+                    right: 0 !important;
+                     ::before {
+                        border-width: 0.4vw 0.4vw 0 !important;
+                    }
+                }
+                .dropdown-multiselect__caret:before {
+                    border-width: 0.4vw 0.4vw 0 !important;
+                    border: 0 !important;
+                    border-bottom: 0.15vw solid !important;
+                    border-right: 0.15vw solid !important;
+                    transform: rotateZ(45deg);
+                    display: inline-block;
+                    width: 0.6vw;
+                    height: 0.6vw;
+                    margin-left: 1vw !important;
+                    top: 0 !important;
+                    color: #444 !important;
+                    right: 0.2vw !important;
+                }
+            }
+            .dropdown-list {
+                .filter-textbox {
+                    input {
+                        padding: 0 !important;
+                    }
+                }
+                .multiselect-item-checkbox {
+                    div:after {
+                        display: none !important;
+                    }
+                    div {
+                        padding-left: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    .dropdown-list {
+        margin-top: 1.1vw !important;
+        padding-top: 0 !important;
+        box-shadow: 0 .1vw 1.4vw #9595958f !important;
+        border: .1vw solid #fafafa !important;
+        ul {
+            max-height: 18vw;
+        }
+        .filter-textbox {
+            padding: .6vw 1.2vw;
+            font-size: 1.1vw;
+        }
+        li {
+            padding: 0.9vw 1.2vw !important;
+            font-size: 1.1vw;
+            font-weight: 300;
+        }
+    }
+}
+
+.small-dialog.cdk-overlay-pane {
+    .dialog_title {
+        h3 {
+            text-align: end;
+            padding: 0 1vw;
+            font-size: 1.5vw;
+            color: red;
+            margin: 0;
+            margin-top: 0.6vw;
+        }
+        h1 {
+            padding: 1vw !important;
+        }
+    }
+}
+
+.link-modal.cdk-overlay-pane {
+    .mat-dialog-container {
+        width: 25vw !important;
+        // padding: 2vw !important;
+    }
+    .add_new_topic {
+        .dialog_title {
+            box-shadow: 0.05vw 0.01vw 0.31vw 0.2vw #66666629;
+            position: relative;
+            .cancel_btn {
+                text-align: end;
+                padding: 0 1vw;
+                font-size: 1.5vw;
+                color: red;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                left: 32vw;
+            }
+            h1 {
+                font-size: 1vw;
+                color: #222;
+                padding: 1vw 0;
+                margin: 0;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+            button.cancel_btn {
+                border: inherit;
+                background-color: inherit;
+                position: absolute;
+                top: 0.8vw;
+                right: 1vw;
+                i {
+                    color: #e86d1f;
+                    font-size: 1.5vw;
+                }
+            }
+        }
+        .dialog_content {
+            padding: 1vw;
+            margin: 0;
+            overflow: hidden;
+            .add_invoice_form {
+                padding: 0 1.5vw;
+                .mat_label {
+                    color: #707074;
+                    font-size: 1.1vw;
+                    padding: 0;
+                    margin: 0 0 0.5vw 1vw;
+                    font-weight: 500;
+                    span {
+                        color: red;
+                    }
+                }
+                .mat_form_filed {
+                    width: 100% !important;
+                    margin-bottom: 2vw;
+                    .mat_input {
+                        border: 0.1vw solid #e3e3e3;
+                        padding: 1.1vw;
+                        font-size: 0.9VW;
+                        border-radius: 0.2VW;
+                        background-color: #f9f9f9;
+                        width: 29.5vw;
+                    }
+                    .mat_input1 {
+                        width: 22.3vw;
+                    }
+                    .mat-form-field-wrapper {
+                        .mat-form-field-underline {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+            .sub_btn {
+                font-size: 1.1vw;
+                font-weight: 500;
+                color: #fff;
+                padding: 1.2vw;
+                background-color: #e86d1f;
+                border: inherit;
+                margin-top: 1vw;
+                border-radius: 5vw;
+                width: 100%;
+            }
+            p {
+                font-size: 1vw;
+                color: #707074;
+                font-weight: 500;
+                padding: 0;
+                margin: 0.8vw;
+                i {
+                    font-size: 1.1vw;
+                    color: #707074;
+                    margin-right: 0.5vw;
+                }
+            }
+        }
+    }
+}
+
+circle-progress {
+    svg {
+        image {
+            border-radius: 50% !important;
+            clip-path: inset(0% round 50%);
+        }
+    }
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    display: none !important;
+}
+
+.links-radio-btn {
+    .mat-radio-label-content {
+        font-size: 0.9vw !important;
+    }
+    .mat-radio-button.mat-accent .mat-radio-inner-circle {
+        background-color: #e86d1f;
+    }
+    .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+        border-color: #e86d1f;
+    }
+}
+
+.text-card {
+    div {
+        p {
+            margin-bottom: 1.5vw;
+            font-size: 1.2vw;
+            color: rgba(49, 49, 49, .9);
+            line-height: 2vw !important;
+        }
+    }
+}
+
+.product-info-cart {
+    div {
+        p {
+            font-size: 11px;
+            color: rgba(49, 49, 49, .9);
+            line-height: 2vw !important;
+            margin: 0;
+        }
+    }
+}
+
+.navbar-expand-md .navbar-toggler {
+    display: none;
+}
+
+.header.sticky {
+    z-index: 99;
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0 !important;
+        width: 100%;
+        z-index: 9;
+        top: -3.1vw;
+        background-color: #0b0a32;
+        border-radius: inherit;
+    }
+    .menu {
+        .logo {
+            img {
+                width: 60% !important;
+            }
+        }
+    }
+    .container_bigscreen {
+        padding: 1vw !important;
+        border: none !important;
+    }
+}
+
+.link-modal_1 {
+    .mat-dialog-container {
+        padding: 25px !important;
+        width: 23vw !important;
+    }
+    .mat-dialog-content {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+    .lawyer_sidemenu .mat-drawer-content {
+        margin-top: 65px;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels .mat-tab-label {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels {
+        width: fit-content;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels .mat-tab-label-content {
+        font-size: 17px;
+    }
+    .lawyerCalendar {
+        .fc .fc-toolbar.fc-header-toolbar {
+            margin-bottom: 30px;
+        }
+        button.fc-today-button.fc-button.fc-button-primary {
+            margin: 10px 0 0;
+        }
+        .fc .fc-toolbar-title {
+            font-size: 15px;
+        }
+    }
+    .cdk-overlay-pane.slots-blocking-modal {
+        width: 300px !important;
+    }
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_title h1,
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_title .h1 {
+        font-size: 20px;
+        padding: 10px 0 10px 20px !important;
+    }
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_content .sub_btn {
+        font-size: 14px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 50px;
+        width: 100%;
+    }
+    .small-dialog.cdk-overlay-pane .dialog_title h3,
+    .small-dialog.cdk-overlay-pane .dialog_title .h3 {
+        padding: 0;
+        font-size: 20px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+    }
+    .form_meet {
+        padding: 10px 5px;
+        .links-radio-btn .mat-radio-label-content {
+            font-size: 13px !important;
+        }
+        .form-control {
+            padding: 10px;
+            font-size: 15px;
+            line-height: initial;
+            border-radius: 5px;
+            height: auto;
+        }
+        .form-label {
+            font-size: 13px;
+        }
+    }
+    .mat-dialog-content {
+        min-height: auto !important;
+        max-height: 90vh!important;
+    }
+    .add_invoice_form {
+        .otp-input {
+            width: 40px !important;
+            font-size: 18px !important;
+            height: 40px !important;
+        }
+    }
+    .cdk-overlay-pane .loc-auto.mat-autocomplete-panel .mat-option span {
+        font-size: 14px !important;
+    }
+    .time-slot mat-tab-group mat-tab-header {
+        height: auto;
+    }
+    .CommentModal {
+        width: 300px !important;
+    }
+    .link-modal_1 {
+        .mat-dialog-container {
+            width: 300px !important;
+        }
+    }
+    .mat-drawer-content.mat-drawer-content.user-content {
+        margin: 0 !important;
+    }
+    .header.sticky .navbar-expand-lg {
+        top: 0px;
+    }
+    .navbar-toggler {
+        display: block !important;
+    }
+    .mat-form-field {
+        width: 100%;
+    }
+    .mobile_none {
+        display: none !important;
+    }
+    .hero-header {
+        padding-top: 60px;
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn span {
+        font-size: 16px;
+        color: #fff !important;
+    }
+    .select-servie {
+        width: 100%;
+        border-right: none !important;
+        margin: 14px 0 0;
+        border-bottom: 1px solid rgb(255 255 255);
+        padding: 8px;
+        input.mat-input-element {
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+        width: 1.9vw;
+        height: 2.3vw;
+    }
+    .reviews .reviews-card .navs {
+        font-size: 20px;
+        height: 40px;
+        width: 40px;
+    }
+    .reviews .reviews-card .navs.next {
+        left: -20px;
+        top: 150px;
+    }
+    .reviews .reviews-card .navs.previous {
+        right: -20px;
+        top: 150px;
+    }
+    .select-servie .dropdown-list li {
+        padding: 8px 12px !important;
+        font-size: 14px;
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-list .filter-textbox input {
+        font-size: 14px;
+    }
+    /* Login_modal */
+    .login-modal {
+        width: 320px !important;
+        max-width: 320px !important;
+        height: auto;
+    }
+    .mat-dialog-container {
+        width: 320px !important;
+    }
+    .login-modal .mat-dialog-content {
+        padding: 0 !important;
+        width: 320px;
+        margin: 0;
+        max-height: 107% !important;
+    }
+    .sign_up .add_invoice_form .mat_form_filed .mat_input {
+        padding: 10px !important;
+        font-size: 16px !important;
+        border-radius: 4px;
+        width: 90%;
+        margin: 20px 0 0;
+    }
+    .ng-star-inserted {
+        font-size: 12px;
+    }
+    .add_invoice_form .mat-form-field-label {
+        left: 11px!important;
+        top: 40px!important;
+    }
+    .sign_up .add_invoice_form .mat_label {
+        font-size: 14px !important;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button .mat-icon,
+    .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button .mat-icon {
+        font-size: 20px !important;
+        top: -19px !important;
+        position: relative !important;
+        right: 29px !important;
+    }
+    .steper mat-stepper .mat-step-header {
+        left: 16px;
+        position: relative;
+        width: 100%;
+    }
+    .steper .mat-step-header .mat-step-icon-selected,
+    .steper .mat-step-header .mat-step-icon-state-done,
+    .steper .mat-step-header .mat-step-icon-state-edit {
+        width: 30px;
+        height: 30px;
+    }
+    .steper mat-stepper .mat-step-header h1,
+    .steper mat-stepper .mat-step-header .h1 {
+        font-size: 17px;
+    }
+    .steper .mat-stepper-vertical-line::before {
+        border-left-width: 2px;
+    }
+    .steper .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding: 0 !important;
+    }
+    .progress_bar circle-progress {
+        height: 80px;
+    }
+    .lawyers_invoice,
+    .lawyers-dashboard,
+    .enquiries,
+    .Add_Invoice {
+        min-height: auto;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown {
+        width: 100%;
+        margin: 6px 0;
+        height: initial;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn span {
+        font-size: 14px;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn {
+        height: inherit;
+        padding: 7px 8px !important;
+        border-radius: 4px !important;
+    }
+    .search-bar .dropdown-list li {
+        font-size: 12px;
+        padding: 7px;
+    }
+    dropdown-list .filter-textbox input {
+        border: 0;
+        width: 100%;
+        font-size: 12px;
+        padding: 5px !important;
+    }
+    .lawyers_tabs .mat-tab-label {
+        font-size: 20px !important;
+    }
+    .time-slot mat-tab-group mat-tab-header .mat-tab-header-pagination-chevron {
+        border-width: 2px 2px 0 0;
+        height: 10px;
+        width: 10px;
+    }
+    .time-slot mat-tab-group mat-tab-header .mat-tab-header-pagination {
+        min-width: 25px;
+    }
+    .dropdown-toggle::after {
+        border-bottom: 2px solid !important;
+        border-right: 2px solid !important;
+        width: 5px;
+        height: 5px;
+        margin-left: 10px !important;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+        border-bottom: 2px solid !important;
+        border-right: 2px solid !important;
+        width: 7px;
+        height: 7px;
+        margin-left: 10px !important;
+        top: 0px !important;
+        right: 7px !important;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
+        top: 9px !important;
+        right: 10px !important;
+    }
+    .link-modal.cdk-overlay-pane .mat-dialog-container {
+        width: 87vw !important;
+    }
+    .text-card div p {
+        margin: 15px 0;
+        font-size: 16px;
+        line-height: inherit!important;
+    }
+    .product-info-cart div p {
+        font-size: 15px;
+        padding: 0;
+        margin: 10px 0;
+        line-height: inherit !important;
+    }
+    .mat_form_filed .mat-icon {
+        left: -36px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .lawyer_sidemenu .mat-drawer-content {
+        margin-top: 63px;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+    .lawyer_sidemenu .mat-drawer-content {
+        margin-top: 65px;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels .mat-tab-label {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels {
+        width: fit-content;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels .mat-tab-label-content {
+        font-size: 17px;
+    }
+    .lawyerCalendar {
+        .fc .fc-toolbar.fc-header-toolbar {
+            margin-bottom: 30px;
+        }
+        button.fc-today-button.fc-button.fc-button-primary {
+            margin: 10px 0 0;
+        }
+        .fc .fc-toolbar-title {
+            font-size: 15px;
+        }
+    }
+    .cdk-overlay-pane.slots-blocking-modal {
+        width: 300px !important;
+    }
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_title h1,
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_title .h1 {
+        font-size: 20px;
+        padding: 10px 0 10px 20px !important;
+    }
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_content .sub_btn {
+        font-size: 14px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 50px;
+        width: 100%;
+    }
+    .small-dialog.cdk-overlay-pane .dialog_title h3,
+    .small-dialog.cdk-overlay-pane .dialog_title .h3 {
+        padding: 0;
+        font-size: 20px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+    }
+    .form_meet {
+        padding: 10px 5px;
+        .links-radio-btn .mat-radio-label-content {
+            font-size: 13px !important;
+        }
+        .form-control {
+            padding: 10px;
+            font-size: 15px;
+            line-height: initial;
+            border-radius: 5px;
+            height: auto;
+        }
+        .form-label {
+            font-size: 13px;
+        }
+    }
+    .mat-dialog-content {
+        min-height: auto !important;
+        max-height: 90vh!important;
+    }
+    .add_invoice_form {
+        .otp-input {
+            width: 40px !important;
+            font-size: 18px !important;
+            height: 40px !important;
+        }
+    }
+    .cdk-overlay-pane .loc-auto.mat-autocomplete-panel .mat-option span {
+        font-size: 14px !important;
+    }
+    .time-slot mat-tab-group mat-tab-header {
+        height: auto;
+    }
+
+
+
+    .CommentModal {
+        width: 300px !important;
+    }
+    .link-modal_1 {
+        .mat-dialog-container {
+            width: 300px !important;
+        }
+    }
+    .mat-drawer-content.mat-drawer-content.user-content {
+        margin: 0 !important;
+    }
+    .header.sticky .navbar-expand-lg {
+        top: 0px;
+    }
+    .navbar-toggler {
+        display: block !important;
+    }
+    .mat-form-field {
+        width: 100%;
+    }
+    .mobile_none {
+        display: none !important;
+    }
+    .hero-header {
+        padding-top: 60px;
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn span {
+        font-size: 16px;
+        color: #fff !important;
+    }
+    .select-servie {
+        width: 100%;
+        border-right: none !important;
+        margin: 14px 0 0;
+        border-bottom: 1px solid rgb(255 255 255);
+        padding: 8px;
+        input.mat-input-element {
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+        width: 1.9vw;
+        height: 2.3vw;
+    }
+    .reviews .reviews-card .navs {
+        font-size: 20px;
+        height: 40px;
+        width: 40px;
+    }
+    .reviews .reviews-card .navs.next {
+        left: -20px;
+        top: 150px;
+    }
+    .reviews .reviews-card .navs.previous {
+        right: -20px;
+        top: 150px;
+    }
+    .select-servie .dropdown-list li {
+        padding: 8px 12px !important;
+        font-size: 14px;
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-list .filter-textbox input {
+        font-size: 14px;
+    }
+    /* Login_modal */
+    .login-modal {
+        width: 320px !important;
+        max-width: 320px !important;
+        height: auto;
+    }
+    .mat-dialog-container {
+        width: 320px !important;
+    }
+    .login-modal .mat-dialog-content {
+        padding: 0 !important;
+        width: 320px;
+        margin: 0;
+        max-height: 107% !important;
+    }
+    .sign_up .add_invoice_form .mat_form_filed .mat_input {
+        padding: 10px !important;
+        font-size: 16px !important;
+        border-radius: 4px;
+        width: 90%;
+        margin: 20px 0 0;
+    }
+    .ng-star-inserted {
+        font-size: 12px;
+    }
+    .add_invoice_form .mat-form-field-label {
+        left: 11px!important;
+        top: 40px!important;
+    }
+    .sign_up .add_invoice_form .mat_label {
+        font-size: 14px !important;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button .mat-icon,
+    .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button .mat-icon {
+        font-size: 20px !important;
+        top: -19px !important;
+        position: relative !important;
+        right: 29px !important;
+    }
+    .steper mat-stepper .mat-step-header {
+        left: 16px;
+        position: relative;
+        width: 100%;
+    }
+    .steper .mat-step-header .mat-step-icon-selected,
+    .steper .mat-step-header .mat-step-icon-state-done,
+    .steper .mat-step-header .mat-step-icon-state-edit {
+        width: 30px;
+        height: 30px;
+    }
+    .steper mat-stepper .mat-step-header h1,
+    .steper mat-stepper .mat-step-header .h1 {
+        font-size: 17px;
+    }
+    .steper .mat-stepper-vertical-line::before {
+        border-left-width: 2px;
+    }
+    .steper .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding: 0 !important;
+    }
+    .progress_bar circle-progress {
+        height: 80px;
+    }
+    .lawyers_invoice,
+    .lawyers-dashboard,
+    .enquiries,
+    .Add_Invoice {
+        min-height: auto;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown {
+        width: 100%;
+        margin: 6px 0;
+        height: initial;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn span {
+        font-size: 14px;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn {
+        height: inherit;
+        padding: 7px 8px !important;
+        border-radius: 4px !important;
+    }
+    .search-bar .dropdown-list li {
+        font-size: 12px;
+        padding: 7px;
+    }
+    dropdown-list .filter-textbox input {
+        border: 0;
+        width: 100%;
+        font-size: 12px;
+        padding: 5px !important;
+    }
+    .lawyers_tabs .mat-tab-label {
+        font-size: 20px !important;
+    }
+    .time-slot mat-tab-group mat-tab-header .mat-tab-header-pagination-chevron {
+        border-width: 2px 2px 0 0;
+        height: 7px;
+        width: 10px;
+    }
+    .dropdown-toggle::after {
+        border-bottom: 2px solid !important;
+        border-right: 2px solid !important;
+        width: 5px;
+        height: 5px;
+        margin-left: 10px !important;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+        border-bottom: 2px solid !important;
+        border-right: 2px solid !important;
+        width: 7px;
+        height: 7px;
+        margin-left: 10px !important;
+        top: 0px !important;
+        right: 7px !important;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
+        top: 9px !important;
+        right: 10px !important;
+    }
+    .link-modal.cdk-overlay-pane .mat-dialog-container {
+        width: 87vw !important;
+    }
+    .text-card div p {
+        margin: 15px 0;
+        font-size: 16px;
+        line-height: inherit!important;
+    }
+    .product-info-cart div p {
+        font-size: 15px;
+        padding: 0;
+        margin: 10px 0;
+        line-height: inherit !important;
+    }
+}
+
+.table_data {
+    th.mat-header-cell {
+        font-size: 1vw;
+        padding: 1vw;
+        margin: 0;
+        color: #fff !important;
+        background: #213870 !important;
+    }
+}
+
+.select-servie {
+    .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding-bottom: 0 !important;
+        font-size: 1.1vw;
+    }
+    .mat-form-field-infix {
+        border-top: 0 !important;
+        padding: 0.5em 0.5em !important;
+    }
+    input.mat-input-element {
+        margin-top: 4px;
+    }
+    .link-modal.cdk-overlay-pane .mat-dialog-container {
+        width: 87vw !important;
+    }
+    .select-servie input.mat-input-element {
+        font-size: 16px;
+    }
+    .product-info-cart div p {
+        font-size: 15px;
+        padding: 0;
+        margin: 10px 0;
+        line-height: inherit !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .lawyer_sidemenu .mat-drawer-content {
+        margin-top: 63px;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+    .lawyer_sidemenu .mat-drawer-content {
+        margin-top: 65px;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels .mat-tab-label {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels {
+        width: fit-content;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels .mat-tab-label-content {
+        font-size: 17px;
+    }
+    .lawyerCalendar {
+        .fc .fc-toolbar.fc-header-toolbar {
+            margin-bottom: 30px;
+        }
+        button.fc-today-button.fc-button.fc-button-primary {
+            margin: 10px 0 0;
+        }
+        .fc .fc-toolbar-title {
+            font-size: 15px;
+        }
+    }
+    .cdk-overlay-pane.slots-blocking-modal {
+        width: 300px !important;
+    }
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_title h1,
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_title .h1 {
+        font-size: 20px;
+        padding: 10px 0 10px 20px !important;
+    }
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_content .sub_btn {
+        font-size: 14px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 50px;
+        width: 100%;
+    }
+    .small-dialog.cdk-overlay-pane .dialog_title h3,
+    .small-dialog.cdk-overlay-pane .dialog_title .h3 {
+        padding: 0;
+        font-size: 20px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+    }
+    .form_meet {
+        padding: 10px 5px;
+        .links-radio-btn .mat-radio-label-content {
+            font-size: 13px !important;
+        }
+        .form-control {
+            padding: 10px;
+            font-size: 15px;
+            line-height: initial;
+            border-radius: 5px;
+            height: auto;
+        }
+        .form-label {
+            font-size: 13px;
+        }
+    }
+    .mat-dialog-content {
+        min-height: auto !important;
+        max-height: 90vh!important;
+    }
+    .add_invoice_form {
+        .otp-input {
+            width: 40px !important;
+            font-size: 18px !important;
+            height: 40px !important;
+        }
+    }
+  
+    .time-slot mat-tab-group mat-tab-header {
+        height: auto;
+    }
+
+
+    .cdk-overlay-pane .loc-auto.mat-autocomplete-panel .mat-option span {
+        font-size: 14px !important;
+    }
+    .CommentModal {
+        width: 300px !important;
+    }
+    .link-modal_1 {
+        .mat-dialog-container {
+            width: 300px !important;
+        }
+    }
+    .mat-drawer-content.mat-drawer-content.user-content {
+        margin: 0 !important;
+    }
+    .mat-form-field-infix {
+        min-width: 100% !important;
+        width: 100% !important;
+    }
+    .product-info-cart div p {
+        font-size: 15px;
+        padding: 0;
+        margin: 10px 0;
+        line-height: inherit !important;
+    }
+    .navbar-toggler {
+        display: block !important;
+    }
+    .mobile_none {
+        display: none !important;
+    }
+    .hero-header {
+        padding-top: 60px;
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn span {
+        font-size: 12px;
+    }
+    .select-servie {
+        width: 25%;
+    }
+    .reviews .reviews-card .navs {
+        font-size: 20px;
+        height: 40px;
+        width: 40px;
+    }
+    .reviews .reviews-card .navs.next {
+        left: -50px;
+        top: 67px;
+    }
+    .reviews .reviews-card .navs.previous {
+        right: -50px;
+        top: 67px;
+    }
+    .select-servie .dropdown-list li {
+        padding: 8px 12px !important;
+        font-size: 14px;
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-list .filter-textbox input {
+        font-size: 14px;
+    }
+    /* Login_modal */
+    .login-modal {
+        width: 320px !important;
+        max-width: 320px !important;
+    }
+    .mat-dialog-container {
+        width: 320px !important;
+    }
+    .login-modal .mat-dialog-content {
+        padding: 0 !important;
+        width: 320px;
+        margin: 0;
+    }
+    .sign_up .add_invoice_form .mat_form_filed .mat_input {
+        padding: 10px !important;
+        font-size: 16px !important;
+        border-radius: 4px;
+        width: 90%;
+        margin: 20px 0 0;
+    }
+    .ng-star-inserted {
+        font-size: 12px;
+        // width: 100%;
+        // margin: 0 auto;
+    }
+    .add_invoice_form .mat-form-field-label {
+        left: 11px!important;
+        top: 40px!important;
+    }
+    .sign_up .add_invoice_form .mat_label {
+        font-size: 14px !important;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button .mat-icon,
+    .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button .mat-icon {
+        font-size: 20px !important;
+        top: -19px !important;
+        position: relative !important;
+        right: 29px !important;
+    }
+    .steper mat-stepper .mat-step-header {
+        left: 16px;
+        position: relative;
+        width: 100%;
+    }
+    .steper .mat-step-header .mat-step-icon-selected,
+    .steper .mat-step-header .mat-step-icon-state-done,
+    .steper .mat-step-header .mat-step-icon-state-edit {
+        width: 30px;
+        height: 30px;
+    }
+    .steper mat-stepper .mat-step-header h1,
+    .steper mat-stepper .mat-step-header .h1 {
+        font-size: 17px;
+    }
+    .steper .mat-stepper-vertical-line::before {
+        border-left-width: 2px;
+    }
+    .steper .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding: 0 !important;
+    }
+    .progress_bar circle-progress {
+        height: 80px;
+    }
+    .lawyers_invoice,
+    .lawyers-dashboard,
+    .enquiries,
+    .Add_Invoice {
+        min-height: auto;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown {
+        width: 100%;
+        margin: 6px 0;
+        height: initial;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn span {
+        font-size: 14px;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn {
+        height: inherit;
+        padding: 7px 8px !important;
+        border-radius: 4px !important;
+    }
+    .search-bar .dropdown-list li {
+        font-size: 12px;
+        padding: 7px;
+    }
+    dropdown-list .filter-textbox input {
+        border: 0;
+        width: 100%;
+        font-size: 12px;
+        padding: 5px !important;
+    }
+    .lawyers_tabs .mat-tab-label {
+        font-size: 20px !important;
+    }
+    .time-slot mat-tab-group mat-tab-header .mat-tab-header-pagination-chevron {
+        border-width: 2px 2px 0 0;
+        height: 7px;
+        width: 7px;
+    }
+    .dropdown-toggle::after {
+        border-bottom: 2px solid !important;
+        border-right: 2px solid !important;
+        width: 5px;
+        height: 5px;
+        margin-left: 10px !important;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+        border-bottom: 2px solid !important;
+        border-right: 2px solid !important;
+        width: 7px;
+        height: 7px;
+        margin-left: 10px !important;
+        top: 0px !important;
+        right: 7px !important;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
+        top: 9px !important;
+        right: 10px !important;
+    }
+    .time-slot mat-tab-group mat-tab-header {
+        height: auto;
+        padding: 4px 0;
+    }
+    .link-modal.cdk-overlay-pane .mat-dialog-container {
+        width: 87vw !important;
+    }
+    .select-servie input.mat-input-element {
+        font-size: 16px;
+    }
+    .text-card div p {
+        margin: 15px 0;
+        font-size: 16px;
+        line-height: inherit!important;
+    }
+    .product-info-cart div p {
+        font-size: 15px;
+        padding: 0;
+        margin: 10px 0;
+        line-height: inherit !important;
+    }
+    .sign_up {
+        padding: 20px;
+        .clip_patharea {
+            h1 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        .sub_btn {
+            font-size: 19px;
+            padding: 13px;
+            margin: 10px 0;
+            border-radius: 50px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+
+    
+    .lawyer_sidemenu .mat-drawer-content {
+        margin-top: 63px;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+    .lawyer_sidemenu .mat-drawer-content {
+        margin-top: 80px;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels .mat-tab-label {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels {
+        width: fit-content;
+    }
+    .mat_card_invoice mat-tab-group .mat-tab-labels .mat-tab-label-content {
+        font-size: 17px;
+    }
+    .lawyerCalendar {
+        .fc .fc-toolbar.fc-header-toolbar {
+            margin-bottom: 30px;
+        }
+        button.fc-today-button.fc-button.fc-button-primary {
+            margin: 10px 0 0;
+        }
+        .fc .fc-toolbar-title {
+            font-size: 15px;
+        }
+    }
+    .cdk-overlay-pane.slots-blocking-modal {
+        width: 300px !important;
+    }
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_title h1,
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_title .h1 {
+        font-size: 20px;
+        padding: 10px 0 10px 20px !important;
+    }
+    .link-modal.cdk-overlay-pane .add_new_topic .dialog_content .sub_btn {
+        font-size: 14px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 50px;
+        width: 100%;
+    }
+    .small-dialog.cdk-overlay-pane .dialog_title h3,
+    .small-dialog.cdk-overlay-pane .dialog_title .h3 {
+        padding: 0;
+        font-size: 20px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+    }
+    .form_meet {
+        padding: 10px 5px;
+        .links-radio-btn .mat-radio-label-content {
+            font-size: 13px !important;
+        }
+        .form-control {
+            padding: 10px;
+            font-size: 15px;
+            line-height: initial;
+            border-radius: 5px;
+            height: auto;
+        }
+        .form-label {
+            font-size: 13px;
+        }
+    }
+    .mat-dialog-content {
+        min-height: auto !important;
+        max-height: 90vh!important;
+    }
+    .add_invoice_form {
+        .otp-input {
+            width: 40px !important;
+            font-size: 18px !important;
+            height: 40px !important;
+        }
+    }
+  
+    .time-slot mat-tab-group mat-tab-header {
+        height: auto;
+    }
+
+
+    .cdk-overlay-pane .loc-auto.mat-autocomplete-panel .mat-option span {
+        font-size: 14px !important;
+    }
+
+
+
+
+
+
+    .product-info-cart div p {
+        font-size: 15px;
+        padding: 0;
+        margin: 10px 0;
+        line-height: inherit !important;
+    }
+    .select-servie input.mat-input-element {
+        font-size: 16px;
+    }
+    .navbar-toggler {
+        display: block !important;
+    }
+    .mobile_none {
+        display: none !important;
+    }
+    .hero-header {
+        padding-top: 60px;
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn span {
+        font-size: 12px;
+    }
+    .select-servie {
+        width: 25%;
+    }
+    .reviews .reviews-card .navs {
+        font-size: 20px;
+        height: 40px;
+        width: 40px;
+    }
+    .reviews .reviews-card .navs.next {
+        left: -50px;
+        top: 67px;
+    }
+    .reviews .reviews-card .navs.previous {
+        right: -50px;
+        top: 67px;
+    }
+    .select-servie .dropdown-list li {
+        padding: 8px 12px !important;
+        font-size: 14px;
+    }
+    .select-servie ng-multiselect-dropdown .multiselect-dropdown .dropdown-list .filter-textbox input {
+        font-size: 14px;
+    }
+    /* Login_modal */
+    .login-modal {
+        width: 320px !important;
+        max-width: 320px !important;
+    }
+    .mat-dialog-container {
+        width: 320px !important;
+    }
+    .login-modal .mat-dialog-content {
+        padding: 0 !important;
+        width: 320px;
+        margin: 0;
+    }
+    .sign_up .add_invoice_form .mat_form_filed .mat_input {
+        padding: 10px !important;
+        font-size: 16px !important;
+        border-radius: 4px;
+        width: 90%;
+        margin: 20px 0 0;
+    }
+    .ng-star-inserted {
+        font-size: 12px;
+    }
+    .add_invoice_form .mat-form-field-label {
+        left: 11px!important;
+        top: 40px!important;
+    }
+    .sign_up .add_invoice_form .mat_label {
+        font-size: 14px !important;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button .mat-icon,
+    .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button .mat-icon {
+        font-size: 20px !important;
+        top: -19px !important;
+        position: relative !important;
+        right: 29px !important;
+    }
+    .steper mat-stepper .mat-step-header {
+        left: 16px;
+        position: relative;
+        width: 100%;
+    }
+    .steper .mat-step-header .mat-step-icon-selected,
+    .steper .mat-step-header .mat-step-icon-state-done,
+    .steper .mat-step-header .mat-step-icon-state-edit {
+        width: 30px;
+        height: 30px;
+    }
+    .steper mat-stepper .mat-step-header h1,
+    .steper mat-stepper .mat-step-header .h1 {
+        font-size: 17px;
+    }
+    .steper .mat-stepper-vertical-line::before {
+        border-left-width: 2px;
+    }
+    .steper .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding: 0 !important;
+    }
+    .progress_bar circle-progress {
+        height: 80px;
+    }
+    .lawyers_invoice,
+    .lawyers-dashboard,
+    .enquiries,
+    .Add_Invoice {
+        min-height: auto;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown {
+        width: 100%;
+        margin: 6px 0;
+        height: initial;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn span {
+        font-size: 14px;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn {
+        height: inherit;
+        padding: 7px 8px !important;
+        border-radius: 4px !important;
+    }
+    .search-bar .dropdown-list li {
+        font-size: 12px;
+        padding: 7px;
+    }
+    dropdown-list .filter-textbox input {
+        border: 0;
+        width: 100%;
+        font-size: 12px;
+        padding: 5px !important;
+    }
+    .lawyers_tabs .mat-tab-label {
+        font-size: 20px !important;
+    }
+    .time-slot mat-tab-group mat-tab-header .mat-tab-header-pagination-chevron {
+        border-width: 2px 2px 0 0;
+        height: 7px;
+        width: 7px;
+    }
+    .dropdown-toggle::after {
+        border-bottom: 2px solid !important;
+        border-right: 2px solid !important;
+        width: 5px;
+        height: 5px;
+        margin-left: 10px !important;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+        border-bottom: 2px solid !important;
+        border-right: 2px solid !important;
+        width: 7px;
+        height: 7px;
+        margin-left: 10px !important;
+        top: 0px !important;
+        right: 7px !important;
+    }
+    .search-bar ng-multiselect-dropdown .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
+        top: 9px !important;
+        right: 10px !important;
+    }
+    .time-slot mat-tab-group mat-tab-header {
+        height: auto;
+        padding: 4px 0;
+    }
+    .link-modal.cdk-overlay-pane .mat-dialog-container {
+        width: 500px !important;
+    }
+    .text-card div p {
+        margin: 15px 0;
+        font-size: 16px;
+        line-height: inherit!important;
+    }
+    .product-info-cart div p {
+        font-size: 15px;
+        padding: 0;
+        margin: 10px 0;
+        line-height: inherit !important;
+    }
+}
+
+.cdk-overlay-pane {
+    .loc-auto.mat-autocomplete-panel {
+        .mat-option {
+            span {
+                font-size: 1.1vw;
+                color: #000 !important;
+            }
+        }
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.case-about {
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+        background: #e86d1f !important;
+    }
+}
+
+.mat_form_filed {
+    .mat-icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: -2vw;
+    }
+}
+
+.interval-div {
+    .mat-form-field-infix {
+        border-top: 0 !important;
+    }
+}
+
+.radio_btn {
+    .mat-radio-button {
+        margin-left: 1vw;
+    }
+}
+
+.site-navigation.is-open {
+    display: block !important;
+}
+.mat-tab-group.mat-primary .mat-ink-bar{
+    background-color: #0b0a32 !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar{
+    background-color: rgb(11 11 49 / 55%) !important;
+}
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #0b0b31 !important;
+}
+
+.usersignup-dialog{
+    width:25vw;
+    mat-dialog-container{
+        width: auto !important;
+        padding: 0 1vw 1vw !important;
+    }
+}
+
+
+.link-modal.cdk-overlay-pane .add_new_topic .dialog_content .add_invoice_form_close .mat_form_filed .mat_input{
+    width: 92%;
+    padding: 0.8vw;
+}
+.link-modal.cdk-overlay-pane .add_new_topic .dialog_content .add_invoice_form_close .mat_form_filed .mat_input_1{
+width: 100% !important;
+}
+
+.link-modal.cdk-overlay-pane .add_new_topic .dialog_content .add_invoice_form_close .mat-icon-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.link-modal.cdk-overlay-pane .add_new_topic .dialog_content .add_invoice_form_close .mat_form_filed{
+    margin: 0;
+}
+.link-modal.cdk-overlay-pane .add_new_topic .dialog_content .add_invoice_form_close .mat_label{
+    margin: 0;
+    font-size: 0.9vw;
+}
+.link-modal.cdk-overlay-pane .add_new_topic .dialog_content .add_invoice_form_close .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+    padding: 0;
+}
+.check-box-class{
+    section.example-section {
+        margin-top: 3vw !important;
+    }
+}

@@ -1,0 +1,207 @@
+<app-sub-nav></app-sub-nav>
+
+<div app-theme>
+
+<div class="contact-header">
+  <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-md-9">
+          <div class="wel-jus-law">
+              <h2>Contact Us</h2>
+              <p>Connect with our AI-powered legal experts.</p>
+              <h3>   <a routerLink="/home"> Home</a> <i class="bi bi-arrow-right"></i> <span class="about-span">Contact Us</span></h3>
+              
+          </div>
+         </div>
+         <div class="col-md-3">
+         
+         </div>
+      </div>
+  </div> 
+</div>
+
+<div class="more-que">
+  <div class="container">
+      <div class="row more-que-row justify-content-center">
+           <div class="col-md-6">
+          <div class="jus-law-address">
+             <h2>
+              Further Inquiries?,<br> Reach Out to Us.
+             </h2>
+
+             <div *ngIf="country == 'India' "> 
+             <div class="address-div">
+              <h3>
+                  <i class="bi bi-geo-alt-fill"></i>  <span> Location</span>
+               </h3>
+               <p (click)="goJustLawAddress()">
+                3rd floor, Sreshta Marvel,Sy.No.136,<br> Kondapur Main Road, Gachibowli,<br> Hyderabad - 500032
+             </div>
+             <!-- <div class="address-div mt-4">
+              <h3>
+                  <i class="bi bi-telephone-fill"></i>  <span> Phone</span>
+               </h3>
+               <p>
+                <a href="tel:9142846846">+91-9142846846</a>
+               </p>
+              
+             </div> -->
+             <div class="address-div mt-4">
+              <h3>
+                  <i class="bi bi-envelope-fill"></i>  <span> Mail</span>
+               </h3>
+               <p (click)="mailtoJustLaw()">
+                support@justdiallaw.com
+               </p>
+              
+             </div>
+            </div>
+
+            <div *ngIf="country == 'United States' "> 
+             <div class="address-div">
+              <h3>
+                  <i class="bi bi-geo-alt-fill"></i>  <span> Location</span>
+               </h3>
+               <p  (click)="goJustLawAddressUsa()">77 Milltown road #C2, East Brunswick,<br> NJ 08816</p>
+             </div>
+             <!-- <div class="address-div mt-4">
+              <h3>
+                  <i class="bi bi-telephone-fill"></i>  <span> Phone</span>
+               </h3>
+              
+               <p>
+                <a href="tel:+17327435279">+1 732-743-5279</a>
+              </p>
+             </div> -->
+             <div class="address-div mt-4">
+              <h3>
+                  <i class="bi bi-envelope-fill"></i>  <span> Mail</span>
+               </h3>
+              
+               <p (click)="mailtoJustLawUsa()">
+                Support@justdiallaw.com
+             </p>
+             </div>
+</div>
+
+<div *ngIf="!country"> 
+  <div class="address-div">
+   <h3>
+       <i class="bi bi-geo-alt-fill"></i>  <span> Location</span>
+    </h3>
+    <p  (click)="goJustLawAddressUsa()">77 Milltown road #C2, East Brunswick,<br> NJ 08816</p>
+  </div>
+  <!-- <div class="address-div mt-4">
+   <h3>
+       <i class="bi bi-telephone-fill"></i>  <span> Phone</span>
+    </h3>
+   
+    <p>
+     <a href="tel:+17327435279">+1 732-743-5279</a>
+   </p>
+  </div> -->
+  <div class="address-div mt-4">
+   <h3>
+       <i class="bi bi-envelope-fill"></i>  <span> Mail</span>
+    </h3>
+   
+    <p (click)="mailtoJustLawUsa()">
+     Support@justdiallaw.com
+  </p>
+  </div>
+</div>
+
+          </div>
+           </div>
+
+           <div class="col-md-6" id="contact-us-form">
+           <div class="send-form">
+             <h2>Get In Touch</h2>
+
+             <div class="footer_nav">
+              <form class="row"  [formGroup]="readyToLaunch"  #myform="ngForm" >
+                
+                  <div class="col-md-6 pe-md-0">
+                      <label class="mat_label">First Name<span>*</span></label>
+                      <input class="form-control" formControlName="first_name" type="text" (keypress)="keyPressAlphaNumeric($event)" placeholder="Enter First Name*">
+                     <h6>
+                      <span *ngIf="readyToLaunch.controls['first_name'].hasError('required') && myform.submitted">First Name is Required</span>
+                    </h6>
+                  </div>
+                  <div class="col-md-6 pe-md-0">
+                      <label class="mat_label">Last Name<span>*</span></label>
+                      <input class="form-control" formControlName="last_name" type="text" placeholder="Enter Last Name*">
+                     <h6>
+                      <span *ngIf="readyToLaunch.controls['last_name'].hasError('required') && myform.submitted">Last Name is Required</span>
+                    </h6>
+                  </div>
+                 
+                  <div class="col-md-6 pe-md-0">
+                      <label class="mat_label">Email<span>*</span></label>
+                      <input class="form-control" formControlName="email" type="email" placeholder="Enter Email*">
+                     <h6>
+                      <span *ngIf="readyToLaunch.controls['email'].hasError('required') && myform.submitted">Email Id is Required</span>
+                    </h6>
+                  </div>
+                 
+                  <div class="col-md-6 pe-md-0">
+                      <label class="mat_label">Phone Number<span>*</span></label>
+                      <input class="form-control" formControlName="phone_no" type="text" placeholder="Enter Phone Number*">
+                     <h6>
+                      <span *ngIf="readyToLaunch.controls['phone_no'].hasError('required') && myform.submitted">Mobile No is Required</span>
+                    </h6>
+                    <h6>
+                      <span
+                          *ngIf="readyToLaunch.controls['phone_no'].hasError('pattern') && myform.submitted">Mobile
+                          number is not 10 digit </span>
+                  </h6>
+                  </div>
+                 
+                  <div class="col-md-12 pe-md-0">
+                      <label class="mat_label">Message<span>*</span></label>
+                     <textarea class="form-control" formControlName="message" cols="10" rows="5" placeholder="Type Message!"></textarea>
+                     <!-- <div *ngIf="readyToLaunch.controls['message'].invalid && (readyToLaunch.controls['message'].touched)" class="alert alert-danger">
+                      <div *ngIf="readyToLaunch.controls['message'].errors">
+                        Message Requried
+                      </div>
+                   </div> -->
+                   <h6>
+                    <span *ngIf="readyToLaunch.controls['message'].hasError('required') && myform.submitted">Message is Required</span>
+                  </h6>
+                    </div>
+
+                  <button mat-button (click)="getInTouch()" >Send Message</button>
+
+             </form>
+           
+          </div>
+
+
+           </div>
+           </div>
+      </div>
+  </div>
+</div>
+<!-- <div style="width: 100%"><iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=3rd%20Floor,%20Plot%20No.%20658,%20Ayyappa%20Society,%20Madhapur,%20Telangana%20500081+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html"></a></iframe></div> -->
+<div class="mapouter"><div class="gmap_canvas">
+ 
+  <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.1333863936356!2d78.36391419325365!3d17.446941105620215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb916078eadd43%3A0x745d7d7bb692315d!2sSreeMedhas%20Software%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1692430957754!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <a href="https://2yu.co">
+</a> -->
+ <div *ngIf="country == 'United States' ">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.552921305661!2d-74.3984747!3d40.4408976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3cf5c0d7b33eb%3A0xa1f3fd0e8a21fb90!2s77%20Milltown%20Rd%20%23%20C2%2C%20East%20Brunswick%2C%20NJ%2008816%2C%20USA!5e0!3m2!1sen!2sin!4v1694169091392!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ <div *ngIf="country == 'India'">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7612.446240309199!2d78.3539915!3d17.4490318!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93d96eadf737%3A0x24a4224282467401!2sMedhas%20Law!5e0!3m2!1sen!2sin!4v1694005166815!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div *ngIf="!country">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.552921305661!2d-74.3984747!3d40.4408976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3cf5c0d7b33eb%3A0xa1f3fd0e8a21fb90!2s77%20Milltown%20Rd%20%23%20C2%2C%20East%20Brunswick%2C%20NJ%2008816%2C%20USA!5e0!3m2!1sen!2sin!4v1694169091392!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+
+</div >
+</div>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,116 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/profile'"><a>Profile</a></li>
+                        <li class="breadcrumb-item active"><a>Bank Details</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <div class="add_new_topic">
+                    <div class="row m-0">
+                        <div class="col-md-12 p-0">
+                            <div mat-dialog-title class="dialog_title">
+                                <h1>Bank Details</h1>
+                            </div>
+                            <div mat-dialog-content class="dialog_content">
+                                <form [formGroup]="bankDetails" #myform="ngForm" class="add_invoice_form">
+                                    <div class="row">
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">Account Holder<span>*</span></label>
+                                            <mat-form-field class="mat_form_filed">
+                                                <input matInput type="text" class="mat_input"
+                                                    formControlName="account_holder_name">
+                                            </mat-form-field>
+                                            <h6>
+                                                <span
+                                                    *ngIf="bankDetails.controls['account_holder_name'].hasError('required') && myform.submitted">Account Holder is Required</span>
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">Bank Name<span>*</span></label>
+                                            <mat-form-field class="mat_form_filed">
+                                                <input matInput type="text" class="mat_input"
+                                                    formControlName="bank_name">
+                                            </mat-form-field>
+                                            <h6>
+                                                <span
+                                                    *ngIf="bankDetails.controls['bank_name'].hasError('required') && myform.submitted">Bank Name is Required</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">Account Number<span>*</span></label>
+                                            <mat-form-field class="mat_form_filed">
+                                                <input matInput type="text" class="mat_input"
+                                                    formControlName="account_number">
+                                            </mat-form-field>
+                                            <h6>
+                                                <span
+                                                    *ngIf="bankDetails.controls['account_number'].hasError('required') && myform.submitted">Account Number is Required</span>
+                                            </h6>
+                                        </div>
+                                      
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">IFSC Code<span>*</span></label>
+                                            <mat-form-field class="mat_form_filed">
+                                                <input matInput type="text" class="mat_input"
+                                                    formControlName="ifsc_code">
+                                            </mat-form-field>
+                                            <h6>
+                                                <span
+                                                    *ngIf="bankDetails.controls['ifsc_code'].hasError('required') && myform.submitted">IFSC Code is Required</span>
+                                            </h6>
+                                        </div>
+
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">Pan Number<span>*</span></label>
+                                            <mat-form-field class="mat_form_filed">
+                                                <input matInput type="text" class="mat_input"
+                                                    formControlName="pan_number">
+                                            </mat-form-field>
+                                            <h6>
+                                                <span
+                                                    *ngIf="bankDetails.controls['pan_number'].hasError('required') && myform.submitted">Pan Number is Required</span>
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-6 p-0 ">
+                                            <div class="check-box-class">
+                                                <section class="example-section ">
+                                                    <mat-checkbox formControlName="primary" class="example-margin"> Set Primary Details </mat-checkbox>
+                                                  </section>
+                                            </div>
+                                           
+                                        </div>
+                                      
+                                       
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="d-flex justify-content-between">
+                                                    <button mat-button (click)="save()"
+                                                        class="sub_btn">Update</button>
+                                                
+                                                    <button mat-button (click)="cancelBtn()" class="cancel_btn">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

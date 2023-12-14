@@ -1,0 +1,95 @@
+<div class="Add_Invoice" >
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>View Article</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between">
+                <div class="invoice_heading">
+                    <h1>Articles</h1>
+                </div>
+                <form action="" class="add_invoice_form add_invoice_form1">
+                    <!-- <div class="row">
+                        <div class="col-md-8"> -->
+                            <div class="add-artical-btn" [routerLink]="'/lawyer-jdl/view-artical/add-article'">
+                                <button mat-button class="artical-btn">
+                                    Add New Article
+                                </button>
+                            </div>
+
+                            <!-- <mat-form-field class="mat_form_filed">
+                                <button mat-button><i class="bi bi-search"></i> </button>
+                                <mat-label class="mat_label">Search</mat-label>
+                                <input matInput type="text" class="mat_input" (keyup)="applyFilter($event)" #input>
+                            </mat-form-field> -->
+                        <!-- </div>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <p *ngIf="articalList.length == 0">Currently You Don't Have Articles</p>
+            <div class="transactions_tables" *ngIf="articalList.length > 0">
+
+                <div class="table-responsive">
+                    <table mat-table [dataSource]="dataSource" class="  table_width">
+                        <!-- <ng-container matColumnDef="lawyer">
+                        <th mat-header-cell *matHeaderCellDef>  Lawyer Name </th>
+                        <td mat-cell *matCellDef="let element "> {{element.created_by?.username.split('-')[0]}}
+                        </td>
+                    </ng-container> -->
+                        <ng-container matColumnDef="titel">
+                            <th mat-header-cell *matHeaderCellDef>Article Title</th>
+                            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="created_date">
+                            <th mat-header-cell *matHeaderCellDef> Created Date</th>
+                            <td mat-cell *matCellDef="let element"> {{element.created_on | date:'dd MMM,yyy'}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="category_name">
+                            <th mat-header-cell *matHeaderCellDef>Category</th>
+                            <td mat-cell *matCellDef="let element"> {{element.category.category_name}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="status">
+                            <th mat-header-cell *matHeaderCellDef> Status</th>
+                            <td mat-cell *matCellDef="let element">
+                                <ng-container *ngIf="element.status === false">
+                                    Wating for Accept
+                                </ng-container>
+                                <ng-container *ngIf="element.status === true ">
+                                    Accepted
+                                </ng-container>
+
+                            </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="action">
+                            <th mat-header-cell *matHeaderCellDef>Action</th>
+                            <td mat-cell *matCellDef="let element"><button mat-button (click)="editArticle(element.id)" ><i class="bi bi-pencil-square"></i></button></td>
+                        </ng-container>
+
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header_bg"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+
+
+                <mat-paginator [length]="articalList.length" [pageSize]="5"
+                    [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+            </div>
+        </div>
+    </div>
+</div>
+

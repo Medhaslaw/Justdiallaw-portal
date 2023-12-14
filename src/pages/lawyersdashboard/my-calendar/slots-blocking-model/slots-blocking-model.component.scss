@@ -1,0 +1,394 @@
+.slot_card{
+    padding: 2vw 1vw;
+}
+.mat_card_invoice {
+    padding: 1vw 0 0;
+    // margin-top: 1vw;
+
+    .add_invoice_form {
+        .mat_label {
+            color: #707074;
+            font-size: 1.1vw;
+            padding: 0;
+            margin: 0 0 0.5vw;
+            font-weight: 500;
+
+            span {
+                color: red;
+            }
+        }
+
+        .mat-icon-button{
+            margin: 0 1vw;
+        }
+        .mat_form_filed {
+            width: 100% !important;
+            // margin-bottom: 2vw;
+
+            .mat_input {
+                border: 0.1vw solid #e3e3e3;
+                padding: 1.1vw;
+                font-size: 0.9VW;
+                border-radius: 0.2VW;
+                background-color: #f9f9f9;
+                width: 24vw;
+            }
+
+            .mat_input1 {
+                width: 33.5vw;
+            }
+
+            .time_picker {
+                position: absolute;
+                right: 0;
+                top: 0;
+               
+            }
+        }
+
+        .mat_label_1 {
+            color: #707074;
+            font-size: 1vw;
+            padding: 0;
+            margin: 0 0 0.5vw;
+            font-weight: 500;
+            display: block;
+
+            span {
+                color: red;
+            }
+        }
+
+    }
+
+    .sel-btn {
+        text-align: center;
+
+        .sub_btn {
+            font-size: 1.1vw;
+            font-weight: 500;
+            color: #fff;
+            padding: 1.2vw 5vw;
+            background-color: #e86d1f;
+            border: inherit;
+            // margin-top: 1vw;
+            border-radius: 5vw;
+        }
+    }
+}
+
+.schedule-slot {
+    transform: none;
+    overflow-x: hidden;
+    padding: 1vw;
+
+    p {
+        font-size: 1vw;
+        padding: 0;
+        margin: 0 0 1vw;
+    }
+
+    .slot-btn {
+        margin: 0.5vw 0;
+
+        button {
+            background-color: #abc2c5;
+            border: inherit;
+            font-size: 0.9vw;
+            font-weight: 600;
+            padding: 0.9vw 0;
+            width: 100%;
+            border-radius: 0.5vw;
+            // &:hover{
+            //     background-color: #01204e;
+            //     color: #fff;
+            // }
+        }
+    }
+
+    .boocked {
+        h3{
+            font-size: 1vw;
+    font-weight: 500;
+        }
+        p {
+
+            width: 1vw;
+            height: 1vw;
+            background-color: #07621bdd;
+            margin-left: 0.5vw;
+        }
+
+    }
+    .available {
+        h3{
+            font-size: 1vw;
+    font-weight: 500;
+        }
+        p {
+
+            width: 1vw;
+            height: 1vw;
+            background-color: #abc2c5;
+            margin-left: 0.5vw;
+        }
+
+    }
+    .blooked {
+        h3{
+            font-size: 1vw;
+    font-weight: 500;
+        }
+        p {
+
+            width: 1vw;
+            height: 1vw;
+            background-color: #620807dd;
+            margin-left: 0.5vw;
+        }
+
+    }
+    .proceed-to-block{
+        text-align: center;
+        button{
+            font-size: 1.1vw;
+            font-weight: 500;
+            color: #fff;
+            padding: 0.8vw 1.5vw;
+            background-color: #e86d1f;
+            border: inherit;
+            border-radius: 5vw;
+        }
+    }
+}
+
+.isClassActive {
+    button {
+        background-color: #07621bdd !important;
+        color: #fff;
+    }
+    // color: #fff;
+    // background-color: #014e16 
+}
+
+.isActive{
+    background-color: #620807dd!important;
+    color: #fff;
+}
+
+.activeClass{
+    background-color: #620807dd!important;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.clip_patharea {
+    height: auto;
+
+    h3{
+        text-align: end;
+        margin: 0 1vw;
+        font-size: 1.5vw;
+        color: red;
+        position: absolute;
+        right: -1vw;
+        top: -1.5vw;    
+    }
+
+    h1 {
+        text-align: center;
+        color: #223871;
+        font-size: 1.5vw;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 575.98px){
+    .slot_card{
+        padding: 15px;
+    }
+    .clip_patharea{
+        h1{
+            font-size: 20px;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        h3{
+            font-size: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .mat_card_invoice{
+        .sel-btn{
+            .sub_btn{
+                font-size: 15px;
+                padding: 12px 30px;
+                border-radius: 50px;
+            }
+        }
+        .add_invoice_form{
+            .mat_label{
+                font-size: 15px;
+                padding: 0;
+                margin: 0 0 ;
+            }
+            .mat_form_filed{
+                .mat_input{
+                    border: 1px solid #e3e3e3;
+                    padding: 10px;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    width: 91%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+    .slot_card{
+        padding: 15px;
+    }
+    .clip_patharea{
+        h1{
+            font-size: 20px;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        h3{
+            font-size: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .mat_card_invoice{
+        .sel-btn{
+            .sub_btn{
+                font-size: 15px;
+                padding: 12px 30px;
+                border-radius: 50px;
+            }
+        }
+        .add_invoice_form{
+            .mat_label{
+                font-size: 15px;
+                padding: 0;
+                margin: 0 0 ;
+            }
+            .mat_form_filed{
+                .mat_input{
+                    border: 1px solid #e3e3e3;
+                    padding: 10px;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    width: 91%;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .slot_card{
+        padding: 15px;
+    }
+    .clip_patharea{
+        h1{
+            font-size: 20px;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        h3{
+            font-size: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .mat_card_invoice{
+        .sel-btn{
+            .sub_btn{
+                font-size: 15px;
+                padding: 12px 30px;
+                border-radius: 50px;
+            }
+        }
+        .add_invoice_form{
+            .mat_label{
+                font-size: 15px;
+                padding: 0;
+                margin: 0 0 ;
+            }
+            .mat_form_filed{
+                .mat_input{
+                    border: 1px solid #e3e3e3;
+                    padding: 10px;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    width: 91%;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+    
+    .slot_card{
+        padding: 15px;
+    }
+    .clip_patharea{
+        h1{
+            font-size: 20px;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        h3{
+            font-size: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .mat_card_invoice{
+        .sel-btn{
+            .sub_btn{
+                font-size: 15px;
+                padding: 12px 30px;
+                border-radius: 50px;
+            }
+        }
+        .add_invoice_form{
+            .mat_label{
+                font-size: 15px;
+                padding: 0;
+                margin: 0 0 ;
+            }
+            .mat_form_filed{
+                .mat_input{
+                    border: 1px solid #e3e3e3;
+                    padding: 10px;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    width: 91%;
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,665 @@
+.Add_Invoice {
+    padding: 5.5vw 2vw 3vw 2vw;
+
+    .pagination-header {
+        nav {
+            .breadcrumb {
+                margin: 0 0 1vw;
+                font-family: 'Manrope';
+                font-weight: 500;
+
+                li {
+                    font-size: .75vw;
+                    color: #414146;
+                    font-weight: 500;
+                    padding-left: .3vw;
+
+                    a {
+                        color: #414146;
+                        font-size: .75vw;
+                        font-weight: 400;
+                    }
+                }
+
+                .breadcrumb-item+.breadcrumb-item::before {
+                    padding-right: .3vw;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    .invoice_heading {
+        h1 {
+            font-size: 1.2vw;
+            font-weight: 800;
+            color: #000;
+            padding: 0;
+            margin: 0.8vw 0;
+            text-transform: uppercase;
+            line-height: inherit !important;
+        }
+    }
+
+    .mat_form_filed {
+        width: 100% !important;
+        margin: 0 0vw;
+        position: relative;
+
+        button {
+            position: absolute;
+            top: 0.9vw;
+            left: 1vw;
+            border: inherit;
+            color: #e86d1f;
+            font-size: 1.2vw;
+            background-color: inherit;
+        }
+
+        .mat_input {
+            border-bottom: 0.1vw solid #8d8c8c;
+            padding: 0.8vw 0.8vw 0.8vw 2vw;
+            font-size: 0.9VW;
+            border-radius: inherit;
+            background-color: #f9f9f9;
+        }
+
+    }
+
+    .table_width {
+        width: 100%;
+        padding: 0.5vw;
+        margin-top: 1vw;
+
+        .mat-row:nth-child(even) {
+            background-color: #f5f8fd;
+        }
+
+        th {
+            font-size: 1vw;
+            padding: 1vw;
+            margin: 0;
+            color: #fff;
+        }
+
+        .header_bg {
+            background-color:#0b0b31;
+        }
+
+        td {
+            font-size: 0.9vw;
+            font-weight: 400;
+            color: #333437;
+            padding: 1vw;
+            margin: 0;
+            border: inherit;
+
+            i.bi-eye-fill {
+                color: #213870;
+                font-size: 1.2vw;
+            }
+
+            span {
+                color: #e86d1f;
+                cursor: pointer;
+            }
+
+            button {
+                border: inherit;
+                background-color: #e7eefe;
+                padding: 0.5vw;
+                border-radius: 0.3vw;
+
+                i {
+                    color: #213870;
+                    margin-left: 0.5vw;
+                    font-size: 1vw;
+                }
+            }
+
+            .review_btn {
+                background-color: inherit;
+                font-size: 1.2vw;
+                padding: 0;
+                margin: 0;
+                border: inherit;
+            }
+        }
+    }
+
+    .mat_card_invoice {
+        padding: 2vw;
+        margin-top: 1vw;
+
+        .add_invoice_form {
+            .form_alert {
+                margin-bottom: 2vw;
+
+                .mat_label {
+                    color: #707074;
+                    font-size: 1.1vw;
+                    padding: 0;
+                    margin: 0 0 0.5vw;
+                    font-weight: 500;
+
+                    span {
+                        color: red;
+                    }
+                }
+
+                .mat_form_filed {
+                    width: 100% !important;
+                    margin-bottom: 0.3vw;
+
+                    .mat_input {
+                        border: 0.1vw solid #e3e3e3;
+                        padding: 1.1vw;
+                        font-size: 0.9VW;
+                        border-radius: 0.2VW;
+                        background-color: #f9f9f9;
+                        width: 31vw;
+                    }
+
+                    .mat_input1 {
+                        width: 33.5vw;
+                    }
+
+                    .time_picker {
+                        position: absolute;
+                        right: 1vw;
+                        top: 0.7vw;
+                    }
+                }
+
+                .alert-danger {
+                    background-color: inherit;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 0.83vw;
+                    color: red;
+                    border: inherit;
+                    position: absolute;
+                }
+            }
+
+
+        }
+
+        .sub_btn {
+            font-size: 1.1vw;
+            font-weight: 500;
+            color: #fff;
+            padding: 0.7vw 3vw;
+            background-color: #e86d1f;
+            border: inherit;
+            margin-top: 1.5vw;
+            border-radius: 0.2vw;
+            height: 6vh;
+        }
+
+        .cancel_btn {
+            color: #999999;
+            font-size: 1.1vw;
+            font-weight: 500;
+            background-color: inherit;
+            border: 0.1vw solid #666;
+            margin-top: 1.5vw;
+            border-radius: 0.2vw;
+            height: 6vh;
+            padding: 0.7vw 3vw;
+        }
+
+    }
+}
+
+
+.file-upload-button {
+    border-radius: 0.2vw;
+    padding: 0vw;
+    overflow: hidden;
+    width: 8vw;
+    border: 0.1vw solid #ccc !important;
+    height: 3vw;
+    position: absolute;
+    top: 0.5vw;
+    right: 0;
+    background: #0b0b31;
+    color: #fff;
+    font-size: 0.85vw;
+    font-weight: 600;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        color: #000;
+        font-size: 1vw;
+        text-align: center;
+    }
+
+    .upload-file[type="file"] {
+
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        padding: 1.1vw !important;
+        cursor: pointer;
+    }
+
+}
+
+.file-info {
+    color: #999;
+    font-family: Lato;
+    margin-left: 0.5rem;
+}
+
+.upload-file {
+
+    padding: 0;
+    width: 100%;
+    height: 3vw;
+
+    .upload-img {
+        position: relative;
+        border-bottom: 0.1vw solid #ccc;
+        padding: 1.67vw;
+
+        p {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            bottom: 1vw;
+            font-size: 13px;
+        }
+
+        h5 {
+            margin-top: 1vw;
+            margin-left: 1vw;
+            font-size: 0.75vw;
+            font-weight: 500;
+            color: #575759;
+        }
+    }
+
+    input::placeholder {
+        font-size: 0.75vw;
+        font-weight: 500;
+    }
+
+    .upload-photo {
+        margin-left: 1vw;
+
+        h5 {
+            margin-top: 1vw;
+            margin-left: 1vw;
+            font-size: 0.75vw;
+            font-weight: 500;
+            color: #575759;
+        }
+    }
+}
+
+
+h6 {
+    color: red;
+}
+.color1 {
+    color: #e31b1b !important;
+
+}
+
+.color2 {
+    color: #179d21 !important;
+
+}
+
+.color3 {
+    color: #fd8d08 !important;
+
+}
+
+.add-artical-btn {
+    button{
+        font-size: 1.1vw;
+        font-weight: 500;
+        color: #fff;
+        padding: 1vw 2vw;
+        background-color: #e86d1f;
+        border: inherit;
+        margin-top: 0;
+        border-radius: 0.6vw;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 575.98px){
+    .Add_Invoice{
+        padding: 20px 10px !important;
+        .pagination-header{
+            margin-bottom: 20px;
+            nav{
+                .breadcrumb{
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item::before{
+                        font-size: 12px;
+                        margin: 0 2px 0 0;
+                        
+                    }
+                }
+            }
+        }
+        .add-artical-btn{
+            button{
+                font-size: 13px;
+                padding: 8px 15px;
+                margin-top: 0;
+                border-radius: 5px;
+            }
+        }
+        .invoice_heading{
+            margin-top: 0px;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .mat_card_invoice{
+            padding: 20px 5px;
+            border-radius: 10px;
+            margin: 15px 0 0;
+        }
+        .table_width{
+            th{
+                font-size: 17px;
+                padding: 10px;
+            }
+            td{
+                font-size: 15px;
+                padding: 10px;
+                button{
+                    padding: 0 14px;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .table-responsive{
+            &::-webkit-scrollbar {
+                width: 20px;
+                height: 4px;
+            }
+    
+            /* Track */
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+    
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #0b0b31;
+                border-radius: 10px;
+            }
+    
+          
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+
+    .Add_Invoice{
+        padding: 20px 10px !important;
+        .pagination-header{
+            margin-bottom: 20px;
+            nav{
+                .breadcrumb{
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item::before{
+                        font-size: 12px;
+                        margin: 0 2px 0 0;
+                        
+                    }
+                }
+            }
+        }
+        .add-artical-btn{
+            button{
+                font-size: 13px;
+                padding: 8px 15px;
+                margin-top: 0;
+                border-radius: 5px;
+            }
+        }
+        .invoice_heading{
+            margin-top: 0px;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .mat_card_invoice{
+            padding: 20px 5px;
+            border-radius: 10px;
+            margin: 15px 0 0;
+        }
+        .table_width{
+            th{
+                font-size: 17px;
+                padding: 10px;
+            }
+            td{
+                font-size: 15px;
+                padding: 10px;
+                button{
+                    padding: 0 14px;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .table-responsive{
+            &::-webkit-scrollbar {
+                width: 20px;
+                height: 4px;
+            }
+    
+            /* Track */
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+    
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #0b0b31;
+                border-radius: 10px;
+            }
+    
+          
+        }
+    }
+    
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    
+    .Add_Invoice{
+        padding: 20px 10px !important;
+        .pagination-header{
+            margin-bottom: 20px;
+            nav{
+                .breadcrumb{
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item::before{
+                        font-size: 12px;
+                        margin: 0 2px 0 0;
+                        
+                    }
+                }
+            }
+        }
+        .add-artical-btn{
+            button{
+                font-size: 13px;
+                padding: 8px 15px;
+                margin-top: 0;
+                border-radius: 5px;
+            }
+        }
+        .invoice_heading{
+            margin-top: 0px;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .mat_card_invoice{
+            padding: 20px 5px;
+            border-radius: 10px;
+            margin: 15px 0 0;
+        }
+        .table_width{
+            th{
+                font-size: 17px;
+                padding: 10px;
+            }
+            td{
+                font-size: 15px;
+                padding: 10px;
+                button{
+                    padding: 0 14px;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .table-responsive{
+            &::-webkit-scrollbar {
+                width: 20px;
+                height: 4px;
+            }
+    
+            /* Track */
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+    
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #0b0b31;
+                border-radius: 10px;
+            }
+    
+          
+        }
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+    .Add_Invoice{
+        padding: 20px 10px !important;
+        .pagination-header{
+            margin-bottom: 20px;
+            nav{
+                .breadcrumb{
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item::before{
+                        font-size: 12px;
+                        margin: 0 2px 0 0;
+                        
+                    }
+                }
+            }
+        }
+        .add-artical-btn{
+            button{
+                font-size: 13px;
+                padding: 8px 15px;
+                margin-top: 0;
+                border-radius: 5px;
+            }
+        }
+        .invoice_heading{
+            margin-top: 0px;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .mat_card_invoice{
+            padding: 20px 5px;
+            border-radius: 10px;
+            margin: 15px 0 0;
+        }
+        .table_width{
+            th{
+                font-size: 17px;
+                padding: 10px;
+            }
+            td{
+                font-size: 15px;
+                padding: 10px;
+                button{
+                    padding: 0 14px;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .table-responsive{
+            &::-webkit-scrollbar {
+                width: 20px;
+                height: 4px;
+            }
+    
+            /* Track */
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+    
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #0b0b31;
+                border-radius: 10px;
+            }
+    
+          
+        }
+    }
+
+}

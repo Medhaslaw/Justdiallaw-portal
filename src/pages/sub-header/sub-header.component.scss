@@ -1,0 +1,211 @@
+.navigation {
+    padding: 0.3rem 2rem;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+
+    .container_bigscreen{
+        border-bottom: 0.3px solid #ffffff82;
+        padding-bottom: 0.4vw !important;
+    }
+
+    .social_media {
+        i {
+            font-size: 1.1vw;
+            color: #ffffff;
+            margin: 0 0.5vw;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+    .center-div {
+        padding: 0 0 0 3vw;
+        i {
+            font-size: 1.1vw;
+            color: #f2a900;
+            margin: 0 0.6vw;
+            text-align: center;
+            cursor: pointer;
+        }
+        h6{
+            font-size: 1.1vw;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            margin: 0;
+        }
+    }
+}
+.desktop_none{
+    display: none;
+}
+
+
+
+@media (max-width: 575.98px){
+    .mobile_none{
+        display: none;
+    }
+    .desktop_none{
+        display: block;
+    }
+    .navigation{
+        background: #0b0a32;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        .container_bigscreen{
+            padding: 10px 5px !important;
+            justify-content: flex-end  !important;
+        }
+        .social_media{
+            i{
+                font-size: 15px;
+                margin: 0 8px;
+            }
+        }
+        .center-div{
+            padding: 0 8px;
+            i{
+                font-size: 15px;
+            }
+            h6{
+                font-size: 13px;
+                color: #fff;
+                text-align: center;
+                cursor: pointer;
+                padding: 0.9vw;
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    .mobile_none{
+        display: none;
+    }
+    .desktop_none{
+        display: block;
+        
+    }
+    .navigation{
+        background: #0b0a32;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        border-bottom: 0.3px solid rgba(255, 255, 255, 0.5098039216);
+        .container_bigscreen{
+            padding: 10px 5px !important;
+            justify-content: flex-end  !important;
+            border: none;
+        }
+        .social_media{
+            i{
+                font-size: 15px;
+                margin: 0 8px;
+            }
+        }
+        .center-div{
+            padding: 0 8px;
+            i{
+                font-size: 15px;
+            }
+            h6{
+                font-size: 13px;
+                color: #fff;
+                text-align: center;
+                cursor: pointer;
+                padding: 0.9vw;
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .mobile_none{
+        display: none;
+    }
+    .desktop_none{
+        display: block;
+    }
+    .navigation{
+        background: #0b0a32;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        .container_bigscreen{
+            padding: 10px 5px !important;
+            justify-content: flex-end  !important;
+        }
+        .social_media{
+            i{
+                font-size: 15px;
+                margin: 0 8px;
+            }
+        }
+        .center-div{
+            padding: 0 8px;
+            i{
+                font-size: 15px;
+            }
+            h6{
+                font-size: 13px;
+                color: #fff;
+                text-align: center;
+                cursor: pointer;
+                padding: 0.9vw;
+                margin: 0;
+            }
+        }
+    }
+    
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    
+    .desktop_none{
+        display: block !important;
+    }
+    .navigation{
+        background: #0b0a32;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        .container_bigscreen{
+            padding: 10px 5px !important;
+            justify-content: flex-end  !important;
+        }
+        .social_media{
+            i{
+                font-size: 15px;
+                margin: 0 8px;
+            }
+        }
+        .center-div{
+            padding: 0 8px;
+            i{
+                font-size: 15px;
+            }
+            h6{
+                font-size: 13px;
+                color: #fff;
+                text-align: center;
+                cursor: pointer;
+                padding: 0.9vw;
+                margin: 0;
+            }
+        }
+    }
+
+
+}
+

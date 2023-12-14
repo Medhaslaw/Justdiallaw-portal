@@ -1,0 +1,413 @@
+<div class="header" id="header">
+  <div app-theme>
+
+    <header class="menu">
+      <nav class="navbar navbar-expand-lg " aria-label="Fifth navbar example">
+        <div class="container">
+          <button class="navbar-toggler hamburger is-active menu_toggle mobile_none" type="button"
+            aria-label="Toggle navigation" (click)="openMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <!-- <span class="navbar-toggler-icon">
+              
+            </span> -->
+          </button>
+          <a href="/" class="logo">
+            <img src="assets/img/just-law-logo.svg" alt="">
+          </a>
+
+          <div *ngIf="userDetails" class="desktop_none">
+            <li class="position_right">
+              <div class="dropdown text-end">
+
+                <div *ngIf="user_Profile === null; else elseBlock ">
+                  <!-- <button mat-button class="dropdown-toggle" data-bs-display="static" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                    <img src="assets/img/avatar.webp" class="rounded-circle">
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                    <li><a mat-button (click)="Dashboard()">Dashboard</a></li> -->
+                    <!-- <li><a mat-button>Settings</a></li> -->
+                    <!-- <li><a mat-button (click)="logOut()">Sign out</a></li>
+                  </ul> -->
+
+
+                  <button mat-icon-button class="dropdown-toggle" [matMenuTriggerFor]="menu"
+                  aria-label="Example icon-button with a menu">
+                  <i class="bi bi-list"></i>
+                  <img src="assets/img/avatar.webp" class="rounded-circle">
+              </button>
+              <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="Dashboard()">
+                      Dashboard
+                  </button>
+
+                  <button (click)="logOut()" mat-menu-item>
+                      Sign out
+                  </button>
+              </mat-menu>
+                </div>
+                <ng-template #elseBlock>
+                  <!-- <button mat-button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                    <img src="{{imgUrl}}{{userDetails?.profile_pic_url}}" class="rounded-circle">
+                  </button> -->
+                  <ul class="dropdown-menu text-small dropdown-menu-end dropdown-menu-lg-start">
+                    <li><a mat-button (click)="Dashboard()">Dashboard</a></li>
+                    <!-- <li><a mat-button>Settings</a></li> -->
+                    <li><a mat-button (click)="logOut()">Sign out</a></li>
+                  </ul>
+                </ng-template>
+
+
+              </div>
+
+            </li>
+          </div>
+
+
+          <div class="d-flex flex-wrap align-items-center collapse navbar-collapse  justify-content-end "
+            id="navbarsExampleDefault1">
+
+
+
+
+            <div class="mobile_none">
+              <div class="d-flex">
+                <ul class="nav col-12 col-lg-auto navbar-nav ms-auto justify-content-center">
+                  <!-- <li><a class="nav-link" [routerLink]="['/lawyers-list']" >Find Lawyers</a></li> -->
+                  <li class="nav-item dropdown has-mega-menu" style="position:static;">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                      aria-haspopup="true" aria-expanded="false" (mouseover)="changeMenu('document')">Services</a>
+
+                    <div class="dropdown-menu megamenu">
+                      <!-- <div class="container"> -->
+                      <div class="row justify-content-center">
+                        <div class="col-md-11">
+                          <div class="megamenu-container">
+                            <div class="row">
+                              <div class="col-md-2 mega-menu-category">
+                                <ul>
+                                  <li (mouseover)="changeMenu('document')"
+                                    [ngClass]="{'active': mouseOverObj == 'document'}">
+                                    Documents</li>
+                                  <li (mouseover)="changeMenu('startup')"
+                                    [ngClass]="{'active': mouseOverObj == 'startup'}">
+                                    Startup</li>
+
+                                </ul>
+                              </div>
+                              <div class="col-md-10 sub_megamenu">
+                                <div class="row" *ngIf="mouseOverObj == 'document'">
+
+                                  <div class="col-md-4" *ngFor="let document of documentList">
+                                    <h6>{{document.document_name}}</h6>
+                                    <ul>
+                                      <li *ngFor="let subDoc of document.subDocuments" (click)="gotoDocuments(subDoc)">
+                                        <a>
+                                          {{subDoc.sub_document_name}}
+                                        </a>
+                                      </li>
+
+                                    </ul>
+                                  </div>
+
+                                </div>
+                                <div class="row" *ngIf="mouseOverObj == 'startup'">
+
+                                  <div class="col-md-4" *ngFor="let document of startupList">
+                                    <h6>{{document.document_name}}</h6>
+                                    <ul>
+                                      <li *ngFor="let subDoc of document.subDocuments" (click)="gotoStartups(subDoc)">
+                                        <a>
+                                          {{subDoc.sub_document_name}}
+                                        </a>
+                                      </li>
+
+                                    </ul>
+                                  </div>
+
+
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- </div> -->
+
+                  </li>
+                  <li><a class="nav-link" [routerLink]="'/about-us'">About Us</a></li>
+
+
+                  <li><a class="nav-link" [routerLink]="'/blog'">Blog</a></li>
+                  <li><a class="nav-link" [routerLink]="'/contact-us'">Contact Us</a></li>
+
+                  <li *ngIf="!userDetails">
+                    <button mat-button class="login_btn lawyers_border" [routerLink]="'/for-lawyers'">For
+                      Lawyers</button>
+                  </li>
+                  <li *ngIf="!userDetails">
+                    <button mat-button class="login_btn" (click)="openUserDialog()">Login</button>
+                  </li>
+
+                </ul>
+
+                <ul *ngIf="userDetails">
+                  <li>
+                    <div class="dropdown text-end">
+
+                      <div *ngIf="user_Profile === null; else elseBlock ">
+                        <!-- <button mat-button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-list"></i>
+                          <img src="assets/img/avatar.webp" class="rounded-circle">
+                        </button>
+                        <ul class="dropdown-menu text-small dropdown-menu-end dropdown-menu-lg-start">
+                          <li><a mat-button (click)="Dashboard()">Dashboard</a></li> -->
+                          <!-- <li><a mat-button>Settings</a></li> -->
+                          <!-- <li><a mat-button (click)="logOut()">Sign out</a></li>
+                        </ul> -->
+
+                        <button mat-icon-button class="dropdown-toggle" [matMenuTriggerFor]="menu"
+                        aria-label="Example icon-button with a menu">
+                        <i class="bi bi-list"></i>
+                        <img src="assets/img/avatar.webp" class="rounded-circle">
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="Dashboard()">
+                            Dashboard
+                        </button>
+
+                        <button (click)="logOut()" mat-menu-item>
+                            Sign out
+                        </button>
+                    </mat-menu>
+                      </div>
+                      <ng-template #elseBlock>
+                        <!-- <button mat-button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list"></i>
+                            <img src="{{imgUrl}}{{userDetails?.profile_pic_url}}" class="rounded-circle">
+                          </button>
+                          <ul class="dropdown-menu text-small dropdown-menu-end dropdown-menu-lg-start">
+                            <li><a mat-button (click)="Dashboard()">Dashboard</a></li>
+                            <li><a mat-button>Settings</a></li>
+                            <li><a mat-button (click)="logOut()">Sign out</a></li>
+                          </ul> -->
+                        <div class="d-flex">
+
+                          <!-- <h6 class="bell-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="bi bi-bell-fill"></i>
+                            </h6>
+                            <ul class="dropdown-menu text-small">
+                              <li>
+                                <a>
+                                <div *ngIf="message;">
+                                  <h1>{{ message.notification.title }}</h1>
+                                  <h2>{{ message.notification.body }}</h2>
+                                </div>
+                                <div *ngIf="!message;">
+                                  No Message Arrived
+                                </div>
+                              </a>
+                              </li>
+                             
+                             
+                            </ul> -->
+
+                          <button mat-button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list"></i>
+                            <img src="{{userDetails?.profile_pic_url}}" class="rounded-circle">
+                          </button>
+                          <ul class="dropdown-menu text-small">
+                            <li><a mat-button (click)="Dashboard()">Dashboard</a></li>
+                            <!-- <li><a mat-button>Settings</a></li> -->
+                            <li><a mat-button (click)="logOut()">Sign out</a></li>
+                          </ul>
+
+
+
+                        </div>
+                      </ng-template>
+
+
+                    </div>
+
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+
+
+
+
+
+          </div>
+
+          <!-- justify-content-center justify-content-lg-start -->
+
+
+          <div class="mobileMneu">
+            <div class="site-navigation" id="navbarsExampleDefault1">
+              <ul class="nav col-12 col-lg-auto ms-auto justify-content-center navbar-nav">
+                <!-- <li><a class="nav-link" [routerLink]="['/lawyers-list']" >Find Lawyers</a></li> -->
+                <li class="nav-item dropdown has-mega-menu" style="position:static;">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false" (mouseover)="changeMenu('document')">Services</a>
+
+                  <div class="dropdown-menu megamenu">
+                    <!-- <div class="container"> -->
+                    <div class="row justify-content-center">
+                      <div class="col-md-11">
+                        <div class="megamenu-container">
+                          <div class="row">
+                            <div class="col-md-2 mega-menu-category">
+                              <ul>
+                                <li (mouseover)="changeMenu('document')"
+                                  [ngClass]="{'active': mouseOverObj == 'document'}">
+                                  Documents</li>
+                                <li (mouseover)="changeMenu('startup')"
+                                  [ngClass]="{'active': mouseOverObj == 'startup'}">
+                                  Startup</li>
+
+                              </ul>
+                            </div>
+                            <div class="col-md-10 sub_megamenu">
+                              <div class="row" *ngIf="mouseOverObj == 'document'">
+
+                                <div class="col-md-4" *ngFor="let document of documentList">
+                                  <h6>{{document.document_name}}</h6>
+                                  <ul>
+                                    <li *ngFor="let subDoc of document.subDocuments" (click)="gotoDocuments(subDoc)">
+                                      <a>
+                                        {{subDoc.sub_document_name}}
+                                      </a>
+                                    </li>
+
+                                  </ul>
+                                </div>
+
+                              </div>
+                              <div class="row" *ngIf="mouseOverObj == 'startup'">
+                                <div class="col-md-4"
+                                                                    *ngFor="let document of startupList">
+                                                                    <h6>{{document.document_name}}</h6>
+                                                                    <ul>
+                                                                        <li *ngFor="let subDoc of document.subDocuments"
+                                                                            (click)="gotoStartups(subDoc)">
+                                                                            <a>
+                                                                                {{subDoc.sub_document_name}}
+                                                                            </a>
+                                                                        </li>
+
+                                                                    </ul>
+                                                                </div>
+
+                               
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- </div>
+                </div> -->
+                  <!-- </div> -->
+                  <!-- </div> -->
+
+                </li>
+                <li><a class="nav-link" [routerLink]="'/about-us'">About Us</a></li>
+
+
+                <li><a class="nav-link" [routerLink]="'/blog'">Blog</a></li>
+                <li><a class="nav-link" [routerLink]="'/contact-us'">Contact Us</a></li>
+
+                <li *ngIf="!userDetails">
+                  <button mat-button class="login_btn lawyers_border" [routerLink]="'/for-lawyers'">For Lawyers</button>
+                </li>
+                <li *ngIf="!userDetails">
+                  <button mat-button class="login_btn" (click)="openUserDialog()">Login</button>
+                </li>
+
+              </ul>
+              <div *ngIf="userDetails">
+                <li>
+                  <div class="dropdown text-end">
+
+                    <div *ngIf="user_Profile === null; else elseBlock ">
+                      <button mat-button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                        <img src="assets/img/avatar.webp" class="rounded-circle">
+                      </button>
+                      <ul class="dropdown-menu text-small">
+                        <li><a mat-button (click)="Dashboard()">Dashboard</a></li>
+                        <li><a mat-button>Settings</a></li>
+                        <li><a mat-button (click)="logOut()">Sign out</a></li>
+                      </ul>
+                    </div>
+                    <ng-template #elseBlock>
+
+                      <div class="d-flex">
+
+                        <!-- <h6 class="bell-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-bell-fill"></i>
+                  </h6>
+                  <ul class="dropdown-menu text-small">
+                    <li>
+                      <a>
+                      <div *ngIf="message;">
+                        <h1>{{ message.notification.title }}</h1>
+                        <h2>{{ message.notification.body }}</h2>
+                      </div>
+                      <div *ngIf="!message;">
+                        No Message Arrived
+                      </div>
+                    </a>
+                    </li>
+                   
+                   
+                  </ul> -->
+
+                        <button mat-button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-list"></i>
+                          <img src="{{imgUrl}}{{userDetails?.profile_pic_url}}" class="rounded-circle">
+                        </button>
+                        <ul class="dropdown-menu text-small">
+                          <li><a mat-button (click)="Dashboard()">Dashboard</a></li>
+                          <li><a mat-button>Settings</a></li>
+                          <li><a mat-button (click)="logOut()">Sign out</a></li>
+                        </ul>
+
+                      </div>
+                    </ng-template>
+
+
+                  </div>
+
+                </li>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+      </nav>
+
+    </header>
+  </div>
+
+</div>

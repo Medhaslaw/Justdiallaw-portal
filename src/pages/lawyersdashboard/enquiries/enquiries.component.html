@@ -1,0 +1,140 @@
+<div class="enquiries" >
+    <div class="row m-0">
+        <div class="col-md-8">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>Enquiries</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Enquiries</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-4" >
+            <div class="side_bar" (scroll)="onscroll()" [ngClass]="navbarfixed? 'fixed': 'nofixed'" >
+                <form   class="add_invoice_form">
+                    <div class="row m-0">
+                        <div class="col-md-10">
+                            <mat-form-field class="mat_form_filed">
+                                <mat-label class="mat_label">Search legal topics</mat-label>
+                                <input matInput type="text" class="mat_input" placeholder="Search legal topics">
+                            </mat-form-field>
+                            <button class="search_icon">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2">
+                           
+                           <button class="filter_icon"> <i class="bi bi-funnel"></i></button>
+                          
+                        </div>
+                    </div>
+                    
+                </form>
+
+                <div class="">
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab>
+                            <ng-template mat-tab-label>
+                                <div class="tabs-time">
+                                   <h5>New(216)</h5>
+                                </div>
+                            </ng-template>
+                            <div class="tab_body">
+                                <p>Last Updated 45 Mins ago</p>
+                                <div class="status_cards">
+                                    <mat-card class="card_mat" *ngFor="let case of casesArray">
+                                        <div class="card_header">
+                                            <div class="civil_bg">
+                                                <p>{{case.civil}}</p>
+                                            </div>
+                                            <div class="bg_clip">
+                                               <p>{{case.status}}</p>
+                                            </div>
+                                        </div>
+                                        <p>{{case.describtion}}</p>
+                                        <h6>{{case.name}}</h6>
+                                        <div class="calender_icon">
+                                            <p><i class="bi bi-calendar-fill"></i>{{case.scheduletime}}</p>
+                                            <p>{{case.location}}</p>
+                                            <button mat-bttton><i class="bi bi-arrow-right"></i></button>
+                                        </div>
+                                    </mat-card>
+                                </div>
+                            </div>
+                        </mat-tab>
+                        <mat-tab>
+                            <ng-template mat-tab-label>
+                                <div class="tabs-time">
+                                   <h5>Answered(0)</h5>
+                                </div>
+                            </ng-template>
+                            <div class="tab_body">
+                                <p>Last Updated 45 Mins ago</p>
+                                <div class="status_cards">
+                                    <mat-card class="card_mat" *ngFor="let case of casesAnsweres">
+                                        <div class="card_header">
+                                            <div class="civil_bg">
+                                                <p>{{case.civil}}</p>
+                                            </div>
+                                            <div class="bg_clip">
+                                               <p>{{case.status}}</p>
+                                            </div>
+                                        </div>
+                                        <p>{{case.describtion}}</p>
+                                        <h6>{{case.name}}</h6>
+                                        <div class="calender_icon">
+                                            <p><i class="bi bi-calendar-fill"></i>{{case.scheduletime}}</p>
+                                            <p>{{case.location}}</p>
+                                            <button mat-bttton><i class="bi bi-arrow-right"></i></button>
+                                        </div>
+                                    </mat-card>
+                                </div>
+                            </div>
+                        </mat-tab>
+                       
+                    </mat-tab-group>
+                </div>
+
+            
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="open_card" *ngFor ="let opencase of opendCases ">
+                <div class="row justify-content-between">
+                    <div class="col-md-6">
+                        <div class="open_card_header">
+                            <div class="card_sbtitle">
+                                <p>{{opencase.title}}</p>
+                            </div>
+                            <div class="clip_path">
+                                <p>{{opencase.status}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="social_mediaicons">
+                            <button class="icons">
+                                <i class="bi bi-currency-rupee"></i>
+                            </button>
+                            <button class="icons">
+                                <i class="bi bi-envelope"></i>
+                            </button>
+                            <button class="icons">
+                                <i class="bi bi-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <h6>{{opencase.name}}</h6>
+                <p><i class="bi bi-calendar-fill"></i> {{opencase.scheduletime}}  |  {{opencase.location}} </p>
+                <p>{{opencase.describtion}} </p>
+            </div>
+        </div>
+    </div>
+</div>

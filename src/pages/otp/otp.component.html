@@ -1,0 +1,234 @@
+
+<app-sub-nav></app-sub-nav>
+<div class="singup_landing middle">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-5">
+                <div class="signup_content middle">
+                    <h1><span>10,000 Lawyers</span> are helping
+                        15 Lac users every month
+                        at <span>Just Dial Law</span></h1>
+                     <p>Join India's leading lawyer network & grow  your practice</p>
+                     
+                </div>
+             </div>
+             <div class="col-md-3">
+                 <div class="sign_up">
+                    <div class="clip_patharea middle">
+                        <h1>OTP Verification</h1>                            
+                    </div>
+                    <div class="otp_text">
+                        <h3>OTP Sent Successfully</h3>
+                        <h5>Enter your Verification code</h5>
+                    </div>
+                    <div class="otp_form">
+                        <form   class="add_invoice_form otp_form1" [formGroup]="otpVerifacationForm">
+                            <div class="col-md-12">
+                                <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:5}" ></ng-otp-input>
+                            </div>
+            
+                             
+                              <div class="row">
+                                 <div class="col-md-12">
+                                     <div class="row">
+                                         <div class="col-md-12">
+                                            <p>Didn't get the code?<a href="">Resend OTP</a></p>
+                                             <button mat-button type="submit" class="sub_btn" (clicl)="save()">Submit</button>
+                                             
+                                         </div>
+                                         
+                                     </div>
+                                 </div>                        
+                             </div>
+                         </form>
+                    </div>
+                     
+                 </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+<div class="build">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="build_icon">
+                            <img src="../../assets/img/sigin_icon1.png" alt="">
+                        </div>
+                        <div class="build_text">
+                            <h1>Build Online Brand</h1>
+                            <p>Showcase your expertise,
+                                capabilities & achievements in the legal field.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="build_icon">
+                            <img src="../../assets/img/sigin_icon2.png" alt="">
+                        </div>
+                        <div class="build_text">
+                            <h1>Reach More Clients</h1>
+                            <p>Increase your business
+                                prospects by getting in front of new potential clients.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="build_icon">
+                            <img src="../../assets/img/sigin_icon3.png" alt="">
+                        </div>
+                        <div class="build_text">
+                            <h1>Grow Your Reputation</h1>
+                            <p>Answer legal questions
+                                and stand out among
+                                the rest.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="endorse">
+    <div class="container-fliud">
+        <div class="row m-0">
+            <div class="col-md-6 p-0">
+                <div class="endorse_bg">
+                    <h1>We do not endorse any lawyer,
+                        nor do we allow any sort of marketing
+                        advertisement activity on our platform.
+                    </h1>
+                    <li class="d-flex">
+                        <div class="icon">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <span><h3>India's preferred lawyer platform</h3>
+                        <p>Over 1000 clients get legal assistance every day at Just Dial Law. Join India's leading lawyer platform - with 50000+ visitors and 1000+ legal inquiries each day, we take pride in being the preferred
+                            destination for all legal support in India.</p></span>
+                    </li>
+
+                    <li class="d-flex">
+                        <div class="icon">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <span><h3>Be where the best are</h3>
+                        <p>Rub shoulders with the best in the legal sector in India. As we are very selective in onboarding top rated lawyers in the
+                            country at Just Dial Law, joining the platform gives you immediate access to network with the best lawyers in India.</p></span>
+                    </li>
+                    
+                </div>
+            </div>
+            <div class="col-md-6 p-0">
+                <div class="endorse_img">
+                    <img src="../../assets/img/signup_img2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="faqs">
+   <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="faq_title">
+                <h1>Frequently Asked Questions</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <mat-accordion>
+                <mat-expansion-panel class="expansion_panel">
+                  <mat-expansion-panel-header class="panel_header">
+                    <mat-panel-title>
+                     <h1>What is Just Dial Law?</h1>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div class="panal_content">
+                    <p>Yes, you can request a consultation fee and any legal fee you deem fit and necessary if they are in agreement with you for the fee.</p>
+                  </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="expansion_panel" (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="panel_header">
+                      <mat-panel-title>
+                       <h1>Is Just Dial Law a law firm?</h1>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="panal_content">
+                      <p>No, Just Dial Law is not a law firm. We are a neutral and transparent legal tech platform that connects our network of high-quality lawyers with business clients. Just Dial Law does not entertain and take up any client matter directly.</p>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="expansion_panel" (opened)="panelOpenState = true"
+                 (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="panel_header">
+                      <mat-panel-title>
+                       <h1>Can listing myself with Just Dial Law?</h1>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="panal_content">
+                      <p>Yes, you can request a consultation fee and any legal fee you deem fit and necessary if they are in agreement with you for the fee.</p>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="expansion_panel" (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="panel_header">
+                      <mat-panel-title>
+                       <h1>Why should I sign up with Just Dial Law?</h1>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="panal_content">
+                      <p>Yes, you can request a consultation fee and any legal fee you deem fit and necessary if they are in agreement with you for the fee.</p>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="expansion_panel" (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="panel_header">
+                      <mat-panel-title>
+                       <h1>Am I eligible to sign up?</h1>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="panal_content">
+                      <p>Yes, you can request a consultation fee and any legal fee you deem fit and necessary if they are in agreement with you for the fee.</p>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="expansion_panel" (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="panel_header">
+                      <mat-panel-title>
+                       <h1>Is this a lawyer referral service?</h1>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="panal_content">
+                      <p>Yes, you can request a consultation fee and any legal fee you deem fit and necessary if they are in agreement with you for the fee.</p>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="expansion_panel" (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="panel_header">
+                      <mat-panel-title>
+                       <h1>How do I sign up?</h1>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="panal_content">
+                      <p>Yes, you can request a consultation fee and any legal fee you deem fit and necessary if they are in agreement with you for the fee.</p>
+                    </div>
+                </mat-expansion-panel>                
+            </mat-accordion>
+            <div class="qust">
+                <h1>Didn't find your answer?</h1>
+                <p>Contact our Partner Support team at contact@justlaw.in or call us at <span>+91 709 658 4158</span></p>
+                <button>Sign Up Now</button>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+
+
+
+
+<app-footer></app-footer>

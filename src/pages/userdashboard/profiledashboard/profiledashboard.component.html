@@ -1,0 +1,230 @@
+<div app-theme>
+
+    <div class="profile_dashboard">
+
+        <div class="row m-0">
+            <div class="col-md-12">
+                <div class="wel_title">
+                    <h1>Welcome to just Dial law</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="enq_tabs">
+                    <div class="row m-0">
+                        <div class="col-md-3">
+
+                            <mat-card class="panal_bg_color ">
+                                <div class="d-flex">
+                                    <div class="bg_icon">
+                                        <img src="../../assets/img/enquiries-icon3.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p>Total Cases</p>
+                                        <h1>{{userCounts?.total_cases}}</h1>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-card class="panal_bg_color panal_bg_color1">
+                                <div class="d-flex">
+                                    <div class="bg_icon">
+                                        <img src="../../assets/img/enquiries-icon6.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p>Ongoing Cases</p>
+                                        <h1>{{userCounts?.ongoing_cases}}</h1>
+                                    </div>
+                                </div>
+                            </mat-card>
+
+                        </div>
+                        <div class="col-md-3">
+                            <mat-card class="panal_bg_color panal_bg_color2">
+                                <div class="d-flex">
+                                    <div class="bg_icon">
+                                        <img src="../../assets/img/enquiries-icon4.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p>Amount Paid</p>
+                                        <h1>{{userCounts?.amount_paid}}</h1>
+                                    </div>
+                                </div>
+                            </mat-card>
+
+                        </div>
+                        <div class="col-md-3">
+                            <mat-card class="panal_bg_color panal_bg_color3">
+                                <div class="d-flex">
+                                    <div class="bg_icon">
+                                        <img src="../../../assets/img/cart4.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p>Online Meetings</p>
+                                        <h1>{{userCounts?.online_meetings}}</h1>
+                                    </div>
+                                </div>
+                            </mat-card>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recent_cal_tables">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table_title">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-between">
+                                    <h1>My Cases</h1>
+
+
+                                    <button mat-button class="view_btn" [routerLink]="'/my-jdl/my-cases'">View All<i
+                                            class="bi bi-caret-right-fill"></i></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table mat-table [dataSource]="dataSource" class="  table_width">
+
+                            <!--- Note that these columns can be defined in any order.
+                                  The actual rendered columns are set as a property on the row definition" -->
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="date">
+                                <th mat-header-cell *matHeaderCellDef> Case Id </th>
+                                <td mat-cell *matCellDef="let element"> {{element.token_numbers}} </td>
+                            </ng-container>
+
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef>Lawyer Name </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.timeslot.created_by.username.split('-')[0]}} </td>
+                            </ng-container>
+
+                            <!-- Weight Column -->
+                            <ng-container matColumnDef="status">
+                                <th mat-header-cell *matHeaderCellDef> Case Details </th>
+                                <td mat-cell *matCellDef="let element"
+                                    [matTooltip]="getTooltip(element.appointment_detail)">
+                                    {{element.appointment_detail?.slice(0,15)}}...</td>
+                            </ng-container>
+
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="action">
+                                <th mat-header-cell *matHeaderCellDef> Action </th>
+                                <td mat-cell *matCellDef="let element">
+
+                                    <button class="review_btn" mat-icon-button [matMenuTriggerFor]="menu"
+                                        aria-label="Example icon-button with a menu">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="viewDetails(element)">Details
+                                        </button>
+
+                                    </mat-menu>
+
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header_bg"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row">
+
+
+                <div class="col-md-12">
+                    <div class="table_title">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-between">
+                                    <h1>My Appointments</h1>
+
+
+                                    <!-- <button mat-button class="view_btn" [routerLink]="'/my-jdl/my-appointments'">View All<i class="bi bi-caret-right-fill"></i></button> -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table mat-table [dataSource]="dataSource1" class="  table_width">
+
+                            <!--- Note that these columns can be defined in any order.
+                              The actual rendered columns are set as a property on the row definition" -->
+
+                            <!-- Position Column -->
+
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> Agenda </th>
+                                <td mat-cell *matCellDef="let element" [matTooltip]="getTooltip(element.meet_details)">
+                                    {{element.meet_details?.slice(0,12)}}... </td>
+                            </ng-container>
+
+                            <!-- Weight Column -->
+                            <ng-container matColumnDef="status">
+                                <th mat-header-cell *matHeaderCellDef> Case Id </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.token_numbers}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="link">
+                                <th mat-header-cell *matHeaderCellDef> Link</th>
+                                <td mat-cell *matCellDef="let element">
+
+                                    {{element.meet_link ? element.meet_link : 'Offline'}} </td>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="meeting_detalis">
+                                <th mat-header-cell *matHeaderCellDef> Meeting Details </th>
+                                <td mat-cell *matCellDef="let element">
+
+                                    {{element.meet_date | date: 'dd MMM, yyyy'}}-{{element.meet_time }}
+
+                                </td>
+                            </ng-container>
+
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="action">
+                                <th mat-header-cell *matHeaderCellDef> Action </th>
+                                <!-- <td mat-cell *matCellDef="let element"> {{element.action}} </td> -->
+                                <td mat-cell *matCellDef="let element">
+                                    <button *ngIf="element.meet_link" mat-button (click)="joinNow(element)">Join
+                                        Now</button>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns1" class="header_bg"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+                        </table>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,53 @@
+<div class="add_new_topic">
+    <div class="row m-0">
+        <div class="col-md-12 p-0">
+            <div mat-dialog-title class="dialog_title">
+                <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+
+                <h1>Add Comments</h1>
+              
+            </div>
+            <div mat-dialog-content class="dialog_content">
+                <form class="add_invoice_form" [formGroup]="commentsFrom"  #myform="ngForm" >
+                   
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Meeting Subject <span>*</span></label>
+                                <input type="text" class="form-control" formControlName="subject"  placeholder="Meeting Subject">
+                                <h6>
+                                    <span *ngIf="commentsFrom.controls['subject'].hasError('required') && myform.submitted">Meeting Subject  is Required</span>
+                                  </h6>
+                              </div>
+                              
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Comments <span>*</span></label>
+                                <textarea class="form-control" formControlName="comment" placeholder="Enter Comment"></textarea>
+                                <h6>
+                                    <span *ngIf="commentsFrom.controls['comment'].hasError('required') && myform.submitted">Comments  is Required</span>
+                                  </h6>
+                              </div>
+                         
+                        </div>
+                      
+                    </div>
+                 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row  justify-content-center">
+                                <div class="col-md-7">
+                                    <button mat-button (click)="addComment()" class="su_bt">Submit</button>
+                                  
+                                </div>
+                               
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

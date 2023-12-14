@@ -1,0 +1,423 @@
+<div app-theme >
+
+<div class="lawyers_invoice">
+    <div class="row m-0">
+        <div class="col-md-8">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>My Profile</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Profile</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="progress_img">
+                            <circle-progress [percent]="profilePercent" [radius]="65" [backgroundPadding]="5"
+                                [outerStrokeWidth]="7" [innerStrokeWidth]="0" [outerStrokeColor]="'#e86d1f'"
+                                [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300"
+                                [showImage]="true" [imageHeight]="100" [imageWidth]="100"
+                                [imageSrc]="userDetails.profile_pic_url ? userDetails?.profile_pic_url : '../../../assets/img/avatar.webp'">
+                            </circle-progress>
+                            <!-- <div class="profile_img">
+                                <img
+                                    [src]="userDetails?.profile_pic ? imgUrl + userDetails?.profile_pic : '../../../assets/img/avatar.webp'">
+                            </div> -->
+                            <div class="text_verified">
+                                <h5><i
+                                        [ngClass]="userDetails.approved_by_admin ? 'bi bi-patch-check-fill' : 'bi bi-info-circle' "></i>
+                                    {{userDetails.approved_by_admin ? 'Verified Profile': 'Waiting for Approval'}}</h5>
+                                <h6>Profile Completeness : <span>{{profilePercent}}%</span></h6>
+                                <p>Joined on {{userDetails?.created_on | date: 'dd MMM, yyyy'}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="profile_details">
+                            <h4>{{userDetails?.first_name}} {{userDetails?.last_name}}</h4>
+                            <p>(* Click Toggle Button To "ON" Or "OFF" For Individual Field. It Will Be Hidden From
+                                Others When They View Your Profile.*)</p>
+                            <p class="btn_togl"><i class="bi bi-telephone-fill"></i><span *ngIf="show"
+                                    id="tbname">{{userDetails?.phone_no}}</span> 
+                                    <mat-slide-toggle
+                                    [checked]="isSlideChecked" (click)="toggle()">
+                                </mat-slide-toggle></p>
+                            <p class="btn_togl"><i class="bi bi-envelope-fill"></i><span *ngIf="show1"
+                                    id="tbname">{{userDetails?.email}}</span><mat-slide-toggle
+                                    [checked]="isSlideChecked1" (click)="toggle1()"></mat-slide-toggle></p>
+                            <!-- <p class="btn_togl"><i class="bi bi-calendar2-check-fill" matTooltipPosition="below"
+                                    matTooltip="Today Availability"></i><mat-slide-toggle></mat-slide-toggle></p> -->
+                            <p class="btn_togl"><i class="bi bi-geo-alt-fill"></i><span>{{userDetails?.city_name}}</span>
+                            </p>
+                            <div class="d-flex">
+                                <button mat-button [routerLink]="'/lawyer-jdl/profile/profile_information'">View
+                                    As</button>
+                                    <div class="edit_btn desktop_none">
+                                        <button mat-button [routerLink]="'/lawyer-jdl/profile/edit_profile'"><i
+                                                class="bi bi-pencil-square"></i> Edit</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 mobile_none">
+                        <div class="edit_btn">
+                            <button mat-button [routerLink]="'/lawyer-jdl/profile/edit_profile'"><i
+                                    class="bi bi-pencil-square"></i> Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <div class="council">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-card class="mat_card_padding">
+                    <div class="mat_card_header">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-between">
+                                    <div class="header_heading middle">
+                                        <h1>Bar Council Information</h1>
+                                    </div>
+                                    <div class="edit_btn">
+                                        <button mat-button
+                                            [routerLink]="'/lawyer-jdl/profile/bar_council_information'"><i
+                                                class="bi bi-pencil-square"></i> Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <ul class="bar_council_points">
+                        <li class="d-flex">
+                            <span><i [ngClass]="barCouncilInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Your Bar Council Registration Number</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="barCouncilInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>State Bar Council</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="barCouncilInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Name Of Bar Association</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="barCouncilInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Bar Council Certificate Or ID Card</span>
+                        </li>
+                    </ul>
+                </mat-card>
+            </div>
+            <div class="col-md-6">
+                <mat-card class="mat_card_padding">
+                    <div class="mat_card_header">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-between">
+                                    <div class="header_heading middle">
+                                        <h1>Profile Information</h1>
+                                    </div>
+                                    <div class="edit_btn">
+                                        <button mat-button [routerLink]="'/lawyer-jdl/profile/profile_information'"><i
+                                                class="bi bi-pencil-square"></i> Edit</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="bar_council_points mobile_none">
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Few Lines About You</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Designation</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Number Of Cases Completed</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Practising Since</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Language Known</span>
+                                </li>
+
+                            </ul>
+                            <ul class="bar_council_points desktop_none">
+
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Few Lines About You</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Designation</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Number Of Cases Completed</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Practising Since</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Language Known</span>
+                                </li>
+
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Address</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Your Chamber Address</span>
+                                </li>
+                                <!-- <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Language Known</span>
+                                </li> -->
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Twitter</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Facebook</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mobile_none">
+                            <ul class="bar_council_points">
+
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Address</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Your Chamber Address</span>
+                                </li>
+                                <!-- <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Language Known</span>
+                                </li> -->
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Twitter</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span><i
+                                            [ngClass]="profileInfo ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                                    <span>Facebook</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="exp_cards">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="experance_card">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="exp_img">
+                                <img src="../../../assets/img/exp-icon1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="exp-text middle">
+                                <h1>Experience</h1>
+                                <button mat-button><i class="bi bi-pencil-square"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="experance_card experance_card1">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="exp_img">
+                                <img src="../../../assets/img/exp-icon2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="exp-text exp-text1 middle">
+                                <h1>Education</h1>
+                                <button mat-button><i class="bi bi-pencil-square"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="experance_card experance_card2">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="exp_img">
+                                <img src="../../../assets/img/exp-icon3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="exp-text exp-text2 middle">
+                                <h1>Achievements</h1>
+                                <button mat-button><i class="bi bi-pencil-square"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="experance_card experance_card3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="exp_img">
+                                <img src="../../../assets/img/exp-icon4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="exp-text exp-text3 middle">
+                                <h1>Achievements</h1>
+                                <button mat-button><i class="bi bi-pencil-square"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="council">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-card class="mat_card_padding">
+                    <div class="mat_card_header">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-between">
+                                    <div class="header_heading middle">
+                                        <h1>Your Charges/Fees</h1>
+                                    </div>
+                                    <div class="edit_btn"  [routerLink]="'/lawyer-jdl/profile/lawyer_fees_detailes'">
+                                        <button mat-button><i class="bi bi-pencil-square"></i> Edit</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <ul class="bar_council_points">
+                        <li class="d-flex">
+                            <span><i  [ngClass]="profileCharges ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Phone Consultation Fees</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileCharges ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Meeting Consultation Fees</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileCharges ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Email Consultation Fees</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileCharges ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Case Filing Fees</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileCharges ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Per Appearance Fees</span>
+                        </li>
+                    </ul>
+                </mat-card>
+            </div>
+            <div class="col-md-6">
+                <mat-card class="mat_card_padding">
+                    <div class="mat_card_header">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-between">
+                                    <div class="header_heading middle">
+                                        <h1>Bank Details</h1>
+                                    </div>
+                                    <div [routerLink]="'/lawyer-jdl/profile/lawyer_add_bank_details'" class="edit_btn">
+                                        <button  mat-button><i class="bi bi-pencil-square"></i> Edit</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <ul class="bar_council_points">
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileBank ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Account Number</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileBank ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Account Holder</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileBank ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>Bank Name</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileBank ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>IFSC Code</span>
+                        </li>
+                        <li class="d-flex">
+                            <span><i [ngClass]="profileBank ? 'bi bi-check-circle' : 'bi bi-info-circle'"></i></span>
+                            <span>PAN Number</span>
+                        </li>
+                    </ul>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

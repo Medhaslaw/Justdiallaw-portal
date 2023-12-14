@@ -1,0 +1,736 @@
+
+<app-sub-header></app-sub-header>
+<div class="header" id="myHeader">
+    <app-header></app-header>
+</div>
+
+
+<div app-theme>
+    <div class="hero-header">
+        <div class="container ">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-7">
+                    <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+                        <h1>Receive Comprehensive Legal Assistance for <span> All Your Requirements</span></h1>
+                        <div class="serch-lawyer">
+                            <h3>Simplify Your Search for Legal Experts with Just Dial Law</h3>
+                            <div class="input-group search-box justify-content-between mobile_none">
+                                <div class="d-flex justify-content-between" style="width:100%">
+                                    <div class="select-servie ">
+                                        <mat-form-field class="mat_form_filed">
+                                            <input type="text"
+                                            class="mat_input loc-titel"
+                                            matInput
+                                            [(ngModel)]="selectedCity"
+                                            (keyup)="onAutocompleteSelected($event)"
+                                            [matAutocomplete]="auto">
+                                     <mat-autocomplete class="loc-auto" autoActiveFirstOption #auto="matAutocomplete">
+                                       <mat-option *ngFor="let option of autocompleteItems"  [value]="option.description" (click)="selectArea(option)">
+                                        {{option.description}}
+                                       </mat-option>
+                                     </mat-autocomplete>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="select-servie ">
+                                        <ng-multiselect-dropdown [placeholder]="'Language'"
+                                            [settings]="dropdownSettings1" [data]="langugaes"
+                                            [(ngModel)]="selectedItems1" [ngModelOptions]="{standalone: true}"
+                                            (onSelect)="onItemSelect1($event)" (onDeSelect)="onItemDeselect1($event)">
+                                        </ng-multiselect-dropdown>
+
+
+                                    </div>
+                                    <div class="select-servie ">
+                                        <ng-multiselect-dropdown [placeholder]="'Category'"
+                                            [settings]="dropdownSettings" [data]="categoryList"
+                                            [(ngModel)]="selectedItems" [ngModelOptions]="{standalone: true}"
+                                            (onSelect)="onItemSelect($event)" (onDeSelect)="onItemDeselect($event)">
+                                        </ng-multiselect-dropdown>
+
+                                    </div>
+                                    <button class="search_btn pull-right" mat-button (click)="searchaLawyer()"><i
+                                        class="bi bi-search"></i> Search</button>
+                                </div>
+
+                                <!-- <input type="text" class="form-control" (keyup)="onKey($event)"
+                                    placeholder="I need help near (city, ZIP code or county)"> -->
+                                
+                            </div>
+                            <div class="input-group search-box  desktop_none">
+                                <div class="">
+                                    <div class="select-servie ">
+                                        <mat-form-field class="mat_form_filed">
+                                            <input type="text"
+                                            class="mat_input"
+                                            matInput
+                                            [(ngModel)]="selectedCity"
+                                            (keyup)="onAutocompleteSelected($event)" 
+                                            [matAutocomplete]="auto">
+                                     <mat-autocomplete class="loc-auto" autoActiveFirstOption #auto="matAutocomplete">
+                                       <mat-option *ngFor="let option of autocompleteItems"  [value]="option.description" (click)="selectArea(option)">
+                                        {{option.description}}
+                                       </mat-option>
+                                     </mat-autocomplete>
+                                         
+                                        </mat-form-field>
+                                        <!-- <ng-multiselect-dropdown [placeholder]="'Select City'"
+                                            [settings]="dropdownSettings2" [data]="cityList"
+                                            [(ngModel)]="selectedItems2" [ngModelOptions]="{standalone: true}"
+                                            (onSelect)="onItemSelect2($event)" (onDeSelect)="onItemDeselect2($event)">
+                                        </ng-multiselect-dropdown> -->
+                                    </div>
+                                    <div class="select-servie ">
+                                        <ng-multiselect-dropdown [placeholder]="'Language'"
+                                            [settings]="dropdownSettings1" [data]="langugaes"
+                                            [(ngModel)]="selectedItems1" [ngModelOptions]="{standalone: true}"
+                                            (onSelect)="onItemSelect1($event)" (onDeSelect)="onItemDeselect1($event)">
+                                        </ng-multiselect-dropdown>
+
+
+                                    </div>
+                                    <div class="select-servie ">
+                                        <ng-multiselect-dropdown [placeholder]="'Category'"
+                                            [settings]="dropdownSettings" [data]="categoryList"
+                                            [(ngModel)]="selectedItems" [ngModelOptions]="{standalone: true}"
+                                            (onSelect)="onItemSelect($event)" (onDeSelect)="onItemDeselect($event)">
+                                        </ng-multiselect-dropdown>
+
+                                    </div>
+                                </div>
+
+                                <!-- <input type="text" class="form-control" (keyup)="onKey($event)"
+                                    placeholder="I need help near (city, ZIP code or county)"> -->
+                                <button class="search_btn pull-right" mat-button (click)="searchaLawyer()"><i
+                                        class="bi bi-search"></i> Search</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 xol-sm-12 col-lg-10 col-xl-5">
+                    <div class="banner_img">
+                        <img src="../../assets/img/bannerimg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img mobile_none">
+            <!-- <img src="assets/img/peoples.png" alt=""> -->
+        </div>
+    </div>
+
+
+    <div class="can-trust">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="text" data-aos="fade-up" data-aos-duration="800">
+                                <h2>Seasoned Attorneys, Your Trusted Guides; <br>  Solutions You Can Bank On</h2>
+                                <ul class="nav">
+                                    <li>
+                                        <div>
+                                            <i class="bi bi-check-circle"></i> 100% Confidentiality
+                                        </div>
+                                    </li>
+                                    <li><i class="bi bi-check-circle"></i>Approachable and Solution-focused attorneys
+                                    </li>
+                                    <li><i class="bi bi-check-circle"></i> Assured Contentment or Complete Reimbursement</li>
+                                </ul>
+                                <div class="row">
+                                    <div class="col-md-3 col-6">
+                                        <div class="trust-card">
+                                            <div class="img">
+                                                <img src="assets/img/i1.png" alt="">
+                                            </div>
+                                            <h6>Complete the Form</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="trust-card">
+                                            <div class="img">
+                                                <img src="assets/img/i2.png" alt="">
+                                            </div>
+                                            <h6>Schedule an
+                                                Appointment</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="trust-card">
+                                            <div class="img">
+                                                <img src="assets/img/i3.png" alt="">
+                                            </div>
+                                            <h6>Make Payment</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="trust-card">
+                                            <div class="img">
+                                                <img src="assets/img/i4.png" alt="">
+                                            </div>
+                                            <h6>Get a Call from Our Legal Expert</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img trust-img" data-aos="fade-up" data-aos-duration="800">
+                                <img src="assets/img/trust.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="category">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <div class="sec-header d-flex justify-content-between" data-aos="fade-up" data-aos-duration="800">
+                        <h2>Select by Category</h2>
+                        <button mat-button (click)="allCat()">See All Categories</button>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-2 col-6" *ngFor="let category of categoryList?.slice(0,12)">
+                            <div class="category-card" data-aos="fade-up" data-aos-duration="800"
+                                (click)="categoryWise(category)">
+                                <div class="img">
+                                    <div class="category-img"
+                                        [ngStyle]="{'background': 'url('+category.category_pic_url+')'}"></div>
+                                    <!-- <img src="{{imgUrl}}{{category.category_pic}}" alt="img"> -->
+                                </div>
+                                <div class="title middle">
+                                    <h3> {{category.category_name}}</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="top-lawyers">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <div class="sec-header d-flex justify-content-between" data-aos="fade-up" data-aos-duration="800">
+                        <h2>Our Premier Attorneys</h2>
+                        <button mat-button (click)="lawyers()">See All Lawyers</button>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="row row-cols-md-5  tab_none">
+                        <div class="col" *ngFor="let topLawyer of topLawyers?.slice(0,5)"
+                            (click)="lawerDetails(topLawyer)">
+                            <div class="main-card">
+                                <div class="lawyer-card" data-aos="fade-up" data-aos-duration="800">
+                                    <div *ngIf="topLawyer.profile_pic_url === null; else elseBlock ">
+                                        <div class="img">
+                                            <div class="pro-user"
+                                                [ngStyle]="{'background': 'url('+ 'assets/img/avatar.webp' + ')'}"></div>
+                                            <div class="overlay">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ng-template #elseBlock>
+                                        <div class="img">
+                                            <div class="pro-user"
+                                                [ngStyle]="{'background': 'url('+ topLawyer.profile_pic_url + ')'}">
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                    <div class="text">
+                                        <h4>{{topLawyer.first_name}} {{topLawyer.last_name}}</h4>
+                                        <h5>{{topLawyer.primary_category_id[0]?.category_name}}</h5>
+                                        <h6>{{topLawyer.year_of_practice}} years experience overall</h6>
+                                        <div class="d-flex rating" *ngIf="topLawyer.overall_rating > 0">
+                                            <span>{{topLawyer.overall_rating}} <i class="bi bi-star-fill"></i></span>
+                                            <h6>{{topLawyer.overall_count}} No. of Ratings</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab_view">
+                        <div class="dis_cards">
+                            <div  class="card_width" *ngFor="let topLawyer of topLawyers?.slice(0,5)"
+                            (click)="lawerDetails(topLawyer)">
+                            <div class="main-card">
+                                <div class="lawyer-card" data-aos="fade-up" data-aos-duration="800">
+                                    <div *ngIf="topLawyer.profile_pic_url === null; else elseBlock ">
+                                        <div class="img">
+                                            <div class="pro-user"
+                                                [ngStyle]="{'background': 'url('+ 'assets/img/avatar.webp' + ')'}"></div>
+                                            <div class="overlay">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ng-template #elseBlock>
+                                        <div class="img">
+                                            <div class="pro-user"
+                                                [ngStyle]="{'background': 'url('+  topLawyer.profile_pic_url + ')'}">
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                    <div class="text middle">
+                                        <h4>{{topLawyer.first_name}} {{topLawyer.last_name}}</h4>
+                                        <h5>{{topLawyer.primary_category_id[0]?.category_name}}</h5>
+                                        <h6>{{topLawyer.year_of_practice}} years experience overall</h6>
+                                        <div class="d-flex rating" *ngIf="topLawyer.overall_rating > 0">
+                                            <span>{{topLawyer.overall_rating}} <i class="bi bi-star-fill"></i></span>
+                                            <h6>{{topLawyer.overall_count}} No. of Ratings</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="how-it-works">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <h2 data-aos="fade-up" data-aos-duration="800">How It Works</h2>
+                </div>
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="how-works-card" data-aos="fade-up" data-aos-duration="800">
+                                <div class="img">
+                                    <img src="assets/img/how1.png" alt="">
+                                </div>
+                                <h6>1. Share Your Case</h6>
+                                <p>A succinct overview of your case, 
+                                    encapsulating the key aspects and relevant details in a comprehensive manner.
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="how-works-card" data-aos="fade-up" data-aos-duration="800">
+                                <div class="img">
+                                    <img src="assets/img/how2.png" alt="">
+                                </div>
+                                <h6>2.Choose an Attorney  </h6>
+                                <p>Our team of accomplished lawyers,
+                                     each equipped with specialised skills to address diverse needs.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="how-works-card" data-aos="fade-up" data-aos-duration="800">
+                                <div class="img">
+                                    <img src="assets/img/how3.png" alt="">
+                                </div>
+                                <h6>3. Review Responses</h6>
+                                <p>Each response, considering its legal implications,
+                                     relevance to the case, and potential strategies to adopt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="how-it-works">
+        <div class="container container_bigscreen">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <h2>How It Works ?</h2>
+                </div>
+                <div class="col-md-10">
+                    <div class="how-it-works-wrapper ">
+                        <div class="how-it-works-card">
+                            <div class="text">
+                                <h4>Share Your Case</h4>
+    
+                                <div>
+                                    <!-- <h5>Grow with new client onboarding</h5> -->
+                                    <p>a succinct overview of your case, encapsulating the key aspects and relevant details in a 
+                                        comprehensive manner.</p>
+                                </div>
+    
+                                <!-- <div>
+                                    <h5>Stay connected with clients</h5>
+                                    <p>Easily schedule consultations and accept payments with Legalkart Payments. Share and
+                                        accept documents from clients. Chat with them on Legalkart at your convenience.</p>
+                                </div> -->
+    
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="img mobile_none">
+                            <img src="https://www.legalkart.com/frontend/images/lawyers-practice-management-revamp/new-client-page.webp"
+                                alt="">
+                        </div>
+    
+                        <div class="dot"></div>
+                    </div>
+                    <div class="how-it-works-wrapper opposite">
+                        <div class="img mobile_none">
+                            <img src="https://www.legalkart.com/frontend/images/lawyers-practice-management-revamp/new-client-page.webp"
+                                alt="">
+                        </div>
+                        <div class="how-it-works-card">
+                            <div class="text opposite">
+                                <h4>Choose an Attorney</h4>
+    
+                                <div>
+                                    <!-- <h5>Organize Every Case Detail</h5> -->
+                                    <p>Our team of accomplished lawyers,
+                                         each equipped with specialised skills to address diverse needs.</p>
+                                </div>
+    
+                                <!-- <div>
+                                    <h5>Add clients to cases</h5>
+                                    <p>Add clients to the cases and keep them updated with dates, documents, and orders.</p>
+                                </div> -->
+    
+    
+                            </div>
+    
+    
+                        </div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="how-it-works-wrapper">
+                        <div class="how-it-works-card">
+                            <div class="text">
+                                <h4>Review Responses</h4>
+    
+                                <div>
+                                    <!-- <h5>Bill it in real-time</h5> -->
+                                    <p>Each response, considering its legal implications, 
+                                        relevance to the case, and potential strategies to adopt.</p>
+                                </div>
+    
+                                <!-- <div>
+                                    <h5>Customer confidence</h5>
+    
+                                    <p>Professionally designed payment pages, increase the confidence of users in payments.
+    
+                                    </p>
+                                </div>
+     -->
+    
+    
+                            </div>
+                        </div>
+                        <div class="img mobile_none">
+                            <img src="https://www.legalkart.com/frontend/images/lawyers-practice-management-revamp/new-client-page.webp"
+                                alt="">
+                        </div>
+                        <div class="dot"></div>
+                    </div>
+    
+                    <div class="how-it-line app">
+                        <div class="d2c-inactive-line"></div>
+                        <div data-w-id="26afa277-faea-9277-cc4a-f339035950af" class="d2c-active-line">
+                        </div>
+                    </div>
+    
+                    <!-- <div class="apply-now">
+                        <button mat-button (click)="lawyerLogin()">Get Started</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="reviews">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <h2 data-aos="fade-up" data-aos-duration="800">Our Clients say it best</h2>
+                </div>
+                <div class="col-md-11">
+                    <div class="reviews-card" data-aos="fade-up" data-aos-duration="800">
+                        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                            (init)="slickInit($event)" (breakpoint)="breakpoint($event)"
+                            (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+                            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="img test_img">
+                                            <img src="assets/img/testimonial-Image.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="text middle">
+                                            <h6>{{slide.content}}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ngx-slick-carousel>
+                    </div>
+                </div>
+                <!-- <div class="col-md-10 col-11 review-numbers " >
+                    <div class="row justify-content-center">
+                        <div class="col-md-3 col-5 px-md-0">
+                            <div class="review-count" data-aos="fade-up" data-aos-duration="800">
+                                <div class="d-flex">
+                                    <h2>4.8</h2>
+                                    <div class="middle">
+                                        <p>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </p>
+                                        <h6>404.200+ reviews</h6>
+                                    </div>
+                                </div>
+                                <h5 class="d-flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-apple" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+                                        <path
+                                            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+                                    </svg>
+                                    <span class="middle">App Store</span>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-1">
+                            <div class="line" data-aos="fade-up" data-aos-duration="800"></div>
+                        </div>
+                        <div class="col-md-3 col-5 px-md-0">
+                            <div class="review-count" data-aos="fade-up" data-aos-duration="800">
+                                <div class="d-flex">
+                                    <h2>4.8</h2>
+                                    <div class="middle">
+                                        <p>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </p>
+                                        <h6>404.200+ reviews</h6>
+                                    </div>
+                                </div>
+                                <h5 class="d-flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-google" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                                    </svg>
+                                    <span class="middle">App Store</span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+              
+                <!-- <div class="col-md-10 review-numbers desktop_none" >
+                    <div class="row justify-content-center">
+                        <div class="col-md-3 px-md-0">
+                            <div class="review-count" data-aos="fade-up" data-aos-duration="800">
+                                <div class="d-flex">
+                                    <h2>4.8</h2>
+                                    <div class="middle">
+                                        <p>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </p>
+                                        <h6>404.200+ reviews</h6>
+                                    </div>
+                                    <h5 class="d-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-apple" viewBox="0 0 16 16">
+                                            <path
+                                                d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+                                            <path
+                                                d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+                                        </svg>
+                                        <span class="middle">App Store</span>
+                                    </h5>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="line" data-aos="fade-up" data-aos-duration="800"></div>
+                        </div>
+                        <div class="col-md-3 px-md-0">
+                            <div class="review-count" data-aos="fade-up" data-aos-duration="800">
+                                <div class="d-flex">
+                                    <h2>4.8</h2>
+                                    <div class="middle">
+                                        <p>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </p>
+                                        <h6>404.200+ reviews</h6>
+                                    </div>
+                                    <h5 class="d-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-google" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                                        </svg>
+                                        <span class="middle">App Store</span>
+                                    </h5>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ad">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <div class="text" data-aos="fade-up" data-aos-duration="800">
+                        <h2>Accessible Legal Guidance Offered by Child Custody Attorneys
+                        </h2>
+                        <h6>Connect with Just Dial Law to Access Experienced Family Law Firms</h6>
+                        <button (click)="knowMore()" mat-button>See what makes us great</button>
+                    </div>
+                    <div class="img">
+                        <img src="assets/img/lawyers-bg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div app-theme class="blog">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11 sec-header d-flex justify-content-between" data-aos="fade-up"
+                    data-aos-duration="800">
+                    <h2>Explore Our Latest Published Blog</h2>
+                    <button mat-button (click)="allBlogs()">See all blogs
+
+                    </button>
+                </div>
+                <div class="col-md-11 mobile_none">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="blog-card" (click)="viewBlog(topOneBlog)" data-aos="fade-up"
+                                data-aos-duration="800">
+                                <div class="img">
+                                    <img src="{{topOneBlog?.blog_image_url}}" alt="">
+                                </div>
+                                <div class="text">
+                                    <span>{{topOneBlog?.category.category_name}}</span>
+                                    <h5>{{topOneBlog?.title}}</h5>
+                                    <p>{{topOneBlog?.created_on | date:'MMM d, y, h:mm:ss a' }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="blog-card blog-card2" *ngFor="let allTopBlogs of topBlogs?.slice(1,4)"
+                                (click)="viewBlog(allTopBlogs)" data-aos="fade-up" data-aos-duration="800">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="img">
+                                            <img src="{{allTopBlogs?.blog_image_url}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="text">
+                                            <span>{{allTopBlogs.category.category_name}}</span>
+                                            <h5>
+                                                {{allTopBlogs.title}}
+                                            </h5>
+                                            <p>{{allTopBlogs.created_on | date:'MMM d, y, h:mm:ss a'}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-11 desktop_none">
+                    <div class="row d-flex flex-row flex-nowrap flagshipcard-card">
+                        <div class="col-md-6">
+                            <div class="blog-card" (click)="viewBlog(topOneBlog)" data-aos="fade-up"
+                                data-aos-duration="800">
+                                <div class="img">
+                                    <img src="{{topOneBlog?.blog_image_url}}" alt="">
+                                </div>
+                                <div class="text">
+                                    <span>{{topOneBlog?.category.category_name}}</span>
+                                    <h5>{{topOneBlog?.title}}</h5>
+                                    <p>{{topOneBlog?.created_on | date:'MMM d, y, h:mm:ss a' }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                            <div class="blog-card blog-card2" *ngFor="let allTopBlogs of topBlogs?.slice(1,4)"
+                                (click)="viewBlog(allTopBlogs)" data-aos="fade-up" data-aos-duration="800">
+                                <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="img">
+                                            <img src="{{allTopBlogs.blog_image_url}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="text">
+                                            <span>{{allTopBlogs.category.category_name}}</span>
+                                            <h5>
+                                                {{allTopBlogs.title}}
+                                            </h5>
+                                            <p>{{allTopBlogs.created_on | date:'MMM d, y, h:mm:ss a'}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+<app-footer></app-footer>

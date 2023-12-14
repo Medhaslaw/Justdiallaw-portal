@@ -1,0 +1,592 @@
+.blog-header {
+    .blog-bg-content {
+        // color: #1a1a1a;
+        background: url('../../assets/img/blog-bg.jpg') no-repeat;
+        background-color: #656b7c;
+        background-blend-mode: multiply;
+        height: 56vh;
+        width: 100%;
+        background-size: cover;
+        padding-top: 7.5vw;
+        .wel-jus-law {
+            padding-top: 2vw;
+            padding-left: 9vw;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+            h2 {
+                color: #fff;
+                font-size: 3.2vw;
+                font-weight: 600;
+                font-family: Poppins, sans-serif!important;
+                margin: 0;
+            }
+            p {
+                color: #fff;
+                opacity: 0.7;
+                letter-spacing: 0.2vw;
+                font-size: 1vw;
+                margin-top: 0.7vw;
+                font-family: Poppins, sans-serif!important;
+            }
+            h3 {
+                color: #fff;
+                text-align: center;
+                opacity: 0.9;
+                background: rgba(51, 51, 51, 0.5);
+                padding: 0.8vw;
+                font-size: 1vw;
+                font-weight: 700;
+                margin: 0 0 2vw;
+                font-family: Poppins, sans-serif!important;
+                width: 16vw;
+                margin-top: 0.6vw;
+            }
+            i {
+                margin-left: 1vw;
+            }
+            .about-span {
+                color: #e86d1f;
+                margin-left: 1vw;
+            }
+        }
+    }
+    .serch-lawyer {
+        margin-top: 3vw;
+        padding: 0 .7vw;
+        width: 51vw;
+        .search-box {
+            // height: 4.6vw;
+            input.form-control {
+                background: #f2f2f247;
+                z-index: 99;
+                margin-bottom: 0;
+                padding: 0.5vw 2vw;
+                border-radius: 3vw;
+                font-size: 1.2vw;
+                font-weight: 500;
+                height: 4.5vw;
+                border: 1px solid #ccc;
+                &:focus {
+                    outline: 0;
+                    box-shadow: none;
+                }
+                &::placeholder {
+                    color: #333;
+                    font-weight: 400;
+                }
+            }
+            .search_btn {
+                background: #0b0b31;
+                font-size: 1vw;
+                color: #fff;
+                padding: 1.4vw 2vw;
+                border-radius: 10vw;
+                position: absolute;
+                right: 0.3vw;
+                top: 0.3vw;
+                z-index: 999;
+                font-weight: 500;
+                i {
+                    font-size: 1.1vw;
+                    margin-left: .4vw;
+                }
+            }
+        }
+    }
+    .top-categoris {
+        text-align: center;
+        margin-top: 3vw;
+        h3 {
+            font-size: 2vw;
+            color: #333;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif !important;
+            margin-bottom: 1vw;
+        }
+    }
+    .lawyer-reg-inputs {
+        margin-top: 1vw;
+        button {
+            color: #1f2428;
+            background-color: #f3f3f3;
+            padding: 0.8vw 1.2vw;
+            margin: 0 0.8vw 0.8vw 0;
+            font-size: 1vw;
+            border-radius: 0.5vw;
+            font-family: "Poppins", sans-serif !important;
+            line-height: 100%;
+            min-width: inherit;
+            color: #2a2f33;
+        }
+        button:hover {
+            background-color: #e86d1f;
+            color: #fff;
+        }
+        button.selectedBtn {
+            background-color: #e86d1f;
+            color: #fff;
+        }
+        button.selectedBtn2 {
+            background-color: #e86d1f;
+            color: #fff;
+        }
+    }
+    .all-blogs {
+        .blog-row {
+            padding: 6vw 6vw;
+            .all-details {
+                padding: 1vw;
+                .mat-card {
+                    padding: 0 1vw 1vw;
+                    border-bottom: .5vw solid #e86d1f1f;
+                }
+                .example-card {
+                    cursor: pointer;
+                    border: 0;
+                    box-shadow: none;
+                    img {
+                        height: 17vw;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .mat-card-content {}
+                    .blog-blocks {
+                        .category-block {
+                            margin: 2vw 0;
+                            h6 {
+                                font-size: 0.9vw;
+                                font-weight: 500;
+                                color: #e86d1f;
+                                background-color: #e86d1f1f;
+                                padding: 0.5vw 1.2vw;
+                                border-radius: 0.5vw;
+                                font-family: "Poppins", sans-serif !important;
+                                margin: 0;
+                            }
+                        }
+                        .views-count {
+                            margin-left: auto;
+                            margin-right: 0;
+                            h6 {
+                                font-size: 1vw;
+                                color: #9ea0a9;
+                            }
+                        }
+                        .name-block {
+                            span {}
+                            margin-left: 1vw;
+                        }
+                    }
+                    .text {
+                        min-height: 4vw;
+                        h2 {
+                            font-size: 1.4vw;
+                            font-weight: 600;
+                            margin-bottom: 1vw;
+                            font-family: "Poppins", sans-serif !important;
+                        }
+                        p {
+                            font-size: 1.1vw;
+                            font-family: "Poppins", sans-serif !important;
+                            margin-bottom: 0;
+                            color: #738a94;
+                            line-height: 2vw;
+                            p {
+                                margin: 0;
+                                color: #738a94;
+                                span {
+                                    color: #738a94;
+                                }
+                            }
+                        }
+                    }
+                    .view-btn {
+                        background-color: #e86d1f;
+                        color: #fff;
+                        padding: 0.8vw;
+                        border-radius: 8vw;
+                        width: 8vw;
+                        font-size: 0.9vw;
+                    }
+                    .about-Blog {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        /* number of lines to show */
+                        line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        font-size: 1.2vw;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.found_error {
+    p {
+        text-align: center;
+        font-size: 1.5vw;
+        color: red;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .blog-header {
+        padding: 0;
+        .blog-bg-content {
+            padding: 30px 0;
+            height: auto;
+            h2 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 12px;
+                i {
+                    font-size: 12px;
+                }
+            }
+            .wel-jus-law {
+                h2 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 15px;
+                }
+                h3 {
+                    font-size: 9px;
+                    width: fit-content;
+                }
+            }
+        }
+        .serch-lawyer {
+            margin: 20px auto;
+            width: 320px;
+            .search-box {
+                input.form-control {
+                    padding: 20px 15px;
+                    font-size: 15px;
+                    border-radius: 10vw;
+                }
+                .search_btn {
+                    font-size: 17px;
+                    padding: 10.5px 28px;
+                    i {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .top-categoris {
+            h3 {
+                font-size: 30px;
+            }
+        }
+        .lawyer-reg-inputs {
+            button {
+                padding: 10px;
+                margin: 0 8px 8px 0;
+                font-size: 12px;
+                border-radius: 5px;
+            }
+        }
+        .all-blogs {
+            .blog-row {
+                .all-details {
+                    .example-card {
+                        img {
+                            height: 190px;
+                        }
+                        .blog-blocks {
+                            .category-block {
+                                h6 {
+                                    font-size: 12px;
+                                    padding: 7px 20px;
+                                    border-radius: 5px;
+                                    margin: 10px 0 0;
+                                }
+                            }
+                        }
+                        .text {
+                            h2 {
+                                font-size: 20px;
+                                margin: 5px 0;
+                            }
+                            p {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .blog-header {
+        height: auto;
+        padding: 0px 0;
+        .blog-bg-content {
+            height: auto;
+            padding: 30px 0;
+            .wel-jus-law {
+                h3 {
+                    padding: 10px;
+                    font-size: 10px;
+                    margin: 10px 0;
+                    letter-spacing: 1px;
+                    width: fit-content;
+                }
+                h2 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 15px;
+                    margin: 10px 0;
+                }
+            }
+            h2 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 12px;
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+        .serch-lawyer {
+            margin: 20px auto;
+            width: 320px;
+            .search-box {
+                input.form-control {
+                    padding: 20px 15px;
+                    font-size: 15px;
+                    border-radius: 10vw;
+                }
+                .search_btn {
+                    font-size: 17px;
+                    padding: 10.5px 28px;
+                    i {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .top-categoris {
+            h3 {
+                font-size: 30px;
+            }
+        }
+        .lawyer-reg-inputs {
+            button {
+                padding: 10px;
+                margin: 0 8px 8px 0;
+                font-size: 12px;
+                border-radius: 5px;
+            }
+        }
+        .all-blogs {
+            .blog-row {
+                .all-details {
+                    .example-card {
+                        img {
+                            height: 190px;
+                        }
+                        .blog-blocks {
+                            .category-block {
+                                h6 {
+                                    font-size: 12px;
+                                    padding: 7px 20px;
+                                    border-radius: 5px;
+                                    margin: 10px 0 0;
+                                }
+                            }
+                        }
+                        .text {
+                            h2 {
+                                font-size: 20px;
+                                margin: 5px 0;
+                            }
+                            p {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .blog-header {
+        padding: 0;
+        .blog-bg-content {
+            padding: 30px 0;
+            height: auto;
+            h2 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 12px;
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+        .serch-lawyer {
+            margin: 40px auto;
+            width: 80%;
+            .search-box {
+                input.form-control {
+                    padding: 20px 15px;
+                    font-size: 15px;
+                    border-radius: 10vw;
+                }
+                .search_btn {
+                    font-size: 17px;
+                    padding: 10.5px 28px;
+                    i {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .top-categoris {
+            h3 {
+                font-size: 30px;
+            }
+        }
+        .lawyer-reg-inputs {
+            button {
+                padding: 16px;
+                margin: 7px 3px;
+                font-size: 20px;
+                border-radius: 5px;
+                width: fit-content;
+            }
+        }
+        .all-blogs {
+            .blog-row {
+                .all-details {
+                    .example-card {
+                        img {
+                            height: 190px;
+                        }
+                        .blog-blocks {
+                            .category-block {
+                                h6 {
+                                    font-size: 12px;
+                                    padding: 7px 20px;
+                                    border-radius: 5px;
+                                    margin: 10px 0 0;
+                                }
+                            }
+                        }
+                        .text {
+                            h2 {
+                                font-size: 20px;
+                                margin: 5px 0;
+                            }
+                            p {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .blog-header {
+        padding: 0;
+        .blog-bg-content {
+            padding: 30px 0;
+            height: auto;
+            h2 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 12px;
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+        .serch-lawyer {
+            margin: 50px auto 20px;
+            width: 500px;
+            .search-box {
+                input.form-control {
+                    padding: 20px 15px;
+                    font-size: 15px;
+                    border-radius: 10vw;
+                }
+                .search_btn {
+                    font-size: 17px;
+                    padding: 10.5px 28px;
+                    i {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .top-categoris {
+            h3 {
+                font-size: 30px;
+            }
+        }
+        .lawyer-reg-inputs {
+            button {
+                padding: 10px;
+                margin: 0 8px 8px 0;
+                font-size: 12px;
+                border-radius: 5px;
+            }
+        }
+        .all-blogs {
+            .blog-row {
+                .all-details {
+                    .example-card {
+                        img {
+                            height: 190px;
+                        }
+                        .blog-blocks {
+                            .category-block {
+                                h6 {
+                                    font-size: 12px;
+                                    padding: 7px 20px;
+                                    border-radius: 5px;
+                                    margin: 10px 0 0;
+                                }
+                            }
+                        }
+                        .text {
+                            h2 {
+                                font-size: 20px;
+                                margin: 5px 0;
+                            }
+                            p {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.selectedBtn2{
+    background-color: #e86d1f;
+}

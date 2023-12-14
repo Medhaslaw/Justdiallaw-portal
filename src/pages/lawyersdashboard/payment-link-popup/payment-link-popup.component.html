@@ -1,0 +1,87 @@
+<div class="add_new_topic">
+    <div class="row m-0">
+        <div class="col-md-12 p-0">
+            <div mat-dialog-title class="dialog_title">
+                <h1>Generate Payment Link</h1>
+                <button mat-button mat-dialog-close class="cancel_btn"><i class="bi bi-x-circle"></i></button>
+            </div>
+            <div mat-dialog-content class="dialog_content">
+                <form   class="add_invoice_form">
+                   
+                    <div class="row">
+                        <div class="col-md-6 p-0">
+                            <label class="mat_label">First Name<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                               <mat-label class="mat_label">First Name</mat-label> 
+                                <input matInput type="text" class="mat_input" >
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6 p-0">
+                            <label class="mat_label">Last Name<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-label class="mat_label">Last Name</mat-label> 
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 p-0">
+                            <label class="mat_label">Email<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-label class="mat_label">Email</mat-label> 
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6 p-0">
+                            <label class="mat_label">Mobile<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-label class="mat_label">Mobile</mat-label> 
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 p-0">
+                            <label class="mat_label">State<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected1">
+                                  <mat-option value="1" >Select State</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6 p-0">
+                            <label class="mat_label">City<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected2">
+                                  <mat-option value="1" >Select City</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row  justify-content-center">
+                                <div class="col-md-7">
+                                    <button mat-button class="sub_btn">Generate Link</button>
+                                    <div class="alert_text">
+                                        <p><i class="bi bi-info-circle-fill"></i> Once link generated Cannot be edited</p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

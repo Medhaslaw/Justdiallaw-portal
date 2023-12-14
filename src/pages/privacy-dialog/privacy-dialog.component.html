@@ -1,0 +1,25 @@
+<div app-theme>
+
+<div mat-dialog-content class="original-div" *ngIf="!isTermsAccepted" >
+    <div class="row justify-content-center">
+      <div class="col-md-11">
+        <div class="sign_up text-center" >
+          <div class="clip_patharea middle ">
+            <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+            <h1>Welcome to Just Dial Law </h1>
+          </div>
+  <p>
+    The information provided on justdiallaw.com is provided AS IS, subject to Terms of Use & Privacy Policy.
+    It is solely available at your request for informational purposes only, should not be interpreted as soliciting or advertisement. In cases where the user has any legal issues, 
+   he/she in all cases must seek independent legal advice. Advocate ratings displayed on justdiallaw.com are based on user feedback. 
+
+  </p>
+          
+          <button class="accept-btn" (click)="acceptTerms()">Accept</button>
+          <button class="close-btn" (click)="closePopup()">Close</button>
+
+      </div>
+    </div>
+  
+  </div>
+</div>

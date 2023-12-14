@@ -1,0 +1,35 @@
+<div class="lawyers_invoice">
+    <div class="row m-0">
+        <div class="col-md-7">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>Tasks</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Task</h1>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="row m-0">
+                <div class="col-md-6">
+                    <button mat-button class="add_inv_btn" [routerLink] = "'/lawyer-jdl/task/add_task'" >Add Task</button>
+                </div>
+                <div class="col-md-6">
+                    <button mat-button class="filter_btn" ><i class="bi bi-funnel"></i> Filter Case</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <p>You Do Not Have Any Payment Link At This Moment.</p>
+                <h6>Click <button mat-button  [routerLink] = "'/lawyer-jdl/task/add_task'">Add Task</button></h6>
+            </mat-card>
+        </div>
+    </div>
+</div>

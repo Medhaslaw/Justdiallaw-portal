@@ -1,0 +1,185 @@
+.sign_up {
+    padding: 2vw 1vw;
+
+    h1 {
+        color: #1d439f;
+        font-size: 1.3vw;
+        padding: 0;
+        margin: 0 0 1vw 0;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 0.9vw;
+        border: 0.1vw solid #ccc;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    .ratings {
+        color: #1d439f;
+        padding: 0;
+        margin: 0;
+        font-size: 1.2vw;
+    }
+
+    label {
+        font-size: 1vw;
+        color: #000;
+        padding: 0;
+        margin: 0 0 1vw;
+        font-weight: 500;
+    }
+
+    .sub_btn {
+        border: inherit;
+        color: #fff;
+        background-color: #1d439f;
+        font-size: 0.9vw;
+        font-weight: 400;
+        padding: 1vw;
+        width: 100%;
+        margin: 0.8vw 0 0;
+        border-radius: 10vw;
+    }
+}
+
+.rating {
+    padding: 1vw 0;
+
+    i {
+        font-size: 1.2vw;
+        margin: 0 0.2vw;
+        color: #b5b3b375;
+
+        &.active {
+            color: #e86d1f;
+        }
+    }
+
+}
+.cancel_btn{
+    text-align: end;
+margin: 0 1vw;
+font-size: 1.5vw;
+color: red;
+}
+
+@media (max-width: 575.98px){
+    .sign_up{
+        padding: 15px;
+        h1{
+            font-size: 20px;
+        }
+        .rating{
+            padding: 10px;
+            i{
+                font-size: 17px;
+                margin: 0 4px;
+            }
+        }
+        .sub_btn{
+            font-size: 12px;
+            padding: 10px;
+            margin: 15px 0 0;
+        }
+        .cancel_btn{
+            font-size: 20px;
+            position: absolute;
+            top: -6px;
+            right: 0;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .sign_up{
+        padding: 15px;
+        h1{
+            font-size: 20px;
+        }
+        .rating{
+            padding: 10px;
+            i{
+                font-size: 17px;
+                margin: 0 4px;
+            }
+        }
+        .sub_btn{
+            font-size: 12px;
+            padding: 10px;
+            margin: 15px 0 0;
+        }
+        .cancel_btn{
+            font-size: 20px;
+            position: absolute;
+            top: -6px;
+            right: 0;
+        }
+    }
+
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+    .sign_up{
+        padding: 15px;
+        h1{
+            font-size: 20px;
+        }
+        .rating{
+            padding: 10px;
+            i{
+                font-size: 17px;
+                margin: 0 4px;
+            }
+        }
+        .sub_btn{
+            font-size: 12px;
+            padding: 10px;
+            margin: 15px 0 0;
+        }
+        .cancel_btn{
+            font-size: 20px;
+            position: absolute;
+            top: -6px;
+            right: 0;
+        }
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+    .sign_up{
+        padding: 15px;
+        h1{
+            font-size: 20px;
+        }
+        .rating{
+            padding: 10px;
+            i{
+                font-size: 17px;
+                margin: 0 4px;
+            }
+        }
+        .sub_btn{
+            font-size: 12px;
+            padding: 10px;
+            margin: 15px 0 0;
+        }
+        .cancel_btn{
+            font-size: 20px;
+            position: absolute;
+            top: -6px;
+            right: 0;
+        }
+    }
+
+}

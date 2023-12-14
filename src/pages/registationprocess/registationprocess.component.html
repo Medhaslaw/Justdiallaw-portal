@@ -1,0 +1,405 @@
+
+<app-sub-nav></app-sub-nav>
+
+<div app-theme>
+
+
+<div class="register_process">
+    <div class="row m-0">
+
+        <div class="col-md-6 p-0">
+            <div class="reg_img">
+
+            </div>
+        </div>
+        <div class="col-md-6 p-0">
+
+          
+
+            <div class="steper" *ngIf="!successMsg">
+                <div class="progress_bar ">
+                    <div class="d-flex justify-content-center">
+                        <circle-progress
+                        [percent]="progressPercent"
+                        [radius]="100"
+                        [outerStrokeWidth]="10"
+                        [innerStrokeWidth]="10" 
+                        [space] = "-10"
+                        [outerStrokeColor]="'#4882c2'"
+                        [innerStrokeColor]="'#e7e8ea'"
+                        [showSubtitle] = "false"
+                        [showTitle]="false"
+                        [animation]="true"
+                        [animationDuration]="300"
+                        [startFromZero]="false"
+                        [responsive]="true"
+                        [showUnits]="false"
+                      ></circle-progress>
+    
+                    </div>
+                <h5 class="middle d-flex justify-content-end">Profile Complete: {{progressPercent}}%</h5>
+                  
+                </div>
+
+                <mat-stepper orientation="vertical" #stepper>
+                    <mat-step [stepControl]="lawyerSignUpForm">
+                        <ng-template matStepLabel >
+                            <h1>Basic Details</h1>
+                        </ng-template>
+                        <ng-template matStepContent>
+                            <div class="Add_Invoice">
+
+                                <div class="row m-0">
+                                    <div class="col-md-12">
+                                        <div class="mat_card_invoice">
+                                            <form  [formGroup]="lawyerSignUpForm" #myform="ngForm" class="add_invoice_form">
+                                                <div class="row">
+                                                  
+                                                    <div class="col-md-9">
+                                                        <label class="mat_label">First Name<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            <input matInput type="text" (keypress)="keyPressAlphaNumeric($event)" formControlName="first_name"
+                                                            class="mat_input">
+                                                        </mat-form-field>
+                                                       
+                                                         <h6>
+                                                            <span *ngIf="lawyerSignUpForm.controls['first_name'].hasError('required') && myform.submitted">First Name is Required</span>
+                                                          </h6>
+                                                    </div>
+                                                    <div class="col-md-9 lawyer-reg-inputs">
+                                                        <label class="mat_label">Last Name<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            <input matInput type="text" (keypress)="keyPressAlphaNumeric($event)" formControlName="last_name" required
+                                                                class="mat_input">
+                                                        </mat-form-field>
+                                                        
+                                                         <h6>
+                                                            <span *ngIf="lawyerSignUpForm.controls['last_name'].hasError('required') && myform.submitted">Last Name is Required</span>
+                                                          </h6>
+                                                    </div>
+                                             
+                                                    <div class="col-md-9 lawyer-reg-inputs">
+                                                        <label class="mat_label">Email Address<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            <input matInput type="text" formControlName="email" 
+                                                                class="mat_input">
+                                                        </mat-form-field>
+                                                   
+                                                         <h6>
+                                                            <span *ngIf="lawyerSignUpForm.controls['email'].hasError('required') && myform.submitted">Email Id is Required</span>
+                                                          </h6>
+                                                          <h6>
+                                                            <span *ngIf="lawyerSignUpForm.controls['email'].hasError('pattern') && myform.submitted">Email Pattern Was wrong</span>
+                                                          </h6>
+
+                                                    </div>
+                                                    <div class="col-md-9 lawyer-reg-inputs">
+                                                        <label class="mat_label">Mobile Number<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            <input matInput type="text"  formControlName="phone_no" 
+                                                                class="mat_input">
+                                                        </mat-form-field>
+                                                    
+                                                         <h6>
+                                                            <span *ngIf="lawyerSignUpForm.controls['phone_no'].hasError('required') && myform.submitted">Mobile No is Required</span>
+                                                          </h6>
+                                                          <h6>
+                                                            <span *ngIf="lawyerSignUpForm.controls['phone_no'].hasError('pattern') && myform.submitted">Mobile number is not 10 digit </span>
+                                                          </h6>
+                                                    </div>
+                                                    <div class="col-md-9 mt-4 lawyer-reg-inputs">
+                                                        <button class="next_btn" (click)="advacateReg(stepper)" mat-button>Next</button>
+
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <p class="text-danger">{{errData}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </ng-template>
+                    </mat-step>
+                    <mat-step [stepControl]="practiceAreaForm">
+                        <ng-template matStepLabel>
+                            <h1>Practice Areas</h1>
+                        </ng-template>
+                        <ng-template matStepContent>
+                            <div class="Add_Invoice">
+
+                                <div class="row m-0">
+                                    <div class="col-md-12 lawyer-reg-inputs">
+                                        <div class="mat_card_invoice">
+                                            <form [formGroup]="practiceAreaForm" #myform="ngForm" class="add_invoice_form">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="mat_label">Primary Practice
+                                                            Area<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed"  >
+                                                            <mat-select class="mat_input mat_input1"
+                                                            formControlName="primary_category"
+                                                                >
+                                                                <mat-option *ngFor="let category of allCategory "  [value]="category.id">{{category.category_name}}</mat-option>
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                        
+                                                         <h6>
+                                                            <span *ngIf="practiceAreaForm.controls['primary_category'].hasError('required') && myform.submitted">Primary Category is Required</span>
+                                                          </h6>
+                                                    </div>
+
+                                                    <div class="col-md-9 lawyer-reg-inputs">
+
+                                                        <label class="mat_label">Choose Category<span>*</span></label>
+                                                        <mat-chip-list aria-label="Fish selection" selectable multiple>
+                                                            <mat-chip *ngFor="let category of allCategory " 
+                                                           
+                                                                [ngClass]="{'active': selectedCategorys.includes(category.id)}"
+                                                                
+                                                                (click)="selectCategorys(category.id)">
+                                                                {{category.category_name}} 
+                                                              
+                                                            </mat-chip>
+
+                                                        </mat-chip-list>
+                                                    </div>
+                                                    <div class="col-md-9 mt-4 lawyer-reg-inputs">
+                                                        <button class="back_btn me-3" mat-button matStepperPrevious  >Back</button>
+                                                        <button class="next_btn" (click)="practiArea(stepper)" mat-button >Next</button>
+                                                    </div>
+                                                   
+                                                </div>
+
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                         
+                        </ng-template>
+                    </mat-step>
+                    <mat-step [stepControl]="officeAddressForm">
+                        <ng-template matStepLabel>
+                            <h1>Office Address</h1>
+                        </ng-template>
+                        <ng-template matStepContent>
+                            <div class="Add_Invoice">
+
+                                <div class="row m-0">
+                                    <div class="col-md-12 lawyer-reg-inputs">
+                                        <div class="mat_card_invoice">
+                                            <form  [formGroup]="officeAddressForm"  #myform="ngForm" class="add_invoice_form">
+                                                <div class="row">
+                                                    
+                                                    <div class="col-md-9 lawyer-reg-inputs">
+                                                        <label class="mat_label">Address<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            <input type="text"
+                                                            class="mat_input"
+                                                            matInput
+                                                            (keyup)="onAutocompleteSelected($event)" formControlName="office_address"
+                                                            [matAutocomplete]="auto">
+                                                     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                                       <mat-option *ngFor="let option of autocompleteItems"  [value]="option.description" (click)="selectArea(option)">
+                                                        {{option.description}}
+                                                       </mat-option>
+                                                     </mat-autocomplete>
+                                                         
+                                                        </mat-form-field>
+                                                     
+                                                         <h6>
+                                                            <span *ngIf="officeAddressForm.controls['office_address'].hasError('required') && myform.submitted">Office Address is Required</span>
+                                                          </h6>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="col-md-9 lawyer-reg-inputs">
+                                                        <label class="mat_label">City<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            
+                                                            <!-- <mat-select class="mat_input mat_input1"
+                                                                formControlName="city_name">
+                                                                <mat-option *ngFor="let city of cityList" [value]="city.name">{{city.name}}</mat-option>
+                                                            </mat-select> -->
+
+                                                            <input matInput    formControlName="city_name" 
+                                                            class="mat_input">
+                                                        </mat-form-field>
+                                                      
+                                                         <h6>
+                                                            <span *ngIf="officeAddressForm.controls['city_name'].hasError('required') && myform.submitted">City is Required</span>
+                                                          </h6>
+                                                    </div>
+
+                                                    
+                                                    <div class="col-md-9">
+                                                        <label class="mat_label">State<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            <!-- <mat-select class="mat_input mat_input1"
+                                                                formControlName="state" (selectionChange)="getCities($event)">
+                                                                <mat-option *ngFor="let state of stateList" [value]="state.name">{{state.name}}</mat-option>
+                                                            
+                                                            </mat-select> -->
+                                                            <input matInput   formControlName="state"  
+                                                            class="mat_input">
+                                                        </mat-form-field>
+                                                       
+                                                         <h6>
+                                                            <span *ngIf="officeAddressForm.controls['state'].hasError('required') && myform.submitted">State is Required</span>
+                                                          </h6>
+                                                    </div>
+
+                                                  
+
+                                                    <div class="col-md-9 lawyer-reg-inputs">
+                                                        <div class="court-div">
+                                                            <label class="mat_label">Choose Courts<span>*</span></label>
+
+                                                            <div class="form-group has-search">
+                                                               
+                                                                <input type="text" class="form-control" (keyup)="search()" [(ngModel)]="searchItem" [ngModelOptions]="{standalone: true}" placeholder="Search">
+                                                            </div>
+
+                                                            <mat-chip-list selectable multiple>
+                                                                <mat-chip *ngFor="let court of courts "
+                                                               
+                                                                    [ngClass]="{'active': selectedCourt.includes(court.text)}"
+                                                                    (click)="select(court.text)"
+                                                                   >
+                                                                    {{court.text}}
+                                                                
+                                                                </mat-chip>
+                                                            </mat-chip-list>
+                                                        </div>
+                                                      
+                                                        
+                                                    </div>
+
+                                                    <div class="col-md-9 mt-4">
+                                                        <button class="back_btn me-3" mat-button matStepperPrevious>Back</button>
+                                                        <button class="next_btn" (click)="addOffice(stepper)" mat-button>Next</button>
+                            
+                                                    </div>
+                                                  
+
+                                                </div>
+
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        
+                        </ng-template>
+                    </mat-step>
+
+                    <mat-step [stepControl]="experienceForm">
+                        <ng-template matStepLabel>
+                            <h1>Experience</h1>
+                        </ng-template>
+                        <ng-template matStepContent>
+                            <div class="Add_Invoice">
+
+                                <div class="row m-0">
+                                    <div class="col-md-12 lawyer-reg-inputs">
+                                        <div class="mat_card_invoice">
+                                            <form  [formGroup]="experienceForm" #myform="ngForm" class="add_invoice_form">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="mat_label">Years of Practicing
+                                                            Law<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            <mat-select class="mat_input mat_input1"
+                                                                formControlName="year_of_practice">
+                                                                <mat-option *ngFor="let experience of experienceList"
+                                                                 [value]="experience">{{experience}}</mat-option>
+                                                             
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                       
+                                                         <h6>
+                                                            <span *ngIf="experienceForm.controls['year_of_practice'].hasError('required') && myform.submitted">Year Of Practice is Required</span>
+                                                          </h6>
+                                                    </div>
+                                                    <div class="col-md-9 lawyer-reg-inputs">
+                                                        <label class="mat_label">Bar Council Enrollment
+                                                            Number<span>*</span></label>
+                                                        <mat-form-field class="mat_form_filed">
+                                                            <input matInput type="text"
+                                                                formControlName="barcouncil_id" class="mat_input">
+                                                        </mat-form-field>
+                                                       
+                                                         <h6>
+                                                            <span *ngIf="experienceForm.controls['barcouncil_id'].hasError('required') && myform.submitted">Barcouncil Id is Required</span>
+                                                          </h6>
+                                                    </div>
+
+                                                    <div class="col-md-9 lawyer-reg-inputs" >
+
+                                                        <label class="mat_label">Choose Languages<span>*</span></label>
+                                                        <mat-chip-list selectable multiple formControlName="languages">
+                                                            <mat-chip *ngFor="let language of langugaes "
+                                                              
+                                                                [ngClass]="{'active': selectedLanguages.includes(language.name)}"
+                                                                (click)="selectlanguage(language.name)">
+                                                                {{language.name}}
+
+                                                            </mat-chip>
+
+                                                        </mat-chip-list>
+                                                    </div>
+
+                                                    <div class="col-md-9 mt-4 lawyer-reg-inputs">
+                                                        <button class="back_btn me-3" mat-button matStepperPrevious >Back</button>
+                                                        <button class="next_btn" (click)="addExperience(stepper)" mat-button >Submit</button>
+                            
+                                                    </div>
+                                                    
+                                                </div>
+
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                         
+                        </ng-template>
+                    </mat-step>
+
+
+                </mat-stepper>
+
+            </div>
+
+
+            <div class="successdiv" *ngIf="successMsg">
+                <div class="img">
+                    <img src="assets/img/success.png">
+                    <h5>Congratulations! Your account has been Registered Successfully.
+                        Account will be approved in 24 hours after your Profile updation. Login with Email to continue.
+                    </h5>
+                   
+                </div>
+                <button mat-button [routerLink]="'/home'">Go to Home</button>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+<app-footer></app-footer>

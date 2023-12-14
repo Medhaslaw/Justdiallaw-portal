@@ -1,0 +1,82 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a>Home</a></li>
+                        <li class="breadcrumb-item"><a>Invoice List</a></li>
+                        <li class="breadcrumb-item active"><a>Add Invoice List</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Add Invoice</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <form   class="add_invoice_form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Cases<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected">
+                                  <mat-option value="1" >Choose Case</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Invoice Date<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput [matDatepicker]="picker" class="mat_input"> 
+                                <mat-datepicker-toggle class="time_picker" matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Item<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Description<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Amount<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button mat-button type="submit" class="sub_btn">Submit</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button mat-button  class="cancel_btn">Cancel</button>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

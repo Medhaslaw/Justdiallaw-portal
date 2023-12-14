@@ -1,0 +1,331 @@
+.lawyers-dashboard{
+    padding: 5.5vw 2vw 3vw 2vw;
+    .bg_img{
+        background-image: url("../../../assets/img/dashboard-bg-img.jpg");
+        background-position: center;
+        background-size: cover;
+        padding: 2vw;
+        border-radius: 0.5vw;
+        h4{
+            font-size: 1.6vw;
+            padding: 0;
+            margin: 0;
+            font-weight: 600;
+        }
+        p{
+            padding: 0;
+            margin: 1vw 0 0 0;
+            font-size: 1.1vw;
+            font-weight: 500;
+        }
+        
+    }
+    .enq_tabs{
+        margin: 2vw 0 0;
+       
+           
+                .panal_bg_color{
+                    background-color: var(--primary);
+                    padding: 1.2vw 2vw;
+                    border-radius: 0.5vw;
+                    margin: 0.8vw 0;
+                    cursor: pointer;
+                    
+                    .bg_icon{
+                        background-color: #ffffff2b;
+                        width: 4vw;
+                        height: 4vw;
+                        border-radius: 1vw;
+                        padding: 0.5vw;
+                        margin-right: 2vw;
+                        img{
+                            width: 3vw;
+                        }
+                    }
+                    h1{
+                        color: #fff;
+                        padding: 0;
+                        margin: 0;
+                        font-size: 1.2vw;
+                        font-weight: 500;
+                        margin: 0;
+                    }
+                    h5{
+                        font-size: 1.5vw;
+                        font-weight: 700;
+                        color: #fff;
+                        padding: 0;
+                        margin: 0.5vw 0;
+                        span{
+                            margin: 0 0.5vw 0 0;
+                        }
+                    }
+                }
+                .panal_bg_color1{
+                    background-color: #0054a5;
+                }
+                .panal_bg_color2{
+                    background-color: #352c61;
+                }
+                .panal_bg_color3{
+                    background-color: #605ca8;
+                }
+                .panal_bg_color4{
+                    background-color: #10876a;
+                }
+                .panal_bg_color5{
+                    background-color: #c94783;
+                }
+            
+        
+    }
+    .enq_table{
+        .eq-heading{
+            margin: 3vw 0 2vw;
+            h1{
+                padding: 0;
+                margin: 0 0 0 1vw;
+                font-size: 1.5vw;
+                font-weight: 600;
+            }
+        }
+        .table_width{
+            width: 100%;
+            padding: 0.5vw;
+
+            th{
+                font-size: 1vw;
+                padding: 0.5vw;
+                margin: 0;
+                color: #fff;
+            }
+            .header_bg{
+                background-color: var(--background);
+            }
+            td{
+                font-size: 0.9vw;
+                font-weight: 400;
+                color: #333437;
+                padding: 0.5vw;
+                margin: 0;
+                border: inherit;
+                span{
+                    color: var(--primary);
+                    cursor: pointer;
+                }
+                button{
+                    border: inherit;
+                    background-color: #e7eefe;
+                    padding: 0.5vw;
+                    border-radius: 0.3vw;
+                    i{
+                        color: var(--background);
+                        margin-left: 0.5vw;
+                        font-size: 1vw;
+                    }
+                }
+            }
+        }
+        .enq-btn{
+            font-size: 1.1vw;
+            color: #fff;
+            background-color: var(--background);
+            font-weight: 500;
+            border: inherit;
+            border-radius: 10vw;
+            padding: 1.5vw 3vw;
+            margin: 3vw 0 0 ;
+
+        }
+    }
+   
+}
+
+
+@media (max-width: 575.98px){
+    .lawyers-dashboard{
+        padding: 25px 10px;
+        .bg_img{
+            padding: 20px;
+            border-radius: 10px;
+            background-image: inherit;
+            background-color: #eceee9;
+            margin-bottom: 20px;
+            h4{
+                font-size: 20px;
+                margin: 0 0 10px;
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+        .enq_tabs{
+            .panal_bg_color{
+                padding: 20px;
+                border-radius: 10px;
+                margin: 0 0 15px;
+                .bg_icon{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50px;
+                    padding: 10px 0;
+                    margin-right: 20px;
+                    text-align: center;
+                    img{
+                        width: 25px;
+                    }
+                }
+                h1{
+                    font-size: 22px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+    .lawyers-dashboard{
+        padding: 25px 10px !important;
+        .bg_img{
+            padding: 20px;
+            border-radius: 10px;
+            background-image: inherit;
+            background-color: #eceee9;
+            margin-bottom: 20px;
+            h4{
+                font-size: 20px;
+                margin: 0 0 10px;
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+        .enq_tabs{
+            .panal_bg_color{
+                padding: 20px;
+                border-radius: 10px;
+                margin: 0 0 15px;
+                .bg_icon{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50px;
+                    padding: 10px 0;
+                    margin-right: 20px;
+                    text-align: center;
+                    img{
+                        width: 25px;
+                    }
+                }
+                h1{
+                    font-size: 22px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    
+    .lawyers-dashboard{
+        padding: 25px 10px !important;
+        .bg_img{
+            padding: 20px;
+            border-radius: 10px;
+            background-image: inherit;
+            background-color: #eceee9;
+            margin-bottom: 20px;
+            h4{
+                font-size: 20px;
+                margin: 0 0 10px;
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+        .enq_tabs{
+            .panal_bg_color{
+                padding: 20px;
+                border-radius: 10px;
+                margin: 0 0 15px;
+                .bg_icon{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50px;
+                    padding: 10px 0;
+                    margin-right: 20px;
+                    text-align: center;
+                    img{
+                        width: 25px;
+                    }
+                }
+                h1{
+                    font-size: 22px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+    .lawyers-dashboard{
+        padding: 25px 10px !important;
+        .bg_img{
+            padding: 20px;
+            border-radius: 10px;
+            background-image: inherit;
+            background-color: #eceee9;
+            margin-bottom: 20px;
+            h4{
+                font-size: 20px;
+                margin: 0 0 10px;
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+        .enq_tabs{
+            .panal_bg_color{
+                padding: 20px;
+                border-radius: 10px;
+                margin: 0 0 15px;
+                .bg_icon{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50px;
+                    padding: 10px 0;
+                    margin-right: 20px;
+                    text-align: center;
+                    img{
+                        width: 25px;
+                    }
+                }
+                h1{
+                    font-size: 22px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+
+}

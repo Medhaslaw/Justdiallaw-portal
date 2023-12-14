@@ -1,0 +1,91 @@
+
+.add_new_topic{
+
+    .dialog_title{
+        box-shadow: 0.05vw 0.01vw 0.31vw 0.2vw #66666629;
+        position: relative;
+        h1{
+            font-size: 1vw;
+            color: #222;
+            padding: 1.5vw 0;
+            margin: 0;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+
+        }
+        button.cancel_btn{
+            border: inherit;
+            background-color: inherit;
+            position: absolute;
+            top: 0.8vw;
+            right: 1vw;
+            i{
+                color: #e86d1f;
+                font-size: 1.5vw;
+            }
+        }
+
+       
+    }
+    .dialog_content{
+        padding: 1vw;
+        margin: 0;
+        overflow: hidden;
+
+        .add_invoice_form{
+            padding: 0 1.5vw;
+            .mat_label{
+                color: #707074;
+                font-size: 1.1vw;
+                padding: 0;
+                margin: 0 0 0.5vw 1vw;  
+                font-weight: 500;  
+                span{
+                    color: red;
+                }
+             }
+            .mat_form_filed{
+                width: 100% !important;
+                margin-bottom: 2vw;
+                .mat_input{
+                   border: 0.1vw solid #e3e3e3;
+                   padding: 1.1vw;
+                   font-size: 0.9VW;
+                   border-radius: 0.2VW;
+                   background-color: #f9f9f9;
+                   width: 20vw;
+                }
+                .mat_input1{
+                    width: 22.3vw;
+                }
+                
+            }
+            
+        }
+        .sub_btn{
+            font-size: 1.1vw;
+            font-weight: 500;
+            color: #fff;
+            padding: 1.2vw ;
+            background-color: #e86d1f;
+            border: inherit;
+            margin-top: 1vw;
+            border-radius: 5vw;
+            width: 100%;
+        }
+        p{
+            font-size: 1vw;
+            color: #707074;
+            font-weight: 500;
+            padding: 0;
+            margin: 0.8vw;
+            
+            i{
+                font-size: 1.1vw;
+                color: #707074;
+                margin-right: 0.5vw;
+            }
+        }
+    }
+}

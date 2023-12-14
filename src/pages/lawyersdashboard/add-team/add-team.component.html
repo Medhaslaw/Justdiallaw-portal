@@ -1,0 +1,84 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a>Home</a></li>
+                        <li class="breadcrumb-item"><a>Team</a></li>
+                        <li class="breadcrumb-item active"><a>Add Team</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Add Team</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <div class="new_team_heading">
+                    <h1>Add new Team Member</h1>
+                </div>
+                <form   class="add_invoice_form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="radio_mat_btn">
+                                <label class="mat_label_1">Task Related To<span>*</span></label> 
+                                <mat-radio-group class="mat_radio" aria-label="Select an option">
+                                    <mat-radio-button class="radio_btn" value="Team">Team</mat-radio-button>
+                                    <mat-radio-button class="radio_btn" value="Connections">Connections</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">First Name<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Last Name<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Email<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Mobile Number<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button mat-button type="submit" class="sub_btn">Submit</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button mat-button  class="cancel_btn">Cancel</button>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

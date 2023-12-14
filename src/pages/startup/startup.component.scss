@@ -1,0 +1,981 @@
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+p {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.breadcrumbs-card {
+    background: #f9fafc;
+    padding: 1.3vw 0;
+
+    .nav {
+        margin: 0;
+        padding: 0;
+
+        li {
+            font-size: 1vw;
+            margin-right: .6vw;
+
+            svg {
+                height: 2vw;
+
+            }
+
+            span {
+                margin-left: .6vw;
+            }
+
+            a {
+                font-size: 1vw;
+                text-decoration: none;
+                color: #313131;
+                padding: 0;
+            }
+        }
+
+        li:last-child {
+            color: rgba(49, 49, 49, .5);
+        }
+    }
+}
+
+.document-brief {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+
+    .document-brief-left {
+        flex: 0 0 63.5%;
+        max-width: 63.5%;
+
+        .course-info {
+
+            .text {
+                color: #000;
+                position: relative;
+
+                h3 {
+                    font-size: 2.5vw;
+                    font-weight: 700;
+                    margin-bottom: 2vw;
+                    color: #313131;
+                    line-height: 3vw !important;
+                }
+
+                h6 {
+                    font-weight: 500;
+                    font-size: 1.1vw;
+                    // color: rgba(255, 255, 255, 0.872);
+                    margin-bottom: 1vw;
+                    color: #313131;
+                }
+
+                p {
+                    font-size: 1vw;
+                    margin: 0;
+
+
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+
+            }
+        }
+
+        .course-features {
+            margin-top: 2.5vw;
+
+            .course-header {
+                margin-bottom: 1vw;
+
+                h6 {
+                    font-size: 2vw;
+                    font-weight: 500;
+                    color: #313131;
+                    margin: 0;
+                }
+            }
+
+            .course-features-card {
+                padding: 1.4vw 1.3vw 1.4vw;
+                border-radius: 0.7vw;
+                color: #fff;
+                min-height: 100%;
+                margin-bottom: 0;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+                box-shadow: 0 0 16px 0 rgb(0 0 0 / 9%);
+
+                .icon {
+                    text-align: center;
+                    height: 4.5vw;
+                    width: 4.5vw;
+                    margin: 0 auto 1vw;
+                    border-radius: .8vw;
+                    background-color: #ffffff2c;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        font-size: 2.3vw;
+                    }
+                }
+
+                .img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 86%;
+                    display: none;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.05vw;
+                    margin-bottom: 1vw;
+                    font-weight: 500;
+                    line-height: 1.5vw !important;
+                }
+
+                p {
+                    font-size: .9vw;
+                    font-weight: 400;
+                    margin: 0 !important;
+
+                    p {
+                        margin: 0 !important;
+                    }
+
+                    span {
+                        display: block;
+                    }
+
+                    small {
+                        font-size: 12px;
+                        display: block;
+                    }
+                }
+            }
+
+
+        }
+
+
+        .text-card {
+            margin-bottom: 1.2vw;
+            border-radius: .4vw;
+            padding: 1.7vw;
+            box-shadow: 0 0 24.44px 1.56px rgb(154 154 156 / 21%);
+            margin-top: 2vw;
+
+            h6 {
+                font-size: 1.7vw;
+                color: #313131;
+                margin-bottom: 1vw;
+                font-weight: 400;
+            }
+
+            div{
+                p {
+                    margin-bottom: 1.5vw;
+                    font-size: 1.2vw;
+                    color: rgba(49, 49, 49, .9);
+                    line-height: 2vw !important;
+                }
+            }
+            
+
+
+        }
+
+    }
+
+    .document-brief-right {
+        flex: 0 0 36.5%;
+        max-width: 36.5%;
+
+        .document-brief-container {
+            border-radius: 1vw;
+            padding: 1.8vw 2vw;
+            top: 4vw;
+            // background-color: #f9fafc;
+            display: inline-block;
+            background: #fff;
+            box-shadow: 0 0 24.44px 1.56px rgb(154 154 156 / 21%);
+            z-index: 99;
+
+            h2 {
+                font-size: 2vw;
+                position: relative;
+                text-align: center;
+                font-weight: 400;
+                margin-bottom: 3vw;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    -o-transform: translate(-50%, -50%);
+                    left: 50%;
+                    right: 50%;
+                    background: #313131;
+                    width: 2vw;
+                    bottom: -1.2vw;
+                    background: rgba(49, 49, 49, .7);
+                    height: .2vw;
+                }
+
+
+            }
+
+            .img {
+                border-radius: 20px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .product-info-cart {
+                margin: 1.2vw 0 0;
+
+                h6 {
+                    font-size: 15px;
+                    margin: 0;
+                }
+
+                ul {
+                    // margin: 1.2vw 0 0;
+                    padding: 0;
+                    display: inline-block;
+
+                    li {
+                        list-style: none;
+                        float: left;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 0.3vw;
+                        color: #5e5e5e;
+                        width: 100%;
+
+                        span {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+            .product-addons {
+                h3 {
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 1.1vw;
+                    font-weight: 400;
+                    color: #333;
+                    margin: 0;
+                    text-align: right;
+                }
+
+                ul {
+                    margin: 7px 0 0;
+                    padding: 0;
+                    display: inline-block;
+                    width: 100%;
+
+                    li {
+                        list-style: none;
+                        float: left;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 6px;
+                        justify-content: space-between;
+                        color: #000;
+                        width: 100%;
+
+                        svg {
+                            fill: #000;
+                            width: 14px;
+                            height: 14px;
+                            cursor: pointer;
+                            position: relative;
+                            top: -2px;
+                            margin-left: 2px;
+                        }
+
+                        span {
+                            font-size: 13px;
+                        }
+
+                        small {
+                            display: block;
+                            font-size: 10px;
+                            opacity: .9;
+                        }
+                    }
+                }
+            }
+
+            .price-coupom {
+                align-items: end;
+                line-height: 100%;
+
+                .couponCode {
+                    h6 {
+                        font-size: 1.1vw;
+                        display: flex;
+                        margin: 0;
+                        color: #000;
+                        align-items: center;
+                        cursor: pointer;
+                        font-weight: 600;
+
+                        img {
+                            margin-right: 7px;
+                            width: 22px;
+                            min-width: 22px;
+                        }
+                    }
+                }
+
+                .priceCard {
+                    text-align: right;
+
+                    h3 {
+                        font-weight: 600;
+                        font-size: 25px;
+                        color: #000;
+                        margin: 0;
+                        line-height: 100%;
+                    }
+
+                    span {
+                        font-size: 13px;
+                        font-style: italic;
+                        color: #000;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .cart-actions {
+                display: flex;
+                margin-top: 15px;
+
+                button {
+                    border-radius: 10px;
+                    line-height: 100%;
+                    padding: 9px 10px;
+                    font-size: 20px;
+                    font-weight: 800;
+                    background: #fff;
+                    margin-left: 10px;
+                    min-width: 20%;
+                    width: 20%;
+                }
+
+                .buy_now {
+                    background: linear-gradient(268deg, #c82090 0%, #6a14d1 93%);
+                    color: #fff;
+                    margin-left: 0;
+                    min-width: 60%;
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    .faq {
+        // background-color: #000;
+
+        // background: linear-gradient(143deg, #403369 12%, #3270ac);
+        h2 {
+            font-size: 2vw;
+            font-weight: 500;
+            color: #313131;
+            margin: 0;
+        }
+
+
+        .accordion {
+            width: 100%;
+            margin: auto;
+            margin: 0;
+            padding: 0;
+
+            li {
+                border-radius: 4px;
+                margin-bottom: 8px;
+                overflow: hidden;
+                // border: 1px solid #ff165a;
+                box-shadow: 0 0 24.44px 1.56px rgb(154 154 156 / 21%);
+            }
+
+
+
+            .menu {
+                background: #fff;
+                position: relative;
+                padding: 16px 20px;
+                color: #1d439f;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                font-size: 13px;
+                font-weight: 600;
+
+            }
+
+            li {
+                list-style: none;
+
+                &:last-child .menu {
+                    border-bottom: 0;
+                }
+
+                i {
+                    position: absolute;
+                    top: 1.2rem;
+                    left: 1rem;
+                    color: #c4c4c4;
+                    transition: all 0.4s ease;
+
+                    &.fa-plus {
+                        right: 1rem;
+                        left: auto;
+                    }
+
+                    &.fa-minus {
+                        right: 1rem;
+                        left: auto;
+                    }
+                }
+
+            }
+        }
+
+
+
+        .submenu {
+            height: 0;
+            overflow: hidden;
+            font-size: 14px;
+            transition: height 0.4s ease;
+
+            .acco_info {
+                padding: 22px 18px 22px;
+
+                p {
+                    margin: 0;
+                    color: #5e5e5e;
+                }
+            }
+
+            .acc_points {
+                margin: 5px 12px;
+            }
+        }
+
+        .accordion li:last-child .submenu {
+            border-radius: 0 0 4px 4px;
+
+            li:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        .submenu a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 20px;
+            transition: all 0.25s ease-in-out;
+
+
+        }
+    }
+
+}
+
+
+.mobile_none {
+    display: block;
+}
+
+.desktop_none {
+    display: none;
+}
+
+@media (max-width: 575.98px) {
+    .call-div {
+        padding: 15px !important;
+        .sign_up {
+            .clip_patharea {
+                h1 {
+                    font-size: 22px;
+                    padding: 0;
+                    margin: 0 0 10px;
+                }
+                h3 {
+                    position: absolute;
+                    right: 5px;
+                    font-size: 20px;
+                    top: 5px;
+                }
+            }
+            .just-law-num {
+                .num {
+                    h1 {
+                        font-size: 14px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    h3 {
+                        font-size: 13px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .document-brief {
+        .document-brief-left {
+            .course-info {
+                .text {
+                    h3 {
+                        font-size: 17px;
+                        margin: 15px 0;
+                        line-height: inherit !important;
+                    }
+                    h6 {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .text-card {
+                margin: 20px 0;
+                padding: 15px;
+                h6 {
+                    font-size: 20px;
+                }
+            }
+            .faq {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+            flex: auto;
+            max-width: initial;
+            .margin_bottom {
+                margin: 5px 0;
+            }
+            .course-features {
+                .course-header {
+                    h6 {
+                        font-size: 20px;
+                    }
+                }
+                .course-features-card {
+                    padding: 20px 10px;
+                    .icon {
+                        i {
+                            font-size: 27px;
+                        }
+                    }
+                    h2 {
+                        font-size: 12px;
+                        margin: 10px 0;
+                        line-height: initial !important;
+                    }
+                    p {
+                        font-size: 11px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        .document-brief-right {
+            flex: auto;
+            max-width: 90%;
+            margin: 0 auto;
+            .document-brief-container {
+                padding: 20px;
+                width: 100%;
+                h2 {
+                    font-size: 13px;
+                }
+                .product-addons {
+                    p {
+                        font-size: 15px;
+                    }
+                }
+                .price-coupom {
+                    .couponCode {
+                        h6 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .desktop_none {
+        display: block;
+    }
+    .breadcrumbs-card {
+        .nav {
+            a {
+                font-size: 12px !important;
+            }
+            li {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.course-header {
+    margin-bottom: 1vw;
+    h6 {
+        font-size: 2vw;
+        font-weight: 500;
+        color: #313131;
+        margin: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .document-brief {
+        .document-brief-left {
+            .course-info {
+                .text {
+                    h3 {
+                        font-size: 17px;
+                        margin: 15px 0;
+                        line-height: inherit !important;
+                    }
+                    h6 {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .text-card {
+                margin: 20px 0;
+                padding: 15px;
+                h6 {
+                    font-size: 20px;
+                }
+            }
+            .faq {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+            flex: auto;
+            max-width: initial;
+            .margin_bottom {
+                margin: 5px 0;
+            }
+            .course-features {
+                .course-header {
+                    h6 {
+                        font-size: 20px;
+                    }
+                }
+                .course-features-card {
+                    padding: 20px 10px;
+                    .icon {
+                        i {
+                            font-size: 27px;
+                        }
+                    }
+                    h2 {
+                        font-size: 12px;
+                        margin: 10px 0;
+                        line-height: initial !important;
+                    }
+                    p {
+                        font-size: 11px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        .document-brief-right {
+            flex: auto;
+            max-width: 90%;
+            margin: 0 auto;
+            .document-brief-container {
+                padding: 20px;
+                width: 100%;
+                .product-addons {
+                    p {
+                        font-size: 15px;
+                    }
+                }
+                .price-coupom {
+                    .couponCode {
+                        h6 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .desktop_none {
+        display: block;
+    }
+    .breadcrumbs-card {
+        .nav {
+            a {
+                font-size: 12px !important;
+            }
+            li {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .call-div {
+        padding: 15px !important;
+        .sign_up {
+            .clip_patharea {
+                h1 {
+                    font-size: 22px;
+                    padding: 0;
+                    margin: 0 0 10px;
+                }
+                h3 {
+                    position: absolute;
+                    right: 5px;
+                    font-size: 20px;
+                    top: 5px;
+                }
+            }
+            .just-law-num {
+                .num {
+                    h1 {
+                        font-size: 14px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    h3 {
+                        font-size: 13px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .document-brief {
+        .document-brief-left {
+            .course-info {
+                .text {
+                    h3 {
+                        font-size: 17px;
+                        margin: 15px 0;
+                        line-height: inherit !important;
+                    }
+                    h6 {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .text-card {
+                margin: 20px 0;
+                padding: 15px;
+                h6 {
+                    font-size: 20px;
+                }
+            }
+            .faq {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+            flex: auto;
+            max-width: initial;
+            .margin_bottom {
+                margin: 5px 0;
+            }
+            .course-features {
+                .course-header {
+                    h6 {
+                        font-size: 20px;
+                    }
+                }
+                .course-features-card {
+                    padding: 20px 10px;
+                    .icon {
+                        i {
+                            font-size: 27px;
+                        }
+                    }
+                    h2 {
+                        font-size: 12px;
+                        margin: 10px 0;
+                        line-height: initial !important;
+                    }
+                    p {
+                        font-size: 11px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        .document-brief-right {
+            flex: auto;
+            max-width: 90%;
+            margin: 0 auto;
+            .document-brief-container {
+                padding: 20px;
+                .product-addons {
+                    p {
+                        font-size: 15px;
+                    }
+                }
+                .price-coupom {
+                    .couponCode {
+                        h6 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .desktop_none {
+        display: block;
+    }
+    .breadcrumbs-card {
+        .nav {
+            a {
+                font-size: 12px !important;
+            }
+            li {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .document-brief {
+        .document-brief-left {
+            .course-info {
+                .text {
+                    h3 {
+                        font-size: 17px;
+                        margin: 15px 0;
+                        line-height: inherit !important;
+                    }
+                    h6 {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .text-card {
+                margin: 20px 0;
+                padding: 15px;
+                h6 {
+                    font-size: 20px;
+                }
+            }
+            .faq {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+            flex: auto;
+            max-width: initial;
+            .margin_bottom {
+                margin: 5px 0;
+            }
+            .course-features {
+                .course-header {
+                    h6 {
+                        font-size: 20px;
+                    }
+                }
+                .course-features-card {
+                    padding: 20px 10px;
+                    .icon {
+                        i {
+                            font-size: 27px;
+                        }
+                    }
+                    h2 {
+                        font-size: 12px;
+                        margin: 10px 0;
+                        line-height: initial !important;
+                    }
+                    p {
+                        font-size: 11px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        .document-brief-right {
+            flex: auto;
+            max-width: 90%;
+            margin: 0 auto;
+            .document-brief-container {
+                padding: 20px;
+                z-index: -1;
+                .product-addons {
+                    p {
+                        font-size: 15px;
+                    }
+                }
+                .price-coupom {
+                    .couponCode {
+                        h6 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .desktop_none {
+        display: block;
+    }
+    .breadcrumbs-card {
+        .nav {
+            a {
+                font-size: 12px !important;
+            }
+            li {
+                font-size: 11px;
+            }
+        }
+    }
+}
+.doc_bg {
+    width: 100%;
+  height: 16vw;
+    background-position: center !important;
+    background-size: cover !important;
+}

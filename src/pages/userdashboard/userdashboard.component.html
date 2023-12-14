@@ -1,0 +1,175 @@
+<app-userheader></app-userheader>
+<button class=" men_btn open menu-active desktop_none" (click)="openMenu()"><i class="bi bi-list"></i></button>
+
+<div app-theme>
+
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" class="user-side-nav hednav" opened>
+            <div class="mat-user-side-nav">
+                <div class="profile_details">
+                    <div *ngIf="user_Profile?.profile_pic_url === null; else elseBlock ">
+                        <div class="user-profile">
+                            <img src="assets/img/avatar.webp" class="rounded-circle">
+                            <div class="upload-file d-flex">
+                                <div class="upload-img d-flex">
+                                    <button class="file-upload-button">
+                                        <input type="file" class="upload-file" placeholder="+"
+                                            (change)="onFileChanged($event)" /><i class="bi bi-camera-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-template #elseBlock>
+                        <div class="user-profile" >
+                            <img (click)="openDialog(user_Profile)" src="{{user_Profile.profile_pic_url}}" alt="">
+                            <div class="upload-file d-flex">
+                                <div class="upload-img d-flex">
+                                    <button class="file-upload-button">
+                                        <input type="file" class="upload-file" (change)="onFileChanged($event)" /><i
+                                            class="bi bi-camera-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <h3>{{user_Profile?.username.split('-')[0]}}</h3>
+                    <h4>{{user_Profile?.email}}</h4>
+                </div>
+                <div class="mat-side-nav-link">
+                    <div class="mat-link" [routerLink]="'/my-jdl/profiledashboard'" (click)="viewTab()" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 17.000000 17.000000"
+                                preserveAspectRatio="xMidYMid meet">
+                                <g transform="translate(0.000000,17.000000) scale(0.100000,-0.100000)" stroke="none">
+                                    <path
+                                        d="M7 164 c-4 -4 -7 -16 -7 -26 0 -16 6 -19 38 -16 29 2 37 7 37 23 0 15 -8 21 -30 23 -17 2 -34 0 -38 -4z" />
+                                    <path
+                                        d="M97 163 c-2 -4 -4 -26 -3 -48 1 -39 2 -40 36 -40 35 0 35 0 35 45 0 43 -1 45 -32 48 -17 2 -33 -1 -36 -5z" />
+                                    <path
+                                        d="M4 87 c-3 -8 -4 -30 -2 -49 3 -31 6 -33 38 -33 35 0 35 0 35 45 0 43 -1 45 -33 48 -21 2 -34 -2 -38 -11z" />
+                                    <path
+                                        d="M97 43 c-12 -25 0 -38 33 -38 29 0 36 4 38 23 3 19 -1 22 -32 22 -19 0 -37 -3 -39 -7z" />
+                                </g>
+                            </svg>Dashboard
+                        </a>
+                    </div>
+
+                    <div [routerLink]="'/my-jdl/my-appointments'" (click)="viewTab()" class="mat-link" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 18.000000 24.000000"
+                                preserveAspectRatio="xMidYMid meet">
+
+                                <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)" stroke="none">
+                                    <path
+                                        d="M68 226 c-33 -24 -22 -46 22 -46 30 0 40 4 40 16 0 15 -27 43 -40 43 -3 0 -13 -6 -22 -13z" />
+                                    <path
+                                        d="M4 197 c-3 -8 -4 -54 -2 -103 l3 -89 85 0 85 0 0 99 c0 71 -4 101 -12 104 -8 2 -13 -5 -13 -16 0 -22 -18 -32 -60 -32 -41 0 -60 10 -60 31 0 22 -18 26 -26 6z m86 -55 c0 -5 -8 -16 -18 -25 -14 -13 -21 -14 -30 -5 -9 9 -6 14 11 24 27 15 37 16 37 6z m55 -12 c3 -5 -3 -10 -14 -10 -12 0 -21 5 -21 10 0 6 6 10 14 10 8 0 18 -4 21 -10z m-55 -48 c0 -5 -8 -16 -18 -25 -14 -13 -21 -14 -30 -5 -9 9 -6 14 11 24 27 15 37 16 37 6z m55 -12 c3 -5 -3 -10 -14 -10 -12 0 -21 5 -21 10 0 6 6 10 14 10 8 0 18 -4 21 -10z" />
+                                </g>
+                            </svg>
+                            My Leads</a>
+                    </div>
+
+                    <div [routerLink]="'/my-jdl/my-cases'" (click)="viewTab()" class="mat-link" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 24.000000 31.000000"
+                                preserveAspectRatio="xMidYMid meet">
+
+                                <g transform="translate(0.000000,31.000000) scale(0.100000,-0.100000)" stroke="none">
+                                    <path d="M46 284 c-4 -10 -2 -22 3 -27 15 -15 46 -3 46 18 0 26 -40 33 -49 9z" />
+                                    <path d="M144 285 c-8 -20 4 -35 26 -35 23 0 32 13 24 34 -8 20 -43 21 -50 1z" />
+                                    <path
+                                        d="M22 209 c-23 -36 -15 -39 98 -39 114 0 125 5 97 42 -10 13 -31 16 -98 16 -73 1 -87 -2 -97 -19z" />
+                                    <path
+                                        d="M54 118 c26 -30 36 -51 36 -75 0 -22 5 -33 14 -33 31 0 46 13 46 39 0 17 14 44 36 69 l36 42 -102 0 -102 0 36 -42z" />
+                                </g>
+                            </svg>
+
+                            My Cases</a>
+                    </div>
+
+
+
+                    <div [routerLink]="'/my-jdl/feedback'" (click)="viewTab()" class="mat-link" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 18.000000 24.000000"
+                                preserveAspectRatio="xMidYMid meet">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M20 2H4.01c-1.1 0-2 .9-2 2v18L6 18h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-5c0 .55-.45 1-1 1s-1-.45-1-1V7c0-.55.45-1 1-1s1 .45 1 1v2z" />
+                            </svg>
+                            Feedback</a>
+                    </div>
+
+
+                    <div [routerLink]="'/my-jdl/transactions'" (click)="viewTab()" class="mat-link" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <a >
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 20.000000 20.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,20.000000) scale(0.100000,-0.100000)" stroke="none">
+                                <path
+                                    d="M6 174 c-8 -20 -8 -128 0 -148 9 -23 179 -23 188 0 8 20 8 128 0 148 -9 23 -179 23 -188 0z m74 -34 c0 -5 15 -10 34 -10 19 0 38 -4 41 -10 4 -6 -17 -10 -54 -10 -61 0 -71 6 -49 28 15 15 28 16 28 2z m78 -67 c-2 -10 -12 -19 -22 -21 -11 -3 -16 0 -12 7 5 7 -7 11 -33 11 -23 0 -41 5 -41 10 0 6 25 10 56 10 47 0 55 -3 52 -17z" />
+                            </g>
+                        </svg>
+                        My Payments</a>
+                </div >
+              
+
+                    <div [routerLink]="'/my-jdl/userprofile'" (click)="viewTab()" class="mat-link" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 22.000000 24.000000"
+                                preserveAspectRatio="xMidYMid meet">
+
+                                <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)" stroke="none">
+                                    <path
+                                        d="M70 220 c-25 -25 -26 -62 -2 -83 39 -35 102 -9 102 41 0 28 -34 62 -60 62 -11 0 -29 -9 -40 -20z" />
+                                    <path
+                                        d="M64 91 c-26 -12 -54 -49 -54 -73 0 -16 11 -18 100 -18 92 0 100 1 100 19 0 11 -10 32 -23 46 -24 29 -86 42 -123 26z" />
+                                </g>
+                            </svg>
+                            Profile</a>
+                    </div>
+
+
+                    <!--         
+                <div [routerLink]="'/my-jdl/talk-ro-lawyer'" class="mat-link" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <a > 
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 24.000000 19.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,19.000000) scale(0.100000,-0.100000)" stroke="none">
+                                <path d="M57 173 c-12 -12 -7 -50 8 -63 17 -14 51 -5 59 16 13 35 -41 73 -67 47z" />
+                                <path d="M157 153 c-13 -12 -7 -44 8 -49 24 -10 47 14 34 37 -10 19 -30 25 -42 12z" />
+                                <path
+                                    d="M48 75 c-28 -15 -44 -47 -33 -65 3 -5 37 -10 76 -10 61 0 69 2 69 19 0 49 -65 82 -112 56z" />
+                                <path d="M163 83 c-21 -8 16 -53 43 -53 27 0 30 9 12 32 -15 18 -38 27 -55 21z" />
+                            </g>
+                        </svg>
+                        Talk to Lawyer</a>
+                </div> -->
+
+                    <div class="mat-link" (click)="logOut()" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M4,12a1,1,0,0,0,1,1h7.59l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l4-4a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-4-4a1,1,0,1,0-1.42,1.42L12.59,11H5A1,1,0,0,0,4,12ZM17,2H7A3,3,0,0,0,4,5V8A1,1,0,0,0,6,8V5A1,1,0,0,1,7,4H17a1,1,0,0,1,1,1V19a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V16a1,1,0,0,0-2,0v3a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V5A3,3,0,0,0,17,2Z" />
+                            </svg>
+                            Log Out</a>
+                    </div>
+
+                </div>
+            </div>
+
+</mat-drawer>
+<mat-drawer-content class="user-content">
+    <router-outlet></router-outlet>
+</mat-drawer-content>
+</mat-drawer-container>
+
+</div>

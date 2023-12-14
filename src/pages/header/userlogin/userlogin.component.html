@@ -1,0 +1,180 @@
+<div app-theme>
+
+<div mat-dialog-content class="original-div" >
+  <div class="row justify-content-center">
+    <div class="col-md-11">
+      <div class="sign_up" *ngIf="show1">
+        <div class="clip_patharea middle ">
+          <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+          <h1>Welcome to Just Dial Law </h1>
+        </div>
+        <form   class="add_invoice_form" [formGroup]="userLoginForm" #myform="ngForm" id="userLoginForm">
+          <div class="row">
+            <div class="col-md-12">
+              <mat-label class="mat_label">Email Address <span>*</span></mat-label>
+              <mat-form-field class="mat_form_filed">
+            
+                <input matInput type="text" class="mat_input" formControlName="email">
+              </mat-form-field>
+              <h6>
+                <span *ngIf="userLoginForm.controls['email'].hasError('required') && myform.submitted">Email Id is
+                  required</span>
+                <span *ngIf="userLoginForm.controls['email'].hasError('pattern') && myform.submitted">Email Id is
+                  invalid</span>
+              </h6>
+            </div>
+            <div class="col-md-12">
+              <mat-label class="mat_label">Password <span>*</span></mat-label>
+              <mat-form-field class="mat_form_filed">
+               
+                <input matInput [type]="hide ? 'password' : 'text'" class="mat_input" formControlName="password" #pwd>
+                  <mat-icon class="psw-icon" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </mat-form-field>
+              <h6>
+                <span *ngIf="userLoginForm.controls['password'].hasError('required') && myform.submitted">Password is
+                  required</span>
+              </h6>
+
+            </div>
+          </div>
+
+          <div class="row m-0">
+            <div class="col-md-12">
+              <p>By Login, You agree to our <a (click)="TermsOfUse()">Terms Of Use </a></p>
+              <p class="text-danger">{{errData}}</p>
+              <div class="btns">
+                <div class="row">
+                  <div class="col justify-content-center">
+                    <button mat-button type="submit" class="sub_btn" (click)="usrlog()">Login</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <hr>
+        <div class="forgot_pwd ">
+          <button mat-button type="submit" class="ftp_btn" (click)="forGetPsw()">Forgot Password?</button>
+        </div>
+        <p>Don't have an account Yet? <a (click)="signup()"> Create Account</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row justify-content-center">
+    <div class="col-md-11">
+      <div class="sign_up" *ngIf="show">
+        <div class="clip_patharea middle">
+          <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+          <h1>Forgot Password</h1>
+        </div>
+        <form   class="add_invoice_form" [formGroup]="forgotPswForm" #myform="ngForm" id="userLoginForm">
+          
+          <div class="row" *ngIf="hideOtpInput1">
+            <div class="col-md-12">
+              <mat-form-field class="mat_form_filed">
+                <mat-label class="mat_label">Email Address <span>*</span></mat-label>
+                <input matInput type="text" class="mat_input" formControlName="email">
+              </mat-form-field>
+              <h6>
+                <span *ngIf="forgotPswForm.controls['email'].hasError('required') && myform.submitted">Email Id is
+                  required</span>
+                <span *ngIf="forgotPswForm.controls['email'].hasError('pattern') && myform.submitted">Email Id is
+                  invalid</span>
+              </h6>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="text-danger">{{forgotErrData}}</p>
+                <div class="btns">
+                  <div class="row">
+                    <div class="col justify-content-center">
+                      <button mat-button type="submit" class="sub_btn" (click)="forGotPswSendOpt()">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" *ngIf="hideEmailInput1">
+            <div class="col-md-12" *ngIf="hideOtpInput">
+              <h1 class="otp_sucess">Otp Sent Successfully</h1>
+              <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:4}" formControlName="otp"
+                class="otp_check"></ng-otp-input>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-danger">{{errOtpCheck}}</p>
+                      <p>Didn't get the code?<a (click)="forGotPswSendOpt()">Resend OTP</a></p>
+                      <button mat-button type="submit" class="sub_btn" (click)="verifyOtp()">Verify Otp</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row" *ngIf="hideEmailInput">
+            <div class="col-md-12">
+              <mat-form-field class="mat_form_filed">
+                <mat-label class="mat_label">New Password <span>*</span></mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" class="mat_input" formControlName="new_password"
+                  #pwd>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+
+              <div class="alert alert-danger"
+                *ngIf="forgotPswForm.controls['new_password'].hasError('passwordStrength')">
+                {{forgotPswForm.controls['new_password'].errors&&['Upper case,lower case,number,special character    required']}}
+              </div>
+            </div>
+
+            <div class="col-md-12 mt-4">
+              <mat-form-field class="mat_form_filed">
+                <mat-label class="mat_label">Confirm Password <span>*</span></mat-label>
+                <input matInput [type]=" pwHide ? 'password' : 'text'" class="mat_input"
+                  formControlName="confirm_password" #pwd>
+                <button mat-icon-button matSuffix (click)=" pwHide = !pwHide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]=" pwHide">
+                  <mat-icon>{{pwHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              <h6>
+                <span *ngIf="forgotPswForm.controls['confirm_password'].hasError('matching') && myform.submitted">
+                  Password and Confirm Password must be match.
+                </span>
+              </h6>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="btns">
+                  <div class="row">
+                    <div class="col justify-content-center">
+                      <button mat-button type="submit" class="sub_btn" (click)="resetPsw()">Reset Password</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+        <hr>
+        <p>Don't have an account Yet? <a (click)="signup()" [routerLink]="'/user_signup'"> Create Account</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="enabled" class="overlapped-div">
+  <sa-spinner-round-filled [size]="180" [thickness]="100" [speed]="60" color="rgba(33, 56, 112, 1)" ></sa-spinner-round-filled>
+</div>
+
+</div>

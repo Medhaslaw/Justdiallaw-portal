@@ -1,0 +1,1044 @@
+.about-header {
+
+    background: url('../../assets/img/about-bg.jpg') no-repeat;
+    background-color: #656b7c;
+    background-blend-mode: multiply;
+    height: 56vh;
+    width: 100%;
+    background-size: cover;
+    padding-top: 7.5vw;
+
+    .wel-jus-law {
+        padding-top: 2vw;
+        padding-left: 3.2vw;
+ 
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 3.2vw;
+            font-weight: 600;
+            font-family: "Circular Std-Bold";
+            font-family: "Circular Std Bold";
+            margin: 0;
+        }
+
+        p {
+            color: #fff;
+            opacity: 0.7;
+            letter-spacing: 0.2vw;
+            font-size: 1vw;
+            margin-top: 0.7vw;
+            font-family: "Circular Std Book";
+        }
+        h3 {
+            color: #fff;
+            text-align: center;
+            opacity: 0.9;
+            background: rgba(51, 51, 51, 0.5);
+            padding: 0.8vw;
+            font-size: 1vw;
+    font-weight: 700;
+    margin: 0 0 2vw;
+    font-family: Poppins,sans-serif!important;
+    width: 16vw;
+        }
+        i {
+            margin-left: 1vw;
+
+        }
+
+        .about-span {
+            color: var(--primary);
+            margin-left: 1vw;
+        }
+    }
+
+    .home-to-about {
+        padding-top: 2.5vw;
+        padding-left: 2.5vw;
+
+        h3 {
+            color: #fff;
+            text-align: center;
+            margin-top: 1.2vw;
+            opacity: 0.9;
+            background: rgba(51, 51, 51, 0.5);
+            padding: 0.8vw;
+            width: 70%;
+            font-size: 0.85vw;
+            font-family: "Circular Std-Bold";
+            font-family: "Circular Std Bold";
+        }
+
+        i {
+            margin-left: 1vw;
+
+        }
+
+        .about-span {
+            color: var(--primary);
+            margin-left: 1vw;
+
+
+        }
+
+    }
+}
+
+.can-trust {
+    padding: 6vw 0;
+
+    .text {
+        h2 {
+            font-family: "Circular Std Bold";
+            font-size: 2vw;
+            margin-bottom: 1vw;
+            color: #171c25;
+            line-height: 2.7vw !important;
+        }
+
+        .p-text {
+            p {
+                font-size: 1vw;
+                font-weight: 400;
+            }
+        }
+
+        ul {
+            display: grid;
+            margin-bottom: 2vw;
+
+            li {
+                font-size: 1vw;
+                font-weight: 400;
+                color: #171c25;
+                color: #171c25;
+                margin-bottom: 0.8vw;
+                line-height: 100%;
+
+                i {
+                    margin-right: .8vw;
+                    font-size: 1vw;
+                    color: var(--primary);
+                }
+            }
+        }
+
+        .trust-card {
+            .img {
+                width: 3vw;
+                background: var(--background);
+                color: var(--on-background);
+                border-radius: .7vw;
+                padding: .4vw;
+                margin-bottom: 1vw;
+            }
+
+            h6 {
+                font-size: 0.8vw;
+                font-weight: 500;
+                color: #171c25;
+                margin-bottom: 0;
+                font-family: 'Poppins', sans-serif !important;
+                line-height: 1.2vw;
+            }
+        }
+    }
+
+    .trust-img {
+        img {
+            width: 100%;
+            height: 70vh;
+        }
+
+        // padding-left: 3vw;
+        position: relative;
+
+        &::after {
+            // content: '';
+            // background: #b6e6f4;
+            width: 9vw;
+            height: 100%;
+            position: absolute;
+            // right: -10.69vw;
+            top: 0;
+            // border-bottom-left-radius: 1.5vw;
+            // border-top-left-radius: 1.5vw;
+        }
+    }
+}
+
+.law-connect {
+    background-color: #656b7c;
+    background-blend-mode: multiply;
+    background-image: url('../../assets/img/law-img.jpg');
+    height: 58vh;
+    width: 100%;
+    background-size: cover;
+    padding-top: 5vw;
+
+    .law-connect-head {
+        text-align: center;
+
+        h2 {
+            font-size: 3vw;
+            color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+
+        span {
+            color: var(--primary)
+        }
+
+        p {
+            color: rgb(189, 187, 187);
+            font-size: 1.5vw;
+            padding-top: 1vw;
+        }
+
+        h6 {
+
+            color: #fff;
+            font-size: 1.5vw;
+        }
+
+        button {
+
+            width: 15vw;
+            color: #fff;
+            background-color: var(--primary);
+            border-radius: 3vw;
+            padding: 1vw;
+            margin-top: 1vw;
+
+        }
+
+
+    }
+}
+
+
+.reviews {
+    padding: 6vw 0 3vw;
+
+    h2 {
+        font-family: "Circular Std Bold";
+        font-size: 2.2vw;
+        margin-bottom: 0;
+        color: #0b0b31;
+        line-height: 3vw;
+        text-align: center;
+        margin-bottom: 3vw;
+        font-weight: 600;
+    }
+
+    .reviews-card {
+        padding: 0 6vw;
+
+        .img {
+            padding-right: 1vw;
+        }
+
+        .text {
+            padding-left: 5vw;
+            padding-right: 5vw;
+
+            h6 {
+                color: var(--background);
+
+                margin: 0;
+            
+                font-size: 1.3vw;
+            
+                font-weight: 300;
+            
+                text-align: justify;
+            
+               font-style: italic;
+            
+                font-family: 'Poppins';
+            
+                line-height: 2.2vw!important;
+            }
+        }
+    }
+
+
+    .review-count {
+        padding-left: 2vw;
+
+        h2 {
+            color: #0b0b31;
+            font-size: 3.5vw;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif !important;
+            margin: 0;
+            line-height: 100%;
+        }
+
+        div {
+            margin-left: .5vw;
+            height: auto;
+
+            p {
+                color: var(--primary);
+                font-size: 1vw;
+                margin: 0;
+                line-height: 100%;
+
+                i {
+                    margin-right: .7vw;
+                }
+
+            }
+
+            h6 {
+                font-weight: 400;
+                color: var(--background);
+                margin: .6vw 0 0;
+                line-height: 100%;
+                font-size: 1vw;
+                font-family: 'Poppins', sans-serif !important;
+            }
+        }
+
+        h5 {
+            line-height: 100%;
+            font-size: 1vw;
+            font-family: 'Poppins', sans-serif !important;
+            color: #999999;
+            font-weight: 600;
+            margin-top: 2vw;
+            justify-content: center;
+
+            svg {
+                fill: #999999;
+                width: 1.3vw;
+                height: 1.3vw;
+                margin-right: .4vw;
+            }
+
+            span {
+                height: auto;
+            }
+        }
+    }
+
+    .line {
+        height: 100%;
+        width: .1vw;
+        background: #c7cad1;
+        margin: 0 auto;
+    }
+
+    .review-numbers {
+        border-top: 1px solid #cfc6bd;
+        padding-top: 3vw;
+        margin-top: 2vw;
+    }
+}
+
+.slide{
+    .img{
+        img{
+            width: 60% !important;
+            opacity: 0.7;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .slide{
+        .img{
+            img{
+                width: 50% !important;
+              margin: 0 auto;
+            }
+        }
+    }
+    .about-header {
+        height: 18vh;
+
+        h2 {
+            margin: 0;
+            font-size: 2.5vw;
+        }
+
+        p {
+            margin: 0;
+            font-size: 2.5vw;
+        }
+    }
+
+    .law-connect {
+        height: 18vh;
+    }
+}
+
+
+h1 h2 h3 h4 h4 h6 p span i {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+
+@media (max-width: 575.98px){
+
+    .slide{
+        .img{
+            img{
+                width: 50% !important;
+              margin: 0 auto;
+            }
+        }
+    }
+    .about-header{
+        height: auto;
+        padding: 30px 0;
+        .wel-jus-law{
+            h3{
+                padding: 10px;
+                font-size: 10px;
+                margin: 10px 0;
+                letter-spacing: 1px;
+                width: fit-content;
+            }
+            h2{
+                font-size: 25px;
+            }
+            p{
+                font-size: 15px;
+                margin: 10px 0;
+            }
+           
+        }
+        .home-to-about{
+            h3{
+                padding: 5px 20px;
+                width: fit-content;
+                font-size: 12px;
+            }
+        }
+    }
+    .can-trust{
+        padding: 40px 10px;
+        .trust-img{
+            display: none;
+            img{
+                height: 50vh;
+            }
+        }
+        .text{
+            padding: 10px 0;
+            h2{
+                font-size: 23px;
+                line-height: 30px !important;
+                margin: 10px 0
+            }
+            .p-text{
+                p{
+                    font-size: 14px;
+                }
+            }
+            ul{
+                li{
+                    margin: 8px 0;
+                    font-size: 14px;
+                    i{
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .trust-card{
+                margin: 10px 0 0;
+                width: 90px;
+                .img{
+                    width: 40px;
+                    border-radius: 8px;
+                    background-color: #0b0a32;
+                }
+                h6{
+                    font-size: 12px;
+                }
+            }   
+        }
+    }
+    .hoz-scroll{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 20px;
+            height: 4px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #e86d1f;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+    }
+    .law-connect{
+        padding: 30px 0;
+        height: auto;
+        .law-connect-head{
+            h2{
+                font-size: 22px;
+                margin: 10px 0;
+            }
+            p{
+                font-size: 17px;
+                margin: 10px 0;
+            }
+            h6{
+                font-size: 15px;
+            }
+            button{
+                width: 90%;
+                border-radius: 20px;
+                padding: 14px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .reviews{
+        padding: 40px 0;
+        h2{
+            font-size: 25px;
+            margin: 0 0 10px;
+        }
+        .reviews-card{
+            .text{
+                h6{
+                    margin: 10px 0;
+                    font-size: 17px;
+                    line-height: inherit !important;
+                }
+            }
+        }
+        .review-count{
+            h2{
+                font-size: 22px;
+                margin-right: 8px;
+            }
+            div{
+                p{
+                    font-size: 12px;
+                }
+                h6{
+                    font-size: 13px;
+                }
+               
+            }
+            h5{
+                font-size: 15px;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+    .slide{
+        .img{
+            img{
+                width: 50% !important;
+              margin: 0 auto;
+            }
+        }
+    }
+    .about-header{
+        height: auto;
+        padding: 30px 0;
+        .wel-jus-law{
+            h3{
+                padding: 10px;
+                font-size: 10px;
+                margin: 10px 0;
+                letter-spacing: 1px;
+                width: fit-content;
+            }
+            h2{
+                font-size: 25px;
+            }
+            p{
+                font-size: 15px;
+                margin: 10px 0;
+            }
+           
+        }
+        .home-to-about{
+            h3{
+                padding: 5px 20px;
+                width: fit-content;
+                font-size: 12px;
+            }
+        }
+    }
+    .can-trust{
+        padding: 40px 10px;
+        .trust-img{
+            img{
+                height: 50vh;
+            }
+        }
+        .text{
+            padding: 10px 0;
+            h2{
+                font-size: 23px;
+                line-height: 30px !important;
+                margin: 10px 0
+            }
+            .p-text{
+                p{
+                    font-size: 14px;
+                }
+            }
+            ul{
+                li{
+                    margin: 8px 0;
+                    font-size: 14px;
+                    i{
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .trust-card{
+                margin: 10px 0 0;
+                width: 90px;
+                .img{
+                    width: 40px;
+                    border-radius: 8px;
+                    background-color: #0b0a32;
+                }
+                h6{
+                    font-size: 12px;
+                }
+            }   
+        }
+    }
+    .hoz-scroll{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 20px;
+            height: 4px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #e86d1f;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+    }
+    .law-connect{
+        padding: 40px 10px;
+        height: auto;
+        .law-connect-head{
+            h2{
+                font-size: 22px;
+                margin: 10px 0;
+            }
+            p{
+                font-size: 17px;
+                margin: 10px 0;
+            }
+            h6{
+                font-size: 15px;
+            }
+            button{
+                width: 90%;
+                border-radius: 20px;
+                padding: 14px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .reviews{
+        padding: 40px 0;
+        h2{
+            font-size: 25px;
+            margin: 0 0 10px;
+        }
+        .reviews-card{
+            .text{
+                h6{
+                    margin: 10px 0;
+                    font-size: 17px;
+                    line-height: inherit !important;
+                }
+            }
+        }
+        .review-count{
+            h2{
+                font-size: 22px;
+                margin-right: 8px;
+            }
+            div{
+                p{
+                    font-size: 12px;
+                }
+                h6{
+                    font-size: 13px;
+                }
+               
+            }
+            h5{
+                font-size: 15px;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .slide{
+        .img{
+            img{
+                width: 50% !important;
+              margin: 0 auto;
+            }
+        }
+    }
+
+    .about-header{
+        height: auto;
+        padding: 30px 0;
+        .wel-jus-law{
+            h3{
+                padding: 10px;
+                font-size: 10px;
+                margin: 10px 0;
+                letter-spacing: 1px;
+                width: fit-content;
+            }
+            h2{
+                font-size: 25px;
+            }
+            p{
+                font-size: 15px;
+                margin: 10px 0;
+            }
+           
+        }
+        .home-to-about{
+            h3{
+                padding: 5px 20px;
+                width: fit-content;
+                font-size: 12px;
+            }
+        }
+    }
+    .can-trust{
+        padding: 40px 10px;
+        .trust-img{
+            img{
+                height: 50vh;
+            }
+        }
+        .text{
+            padding: 10px 0;
+            h2{
+                font-size: 30px;
+                line-height: 40px!important;
+                margin: 10px 0;
+            }
+            .p-text{
+                p{
+                    font-size: 18px;
+                }
+            }
+            ul{
+                li{
+                    margin: 8px 0;
+                    font-size: 18px;
+                    i{
+                        font-size: 18px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .trust-card{
+                margin: 10px 0 0;
+                width: 90px;
+                .img{
+                    width: 40px;
+                    border-radius: 8px;
+                    background-color: #0b0a32;
+                }
+                h6{
+                    font-size: 12px;
+                }
+            }   
+        }
+    }
+    .hoz-scroll{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 20px;
+            height: 4px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #e86d1f;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+    }
+    .law-connect{
+        padding: 30px 0;
+        height: auto;
+        .law-connect-head{
+            h2{
+                font-size: 22px;
+                margin: 10px 0;
+            }
+            p{
+                font-size: 17px;
+                margin: 10px 0;
+            }
+            h6{
+                font-size: 15px;
+            }
+            button{
+                width: fit-content;
+                border-radius: 20px;
+                padding: 15px 50px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .reviews{
+        padding: 40px 0;
+        h2{
+            font-size: 25px;
+            margin: 0 0 10px;
+        }
+        .reviews-card{
+            .text{
+                h6{
+                    margin: 10px 0;
+                    font-size: 17px;
+                    line-height: inherit !important;
+                }
+            }
+        }
+        .review-count{
+            h2{
+                font-size: 22px;
+                margin-right: 8px;
+            }
+            div{
+                p{
+                    font-size: 12px;
+                }
+                h6{
+                    font-size: 13px;
+                }
+               
+            }
+            h5{
+                font-size: 15px;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+    .about-header{
+        height: auto;
+        padding: 60px 0;
+        .wel-jus-law{
+            h2{
+                font-size: 25px;
+            }
+            p{
+                font-size: 15px;
+                margin: 10px 0;
+            }
+           
+        }
+        .home-to-about{
+            h3{
+                padding: 5px 20px;
+                width: fit-content;
+                font-size: 12px;
+            }
+        }
+    }
+    .can-trust{
+        padding: 40px 10px;
+        .trust-img{
+            img{
+                height: 100%;
+            }
+        }
+        .text{
+            padding: 10px 0;
+            h2{
+                font-size: 23px;
+                margin: 10px 0
+            }
+            .p-text{
+                p{
+                    font-size: 14px;
+                }
+            }
+            ul{
+                li{
+                    margin: 8px 0;
+                    font-size: 14px;
+                    i{
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .trust-card{
+                margin: 10px 0 0;
+                .img{
+                    width: 40px;
+                    border-radius: 8px;
+                }
+                h6{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .law-connect{
+        padding: 30px 0;
+        height: auto;
+        .law-connect-head{
+            h2{
+                font-size: 22px;
+                margin: 10px 0;
+            }
+            p{
+                font-size: 17px;
+                margin: 10px 0;
+            }
+            h6{
+                font-size: 15px;
+            }
+            button{
+                width: 30%;
+                border-radius: 20px;
+                padding: 14px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .reviews{
+        padding: 40px 0;
+        h2{
+            font-size: 25px;
+            margin: 0 0 10px;
+        }
+        .reviews-card{
+            .text{
+                h6{
+                    margin: 10px 0;
+                    font-size: 17px;
+                }
+            }
+        }
+        .review-count{
+            h2{
+                font-size: 22px;
+                margin-right: 8px;
+            }
+            div{
+                p{
+                    font-size: 12px;
+                }
+                h6{
+                    font-size: 13px;
+                }
+               
+            }
+            h5{
+                font-size: 15px;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+}
+

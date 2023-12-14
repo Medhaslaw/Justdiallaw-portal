@@ -1,0 +1,76 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>Create Time Slots</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Create Time Slots</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <form   class="add_invoice_form" [formGroup]="timeSlotForm" >
+                 
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form_alert">
+                                <label class="mat_label">From Time<span>*</span></label> 
+                                
+                                <input type="time" class="mat_input" formControlName="Advocate_start_time" min="09:00" max="18:00" required>
+
+                            </div>
+                           
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form_alert">
+                                <label class="mat_label">To Time<span>*</span></label> 
+                                
+                                <input type="time" class="mat_input"  formControlName="Advocate_end_time"  min="09:00" max="18:00" required>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form_alert interval-div">
+                                <label class="mat_label">Interval<span>*</span></label> 
+                                
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" formControlName="Advocate_time_interval">
+                                  <mat-option value="15" >15 Mins</mat-option>
+                                  <mat-option value="30">30 Mins</mat-option>
+                                  <mat-option value="45">45 Mins</mat-option>
+                                  <mat-option value="60">60 Mins</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                                
+
+                            </div>
+                        </div>
+
+                        <h6>Time Slots Created Can't Be Changed Later</h6>
+
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6"  *ngIf="pageType == 'new'">
+                                    <button mat-button type="submit" class="sub_btn" (click)="save()" >Save</button>
+                                </div>
+                             
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

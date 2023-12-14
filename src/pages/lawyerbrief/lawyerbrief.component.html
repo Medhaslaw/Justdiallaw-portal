@@ -1,0 +1,398 @@
+<app-sub-nav></app-sub-nav>
+
+<div app-theme>
+    <!-- <div class="search-bar">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="search-menu d-flex">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <input type="password" id="inputPassword5" class="form-control" placeholder="Hyderabad, Telangana"
+                            aria-describedby="passwordHelpBlock">
+                        <button class="search_btn" mat-button><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="lawyers-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item" routerLink="/home"><a>Home</a></li>
+                            <li class="breadcrumb-item" (click)="back()"><a>Lawyer List</a></li>
+                            <li class="breadcrumb-item active">{{lawyerData?.first_name}} {{lawyerData?.last_name}}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <mat-card>
+                        <mat-card-content>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="lawyer-img">
+                                        <img
+                                            [src]="lawyerData?.profile_pic_url ? lawyerData.profile_pic_url : 'assets/img/avatar.webp'">
+                                        <button mat-raised-button> <i class="bi bi-check-circle-fill"></i> Verified
+                                            Profile</button>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="lawyer-name">
+                                        <h1>{{lawyerData?.first_name}} {{lawyerData?.last_name}}</h1>
+                                        <p>{{lawyerData?.primary_category?.category_name}}</p>
+                                        <p>{{lawyerData?.year_of_practice}} years experience overall</p>
+                                        <div class="percent-bar" *ngIf="lawyerData?.overall_rating > 0">
+                                            <div class="badge">{{lawyerData?.overall_rating}}<i
+                                                    class="bi bi-star-fill ms-1"></i>
+                                            </div>
+                                            <p>{{lawyerData?.reviews.length}} Reviews</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="lawyer-acceptance" *ngIf="lawyerData?.mobile_accept">
+                                        <p> Lawyer Accept The Calls </p>
+                                    </div>
+                                    <div class="lawyer-acceptance" *ngIf="lawyerData?.email_accept">
+
+                                        <p> Lawyer Accept The Mails</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="lawyer-details">
+                                        <div class="location-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0"
+                                                viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                                                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                                    fill="#76787b" stroke="none">
+                                                    <path
+                                                        d="M2320 5105 c-823 -102 -1502 -697 -1713 -1501 -153 -580 -28 -1219 332 -1702 117 -156 266 -305 419 -419 l72 -54 0 -663 0 -663 23 -34 c30 -46 81 -71 132 -66 23 3 236 93 508 215 l467 211 468 -211 c271 -122 484 -212 507 -215 51 -5 102 20 132 66 l23 34 0 663 0 663 73 54 c722 539 1001 1483 685 2325 -295 789 -1066 1319 -1905 1311 -65 -1 -165 -7 -223 -14z m490 -300 c342 -56 632 -191 883 -409 745 -652 787 -1799 92 -2501 -256 -258 -560 -419 -930 -492 -127 -25 -463 -25 -590 0 -370 73 -674 234 -930 492 -469 474 -619 1168 -389 1802 186 515 644 931 1174 1069 211 54 494 70 690 39z m-1019 -3569 c164 -72 409 -130 626 -146 297 -24 659 35 912 146 29 13 57 24 62 24 5 0 9 -195 9 -440 0 -242 -2 -440 -5 -440 -3 0 -182 80 -398 177 -321 145 -400 177 -437 177 -37 0 -116 -32 -437 -177 -216 -97 -395 -177 -398 -177 -3 0 -5 198 -5 440 0 245 4 440 9 440 5 0 33 -11 62 -24z" />
+                                                    <path
+                                                        d="M2493 4412 c-41 -22 -45 -27 -218 -305 -81 -130 -151 -239 -155 -242 -3 -2 -143 -9 -311 -15 -330 -13 -351 -17 -391 -72 -11 -16 -23 -49 -25 -72 -6 -48 -1 -59 179 -395 l110 -205 -27 -56 c-15 -30 -79 -152 -142 -270 -129 -240 -139 -273 -103 -337 40 -73 54 -76 330 -85 135 -5 277 -11 315 -14 l70 -5 150 -242 c83 -132 163 -256 178 -274 56 -65 158 -65 214 0 15 18 96 142 178 274 l150 242 70 5 c39 3 180 9 315 14 276 9 290 12 330 85 36 64 26 97 -103 337 -63 118 -127 240 -142 270 l-27 56 110 205 c180 336 185 347 179 395 -2 23 -14 56 -25 72 -40 56 -60 59 -392 72 -211 7 -309 15 -316 23 -7 7 -69 104 -139 217 -70 113 -143 228 -161 255 -52 79 -130 105 -201 67z m186 -597 c112 -182 135 -212 178 -234 13 -6 117 -15 248 -20 124 -4 227 -10 229 -12 2 -2 -44 -94 -102 -204 -91 -169 -107 -207 -107 -245 0 -38 17 -76 107 -245 65 -120 103 -201 95 -203 -7 -1 -111 -6 -233 -10 -199 -8 -225 -11 -255 -30 -25 -15 -67 -73 -153 -211 -65 -105 -122 -191 -126 -191 -4 0 -61 86 -126 191 -86 138 -128 196 -153 211 -30 19 -56 22 -255 30 -122 4 -226 9 -233 10 -8 2 30 83 95 203 90 169 107 207 107 245 0 38 -16 76 -107 245 -58 110 -104 202 -102 204 2 2 105 8 229 12 131 5 235 14 248 20 43 22 66 52 178 234 63 101 116 184 119 184 3 0 56 -83 119 -184z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <p>{{lawyerData?.year_of_practice}} Years of experience</p>
+                                    </div>
+                                    <div class="lawyer-details">
+                                        <div class="location-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0"
+                                                viewBox="0 0 64.000000 64.000000" preserveAspectRatio="xMidYMid meet">
+
+                                                <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+                                                    fill="#76787b" stroke="none">
+                                                    <path
+                                                        d="M257 630 c-116 -37 -174 -179 -118 -289 37 -72 170 -271 181 -271 11 0 144 199 180 270 66 129 -18 284 -161 295 -29 3 -67 0 -82 -5z m98 -114 c59 -25 74 -93 31 -143 -19 -22 -32 -28 -66 -28 -98 0 -126 131 -37 170 40 18 32 17 72 1z" />
+                                                    <path
+                                                        d="M135 198 c-73 -26 -109 -74 -86 -116 30 -57 213 -94 359 -74 147 22 215 70 182 130 -8 14 -31 33 -50 43 -71 35 -71 35 -124 -50 -80 -127 -112 -127 -191 -1 -28 44 -52 79 -55 79 -3 0 -18 -5 -35 -11z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <p>Based in {{lawyerData?.city_name}}</p>
+                                    </div>
+                                    <div class="lawyer-details">
+                                        <div class="location-icon">
+                                            <mat-icon>
+                                                school
+                                            </mat-icon>
+                                        </div>
+                                        <p>{{lawyerData?.phone_no}}</p>
+                                    </div>
+                                    <div class="lawyer-details">
+                                        <div class="location-icon">
+                                            <mat-icon>
+                                                language
+
+                                            </mat-icon>
+                                        </div>
+                                        <p>{{lawyerData?.languages}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <div class="lawyers_tabs">
+                        <mat-tab-group animationDuration="0ms">
+                            <mat-tab label="Law Firm Info">
+
+                                <div class="lawfram">
+                                    <!-- <h1>Law Firm Info</h1> -->
+                                    <mat-card>
+                                        <div class="title1">
+                                            <h6> {{lawyerData?.first_name}} {{lawyerData?.last_name}}</h6>
+                                            <h4>{{lawyerData?.primary_category?.category_name}}</h4>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="lawfram-content">
+                                                    <p
+                                                        [innerHTML]="lawyerData?.profile_lawyer_details[0]?.few_lines_about_you | safeHtml">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="free-card">
+                                                    <h6><mat-icon>event</mat-icon> Fees</h6>
+                                                    <p><span>{{lawyerData?.payment_fees[0]?.phone_consultation_fees | currency}}</span> Phone Consultation Fees </p>
+                                                </div>
+                                                <div class="fee-schedule">
+                                                    <div class="fee-time">
+                                                        <div class="clock-icon">
+                                                            <mat-icon>schedule </mat-icon>
+                                                        </div>
+                                                        <span>
+                                                            <p>Mon - Sun</p>
+                                                            <h6>{{lawyerStartTime}} AM -
+                                                                {{lawyerEndTime}} PM</h6>
+                                                        </span>
+                                                    </div>
+                                                    <div class="fee-time">
+                                                        <div class="clock-icon">
+                                                            <mat-icon>location_on</mat-icon>
+                                                        </div>
+                                                        <span>
+                                                            <p>Address</p>
+                                                            <h6>{{lawyerData?.office_address}}</h6>
+                                                        </span>
+                                                    </div>
+                                                    <button (click)="getDirections()">Get Directions</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </mat-card>
+                                </div>
+                                <div *ngIf="lawyerData?.overall_rating === 0; else ratingBlock ">
+
+                                </div>
+                                <ng-template #ratingBlock>
+                                    <div class="reviews" [routerLink]="['routeexample1']" fragment="info">
+                                        <div class="reviews-title">
+                                            <h1>Reviews</h1>
+                                        </div>
+                                        <div *ngFor="let reviewsList of reviewsList.slice(0,5); let i = index">
+                                            <mat-card>
+                                                <div class="Profile-icon">
+
+                                                    <div class="profile-letter"
+                                                        [ngClass]="{'color1': i == 0, 'color2': i == 1,'color3': i == 2 ,'color4': i == 3,'color5': i == 4 }">
+                                                        <h1>{{reviewsList.client.username.slice(0,1)}}</h1>
+                                                    </div>
+
+                  
+
+                                                    <div class="review-content">
+                                                        <h6>{{reviewsList?.client?.first_name}}
+                                                            {{reviewsList?.client?.last_name}}</h6>
+                                                        <p>{{reviewsList?.comment}}</p>
+                                                        <p><span>{{reviewsList?.created_on | date:'dd MMM,yyy'}}</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </mat-card>
+                                        </div>
+                                    </div>
+                                </ng-template>
+
+                            </mat-tab>
+                            <mat-tab label="Article">
+
+                                <div class="all-blogs">
+                                    <div class="">
+                                        <div class="row  blog-row d-flex">
+                                            <div *ngIf="allBlogsObj.length === 0 ; else blogsBlock" class="empty_blog">
+                                                <h6>Lawyer Blogs Doesn't Exists Right Now </h6>
+                                            </div>
+                                            <ng-template #blogsBlock>
+                                                <div class="col-md-4 all-details" *ngFor="let obj of allBlogsObj ">
+                                                    <mat-card class="example-card">
+                                                     
+                                                        <img src="{{obj.blog_image_url}}">
+                                                        <mat-card-content>
+                                                            <div class="blog-blocks d-flex mt-2">
+                                                                <div class="date-block">
+                                                                    <p><i class="bi bi-calendar2-fill"></i> <span>
+                                                                            {{obj.created_on | date:'dd MMM,yyy'
+                                                                            }}</span> </p>
+                                                                </div>
+                                                             
+                                                            </div>
+
+                                                            <div class="all-blogs-headr">
+                                                                <h2>{{obj.title.slice(0, 40)}}</h2>
+                                                            </div>
+                                                            <button mat-button class="view-btn"
+                                                                (click)="viewBlog(obj)">View More</button>
+                                                        </mat-card-content>
+                                                        <mat-card-actions>
+
+                                                        </mat-card-actions>
+                                                    </mat-card>
+                                                </div>
+                                                
+                                            </ng-template>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="time-slot">
+                        <h1>Pick a time slot</h1>
+                        <div class="pick-time-slot">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3>Pick a time slot</h3>
+                                    <h2>{{lawyerData?.first_name}} {{lawyerData?.last_name}}</h2>
+                                </div>
+                               
+                            <div class="percent-bar" *ngIf="lawyerData?.overall_rating > 0">
+                                <div class="badge">{{lawyerData?.overall_rating}} <i class="bi bi-star-fill ms-1"></i>
+                                </div>
+                                <p (click)="moveToStructure()" >{{lawyerData?.reviews.length}} Reviews</p>
+                            </div>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <div (click)="appointmentType('online')" class="app-type-btn" [ngClass]="{'appTypeActiveClass': AppointmentType === 'online'}">
+                                   <button mat-button>Online</button>
+                                </div>
+                               
+                            <div>
+                                <div (click)="appointmentType('offline')" (click)="callDialog()" class="app-type-btn" [ngClass]="{'appTypeActiveClass': AppointmentType === 'offline'}">
+                                    <button mat-button >Offline</button>
+                                </div>
+                             
+                            </div>
+                            </div>
+
+                            
+                          
+                            <div class="mt-3" *ngIf="showTimeSlots" >
+                                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                                    <mat-tab *ngFor="let timeSlots of allDates ">
+                                        <ng-template mat-tab-label>
+                                            <div class="tabs-time"
+                                                [ngClass]="{'active': timeSlots.date == selectedDate}"
+                                                (click)="selectDate(timeSlots.date)">
+                                                <p>{{ timeSlots.date | date: 'dd MMM, yyyy' }}</p>
+                                                <h6>{{timeSlots.Available_slots}} Slots Available</h6>
+                                            </div>
+                                        </ng-template>
+                                        <div class="schedule-slot" *ngIf="lawyerVaction"  >
+                                            <p
+                                                [ngClass]="{'BlockedActiveClass': timeSlots.date === todayDatePipe && '12:00' < todayTimePipe }">
+                                                Morning</p>
+                                            <div class="row time-slots-row justify-content-center">
+                                                <div class="col-md-4 col-4" *ngFor="let allSlots of mrgSlots"
+                                                    [ngClass]="{'BlockedActiveClass': timeSlots.date === todayDatePipe && allSlots.Advocate_timing_slot < todayTimePipe }">
+                                                    <div class="slot-btn"
+                                                        [ngClass]="{'isClassActive': bookedSlots.includes(allSlots.id)}"
+                                                        [ngClass]="{'slotsActive': isActive(allSlots.id)}"
+                                                        [ngClass]="{'activeClass': blockedTimeSlots.includes(allSlots.id)}">
+                                                        <button mat-stroked-button
+                                                            (click)="slotsBooked(allSlots.id)">{{allSlots.Advocate_timing_slot}}</button>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p
+                                                [ngClass]="{'BlockedActiveClass': timeSlots.date === todayDatePipe && '15:30' < todayTimePipe }">
+                                                After Noon</p>
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-4 col-4" *ngFor="let allSlots of aftSlots"
+                                                    [ngClass]="{'BlockedActiveClass': timeSlots.date === todayDatePipe && allSlots.Advocate_timing_slot < todayTimePipe }">
+                                                    <div class="slot-btn"
+                                                        [ngClass]="{'isClassActive': bookedSlots.includes(allSlots.id)}"
+                                                        [ngClass]="{'slotsActive': isActive(allSlots.id)}"
+                                                        [ngClass]="{'activeClass': blockedTimeSlots.includes(allSlots.id)}">
+                                                        <button mat-stroked-button
+                                                            [disabled]="blockedTimeSlots.includes(allSlots.id)"
+                                                            (click)="slotsBooked(allSlots.id)">{{allSlots.Advocate_timing_slot
+                                                            }}</button>
+                                                    </div>
+
+                                                    <div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p
+                                                [ngClass]="{'BlockedActiveClass': timeSlots.date === todayDatePipe && '19:00' < todayTimePipe }">
+                                                Evening</p>
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-4 col-4" 
+                                                    *ngFor="let allSlots of evngSlots"
+                                                    [ngClass]="{'BlockedActiveClass': timeSlots.date === todayDatePipe && allSlots.Advocate_timing_slot < todayTimePipe }">
+                                                    <div class="slot-btn"
+                                                        [ngClass]="{'isClassActive': allSlots.isBooked}"
+                                                        [ngClass]="{'slotsActive': isActive(allSlots.id)}"
+                                                        [ngClass]="{'activeClass': blockedTimeSlots.includes(allSlots.id)}">
+                                                        <button mat-stroked-button
+                                                            [disabled]="blockedTimeSlots.includes(allSlots.id)"
+                                                            (click)="slotsBooked(allSlots.id)">{{allSlots.Advocate_timing_slot
+                                                            }}</button>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div *ngIf="lawyerVaction === false" >
+                                            <div class="lawyerVaction">
+                                               
+                                                <h6>ADVOCATE IS ON LEAVE THIS DATE </h6>
+                                            </div>
+                                        </div>
+                                    </mat-tab>
+                                </mat-tab-group>
+                            </div>
+
+                            <div class="case-about mt-1" *ngIf="showTimeSlots">
+                                <form  [formGroup]="caseDetalisForm" #myform="ngForm"  >
+                                    <div class="col">
+                                        <label class="mat_label mat_label_1">Message<span>*</span></label>
+                                       <textarea class="form-control form-control_1" formControlName="appointment_detail"  cols="10" rows="5" placeholder="Type Message!"></textarea>
+                                      </div>
+                                      <h6>
+                                        <span *ngIf="caseDetalisForm.controls['appointment_detail'].hasError('required') && myform.submitted">Message is Required</span>
+                                      </h6>
+
+                                      <div class="col" >
+                                        <section class="example-section">
+                                            <mat-checkbox class="example-margin">WhatsApp Messages!</mat-checkbox>
+                                          </section>
+                                      </div>
+
+                                </form>
+                            </div>
+
+                            <div class="proceed-to-book" *ngIf="showTimeSlots">
+                                <button mat-raised-button (click)="proceedToBook()">Proceed To Book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

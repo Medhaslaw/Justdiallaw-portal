@@ -1,0 +1,296 @@
+.register_process{
+    .reg_img{
+       background-image: url('../../assets/img/reg.jpg');
+       background-position: center;
+       background-size: cover;
+       height: 100%;
+       background-repeat: no-repeat;
+    }
+
+    .steper{
+        padding: 2vw;
+        background-color: #fafafa;
+        ng-template{
+            h1{
+                color: red;
+            }
+        }
+        .Add_Invoice{
+            padding: 1vw;
+            // background-color: #f2f1f7;
+            .pagination-header {
+                nav {
+                    .breadcrumb {
+                        margin: 0 0 1vw;
+                        font-family: 'Manrope';
+                        font-weight: 500;
+        
+                        li {
+                            font-size: .75vw;
+                            color: #414146;
+                            font-weight: 500;
+                            padding-left: .3vw;
+        
+                            a {
+                                color: #414146;
+                                font-size: .75vw;
+                                font-weight: 400;
+                            }
+                        }
+        
+                        .breadcrumb-item+.breadcrumb-item::before {
+                            padding-right: .3vw;
+                            color: #666;
+                        }
+                    }
+        
+        
+                }
+               
+            }
+            .invoice_heading{
+                h1{
+                    font-size: 1.2vw;
+                font-weight: 800;
+                color: #000;
+                padding: 0;
+                margin: 0;
+                text-transform: uppercase;
+                }
+            }
+            .mat_card_invoice{
+                padding: 0vw;
+                margin-top: 0vw;
+                .add_invoice_form{
+                    .mat_label{
+                        color: #000000;
+                        font-size: 0.9vw;
+                        padding: 0;
+                        margin: 0 0 0.5vw;
+                        font-weight: 400; 
+                        span{
+                            color: red;
+                        }
+                     }
+                    .mat_form_filed{
+                        width: 100% !important;
+                        // margin-bottom: 1vw;
+                        // margin-top: 1vw;
+                        .mat_input{
+                           border: 0.1vw solid #e3e3e3;
+                           padding: 1.1vw;
+                           font-size: 0.9VW;
+                           border-radius: 0.2VW;
+                           background-color: #fff;
+                        //    width: 31vw;
+                        }
+                        .mat_input1{
+                            width: 28.7vw;
+                            background-color: #fff;
+                        }
+                        .time_picker{
+                            position: absolute;
+                            right: 1vw;
+                            top: 0.7vw;
+                        }
+                    }
+                    
+                }
+                .sub_btn{
+                    font-size: 1.1vw;
+                    font-weight: 500;
+                    color: #fff;
+                    padding: 1.2vw 5vw;
+                    background-color: #e86d1f;
+                    border: inherit;
+                    margin-top: 1.5vw;
+                    border-radius: 5vw;
+                }
+                .cancel_btn{
+                    color: #999999;
+                    font-size: 1.1vw;
+                    font-weight: 500;
+                    background-color:inherit;
+                    border: 0.1vw solid #666;
+                    margin-top: 1.5vw;
+                    border-radius: 5vw;
+                    padding: 1.1vw 5vw;
+                }
+        
+            }
+        }
+        .back_btn{
+            padding: 0.9vw;
+            width: 8vw;
+            // margin: 1vw;
+            font-size: 0.95vw;
+            background-color: #e86d1f;
+            color: #fff;
+            border-radius: 0.3vw;
+        }
+        .next_btn{
+            padding: 0.9vw;
+            width: 8vw;
+            // margin: 1vw;
+            font-size: 0.95vw;
+            background-color: var(--background);
+            color: #fff;
+            border-radius: 0.3vw;
+        }
+
+    }
+}
+
+.active{
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.progress_bar{
+    position: absolute;
+    right: 2vw;
+    h5{
+        margin-top: 0.5vw;
+        font-size: 0.8vw;
+    }
+}
+
+.successdiv{
+    min-height: 91vh;
+    text-align: center;
+    background: #f7f7f7;
+    padding: 10vw 7vw;
+    .img{
+        img{
+            width:10vw;
+            margin:2vw auto;
+        }
+    }
+    h5{
+        font-size: 1.5vw;
+        color: green;
+        line-height: 30px !important;
+    }
+    button{
+        background: #e86d1f;
+        color: #fff;
+        padding: 1vw 2vw;
+    }
+}
+
+.court-div{
+   
+    min-height: 156px;
+    height: 156px;
+    overflow-y: auto;
+    padding: 1vw;
+
+}
+
+.alert-danger{
+    color: red;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    border: inherit;
+    position: absolute;
+}
+
+.lawyer-reg-inputs{
+margin-top: 1vw;
+}
+h6{
+    color: red;
+}
+
+
+
+@media (max-width: 575.98px){
+    .register_process{
+        .reg_img{
+            height: 53vh !important;
+            display: none;
+        }
+        .steper{
+            padding: 70px 10px 30px;
+            .Add_Invoice{
+                .mat_card_invoice{
+                    .add_invoice_form{
+                        .mat_label{
+                            font-size: 14px !important;
+                        }
+                        .mat_form_filed{
+                            .mat_input{
+                                padding: 16px 10px !important;
+                                font-size: 16px !important;
+                                border-radius: 4px !important;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+            .next_btn{
+                padding: 14px;
+                width: 130px;
+                font-size: 14px;
+                border-radius: 5px;
+            }
+        }
+        .progress_bar{
+            right: 9vw;
+            top: 15px;
+            h5{
+                font-size: 12px;
+            }
+          
+        }
+    }
+}
+
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+    .register_process{
+        .reg_img{
+            height: 53vh !important;
+        }
+        .steper{
+            padding: 70px 10px 30px;
+            .Add_Invoice{
+                .mat_card_invoice{
+                    .add_invoice_form{
+                        .mat_label{
+                            font-size: 14px !important;
+                        }
+                        .mat_form_filed{
+                            .mat_input{
+                                padding: 16px 10px !important;
+                                font-size: 16px !important;
+                                border-radius: 4px !important;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+            .next_btn{
+                padding: 14px;
+                width: 130px;
+                font-size: 14px;
+                border-radius: 5px;
+            }
+        }
+        .progress_bar{
+            right: 9vw;
+            top: 15px;
+            h5{
+                font-size: 12px;
+            }
+          
+        }
+    }
+    
+}

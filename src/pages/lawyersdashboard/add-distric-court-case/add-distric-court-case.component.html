@@ -1,0 +1,154 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a>Home</a></li>
+                        <li class="breadcrumb-item"><a>Cases</a></li>
+                        <li class="breadcrumb-item"><a>Add Case</a></li>
+                        <li class="breadcrumb-item active"><a>Add District Court Case</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Add District Court Case</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <form  class="add_invoice_form">
+                    <div class="row">
+                        <div class="col-md-6 btn_filed">
+                            <label class="mat_label">Client<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed" >
+                                <mat-select class="mat_input mat_input1" [(value)]="selected" >
+                                  <mat-option value="1" >Select</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                                <!-- <button (click)='removeInput()'>remove input</button> -->
+                            </mat-form-field>
+
+                            <div class="added_filed" *ngFor = "let clientObject of clientArray">
+                                <label class="mat_label">Client<span>*</span></label> 
+                                <mat-form-field class="mat_form_filed" >
+                                    <mat-select class="mat_input mat_input1" [(ngModel)]="clientObject.clientName" >
+                                      <mat-option value="1" >Select</mat-option>
+                                      <mat-option value="2">Option 2</mat-option>
+                                      <mat-option value="3">Option 3</mat-option>
+                                    </mat-select>
+                                    <button class="remove_btn" (click)='removeInput()'><i class="bi bi-x-circle-fill"></i></button>
+                                </mat-form-field>
+                            </div>
+
+                            <button mat-button class="add_butn" (click)='addInput()'>Add Client</button>` 
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">State<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected1">
+                                  <mat-option value="1" >Select</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">District<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected2">
+                                  <mat-option value="1" >Select</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">State Code<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected3">
+                                  <mat-option value="State 1" >Corporate</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Select Court<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected4">
+                                  <mat-option value="1" >Select</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Case Type<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected5">
+                                  <mat-option value="1" >Select City</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Year<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected6">
+                                  <mat-option value="1" >Select</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Case Number<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" [(value)]="selected7">
+                                  <mat-option value="1" >Select City</mat-option>
+                                  <mat-option value="2">Option 2</mat-option>
+                                  <mat-option value="3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Docket Number<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button mat-button type="submit" class="sub_btn">Add Case</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button mat-button  class="cancel_btn">Cancel</button>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

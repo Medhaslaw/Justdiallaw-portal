@@ -1,0 +1,102 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/profile'"><a>Profile</a></li>
+                        <li class="breadcrumb-item active"><a>Bar Council Information</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <div class="add_new_topic">
+                    <div class="row m-0">
+                        <div class="col-md-12 p-0">
+                            <div mat-dialog-title class="dialog_title">
+                                <h1>Bar Council Information</h1>
+                            </div>
+                            <div mat-dialog-content class="dialog_content">
+                                <form [formGroup]="barCouncilForm" #myform="ngForm" class="add_invoice_form">
+                                    <div class="row">
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">Bar Council ID<span>*</span></label>
+                                            <mat-form-field class="mat_form_filed">
+                                                <input matInput type="text" class="mat_input"
+                                                    formControlName="council_id">
+                                            </mat-form-field>
+                                            <h6>
+                                                <span
+                                                    *ngIf="barCouncilForm.controls['council_id'].hasError('required') && myform.submitted">Bar
+                                                    Council Id is Required</span>
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">State Bar Council<span>*</span></label>
+                                            <mat-form-field class="mat_form_filed">
+                                                <input matInput type="text" class="mat_input"
+                                                    formControlName="state_council_id">
+                                            </mat-form-field>
+                                            <h6>
+                                                <span
+                                                    *ngIf="barCouncilForm.controls['state_council_id'].hasError('required') && myform.submitted">State
+                                                    Bar Council Id is Required</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">Name Of Bar Association<span>*</span></label>
+                                            <mat-form-field class="mat_form_filed">
+                                                <input matInput type="text" class="mat_input"
+                                                    formControlName="bar_association">
+                                            </mat-form-field>
+                                            <h6>
+                                                <span
+                                                    *ngIf="barCouncilForm.controls['bar_association'].hasError('required') && myform.submitted">Name
+                                                    of Bar Association is Required</span>
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-6 p-0">
+                                            <label class="mat_label">Bar Council ID Card<span>*</span></label>
+                                            <div class="form_alert">
+                                                <div class="upload-file">
+                                                    <div class="upload-img d-flex">
+                                                        <button class="file-upload-button">
+                                                            <input type="file" class="upload-file" formControlName="bar_council_id"
+                                                                (change)="onFileChanged($event)" />
+                                                            Browse Image
+                                                        </button>
+                                                        <p *ngIf="!fileName">Upload Bar Council ID Card</p>
+                                                        <p *ngIf="fileName">{{fileName.slice(0,25)}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="d-flex justify-content-between">
+                                                    <button mat-button (click)="saveCouncilInfo()"
+                                                        class="sub_btn">Update</button>
+                                                
+                                                    <button mat-button (click)="cancelBtn()" class="cancel_btn">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

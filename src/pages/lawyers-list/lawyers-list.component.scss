@@ -1,0 +1,991 @@
+.inner-header {
+    background: url('../../assets/img/inner-banner.jpg');
+    background-size: cover;
+    height: 18.3vh;
+    padding: 1vw;
+
+    .pagination-header {
+        nav {
+            .breadcrumb {
+                margin: 0 0 1.5vw;
+                font-family: 'Manrope';
+                font-weight: 500;
+
+                li {
+                    font-size: .75vw;
+                    color: #414146;
+                    font-weight: 500;
+                    padding-left: .3vw;
+
+                    a {
+                        color: #414146;
+                        font-size: .75vw;
+                        font-weight: 400;
+                    }
+                }
+
+                .breadcrumb-item+.breadcrumb-item::before {
+                    padding-right: .3vw;
+                    color: #666;
+                }
+            }
+
+
+        }
+
+    }
+
+    .title {
+        h1 {
+            margin: 0;
+            color: #171c25;
+            font-family: 'Manrope';
+            font-weight: 900;
+            padding: 0;
+            margin: 0;
+            font-size: 2vw;
+        }
+    }
+
+
+}
+
+.search-bar {
+    background-color: #01204e;
+    padding: 1vw 0.7vw;
+
+    .search-menu {
+        background-color: #fff;
+        border-radius: 10vw;
+        padding: 0.2vw 0.6vw;
+        position: relative;
+
+        .select_form {
+            width: 22vw !important;
+
+            .select_filed {
+                font-size: 0.95vw;
+                width: 11vw;
+                padding: 0.6vw;
+            }
+        }
+
+        // .form-select{
+        //     border: inherit;
+        //     padding: 0.3vw 0;
+        //     font-size: 0.9vw;
+        //     margin: 0;
+        // }
+        .form-control {
+            border: inherit;
+            border-radius: 0px !important;
+            border-left: 0.1vw solid #666;
+            padding: 0.3vw 0 0.3vw 0.5vw;
+            margin: 0;
+            font-size: 0.9vw;
+            font-family: "Manrope";
+
+        }
+
+        .search_btn {
+            position: absolute;
+            top: 0.4vw;
+            right: 0.5vw;
+            background-color: var(--primary);
+            min-width: 1vw !important;
+            height: 1.9vw;
+            border-radius: 5vw;
+            padding: 0 0.4vw;
+            width: 2vw;
+            font-size: 0.9vw;
+
+            i {
+                color: #fff;
+                font-size: 1vw;
+            }
+
+        }
+    }
+
+    .consultant {
+        display: flex;
+        margin: 0.3vw 0;
+
+        ul {
+            padding: 0;
+            margin: 0.3vw 0 0;
+
+            li {
+                list-style: none;
+                color: #fff;
+                margin: 0 0.5vw;
+
+                mat-select {
+                    font-size: 0.9vw;
+                }
+
+                mat-icon {
+                    padding: 0;
+                    margin-right: 0.6vw;
+                    width: inherit;
+                    height: inherit;
+                    font-size: 1.2vw;
+                }
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 0.9vw;
+                    font-family: 'Manrope';
+                    font-weight: 600;
+                }
+
+                .form-select {
+                    padding: 0 0.5vw;
+                    background-color: inherit;
+                    border: inherit;
+                    color: #fff;
+                    font-size: 0.9vw;
+                }
+
+            }
+        }
+
+        .sort-by {
+            background-color: #fff;
+            width: 16vw;
+            margin: 0 0 0 2vw;
+            padding: 0.3vw 0.8vw;
+
+            .col-form-label {
+                font-size: 0.95vw;
+                font-weight: 500;
+                color: #666;
+                padding: 0;
+                margin: 0;
+            }
+
+            mat-select {
+                font-size: 0.9vw;
+            }
+
+            .sort_border {
+                padding: 0;
+                margin: 0;
+                width: 10vw;
+                border: inherit;
+                font-size: 0.9vw;
+            }
+        }
+    }
+}
+
+
+.lawyers-section {
+    padding: 3vw;
+
+    .lawyers_hyderabad {
+        margin-bottom: 1.5vw;
+
+        p {
+            padding: 0;
+            margin: 0.5vw 0;
+            font-size: 1vw;
+            font-weight: 500;
+
+            b {
+                padding-right: 0.4vw;
+            }
+
+            mat-icon {
+                color: #d4d9e4;
+                margin-right: 0.5vw;
+                font-size: 1.2vw;
+                width: inherit;
+                height: inherit;
+            }
+
+            span {
+                font-size: 0.9vw;
+                vertical-align: super;
+            }
+        }
+    }
+
+    .mat-card {
+        margin: 1vw 0;
+        padding: 1vw !important;
+        box-shadow: 0 0 24.44px 1.56px rgb(154 154 156 / 21%);
+
+        mat-card-content {
+            font-size: 0.9vw !important;
+
+        }
+    }
+
+    .side-details {
+        padding: 0 3.5vw;
+
+        .side-content {
+            background-color: #f1fbfe;
+            padding: 1.2vw;
+            margin-bottom: 2vw;
+
+            h3 {
+                color: #0a0a0a;
+                padding: 0;
+                margin: 0 0 1vw;
+                font-size: 1.2vw;
+                font-weight: 800;
+                font-family: 'Manrope';
+            }
+
+            p {
+                color: #183053;
+                font-size: 0.8vw;
+                font-weight: 500;
+                padding: 0;
+                margin: 0 0 1vw;
+
+            }
+
+            li {
+                list-style: none;
+                display: flex;
+
+                mat-icon {
+                    font-size: 1.1vw;
+                    margin-right: 0.7vw;
+                    color: #183053;
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+        }
+
+        .content-1 {
+            background-color: #fdf5ed !important;
+        }
+
+        .content-2 {
+            background-color: #f4f3fd;
+        }
+    }
+
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0vw;
+    z-index: 9;
+    transition: 0.5s ease-in-out;
+    transform: scale(1) 0.3s;
+}
+
+
+.lawyer-img {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 11.5vw;
+    }
+
+    button {
+        position: absolute;
+        bottom: 0.3vw;
+        width: 95%;
+        left: 0.3vw;
+        border: inherit;
+        background-color: rgb(85 87 90 / 81%);
+        color: #fff;
+        font-size: 1vw;
+        padding: 0.8vw;
+        border-radius: 0.3vw;
+
+        i {
+
+            color: #36ea50;
+            font-size: 0.9vw;
+            margin-right: 0.5vw;
+        }
+    }
+}
+
+.lawyer-name {
+    h1 {
+        font-size: 1.4vw;
+        font-weight: 800;
+        padding: 0;
+        margin: 0 !important;
+        font-family: 'Manrope';
+        line-height: initial;
+    }
+
+    p {
+        color: #272727;
+        font-family: 'Manrope';
+        font-weight: 500;
+        padding: 0;
+        margin: 0.5vw 0 !important;
+        font-size: 0.95vw;
+        line-height: initial;
+    }
+
+    .percent-bar {
+        display: flex;
+        margin: 1.2vw 0;
+
+        .bi-hand-thumbs-up {
+            font-size: 1.2vw;
+            color: var(--primary);
+            padding: 0;
+            margin-right: 1vw;
+        }
+
+        .badge {
+            width: 2.5vw;
+            height: 1.2vw;
+            font-size: 0.75vw;
+            color: #fff;
+            border-radius: 0.2vw;
+            background-color: var(--primary);
+            padding: 0.2vw;
+            margin: 0 0.5vw 0 0;
+            font-weight: 500;
+        }
+
+        p {
+            margin: 0 !important;
+        }
+    }
+
+}
+
+.lawyer-acceptance {
+    display: flex;
+    margin: 0.5vw 0;
+
+    .vedio-icon {
+        background-color: #8b8d92;
+        width: 1.2vw;
+        height: 1.2vw;
+        border-radius: 10vw;
+        padding: 0 0.15vw;
+        line-height: 1.7vw;
+        margin-right: 0.6vw;
+
+        mat-icon {
+            color: #fff;
+            padding: 0;
+            font-size: 0.9vw;
+            height: inherit;
+            width: inherit;
+        }
+
+        svg {
+            width: 0.9vw;
+            height: 0.9vw;
+            margin-bottom: 0.4vw;
+        }
+    }
+
+    p {
+        font-size: 0.9vw;
+        color: #272727;
+        font-family: 'Manrope';
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.lawyer-details {
+    padding: 0 0 0 2vw;
+
+    .d-flex {
+        margin: 0.6vw 0;
+    }
+
+    .location-icon {
+        margin-right: 0.7vw;
+
+        svg {
+            width: 1.1vw;
+            height: 1.1vw;
+
+        }
+
+        mat-icon {
+            color: #76787b;
+            font-size: 1.15vw;
+            height: inherit;
+            width: inherit;
+        }
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+        font-size: 0.9vw;
+        font-family: 'Manrope';
+        font-weight: 500;
+        color: #171c25;
+        line-break: anywhere;
+    }
+
+    button {
+        background-color: var(--primary);
+        color: #fff;
+        font-size: 1vw;
+        font-family: "Manrope";
+        font-weight: 600;
+        text-transform: uppercase;
+        border: inherit;
+        padding: 1.2vw 2vw;
+        border-radius: 0.3vw;
+        margin-top: 1.2vw;
+        width: 100%;
+    }
+}
+
+.lawyernotfound {
+    h1 {
+        margin: 0;
+        color: #171c25;
+        font-family: 'Manrope';
+        font-weight: 900;
+        padding: 0;
+        margin: 0;
+        font-size: 2vw;
+    }
+}
+
+.desktop_none{
+    display: none;
+}
+
+@media (max-width: 575.98px){
+    .mobile-none{
+        display: none;
+    }
+    .desktop_none{
+        display: block;
+    }
+    .inner-header{
+        height: 15vh;
+        padding: 15px 10px;
+        background-position: center;
+        .title{
+            h1{
+                font-size: 25px;
+            }
+        }
+        .pagination-header{
+            nav{
+                .breadcrumb{
+                    li{
+                        font-size: 11px;
+                        a{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .search-bar{
+        padding: 20px 10px;
+        position: initial;
+
+    }
+    .lawyers-section{
+        padding: 40px 10px;
+        .lawyers_hyderabad{
+            p{
+                font-size: 20px;
+                margin: 10px 0;
+            }
+        }
+        .mat-card{
+            margin: 20px 0;
+            padding: 10px !important;
+            border-radius: 15px;
+        }
+    }
+    .lawyer-img{
+        button{
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            height: 150px;
+        }
+    }
+    .lawyer-name{
+        h1{
+            font-size: 20px;
+            margin: 15px 0 5px !important;
+        }
+        p{
+            margin: 8px 0!important;
+            font-size: 14px;
+        }
+        .percent-bar{
+            .badge{
+                width: auto;
+                height: fit-content;
+                font-size: 12px;
+                border-radius: 2px;
+                padding: 5px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+    .lawyer-acceptance{
+        margin: 10px 0;
+        p{
+            font-size: 14px;
+        }
+        .vedio-icon{
+            width: 30px;
+            height: 30px;
+            line-height: 46px;
+            text-align: center;
+            margin-right: 10px;
+            mat-icon{
+                font-size: 20px;
+            }
+            svg{
+                width: 25px;
+                height: 25px;
+                margin-bottom: 14px;
+            }
+        }
+    }
+    .lawyer-details{
+        button{
+            font-size: 18px;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .location-icon{
+            margin: 5px 10px 5px 0;
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+            mat-icon{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    .mobile-none{
+        display: none;
+    }
+    .desktop_none{
+        display: block;
+    }
+    .inner-header{
+        height: 15vh;
+        padding: 15px 10px;
+        background-position: center;
+        .title{
+            h1{
+                font-size: 25px;
+            }
+        }
+        .pagination-header{
+            nav{
+                .breadcrumb{
+                    li{
+                        font-size: 11px;
+                        a{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .search-bar{
+        padding: 10px 5px;
+        position: initial;
+
+    }
+    .lawyers-section{
+        padding: 30px 10px;
+        .lawyers_hyderabad{
+            p{
+                font-size: 20px;
+                margin: 10px 0;
+            }
+        }
+        .mat-card{
+            margin: 20px 0;
+            padding: 10px !important;
+            border-radius: 15px;
+        }
+    }
+    .lawyer-img{
+        button{
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            height: 200px;
+        }
+    }
+    .lawyer-name{
+        h1{
+            font-size: 20px;
+            margin: 15px 0 5px !important;
+        }
+        p{
+            margin: 8px 0!important;
+            font-size: 14px;
+        }
+        .percent-bar{
+            .badge{
+                width: auto;
+                height: fit-content;
+                font-size: 12px;
+                border-radius: 2px;
+                padding: 5px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+    .lawyer-acceptance{
+        margin: 10px 0;
+        p{
+            font-size: 14px;
+        }
+        .vedio-icon{
+            width: 30px;
+            height: 30px;
+            line-height: 46px;
+            text-align: center;
+            margin-right: 10px;
+            mat-icon{
+                font-size: 20px;
+            }
+            svg{
+                width: 25px;
+                height: 25px;
+                margin-bottom: 14px;
+            }
+        }
+    }
+    .lawyer-details{
+        button{
+            font-size: 18px;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .location-icon{
+            margin: 5px 10px 5px 0;
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+            mat-icon{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .ng_width{
+        width: 113px;
+    }
+
+    // .mobile-none{
+    //     display: none;
+    // }
+    .desktop_none{
+        display: none;
+    }
+    .inner-header{
+        height: 15vh;
+        padding: 15px 10px;
+        background-position: center;
+        .title{
+            h1{
+                font-size: 25px;
+            }
+        }
+        .pagination-header{
+            nav{
+                .breadcrumb{
+                    li{
+                        font-size: 11px;
+                        a{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .search-bar{
+        padding: 10px 5px;
+        position: initial;
+
+    }
+    .lawyers-section{
+        padding: 30px 10px;
+        .lawyers_hyderabad{
+            p{
+                font-size: 20px;
+                margin: 10px 0;
+            }
+        }
+        .mat-card{
+            margin: 20px 0;
+            padding: 10px !important;
+            border-radius: 15px;
+        }
+    }
+    .lawyer-img{
+        button{
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            height: 150px;
+        }
+    }
+    .lawyer-name{
+        h1{
+            font-size: 16px;
+            margin: 0px 0 5px !important;
+        }
+        p{
+            margin: 0px 0!important;
+            font-size: 12px;
+        }
+        .percent-bar{
+            .badge{
+                width: auto;
+                height: fit-content;
+                font-size: 10px;
+                border-radius: 4px;
+                padding: 5px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+    .lawyer-acceptance{
+        margin: 10px 0;
+        p{
+            font-size: 14px;
+        }
+        .vedio-icon{
+            width: 25px;
+            height: 25px;
+            line-height: 36px;
+            text-align: center;
+            margin-right: 10px;
+            mat-icon{
+                font-size: 15px;
+            }
+            svg{
+                width: 15px;
+                height: 15px;
+                margin-bottom: 14px;
+            }
+        }
+    }
+    .lawyer-details{
+        button{
+            font-size: 12px;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        p{
+            font-size: 12px;
+            margin: 5px 0;
+        }
+        .location-icon{
+            margin: 5px 10px 5px 0;
+            svg{
+                width: 15px;
+                height: 15px;
+            }
+            mat-icon{
+                font-size: 15px;
+            }
+        }
+    }
+
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+    .ng_width{
+        width: 150px;
+    }
+
+    // .mobile-none{
+    //     display: none;
+    // }
+    .desktop_none{
+        display: none;
+    }
+    .inner-header{
+        height: 15vh;
+        padding: 15px 10px;
+        background-position: center;
+        .title{
+            h1{
+                font-size: 25px;
+            }
+        }
+        .pagination-header{
+            nav{
+                .breadcrumb{
+                    li{
+                        font-size: 11px;
+                        a{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .search-bar{
+        padding: 10px 5px;
+        position: initial;
+
+    }
+    .lawyers-section{
+        padding: 30px 10px;
+        .lawyers_hyderabad{
+            p{
+                font-size: 20px;
+                margin: 10px 0;
+            }
+        }
+        .mat-card{
+            margin: 20px 0;
+            padding: 10px !important;
+            border-radius: 15px;
+        }
+    }
+    .lawyer-img{
+        button{
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            height: 150px;
+        }
+    }
+    .lawyer-name{
+        h1{
+            font-size: 16px;
+            margin: 0px 0 5px !important;
+        }
+        p{
+            margin: 0px 0!important;
+            font-size: 12px;
+        }
+        .percent-bar{
+            .badge{
+                width: auto;
+                height: fit-content;
+                font-size: 10px;
+                border-radius: 4px;
+                padding: 5px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+    .lawyer-acceptance{
+        margin: 10px 0;
+        p{
+            font-size: 14px;
+        }
+        .vedio-icon{
+            width: 25px;
+            height: 25px;
+            line-height: 36px;
+            text-align: center;
+            margin-right: 10px;
+            mat-icon{
+                font-size: 15px;
+            }
+            svg{
+                width: 15px;
+                height: 15px;
+                margin-bottom: 14px;
+            }
+        }
+    }
+    .lawyer-details{
+        button{
+            font-size: 12px;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        p{
+            font-size: 12px;
+            margin: 5px 0;
+        }
+        .location-icon{
+            margin: 5px 10px 5px 0;
+            svg{
+                width: 15px;
+                height: 15px;
+            }
+            mat-icon{
+                font-size: 15px;
+            }
+        }
+    }
+
+}

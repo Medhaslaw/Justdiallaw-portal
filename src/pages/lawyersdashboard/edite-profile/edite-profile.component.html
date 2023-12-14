@@ -1,0 +1,158 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/profile'"><a>Profile</a></li>
+                        <li class="breadcrumb-item active"><a>Edit Profile</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Edit Profile</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <form [formGroup]="profileForm" #myform="ngForm" class="add_invoice_form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">First Name<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="first_name">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['first_name'].hasError('required') && myform.submitted">First
+                                    Name is Required</span>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Last Name<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="last_name">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['last_name'].hasError('required') && myform.submitted">Last
+                                    Name is Required</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Email<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="email">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['email'].hasError('required') && myform.submitted">Email
+                                    Id is Required</span>
+                            </h6>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['email'].hasError('pattern') && myform.submitted">Email
+                                    Id is invalid</span>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Mobile Number<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="phone_no">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['phone_no'].hasError('required') && myform.submitted">Mobile
+                                    Number is Required</span>
+                            </h6>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['phone_no'].hasError('pattern') && myform.submitted">Mobile
+                                    number is not 10 digit </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="radio_mat_btn">
+                                <label class="mat_label_1">Gender<span>*</span></label>
+                                <mat-radio-group class="mat_radio" aria-label="Select an option"
+                                    formControlName="gender">
+                                    <mat-radio-button class="radio_btn" value="Female">Female</mat-radio-button>
+                                    <mat-radio-button class="radio_btn" value="Male">Male</mat-radio-button>
+                                    <mat-radio-button class="radio_btn" value="Others">Others</mat-radio-button>
+                                </mat-radio-group>
+                                <h6>
+                                    <span
+                                        *ngIf="profileForm.controls['gender'].hasError('required') && myform.submitted">Gender
+                                        is Required</span>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Date Of Birth<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput [matDatepicker]="picker" class="mat_input" formControlName="dob">
+                                <mat-datepicker-toggle class="time_picker" matIconSuffix
+                                    [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker startView="year"></mat-datepicker>
+                            </mat-form-field>
+                            <h6>
+                                <span *ngIf="profileForm.controls['dob'].hasError('required') && myform.submitted">Date
+                                    of Birth is Required</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">State<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <!-- <mat-select class="mat_input mat_input1" formControlName="state"
+                                    (selectionChange)="getCities($event)">
+                                    <mat-option *ngFor="let state of stateList"
+                                        [value]="state.name">{{state.name}}</mat-option>
+                                </mat-select> -->
+                                <input matInput type="text" class="mat_input" formControlName="state">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['state'].hasError('required') && myform.submitted">State
+                                    is Required</span>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">City<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <!-- <mat-select class="mat_input mat_input1" formControlName="city">
+                                    <mat-option *ngFor="let city of cityList"
+                                        [value]="city.name">{{city.name}}</mat-option>
+                                </mat-select> -->
+                                <input matInput type="text" class="mat_input" formControlName="city">
+                            </mat-form-field>
+                            <h6>
+                                <span *ngIf="profileForm.controls['city'].hasError('required') && myform.submitted">City
+                                    is Required</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between">
+                                
+                                    <button mat-button (click)="profileUpdate()" class="sub_btn">Update</button>
+                                
+                                    <button mat-button class="cancel_btn" (click)="cancelBtn()">Cancel</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="lawyers_invoice">
+    <div class="row m-0">
+        <div class="col-md-8">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>Juedgement Topics</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Juedgement Topics</h1>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button mat-button class="add_inv_btn" (click)="openDialog()">Add New Topic</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <p>No Juedgement Topic Found!</p>
+                <h6>Click <button mat-button (click)="openDialog()">Add New Topic</button></h6>
+            </mat-card>
+        </div>
+    </div>
+</div>

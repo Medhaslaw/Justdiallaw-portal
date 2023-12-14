@@ -1,0 +1,70 @@
+
+<div class="header" id="myHeader">
+<app-sub-nav></app-sub-nav>
+
+</div>
+
+<div class="about-blog">
+    <div class="container">
+        <div class="row justify-content-center">
+            
+            <div class="col-md-11 col-sm-12 col-lg-10 col-xl-8 blogs-detalis">
+
+                <div class="pagination-header">
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item" routerLink="/home"><a>Home</a></li>
+                            <li class="breadcrumb-item " routerLink="/blog">Blog</li>
+                            <li class="breadcrumb-item active">Blog brief</li>
+
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="blog-header">
+                    <h3>{{blogData?.category.category_name}}</h3>
+
+                    <div class="row">
+                        <div class="col-md-12 creation-date">
+                            <h1>{{blogData?.title}} </h1>
+
+                        </div>
+                        <div class="col-md-6 creation-date">
+                            <p>{{blogData?.created_on | date:'dd MMM, yyy' }}</p>
+
+                        </div>
+                        <div class="col-md-6 share-icons">
+                            <i class="bi bi-whatsapp" (click)="shareOnWhatsApp()"></i> <span><i class="bi bi-facebook" (click)="shareOnFacebook()"></i></span>
+                            <span>
+                                <i class="bi bi-linkedin"  (click)="shareOnLinkedIn()"></i>
+                                </span>
+                                <span>
+                                <i class="bi bi-twitter"  (click)="shareTwitter()"></i>
+                                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-img">
+                    <img src="{{blogData?.blog_image_url}}">
+                </div>
+                <div class="blog-content">
+                    <p [innerHTML]="blogData?.content | safeHtml"></p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="lawyerCalendar" >
+<full-calendar [options]="calendarOptions"  [events]="eventsPromise | async">
+    <ng-template #eventContent let-arg>
+      <b>{{arg.timeText}}</b>
+      <i>{{arg.event.title}}</i>
+    </ng-template>
+  </full-calendar>
+</div> -->
+
+
+<app-footer></app-footer>

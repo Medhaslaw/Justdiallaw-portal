@@ -1,0 +1,45 @@
+
+<div mat-dialog-content class="original-div call-div" >
+    <div class="row justify-content-center">
+     
+      <div class="col-md-11">
+        <div class="sign_up">
+          <div class="clip_patharea middle">
+            <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+            <h1>Welcome to Just Dial Law</h1>
+          </div>
+          <div class="just-law-num">
+            <div class="num" *ngIf="country === 'India'">
+                <h1>Offline Number : <span>+91-9142846846</span></h1>
+            </div>
+            <div class="num" *ngIf="country === 'United States'">
+              <h1>Offline Number : <span>+1 732-743-5279</span></h1>
+          </div>
+          <div class="num" *ngIf="!country">
+            <h1>Offline Number : <span>+1 732-743-5279</span></h1>
+        </div>
+            <div class="call-now d-flex">
+                <a *ngIf="country === 'India'" class="call-now-btn" href="tel:9142846846">
+                 Call Now <i class="bi bi-telephone-forward-fill"></i>
+                </a>
+
+                <a *ngIf="country === 'United States'" class="call-now-btn" href="tel:+17327435279">
+                  Call Now <i class="bi bi-telephone-forward-fill"></i>
+                 </a>
+                 <a *ngIf="!country" class="call-now-btn" href="tel:+17327435279">
+                  Call Now <i class="bi bi-telephone-forward-fill"></i>
+                 </a>
+
+                <a class="whatsapp-icon" (click)="goWebWhatsApp()" >
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+
+
+
+            </div>
+          </div>
+          
+
+      </div>
+    </div>
+  </div>

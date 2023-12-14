@@ -1,0 +1,26 @@
+<div mat-dialog-content class="original-div" *ngIf="!isOk" >
+    <div class="row justify-content-center">
+      <div class="col-md-11">
+        <div class="sign_up text-center" >
+          <div class="clip_patharea middle ">
+            <!-- <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3> -->
+            <h1>Welcome to Just Dial Law </h1>
+          </div>
+          <div class="img-div" *ngIf="!data.profile_pic_url">
+            <img src="assets/img/avatar.webp">
+          </div>
+          <div  class="img-div" *ngIf="data.profile_pic_url">
+            <img src="{{data.profile_pic_url}}" >
+          </div>
+  <p class="mt-4">
+    Your Account is still in Verification Process. Please wait till your account Approved.
+  </p>
+          
+          <button class="accept-btn" (click)="acceptTerms()">OK</button>
+          <!-- <button class="close-btn" (click)="closePopup()">Close</button> -->
+
+      </div>
+    </div>
+  
+  </div>
+</div>

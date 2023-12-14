@@ -1,0 +1,12 @@
+<div class="delete-modal">
+    <div>
+        <p>Do you want to delete?</p>
+        <div class="action-btn">
+            <button mat-button (click)="onNoClick()" class="close_btn" mat-stroked-button
+                matTooltip="Cancel">Cancel</button>
+            <!-- <button mat-button  (click)="onNoClick()" mat-stroked-button matTooltip="Cancel">Close</button> -->
+            <button mat-button (click)="deleteFile()" mat-raised-button color="warn" cdkFocusInitial matTooltip="Delete"
+                class="delete_btn">Delete</button>
+        </div>
+    </div>
+</div>

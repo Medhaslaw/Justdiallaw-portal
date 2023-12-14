@@ -1,0 +1,144 @@
+
+        .lawyer-img{
+            position: relative;
+            img{
+                width: 100%;
+            }
+            button{
+                position: absolute;
+                bottom: 0.3vw;
+                width: 95%;
+                left: 0.3vw;
+                border: inherit;
+                background-color: rgb(85 87 90 / 81%);
+                color: #fff;
+                font-size: 1vw;
+                padding: 0.8vw;
+                border-radius: 0.3vw;
+                i{
+
+                    color: #36ea50;
+                    font-size: 0.9vw;
+                    margin-right: 0.5vw;
+                }
+            }
+        }
+        .lawyer-name{
+            h1{
+                font-size: 1.4vw;
+                font-weight: 800;
+                padding: 0;
+                margin: 0  !important;
+                font-family: 'Manrope';
+                line-height: initial;
+            }
+            p{
+                color: #272727;
+                font-family: 'Manrope';
+                font-weight: 500;
+                padding: 0;
+                margin: 0.5vw 0 !important;
+                font-size: 0.95vw;
+                line-height: initial;
+            }
+            .percent-bar{
+                display: flex;
+                margin: 1.2vw 0;
+                .bi-hand-thumbs-up{
+                    font-size: 1.2vw;
+                    color: #e86d1f;
+                    padding: 0;
+                    margin-right: 1vw;
+                }
+                .badge{
+                    width: 2vw;
+                    height: 1vw;
+                    font-size: 0.7vw;
+                    color: #fff;
+                    border-radius: 0.2vw;
+                    background-color: #e86d1f;
+                    padding: 0.2vw;
+                    margin: 0 0.5vw 0 0;
+                    font-weight: 500;
+                }
+                p{
+                    margin: 0 !important;
+                }
+            }
+            
+        }
+        .lawyer-acceptance{
+            display: flex;
+            margin: 0.5vw 0;
+            .vedio-icon{
+                background-color: #8b8d92;
+                width: 1.2vw;
+                height: 1.2vw;
+                border-radius: 10vw;
+                padding: 0 0.15vw;
+                line-height: 1.7vw;
+                margin-right: 0.6vw;
+                mat-icon{
+                    color: #fff;
+                    padding: 0;
+                    font-size: 0.9vw;
+                    height: inherit;
+                    width: inherit;
+                }
+                svg{
+                    width: 0.9vw;
+                    height: 0.9vw;
+                    margin-bottom: 0.4vw;
+                }
+            }
+            p{
+                font-size: 0.9vw;
+                color: #272727;
+                font-family: 'Manrope';
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .lawyer-details{
+            display: flex;
+            padding: 0 0 0 2vw;
+            margin: 0.6vw 0;
+            .location-icon{
+                margin-right: 0.7vw;
+                svg{
+                    width: 1.1vw;
+                    height: 1.1vw;
+                    
+                }
+                
+                mat-icon{
+                    color: #76787b;
+                    font-size: 1.15vw;
+                    height: inherit;
+                    width: inherit;
+                }
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                font-size: 0.9vw;
+                font-family: 'Manrope';
+                font-weight: 500;
+                color: #171c25;
+            }
+            
+            button{
+                background-color: #e86d1f;
+                color: #fff;
+                font-size: 1vw;
+                font-family: "Manrope";
+                font-weight: 600;
+                text-transform: uppercase;
+                border: inherit;
+                padding: 1.2vw 2vw;
+                border-radius: 0.3vw;
+                margin-top: 1.2vw;
+                width: 100%;
+            }
+        }

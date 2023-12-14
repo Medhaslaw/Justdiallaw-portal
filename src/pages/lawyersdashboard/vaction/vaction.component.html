@@ -1,0 +1,76 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>Vacation</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Vacation</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <form   class="add_invoice_form" [formGroup]="vactionForm"  #myform="ngForm"  >
+                 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form_alert">
+                                <label class="mat_label">From Date<span>*</span></label> 
+                                
+                                <mat-form-field class="mat_form_filed">
+                                    <input matInput [matDatepicker]="picker" [min]="todayDate" class="mat_input"  formControlName="start_date">
+                                    <mat-datepicker-toggle class="time_picker" matIconSuffix
+                                        [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker startView="year"></mat-datepicker>
+                                </mat-form-field>
+
+                            </div>
+                            <h6>
+                                <span
+                                    *ngIf="vactionForm.controls['start_date'].hasError('required') && myform.submitted">Start Date is Required</span>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form_alert">
+                                <label class="mat_label">To Date<span>*</span></label> 
+                                
+                                <mat-form-field class="mat_form_filed">
+                                    <input matInput [matDatepicker]="picker1" [min]="todayDate" class="mat_input" formControlName="end_date" >
+                                    <mat-datepicker-toggle class="time_picker" matIconSuffix
+                                        [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker1 startView="year"></mat-datepicker>
+                                </mat-form-field>
+
+                            </div>
+                            <h6>
+                                <span
+                                    *ngIf="vactionForm.controls['end_date'].hasError('required') && myform.submitted">End Date is Required</span>
+                            </h6>
+                        </div>
+                      <h6 class="blocked_text" >From Date to  To Date  Your Vacation Leaves Confirm</h6>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button mat-button type="submit" class="sub_btn" (click)="save()" >Save</button>
+                                </div>
+                             
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+
+</div>
+

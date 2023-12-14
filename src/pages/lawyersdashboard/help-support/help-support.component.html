@@ -1,0 +1,113 @@
+<div class="lawyers_invoice">
+    <div class="row m-0">
+        <div class="col-md-8">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>Leads</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Leads</h1>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- <button mat-button class="add_inv_btn">Lead Perference</button> -->
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="verification">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="verfication-heading">
+                            <h1>How Can We Help?</h1>
+                            <p>We Know Great Product Is Nothing Without Amazing Support. 
+                                Our Eager Support Team Is Available 24/7 To Answer Any Questions You Have.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-4">
+            <mat-card class="mat_card_invoice">
+                <li class="d-flex">
+                    <div class="contact_icon">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <span> <p>Phone</p> </span>
+                </li>
+                <hr>
+                <h5> <a href="tel:+91-9142846846">India: +91-9142846846</a> </h5>
+                <h5>  <a href="tel:+1 732-743-5279">USA: +1 732-743-5279</a></h5>
+                <!-- <p>Sign Up For Your Free Account And Phone Number</p> -->
+                
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="mat_card_invoice">
+                <li class="d-flex">
+                    <div class="contact_icon contact_icon1">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <span> <p>Email</p> </span>
+                </li>
+                <hr>
+                <h5> <a (click)="mailtoJustLawIndia()" >India: support@justdiallaw.com </a></h5>
+                <h5> <a (click)="mailtoJustLawUsa()" >USA: support@justdiallaw.com </a> </h5>
+                <!-- <p>Info@justdiallaw.Com For Both SMS And MMS Messages</p> -->
+                
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="mat_card_invoice">
+                <li class="d-flex">
+                    <div class="contact_icon contact_icon2">
+                      <img src="../../assets/img/hand.png" alt="">
+                    </div>
+                    <span> <p>Community</p> </span>
+                </li>
+                <hr>
+                <h5>support@justdiallaw.com</h5>
+                <p>Connect With A Member Of Our Customer Support Team</p>
+                
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="faqs">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="faq_title">
+                    <h1>Frequently Asked Questions</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <mat-accordion>
+                    <mat-expansion-panel class="expansion_panel" *ngFor="let faqs of faqData">
+                      <mat-expansion-panel-header class="panel_header">
+                        <mat-panel-title>
+                         <h1>{{faqs.question}}</h1>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <div class="panal_content">
+                        <p>{{faqs.answer}}</p>
+                      </div>
+                    </mat-expansion-panel>
+
+                    
+
+                    
+                  </mat-accordion>
+            </div>
+        </div>
+    </div>
+    
+</div>

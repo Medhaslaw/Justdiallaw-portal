@@ -1,0 +1,197 @@
+<app-lawyers-dashboard-header></app-lawyers-dashboard-header>
+
+<div app-theme >
+
+    <button class=" men_btn open menu-active desktop_none" (click)="openMenu()"><i class="bi bi-list"></i></button>
+<mat-drawer-container class="example-container lawyer_sidemenu">
+    <mat-drawer mode="side" opened class="side_nave-user hednav">
+        <div class="side_menu">
+            <div class="user_details">
+                <div *ngIf="!userDetails?.profile_pic_url; else elseBlock ">
+                    <div class="user-profile">
+                        <img src="assets/img/avatar.webp" class="rounded-circle">
+                    </div>
+                    <button class="file-upload-button">
+                        <input type="file" class="upload-file" (change)="onFileChanged($event)" />
+                        <i class="bi bi-camera-fill"></i>
+                    </button>
+                </div>
+                <ng-template #elseBlock>
+                    <div class="user-profile">
+                        <img (click)="openDialog(userDetails)"  src="{{userDetails.profile_pic_url}}" alt="">
+                    </div>
+                    <button class="file-upload-button">
+                        <input type="file" class="upload-file" (change)="onFileChanged($event)" />
+                        <i class="bi bi-camera-fill"></i>
+                    </button>
+                </ng-template>
+                <h3 [routerLink]="'/lawyer-jdl/profile'">{{userDetails?.first_name}} {{userDetails?.last_name}}
+                </h3>
+                <h4 [routerLink]="'/lawyer-jdl/profile'">{{userDetails?.email}}</h4>
+            </div>
+            <hr>
+            <ul>
+                <li [routerLink]="'/lawyer-jdl/home'" (click)="viewTab()" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 17.000000 17.000000"
+                        preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,17.000000) scale(0.100000,-0.100000)" fill="#fff"
+                            stroke="none">
+                            <path
+                                d="M7 164 c-4 -4 -7 -16 -7 -26 0 -16 6 -19 38 -16 29 2 37 7 37 23 0 15 -8 21 -30 23 -17 2 -34 0 -38 -4z" />
+                            <path
+                                d="M97 163 c-2 -4 -4 -26 -3 -48 1 -39 2 -40 36 -40 35 0 35 0 35 45 0 43 -1 45 -32 48 -17 2 -33 -1 -36 -5z" />
+                            <path
+                                d="M4 87 c-3 -8 -4 -30 -2 -49 3 -31 6 -33 38 -33 35 0 35 0 35 45 0 43 -1 45 -33 48 -21 2 -34 -2 -38 -11z" />
+                            <path
+                                d="M97 43 c-12 -25 0 -38 33 -38 29 0 36 4 38 23 3 19 -1 22 -32 22 -19 0 -37 -3 -39 -7z" />
+                        </g>
+                    </svg> Home
+                </li>
+
+                <li [routerLink]="'/lawyer-jdl/leads'" (click)="viewTab()" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 24.000000 31.000000"
+                        preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,31.000000) scale(0.100000,-0.100000)" fill="#fff"
+                            stroke="none">
+                            <path d="M46 284 c-4 -10 -2 -22 3 -27 15 -15 46 -3 46 18 0 26 -40 33 -49 9z" />
+                            <path d="M144 285 c-8 -20 4 -35 26 -35 23 0 32 13 24 34 -8 20 -43 21 -50 1z" />
+                            <path
+                                d="M22 209 c-23 -36 -15 -39 98 -39 114 0 125 5 97 42 -10 13 -31 16 -98 16 -73 1 -87 -2 -97 -19z" />
+                            <path
+                                d="M54 118 c26 -30 36 -51 36 -75 0 -22 5 -33 14 -33 31 0 46 13 46 39 0 17 14 44 36 69 l36 42 -102 0 -102 0 36 -42z" />
+                        </g>
+                    </svg>
+                    Leads
+                </li>
+
+                <li [routerLink]="'/lawyer-jdl/cases'" (click)="viewTab()" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 24.000000 24.000000"
+                        preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)" fill="#fff"
+                            stroke="none">
+                            <path
+                                d="M26 214 c-10 -10 -16 -33 -16 -65 0 -56 13 -89 35 -89 10 0 15 -10 15 -27 l0 -27 28 27 c22 21 38 27 75 27 56 0 67 15 67 89 0 71 -14 81 -110 81 -58 0 -83 -4 -94 -16z m65 -77 c-13 -13 -26 -3 -16 12 3 6 11 8 17 5 6 -4 6 -10 -1 -17z m39 8 c0 -8 -4 -15 -10 -15 -5 0 -10 7 -10 15 0 8 5 15 10 15 6 0 10 -7 10 -15z m37 -11 c-9 -9 -28 6 -21 18 4 6 10 6 17 -1 6 -6 8 -13 4 -17z" />
+                        </g>
+                    </svg>
+                    Cases
+                </li>
+
+
+               
+
+                <!-- <li [routerLink]="'/lawyer-jdl/timeline'" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 24.000000 31.000000"
+                        preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,31.000000) scale(0.100000,-0.100000)" fill="#fff"
+                            stroke="none">
+                            <path d="M46 284 c-4 -10 -2 -22 3 -27 15 -15 46 -3 46 18 0 26 -40 33 -49 9z" />
+                            <path d="M144 285 c-8 -20 4 -35 26 -35 23 0 32 13 24 34 -8 20 -43 21 -50 1z" />
+                            <path
+                                d="M22 209 c-23 -36 -15 -39 98 -39 114 0 125 5 97 42 -10 13 -31 16 -98 16 -73 1 -87 -2 -97 -19z" />
+                            <path
+                                d="M54 118 c26 -30 36 -51 36 -75 0 -22 5 -33 14 -33 31 0 46 13 46 39 0 17 14 44 36 69 l36 42 -102 0 -102 0 36 -42z" />
+                        </g>
+                    </svg>
+                    Timeline
+                </li> -->
+
+
+                <li [routerLink]="'/lawyer-jdl/view-artical'" (click)="viewTab()" routerLinkActive="active"
+                    ariaCurrentWhenActive="page">
+
+                    <i class="bi bi-file-earmark-ruled-fill"></i>
+                 View Article
+                </li>
+
+
+                <li [routerLink]="'/lawyer-jdl/my-calendar'" (click)="viewTab()" routerLinkActive="active"
+                ariaCurrentWhenActive="page">
+              
+                <i class="bi bi-calendar-date-fill"></i>
+               My Calendar
+            </li>
+
+            <li [routerLink]="'/lawyer-jdl/create-time-slots'" (click)="viewTab()" routerLinkActive="active"
+            ariaCurrentWhenActive="page">
+          
+            <i class="bi bi-alarm-fill"></i>
+             Create Time Slots
+        </li>
+
+        <li [routerLink]="'/lawyer-jdl/vacation'"  (click)="viewTab()"routerLinkActive="active"
+        ariaCurrentWhenActive="page">
+       
+        <i class="bi bi-tree-fill"></i>
+         Vacation
+    </li>
+
+
+                <!-- <li [routerLink]="'/lawyer-jdl/transactions'" routerLinkActive="active"
+                    ariaCurrentWhenActive="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 18.000000 24.000000"
+                        preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)" fill="#fff"
+                            stroke="none">
+                            <path
+                                d="M68 226 c-33 -24 -22 -46 22 -46 30 0 40 4 40 16 0 15 -27 43 -40 43 -3 0 -13 -6 -22 -13z" />
+                            <path
+                                d="M4 197 c-3 -8 -4 -54 -2 -103 l3 -89 85 0 85 0 0 99 c0 71 -4 101 -12 104 -8 2 -13 -5 -13 -16 0 -22 -18 -32 -60 -32 -41 0 -60 10 -60 31 0 22 -18 26 -26 6z m86 -55 c0 -5 -8 -16 -18 -25 -14 -13 -21 -14 -30 -5 -9 9 -6 14 11 24 27 15 37 16 37 6z m55 -12 c3 -5 -3 -10 -14 -10 -12 0 -21 5 -21 10 0 6 6 10 14 10 8 0 18 -4 21 -10z m-55 -48 c0 -5 -8 -16 -18 -25 -14 -13 -21 -14 -30 -5 -9 9 -6 14 11 24 27 15 37 16 37 6z m55 -12 c3 -5 -3 -10 -14 -10 -12 0 -21 5 -21 10 0 6 6 10 14 10 8 0 18 -4 21 -10z" />
+                        </g>
+                    </svg>Transactions
+                </li> -->
+                <!-- <li [routerLink]="'/lawyer-jdl/justLaw_subscription'" routerLinkActive="active"
+                    ariaCurrentWhenActive="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 24.000000 19.000000"
+                        preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,19.000000) scale(0.100000,-0.100000)" fill="#fff"
+                            stroke="none">
+                            <path d="M57 173 c-12 -12 -7 -50 8 -63 17 -14 51 -5 59 16 13 35 -41 73 -67 47z" />
+                            <path d="M157 153 c-13 -12 -7 -44 8 -49 24 -10 47 14 34 37 -10 19 -30 25 -42 12z" />
+                            <path
+                                d="M48 75 c-28 -15 -44 -47 -33 -65 3 -5 37 -10 76 -10 61 0 69 2 69 19 0 49 -65 82 -112 56z" />
+                            <path d="M163 83 c-21 -8 16 -53 43 -53 27 0 30 9 12 32 -15 18 -38 27 -55 21z" />
+                        </g>
+                    </svg>
+                    Just Dial Law Subscription
+                </li> -->
+                <li [routerLink]="'/lawyer-jdl/clients'" (click)="viewTab()" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 22.000000 24.000000"
+                        preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)" fill="#fff"
+                            stroke="none">
+                            <path
+                                d="M70 220 c-25 -25 -26 -62 -2 -83 39 -35 102 -9 102 41 0 28 -34 62 -60 62 -11 0 -29 -9 -40 -20z" />
+                            <path
+                                d="M64 91 c-26 -12 -54 -49 -54 -73 0 -16 11 -18 100 -18 92 0 100 1 100 19 0 11 -10 32 -23 46 -24 29 -86 42 -123 26z" />
+                        </g>
+                    </svg>
+                    Clients
+                </li>
+               
+                <li [routerLink]="'/lawyer-jdl/help_support'" (click)="viewTab()" routerLinkActive="active"
+                    ariaCurrentWhenActive="page"><svg xmlns="http://www.w3.org/2000/svg" version="1.0"
+                        viewBox="0 0 27.000000 27.000000" preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,27.000000) scale(0.100000,-0.100000)" fill="#fff"
+                            stroke="none">
+                            <path
+                                d="M96 260 c-122 -38 -119 -217 4 -250 99 -27 187 62 160 162 -10 36 -59 88 -83 88 -7 0 -21 2 -32 5 -11 2 -33 0 -49 -5z m65 -50 c11 -6 19 -21 19 -36 0 -28 -38 -86 -52 -78 -14 9 -9 43 9 52 11 7 14 15 9 28 -7 18 -9 18 -23 -3 -9 -13 -19 -23 -24 -23 -16 0 -9 49 9 59 22 13 29 13 53 1z m-13 -141 c-2 -6 -8 -10 -13 -10 -5 0 -11 4 -13 10 -2 6 4 11 13 11 9 0 15 -5 13 -11z" />
+                        </g>
+                    </svg>
+                    Help & Support</li>
+            
+             
+            </ul>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+</div>

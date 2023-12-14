@@ -1,0 +1,84 @@
+.lawyers_invoice{
+    padding: 5.5vw 2vw 3vw 2vw;
+    background-color: #f4f4fa;
+    .pagination-header {
+        nav {
+            .breadcrumb {
+                margin: 0 0 1vw;
+                font-family: 'Manrope';
+                font-weight: 500;
+
+                li {
+                    font-size: .75vw;
+                    color: #414146;
+                    font-weight: 500;
+                    padding-left: .3vw;
+
+                    a {
+                        color: #414146;
+                        font-size: .75vw;
+                        font-weight: 400;
+                    }
+                }
+
+                .breadcrumb-item+.breadcrumb-item::before {
+                    padding-right: .3vw;
+                    color: #666;
+                }
+            }
+
+
+        }
+       
+    }
+    .invoice_heading{
+        h1{
+            font-size: 1.2vw;
+        font-weight: 800;
+        color: #000;
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+        }
+    }
+    .add_inv_btn{
+        border: inherit;
+        font-size: 1vw;
+        padding: 1.3vw 3vw;
+        background-color: #e86d1f;
+        border-radius: 10vw;
+        color: #fff;
+        font-weight: 500;
+        float: right;
+    }
+    .mat_card_invoice{
+        padding: 3vw;
+        border-radius: 1vw;
+        margin:1vw 0  0;
+        p{
+            font-size: 1.1vw;
+            color: #333437;
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+        }
+        h6{
+            padding: 0;
+            margin: 1vw 0 0 ;
+            font-size: 1.2vw;
+            color: #333437;
+            font-weight: 500;
+            button{
+                color: #e86d1f;
+                border: 0.1vw solid #e86d1f;
+                padding: 0.8vw;
+                border-radius: 0.5vw;
+                background-color: inherit;
+                font-size: 1vw;
+                font-weight: 500;
+                margin: 0 0 0 1vw;
+
+            }
+        }
+    }
+}

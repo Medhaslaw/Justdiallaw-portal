@@ -1,0 +1,128 @@
+<div class="header" id="myHeader">
+<app-sub-nav></app-sub-nav>
+
+</div>
+<div app-theme >
+    <div class="appoinment-confirmed">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="confirmed-heading ">
+                        <h1><mat-icon>
+                                verified
+                            </mat-icon>Appointment Confirmed</h1>
+                    </div>
+                    <mat-card>
+                        <mat-card-content>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="schedule-date">
+                                        <p><mat-icon>calendar_today </mat-icon>On <b>{{appDate?.date | date: 'dd MMM, yyyy'}}</b></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="schedule-date">
+                                        <p><mat-icon>alarm_on</mat-icon>At <b>{{appTime?.timeslot.Advocate_timing_slot}}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <hr> -->
+                            <!-- <div class="row">
+                                <div class="col-md-12">
+                                    <div class="schedule-date">
+                                        <button mat-button>Change Date & Time</button>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card>
+                        <mat-card-content>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="img">
+                                        <img
+                                            [src]="lawyerData?.profile_pic_url ?  lawyerData.profile_pic_url : 'assets/img/avatar.webp'">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="lawyer-details">
+                                        <h1>{{lawyerData?.first_name}}<span></span> {{lawyerData?.last_name}}</h1>
+                                        <p>{{lawyerData?.year_of_practice}} years experience overall</p>
+                                        <div class="percent-bar" ><i class="bi bi-hand-thumbs-up"></i>
+                                               <div>
+                                                <div class="badge" *ngIf="reating.overall_rating > 0">
+                                                 {{reating.overall_rating}}<i class="bi bi-star-fill"></i>
+                                                </div>
+                                               </div>
+                                            <p>{{reating.overall_count}} Satisfied customers</p>
+                                        </div>
+                                        <button (click)="getDirections()" mat-button>Get Direction <mat-icon>send</mat-icon></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                        <hr>
+                        <div class="lawyer_contact">
+                            <h3>Lawyer Details</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="call-us">
+                                        <h4><mat-icon> phone_callback</mat-icon>Call us</h4>
+                                        <a  href="tel:{{lawyerData.phone_no}}">{{lawyerData.phone_no}}</a><br>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="call-us"  (click)="mailtoJustLaw()">
+                                        <h4><mat-icon>mail</mat-icon>Email</h4>
+                                        <a>{{lawyerData.email}}</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="lawyer_contact">
+                            <h3>Client Details</h3>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="call-us">
+                                        <p>Client Name</p>
+                                        <h6>{{user.username.split('-')[0]}}</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="call-us">
+                                        <p>Email</p>
+                                        <h6>{{user.email}}</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="call-us">
+                                        <p>Mobile</p>
+                                        <h6>{{user.phone_no}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- <div class="cancel-appoinment">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button mat-button>Cancel Appointment</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button mat-button>Reschedule Appointment</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<app-footer></app-footer>

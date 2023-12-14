@@ -1,0 +1,69 @@
+<div app-theme>
+
+<div mat-dialog-content  class="original-div">
+  <div class="row justify-content-center">
+    <div class="col-md-11">
+      <div class="sign_up" >
+        <div class="clip_patharea middle">
+          <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+          <h1>Welcome to Just Dial Law</h1>
+        </div>
+        <form   class="add_invoice_form" [formGroup]="lawyerLoginForm" #myform="ngForm">
+          <div class="row" *ngIf="show1">
+            <div class="col-md-12">
+              <mat-label class="mat_label">Email Id <span>*</span></mat-label>
+              <mat-form-field class="mat_form_filed">
+               
+                <input matInput type="text" class="mat_input" formControlName="email">
+              </mat-form-field>
+             <h6>
+              <span *ngIf="lawyerLoginForm.controls['email'].hasError('required') && myform.submitted">Email Id is Required</span>
+            </h6>
+            <!-- <h6>
+              <span *ngIf="lawyerLoginForm.controls['email'].hasError('email') && myform.submitted">Email Id is invalid</span>
+            </h6> -->
+            <h6>
+              <span *ngIf="lawyerLoginForm.controls['email'].hasError('pattern') && myform.submitted">Email Id is invalid</span>
+            </h6>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>By Login, You agree to our <a (click)="TermsOfUse()">Terms Of Use </a> </p>
+                      <p class="text-danger">{{errData}}</p>
+                      <button mat-button class="sub_btn" (click)="save()">Send OTP</button>
+                      <hr>
+                      <p>Don't have an account Yet? <a (click)="signup()">Create Account</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12" *ngIf="show">
+            <h1 class="otp_sucess">Otp Sent Successfully</h1>
+            <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:4}" class="otp_check"></ng-otp-input>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="text-danger">{{errOtpCheckData}}</p>
+                    <p>Didn't get the code?<a (click)="save()">Resend OTP</a></p>
+                    <button mat-button type="submit" class="sub_btn" (click)="lawyerLogin()">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="enabled" class="overlapped-div">
+  <sa-spinner-round-filled [size]="180" [thickness]="100" [speed]="60" color="rgba(33, 56, 112, 1)" ></sa-spinner-round-filled>
+</div>
+
+</div>
+

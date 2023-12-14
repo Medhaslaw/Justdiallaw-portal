@@ -1,0 +1,430 @@
+<app-sub-nav>
+
+</app-sub-nav>
+<div app-theme>
+
+    <div class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pagination-header">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item" routerLink="/home"><a>Home</a></li>
+                                <li class="breadcrumb-item active">Lawyers List <span *ngIf="locationVal">/</span> {{locationVal}} <span *ngIf="language">/</span> {{language}} <span *ngIf="categorySearchedName[0]?.category_name">/</span> {{categorySearchedName[0]?.category_name}}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="title">
+                        <h1>Search Law Firm Profiles</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-bar" (scroll)="onscroll()" [ngClass]="navbarfixed? 'fixed': 'nofixed'">
+        <div class="container">
+            <div class="row justify-content-between">
+
+                <div class="col-md-12 mobile-none">
+
+                    <div class="d-flex justify-content-between">
+                        <div class="ng_width">
+                            <ng-multiselect-dropdown [placeholder]="'Category'" [settings]="dropdownSettings" [data]="categoryList" [(ngModel)]="selectedItems" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect($event)" (onDeSelect)="onItemDeselect($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+
+                        <div class="ng_width">
+                            <ng-multiselect-dropdown [placeholder]="'City'" [settings]="dropdownSettings1" [data]="cityList" [(ngModel)]="selectedItems1" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect1($event)" (onDeSelect)="onItemDeselect1($event)">
+                            </ng-multiselect-dropdown>
+                        </div>
+
+                        <div class="ng_width">
+                            <ng-multiselect-dropdown [placeholder]="'Courts'" [settings]="dropdownSettings2" [data]="courts" [(ngModel)]="selectedItems2" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect2($event)" (onDeSelect)="onItemDeselect2($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+
+                        <div class="ng_width">
+                            <ng-multiselect-dropdown [placeholder]="'Experience'" [settings]="dropdownSettings3" [data]="experienceList" [(ngModel)]="selectedItems3" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect3($event)" (onDeSelect)="onItemDeselect3($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+                        <div class="ng_width">
+                            <ng-multiselect-dropdown [placeholder]="'Language'" [settings]="dropdownSettings4" [data]="langugaes" [(ngModel)]="selectedItems4" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect4($event)" (onDeSelect)="onItemDeselect4($event)">
+                            </ng-multiselect-dropdown>
+
+
+                        </div>
+                        <div class="ng_width">
+                            <ng-multiselect-dropdown [placeholder]="'Gender'" [settings]="dropdownSettings5" [data]="genderList" [(ngModel)]="selectedItems5" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect5($event)" (onDeSelect)="onItemDeselect5($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="desktop_none">
+                <div class="row">
+                    <div class="col-6">
+                        <div>
+                            <ng-multiselect-dropdown [placeholder]="'Category'" [settings]="dropdownSettings" [data]="categoryList" [(ngModel)]="selectedItems" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect($event)" (onDeSelect)="onItemDeselect($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <ng-multiselect-dropdown [placeholder]="'City'" [settings]="dropdownSettings1" [data]="cityList" [(ngModel)]="selectedItems1" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect1($event)" (onDeSelect)="onItemDeselect1($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <ng-multiselect-dropdown [placeholder]="'Courts'" [settings]="dropdownSettings2" [data]="courts" [(ngModel)]="selectedItems2" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect2($event)" (onDeSelect)="onItemDeselect2($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div>
+                            <ng-multiselect-dropdown [placeholder]="'Experience'" [settings]="dropdownSettings3" [data]="experienceList" [(ngModel)]="selectedItems3" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect3($event)" (onDeSelect)="onItemDeselect3($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <ng-multiselect-dropdown [placeholder]="'Language'" [settings]="dropdownSettings4" [data]="langugaes" [(ngModel)]="selectedItems4" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect4($event)" (onDeSelect)="onItemDeselect4($event)">
+                            </ng-multiselect-dropdown>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-6">
+                        <div>
+                            <ng-multiselect-dropdown [placeholder]="'Gender'" [settings]="dropdownSettings5" [data]="genderList" [(ngModel)]="selectedItems5" [ngModelOptions]="{standalone: true}" (onSelect)="onItemSelect5($event)" (onDeSelect)="onItemDeselect5($event)">
+                            </ng-multiselect-dropdown>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lawyers-section">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <!-- <div class="col-md-4">
+                    <div class="side-details">
+                        <div class="side-content">
+                            <h3>Category</h3>
+                            <ul>
+                                <li *ngFor="let category of categoryList">
+                                    <mat-checkbox>{{category.category_name}}</mat-checkbox>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="side-content content-1">
+                            <h3>Not Sure What Questions To Ask A Lawyer?</h3>
+                            <p>Here are a few to get you started:</p>
+                            <li>
+                                <mat-icon>check_circle_outline</mat-icon>
+                                <p>How long have you been in practice?</p>
+                            </li>
+                            <li>
+                                <mat-icon>check_circle_outline</mat-icon>
+                                <p>How many cases like mine have you handled?</p>
+                            </li>
+                            <li>
+                                <mat-icon>check_circle_outline</mat-icon>
+                                <p>How often do you settle cases out of court?</p>
+                            </li>
+                            <li>
+                                <mat-icon>check_circle_outline</mat-icon>
+                                <p> What are your fees and costs?</p>
+                            </li>
+                            <li>
+                                <mat-icon>check_circle_outline</mat-icon>
+                                <p>What are the next steps?</p>
+                            </li>
+
+                        </div>
+                        <div class="side-content content-2">
+                            <h3>Not Sure What Questions To Ask A Lawyer?</h3>
+                            <p>It is always a good idea to research your lawyer prior to hiring. Every state has a
+                                disciplinary organization that monitors attorneys, their licenses, and consumer
+                                complaints.
+                                By researching lawyer</p>
+                            <p>Here are a few to get you started:</p>
+                            <li>
+                                <mat-icon>check_circle_outline</mat-icon>
+                                <p>Ensure the attorney is currently licensed to practice in your state</p>
+                            </li>
+                            <li>
+                                <mat-icon>check_circle_outline</mat-icon>
+                                <p>Gain an understanding of his or her historical disciplinary record, if any.</p>
+                            </li>
+                            <li>
+                                <mat-icon>check_circle_outline</mat-icon>
+                                <p>Determine the seriousness of complaints/issues which could range from late bar fees
+                                    to
+                                    more serious issues requiring disciplinary action.</p>
+                            </li>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-md-10">
+                    <div class="filter-chip">
+                        <mat-chip-list>
+                            <mat-chip *ngIf="selectedItems[0]">
+                                {{selectedItems[0].category_name}}
+                                <button matChipRemove (click)="onItemDeselect(selectedItems[0])">
+                                    <mat-icon>cancel</mat-icon>
+                                  </button>
+                            </mat-chip>
+                            <mat-chip *ngIf="selectedItems1[0]">
+                                {{selectedItems1[0].name}}
+                                <button matChipRemove (click)="onItemDeselect1(selectedItems1[0])">
+                                    <mat-icon>cancel</mat-icon>
+                                  </button>
+                            </mat-chip>
+                            <mat-chip *ngIf="selectedItems2[0]">
+                                {{selectedItems2[0].text}}
+                                <button matChipRemove (click)="onItemDeselect2(selectedItems2[0])">
+                                    <mat-icon>cancel</mat-icon>
+                                  </button>
+                            </mat-chip>
+                            <mat-chip *ngIf="selectedItems3[0]">
+                                {{selectedItems3[0].name}}
+                                <button matChipRemove (click)="onItemDeselect3(selectedItems3[0])">
+                                    <mat-icon>cancel</mat-icon>
+                                  </button>
+                            </mat-chip>
+                            <mat-chip *ngIf="selectedItems4[0]">
+                                {{selectedItems4[0].name}}
+                                <button matChipRemove (click)="onItemDeselect4(selectedItems4[0])">
+                                    <mat-icon>cancel</mat-icon>
+                                  </button>
+                            </mat-chip>
+                            <mat-chip *ngIf="selectedItems5[0]">
+                                {{selectedItems5[0].name}}
+                                <button matChipRemove (click)="onItemDeselect5(selectedItems5[0])">
+                                    <mat-icon>cancel</mat-icon>
+                                  </button>
+                            </mat-chip>
+                        </mat-chip-list>
+                    </div>
+                    <div class="lawyers_hyderabad">
+                        <p><b>{{lawyersListData?.length}}</b>Lawyers Found</p>
+                        <!-- <p><mat-icon>check_circle_outline</mat-icon><span>Book appointments with minimum wait-time &
+                                verified Lawyer details</span></p> -->
+                    </div>
+                    <mat-card *ngFor="let lawyer of lawyersListData" class="mobile-none">
+                        <mat-card-content>
+                            <div class="row ms-md-0">
+                                <div class="col-md-2 px-md-0">
+
+                                    <div class="lawyer-img">
+                                        <img [src]="lawyer?.profile_pic_url ?  lawyer.profile_pic_url : 'assets/img/avatar.webp'">
+                                        <button mat-raised-button (click)="lawyers_details(lawyer)">View
+                                            Profile</button>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lawyer-name">
+                                        <h1>{{lawyer.first_name}} {{lawyer.last_name}}</h1>
+                                        <p>{{lawyer.primary_category_id[0]?.category_name}}</p>
+                                        <!-- <p>{{lawyer.year_of_practice}} years experience overall</p> -->
+                                        <div class="percent-bar" *ngIf="lawyer.overall_rating > 0">
+                                            <div class="badge">{{lawyer.overall_rating}}<i class="bi bi-star-fill ms-1"></i>
+                                            </div>
+                                            <p>{{lawyer.overall_count}} No. of reviews</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="lawyer-acceptance">
+                                        <div class="vedio-icon">
+                                            <mat-icon>videocam</mat-icon>
+                                        </div>
+                                        <p>Lawyer accepts video consultation</p>
+                                    </div>
+                                    <div class="lawyer-acceptance">
+                                        <div class="vedio-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 64.000000 64.000000" preserveAspectRatio="xMidYMid meet">
+
+                                                <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+                                                    fill="#fff" stroke="none">
+                                                    <path
+                                                        d="M300 602 c0 -63 -18 -72 -148 -72 -105 0 -112 -1 -112 -20 0 -13 7 -20 20 -20 11 0 20 -2 20 -5 0 -2 -18 -50 -40 -105 -22 -55 -40 -107 -40 -116 0 -9 13 -29 29 -45 24 -24 38 -29 76 -29 72 0 114 30 115 81 0 14 -18 68 -39 120 l-40 94 59 3 c49 2 63 -1 80 -18 18 -18 20 -32 20 -155 0 -110 -3 -135 -14 -135 -15 0 -56 -45 -56 -61 0 -5 41 -9 90 -9 50 0 90 4 90 9 0 16 -41 61 -56 61 -11 0 -14 25 -14 135 0 123 2 137 20 155 17 17 31 20 80 18 l59 -3 -40 -94 c-21 -52 -39 -106 -39 -120 1 -51 43 -81 115 -81 38 0 52 5 76 29 16 16 29 36 29 45 0 9 -18 61 -40 116 -22 55 -40 103 -40 105 0 3 9 5 20 5 13 0 20 7 20 20 0 19 -7 20 -113 20 -130 0 -147 9 -147 73 0 30 -4 37 -20 37 -17 0 -20 -7 -20 -38z m-152 -229 l31 -73 -64 0 c-36 0 -65 2 -65 4 0 2 7 20 15 40 8 20 22 52 30 73 8 20 17 34 19 32 2 -2 18 -37 34 -76z m416 -2 c14 -36 26 -66 26 -68 0 -2 -29 -3 -64 -3 l-65 0 32 75 c17 41 34 72 38 68 4 -5 19 -37 33 -72z" />
+                                                    <path
+                                                        d="M190 73 c-21 -8 -40 -34 -40 -55 0 -17 13 -18 170 -18 157 0 170 1 170 18 0 10 -6 27 -14 38 -13 17 -29 19 -143 21 -70 1 -135 0 -143 -4z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <p>Lawyer accepts free legal old cases</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="lawyer-details">
+                                        <div class="d-flex">
+                                            <div class="location-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                                    <path
+                                                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                                </svg>
+                                            </div>
+                                            <p>{{lawyer.city_name}}, {{lawyer.state}}</p>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="location-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                                                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                                        fill="#76787b" stroke="none">
+                                                        <path
+                                                            d="M2320 5105 c-823 -102 -1502 -697 -1713 -1501 -153 -580 -28 -1219 332 -1702 117 -156 266 -305 419 -419 l72 -54 0 -663 0 -663 23 -34 c30 -46 81 -71 132 -66 23 3 236 93 508 215 l467 211 468 -211 c271 -122 484 -212 507 -215 51 -5 102 20 132 66 l23 34 0 663 0 663 73 54 c722 539 1001 1483 685 2325 -295 789 -1066 1319 -1905 1311 -65 -1 -165 -7 -223 -14z m490 -300 c342 -56 632 -191 883 -409 745 -652 787 -1799 92 -2501 -256 -258 -560 -419 -930 -492 -127 -25 -463 -25 -590 0 -370 73 -674 234 -930 492 -469 474 -619 1168 -389 1802 186 515 644 931 1174 1069 211 54 494 70 690 39z m-1019 -3569 c164 -72 409 -130 626 -146 297 -24 659 35 912 146 29 13 57 24 62 24 5 0 9 -195 9 -440 0 -242 -2 -440 -5 -440 -3 0 -182 80 -398 177 -321 145 -400 177 -437 177 -37 0 -116 -32 -437 -177 -216 -97 -395 -177 -398 -177 -3 0 -5 198 -5 440 0 245 4 440 9 440 5 0 33 -11 62 -24z" />
+                                                        <path
+                                                            d="M2493 4412 c-41 -22 -45 -27 -218 -305 -81 -130 -151 -239 -155 -242 -3 -2 -143 -9 -311 -15 -330 -13 -351 -17 -391 -72 -11 -16 -23 -49 -25 -72 -6 -48 -1 -59 179 -395 l110 -205 -27 -56 c-15 -30 -79 -152 -142 -270 -129 -240 -139 -273 -103 -337 40 -73 54 -76 330 -85 135 -5 277 -11 315 -14 l70 -5 150 -242 c83 -132 163 -256 178 -274 56 -65 158 -65 214 0 15 18 96 142 178 274 l150 242 70 5 c39 3 180 9 315 14 276 9 290 12 330 85 36 64 26 97 -103 337 -63 118 -127 240 -142 270 l-27 56 110 205 c180 336 185 347 179 395 -2 23 -14 56 -25 72 -40 56 -60 59 -392 72 -211 7 -309 15 -316 23 -7 7 -69 104 -139 217 -70 113 -143 228 -161 255 -52 79 -130 105 -201 67z m186 -597 c112 -182 135 -212 178 -234 13 -6 117 -15 248 -20 124 -4 227 -10 229 -12 2 -2 -44 -94 -102 -204 -91 -169 -107 -207 -107 -245 0 -38 17 -76 107 -245 65 -120 103 -201 95 -203 -7 -1 -111 -6 -233 -10 -199 -8 -225 -11 -255 -30 -25 -15 -67 -73 -153 -211 -65 -105 -122 -191 -126 -191 -4 0 -61 86 -126 191 -86 138 -128 196 -153 211 -30 19 -56 22 -255 30 -122 4 -226 9 -233 10 -8 2 30 83 95 203 90 169 107 207 107 245 0 38 -16 76 -107 245 -58 110 -104 202 -102 204 2 2 105 8 229 12 131 5 235 14 248 20 43 22 66 52 178 234 63 101 116 184 119 184 3 0 56 -83 119 -184z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <p>{{lawyer.year_of_practice}} Years of experience</p>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="location-icon">
+                                                <mat-icon> language</mat-icon>
+                                            </div>
+                                            <p>{{lawyer.languages}}</p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="lawyer-details">
+                                        <button mat-raised-button (click)="lawyers_details(lawyer)">Book
+                                            Appointment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card *ngFor="let lawyer of lawyersListData" class="desktop_none">
+                        <mat-card-content>
+                            <div class="row ms-md-0">
+                                <div class="col-md-2 col-5 px-md-0">
+
+                                    <div class="lawyer-img">
+                                        <img [src]="lawyer?.profile_pic_url ? lawyer.profile_pic_url : 'assets/img/avatar.webp'">
+                                        <button mat-raised-button (click)="lawyers_details(lawyer)">View
+                                            Profile</button>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 col-7">
+                                    <div class="lawyer-name">
+                                        <h1>{{lawyer.first_name}} {{lawyer.last_name}}</h1>
+                                        <p>{{lawyer.primary_category_id[0]?.category_name}}</p>
+                                        <!-- <p>{{lawyer.year_of_practice}} years experience overall</p> -->
+                                        <div class="percent-bar" *ngIf="lawyer.overall_rating > 0">
+                                            <div class="badge">{{lawyer.overall_rating}}<i class="bi bi-star-fill ms-1"></i>
+                                            </div>
+                                            <p>{{lawyer.overall_count}} No. of reviews</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="lawyer-acceptance">
+                                        <div class="vedio-icon">
+                                            <mat-icon>videocam</mat-icon>
+                                        </div>
+                                        <p>Lawyer accepts video consultation</p>
+                                    </div>
+                                    <div class="lawyer-acceptance">
+                                        <div class="vedio-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 64.000000 64.000000" preserveAspectRatio="xMidYMid meet">
+
+                                                <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+                                                    fill="#fff" stroke="none">
+                                                    <path
+                                                        d="M300 602 c0 -63 -18 -72 -148 -72 -105 0 -112 -1 -112 -20 0 -13 7 -20 20 -20 11 0 20 -2 20 -5 0 -2 -18 -50 -40 -105 -22 -55 -40 -107 -40 -116 0 -9 13 -29 29 -45 24 -24 38 -29 76 -29 72 0 114 30 115 81 0 14 -18 68 -39 120 l-40 94 59 3 c49 2 63 -1 80 -18 18 -18 20 -32 20 -155 0 -110 -3 -135 -14 -135 -15 0 -56 -45 -56 -61 0 -5 41 -9 90 -9 50 0 90 4 90 9 0 16 -41 61 -56 61 -11 0 -14 25 -14 135 0 123 2 137 20 155 17 17 31 20 80 18 l59 -3 -40 -94 c-21 -52 -39 -106 -39 -120 1 -51 43 -81 115 -81 38 0 52 5 76 29 16 16 29 36 29 45 0 9 -18 61 -40 116 -22 55 -40 103 -40 105 0 3 9 5 20 5 13 0 20 7 20 20 0 19 -7 20 -113 20 -130 0 -147 9 -147 73 0 30 -4 37 -20 37 -17 0 -20 -7 -20 -38z m-152 -229 l31 -73 -64 0 c-36 0 -65 2 -65 4 0 2 7 20 15 40 8 20 22 52 30 73 8 20 17 34 19 32 2 -2 18 -37 34 -76z m416 -2 c14 -36 26 -66 26 -68 0 -2 -29 -3 -64 -3 l-65 0 32 75 c17 41 34 72 38 68 4 -5 19 -37 33 -72z" />
+                                                    <path
+                                                        d="M190 73 c-21 -8 -40 -34 -40 -55 0 -17 13 -18 170 -18 157 0 170 1 170 18 0 10 -6 27 -14 38 -13 17 -29 19 -143 21 -70 1 -135 0 -143 -4z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <p>Lawyer accepts free legal old cases</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="lawyer-details">
+                                        <div class="d-flex">
+                                            <div class="location-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                                    <path
+                                                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                                </svg>
+                                            </div>
+                                            <p>{{lawyer.city_name}}, {{lawyer.state}}</p>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="location-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                                                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                                        fill="#76787b" stroke="none">
+                                                        <path
+                                                            d="M2320 5105 c-823 -102 -1502 -697 -1713 -1501 -153 -580 -28 -1219 332 -1702 117 -156 266 -305 419 -419 l72 -54 0 -663 0 -663 23 -34 c30 -46 81 -71 132 -66 23 3 236 93 508 215 l467 211 468 -211 c271 -122 484 -212 507 -215 51 -5 102 20 132 66 l23 34 0 663 0 663 73 54 c722 539 1001 1483 685 2325 -295 789 -1066 1319 -1905 1311 -65 -1 -165 -7 -223 -14z m490 -300 c342 -56 632 -191 883 -409 745 -652 787 -1799 92 -2501 -256 -258 -560 -419 -930 -492 -127 -25 -463 -25 -590 0 -370 73 -674 234 -930 492 -469 474 -619 1168 -389 1802 186 515 644 931 1174 1069 211 54 494 70 690 39z m-1019 -3569 c164 -72 409 -130 626 -146 297 -24 659 35 912 146 29 13 57 24 62 24 5 0 9 -195 9 -440 0 -242 -2 -440 -5 -440 -3 0 -182 80 -398 177 -321 145 -400 177 -437 177 -37 0 -116 -32 -437 -177 -216 -97 -395 -177 -398 -177 -3 0 -5 198 -5 440 0 245 4 440 9 440 5 0 33 -11 62 -24z" />
+                                                        <path
+                                                            d="M2493 4412 c-41 -22 -45 -27 -218 -305 -81 -130 -151 -239 -155 -242 -3 -2 -143 -9 -311 -15 -330 -13 -351 -17 -391 -72 -11 -16 -23 -49 -25 -72 -6 -48 -1 -59 179 -395 l110 -205 -27 -56 c-15 -30 -79 -152 -142 -270 -129 -240 -139 -273 -103 -337 40 -73 54 -76 330 -85 135 -5 277 -11 315 -14 l70 -5 150 -242 c83 -132 163 -256 178 -274 56 -65 158 -65 214 0 15 18 96 142 178 274 l150 242 70 5 c39 3 180 9 315 14 276 9 290 12 330 85 36 64 26 97 -103 337 -63 118 -127 240 -142 270 l-27 56 110 205 c180 336 185 347 179 395 -2 23 -14 56 -25 72 -40 56 -60 59 -392 72 -211 7 -309 15 -316 23 -7 7 -69 104 -139 217 -70 113 -143 228 -161 255 -52 79 -130 105 -201 67z m186 -597 c112 -182 135 -212 178 -234 13 -6 117 -15 248 -20 124 -4 227 -10 229 -12 2 -2 -44 -94 -102 -204 -91 -169 -107 -207 -107 -245 0 -38 17 -76 107 -245 65 -120 103 -201 95 -203 -7 -1 -111 -6 -233 -10 -199 -8 -225 -11 -255 -30 -25 -15 -67 -73 -153 -211 -65 -105 -122 -191 -126 -191 -4 0 -61 86 -126 191 -86 138 -128 196 -153 211 -30 19 -56 22 -255 30 -122 4 -226 9 -233 10 -8 2 30 83 95 203 90 169 107 207 107 245 0 38 -16 76 -107 245 -58 110 -104 202 -102 204 2 2 105 8 229 12 131 5 235 14 248 20 43 22 66 52 178 234 63 101 116 184 119 184 3 0 56 -83 119 -184z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <p>{{lawyer.year_of_practice}} Years of experience</p>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="location-icon">
+                                                <mat-icon> language</mat-icon>
+                                            </div>
+                                            <p>{{lawyer.languages}}</p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="lawyer-details">
+                                        <button mat-raised-button (click)="lawyers_details(lawyer)">Book
+                                            Appointment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

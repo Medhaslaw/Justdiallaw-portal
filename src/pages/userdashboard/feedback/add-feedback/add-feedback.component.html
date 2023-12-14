@@ -1,0 +1,58 @@
+
+<div class="Add_Invoice">
+<div class="row m-0">
+    <div class="col-md-8">
+        <div class="pagination-header">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" [routerLink]="'/my-jdl/profiledashboard'"><a>Home</a></li>
+                    <li class="breadcrumb-item active"  [routerLink]="'/my-jdl/feedback'" ><a>All Feedbacks</a></li>
+                    <li class="breadcrumb-item active"><a>Add Feedbacks</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="invoice_heading">
+            <h1>Add FeedBack</h1>
+        </div>
+    </div>
+    <div class="col-md-4">
+        
+    </div>
+</div>
+
+<div class="row justify-content-center">
+
+<div class="col-md-6 feedback-col">
+        <div class="send-form">
+          <div class="footer_nav">
+           <form class="row"  [formGroup]="addFeedbackForm"  #myform="ngForm" >
+             
+               <div class="col-md-12 pe-md-0">
+                   <label class="mat_label">Subjects <span>*</span></label>
+                   <input class="form-control"  formControlName="subject" type="text" placeholder="Subjects *">
+                 
+                   <h6>
+                    <span *ngIf="addFeedbackForm.controls['subject'].hasError('required') && myform.submitted">Subject is Required</span>
+                  </h6>
+
+               </div>
+              
+               <div class="col-md-12 pe-md-0">
+                   <label class="mat_label">Message<span>*</span></label>
+                  <textarea class="form-control" formControlName="feed_back_text" cols="10" rows="5" placeholder="Type Message!"></textarea>
+                  <h6>
+                    <span *ngIf="addFeedbackForm.controls['feed_back_text'].hasError('required') && myform.submitted">Message is Required</span>
+                  </h6>
+                 </div>
+
+               <button mat-button  (click)="saveFeedback()" >Send FeedBack</button>
+
+          </form>
+        
+       </div>
+
+
+        </div>
+ </div> 
+</div> 
+</div>

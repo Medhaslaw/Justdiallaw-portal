@@ -1,0 +1,96 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a>Home</a></li>
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/profile'"><a>Profile</a></li>
+                        <li class="breadcrumb-item active"><a>Edit Fees</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Edit Fees</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <form [formGroup]="feesEditForm" #myform="ngForm" class="add_invoice_form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Phone Consultation Fees<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="phone_consultation_fees">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="feesEditForm.controls['phone_consultation_fees'].hasError('required') && myform.submitted">First
+                                    Name is Required</span>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Meeting Consultation Fees<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="meeting_consultation_fees">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="feesEditForm.controls['meeting_consultation_fees'].hasError('required') && myform.submitted">Meeting Consultation Fees is Required</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Email Consultation Fees<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="email_consultation_fees">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="feesEditForm.controls['email_consultation_fees'].hasError('required') && myform.submitted">Email Consultation Fees is Required</span>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Case Filing Fees<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="case_filing_fees">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="feesEditForm.controls['case_filing_fees'].hasError('required') && myform.submitted">Case Filing Fees is Required</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <label class="mat_label">Per Appearance Fees<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="per_appearance_fees">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="feesEditForm.controls['per_appearance_fees'].hasError('required') && myform.submitted">per_appearance_fees is Required</span>
+                            </h6>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between">
+                                
+                                    <button mat-button (click)="editFess()" class="sub_btn">Update</button>
+                                
+                                    <button mat-button (click)="cancelBtn()" class="cancel_btn">Cancel</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

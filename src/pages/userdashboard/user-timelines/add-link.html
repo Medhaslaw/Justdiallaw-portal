@@ -1,0 +1,59 @@
+<div class="add_new_topic">
+    <div class="row m-0">
+        <div class="col-md-12 p-0">
+            <div mat-dialog-title class="dialog_title">
+                <h1>Send Meeting Link</h1>
+                <button mat-button mat-dialog-close class="cancel_btn"><i class="bi bi-x-circle"></i></button>
+            </div>
+            <div mat-dialog-content class="dialog_content radio_btn">
+                <div class="links-radio-btn">
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button  [checked]="true" (change)="meetingType($event)" value="online">Online</mat-radio-button>
+                        <mat-radio-button (change)="meetingType($event)" value="offline">Offline</mat-radio-button>
+                      </mat-radio-group>
+                </div>
+                <form class="add_invoice_form" [formGroup]="meetingLinsFrom"  #myform="ngForm">
+                   
+                    <div class="row">
+                        <div class="col-md-12" *ngIf="meetingLinkInput" >
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Meeting Link </label>
+                                <input type="text" class="form-control" formControlName="meet_link"  placeholder="Meeting Link">
+                              </div>
+                         
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Meeting Date</label>
+                                <input type="date" class="form-control"  formControlName="meet_date" placeholder="Meeting Date">
+                              </div>
+                        
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Meeting Time</label>
+                                <input type="time" class="form-control" formControlName="meet_time"  placeholder="Meeting Time">
+                              </div>
+                           
+                        </div>
+                 
+                        
+                    </div>
+                 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row  justify-content-center">
+                                <div class="col-md-7">
+                                    <button mat-button (click)="sendMeetings()" class="sub_btn">Send Link</button>
+                                  
+                                </div>
+                               
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

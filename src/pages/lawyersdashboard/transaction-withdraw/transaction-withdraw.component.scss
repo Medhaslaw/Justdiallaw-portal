@@ -1,0 +1,122 @@
+.add_new_topic{
+
+    .dialog_title{
+        box-shadow: 0.05vw 0.01vw 0.31vw 0.2vw #66666629;
+        position: relative;
+        h1{
+            font-size: 1vw;
+            color: #222;
+            padding: 1.5vw 0;
+            margin: 0;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+
+        }
+        button.cancel_btn{
+            border: inherit;
+            background-color: inherit;
+            position: absolute;
+            top: 0.8vw;
+            right: 1vw;
+            i{
+                color: #e86d1f;
+                font-size: 1.5vw;
+            }
+        }
+
+       
+    }
+    .dialog_content{
+        padding: 2vw 3vw;
+        margin: 0;
+        overflow: hidden;
+        .withdraw_heading{
+            p{
+                font-size: 1.1vw;
+                color: #233871;
+                padding: 0;
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+        .heading_1{
+            margin-top: 1vw;
+        }
+        .just_law_blance{
+            background-color: #f5f6fa;
+            padding: 1vw 2vw;
+            border-radius: 0.5vw;
+            p{
+                color: #717075;
+                padding: 0;
+                margin: 0 0 0.5vw;
+                font-size: 1vw;
+                font-weight: 500;
+            }
+            li{
+                h1{
+                    font-size: 1.5vw;
+                    color: #233871;
+                    padding: 0;
+                    margin: 0.6vw 1.5vw 0 0;
+                    font-weight: 600;
+
+                }
+                .wallet_icon{
+                    width: 3vw;
+                    height: 3vw;
+                    border-radius: 5vw;
+                    background-color: #cad0de;
+                    padding: 0 0.7vw;
+                    line-height: 3.1vw;
+                    i{
+                        color: #7987a1;
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+        }
+        .Withdarw_amount{
+            border: 0.1vw solid #666;
+            text-align: center;
+            padding: 0.5vw 0;
+            margin-top: 1.5vw;
+            h1{
+                padding: 0;
+                margin: 0;
+                font-size: 1.2vw;
+                font-weight: 600;
+                color: #717075;
+            }
+        }
+
+        .info_content{
+            margin-top: 1.5vw;
+            list-style: none;
+            display: flex;
+            i{
+                color: #717075;
+                font-size: 1.3vw;
+                margin-right: 1vw;
+            }
+            p{
+                font-size: 0.95vw;
+                padding: 0;
+                margin: 0;
+                color: #717075;
+            }
+
+        }
+         .sub_btn{
+            font-size: 1.1vw;
+            font-weight: 500;
+            color: #fff;
+            padding: 1.2vw 5vw;
+            background-color: #e86d1f;
+            border: inherit;
+            margin-top: 1.5vw;
+            border-radius: 5vw;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+<header class="menu">
+    <div class="container-fluid" >
+      <div class="d-flex  justify-content-between ">
+        <a href="/lawyer-jdl" class="logo">
+            <img src="assets/img/just-law-logo.svg" alt="">
+        </a>
+
+       
+
+        <ul class="nav col-12 col-lg-auto justify-content-center">
+          <li >
+            <div class="dropdown text-end" >
+              <div>
+                <button mat-button class="dropdown-toggle" [matMenuTriggerFor]="menu" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-list"></i>
+                  <img [src]="userDetails?.profile_pic_url ?  userDetails.profile_pic_url : 'assets/img/avatar.webp'"   class="rounded-circle">
+               </button>
+               <!-- <ul class="dropdown-menu text-small"  #menu="matMenu">
+                  
+                  <li><a mat-button [routerLink]="'/lawyer-jdl/profile'" >Profile</a></li>
+                 
+                  <li><a mat-button (click)="logOut()">Sign out</a></li>
+                </ul> -->
+
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item [routerLink]="'/lawyer-jdl/profile'">
+                    Profile
+                  </button>
+
+                  <button (click)="logOut()" mat-menu-item>
+                      Sign out
+                  </button>
+              </mat-menu>
+
+              </div>
+
+      
+            </div>
+         
+          </li>
+        </ul>
+
+       
+
+      </div>
+    </div>
+  </header>
+
+  

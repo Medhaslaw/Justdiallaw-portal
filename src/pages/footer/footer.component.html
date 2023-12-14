@@ -1,0 +1,189 @@
+<div app-theme >
+<footer>
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer_nav">
+                                    <h5>About Us</h5>
+                                    <ul>
+                                        <li [routerLink]="'/'" >Home </li>
+                                        <li [routerLink]="'/about-us'" >About Just Dial Law</li>
+                                        <!-- <li>Our Team</li> -->
+                                        <li [routerLink]="'/blog'" >Blogs</li>
+                                        <!-- <li>Accessibility</li> -->
+                                        <li [routerLink]="'/terms-of-use'">Terms of Use</li>
+                                        <!-- <li>Testimonials</li> -->
+                                        <li [routerLink]="'/privacy-policy'">Privacy Policy</li>
+                                        <li [routerLink]="'/contact-us'">Contact Us</li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer_nav">
+                                    <h5>LEGAL RESEARCH</h5>
+                                    <ul >
+                                        <li *ngFor="let categorObj of categorysList?.slice(0,6)" >
+                                           <p (click)="choiceCategory(categorObj.id)" >{{categorObj.category_name}} </p> 
+                                        </li>
+                                        <!-- <li>Employment</li>
+                                        <li>Business</li>
+                                        <li>Bankruptcy</li>
+                                        <li>Finances</li>
+                                        <li>Government</li>
+                                        <li>Products & Services</li> -->
+                                        <li [routerLink]="'/categories'">More</li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-5 px-md-0">
+                        <div class="footer_nav address">
+                            <h5>Address</h5>
+                            <ul>
+                                <li *ngIf="country === 'India'"  (click)="goJustLawAddress()">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <h6> 3rd floor, Sreshta Marvel,Sy.No.136, Kondapur Main Road, Gachibowli, Hyderabad - 500032</h6>
+                                </li>
+                                <li *ngIf="country === 'United States'" (click)="goJustLawAddressUsa()">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <h6>77 Milltown road #C2, East Brunswick, NJ 08816</h6>
+                                </li>
+                                <!-- <li *ngIf="country === 'India'">
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <h6><a href="tel:9142846846"> +91-9142846846</a></h6>
+                                </li> -->
+                                <!-- <li *ngIf="country === 'United States'">
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <h6><a href="tel:+17327435279"> +1 732-743-5279</a></h6>
+                                </li> -->
+                                <li *ngIf="country === 'India'">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <h6> <a  (click)="mailtoJustLaw()" >support@justdiallaw.com</a></h6>
+                                </li>
+                                <li *ngIf="country === 'United States'">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <h6><a  (click)="mailtoJustLawUsa()" > support@justdiallaw.com</a></h6>
+                                </li>
+
+                                <li *ngIf="!country" (click)="goJustLawAddressUsa()">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <h6>77 Milltown road #C2, East Brunswick, NJ 08816</h6>
+                                </li>
+                                <!-- <li *ngIf="!country">
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <h6><a href="tel:+17327435279"> +1 732-743-5279</a></h6>
+                                </li> -->
+                                <li *ngIf="!country">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <h6><a  (click)="mailtoJustLawUsa()" > support@justdiallaw.com</a></h6>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                
+
+                    </div>
+                 
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer_nav">
+                    <h5>Get In Touch</h5>
+                    <form class="row" [formGroup]="getInTouch"  #myform="ngForm">
+                        <div class="col-md-6 pe-md-0">
+                            <input class="form-control" type="text" (keypress)="keyPressAlphaNumeric($event)" formControlName="first_name" placeholder="First Name*">
+                            <h6>
+                                <span *ngIf="getInTouch.controls['first_name'].hasError('required') && myform.submitted">First Name is Required</span>
+                              </h6>
+                        </div>
+                        <div class="col-md-6 pe-md-0">
+                            <input class="form-control" type="text" (keypress)="keyPressAlphaNumeric($event)" formControlName="last_name" placeholder="Last Name*">
+                            <h6>
+                                <span *ngIf="getInTouch.controls['last_name'].hasError('required') && myform.submitted">Last Name is Required</span>
+                              </h6>
+                        </div>
+                        <div class="col-md-6 pe-md-0">
+                            <input class="form-control" type="email" formControlName="email" placeholder="Email*">
+                            <h6>
+                                <span *ngIf="getInTouch.controls['email'].hasError('required') && myform.submitted">Email Id is Required</span>
+                              </h6>
+                              <h6>
+                                <span
+                                    *ngIf="getInTouch.controls['email'].hasError('pattern') && myform.submitted">Email Pattern Was wrong </span>
+                            </h6>
+                        </div>
+                        <div class="col-md-6 pe-md-0">
+                            <input class="form-control" type="text" (keypress)="keyPressNumbers($event)" formControlName="phone_no" placeholder="Phone Number*">
+                            <h6>
+                                <span *ngIf="getInTouch.controls['phone_no'].hasError('required') && myform.submitted">Mobile No is Required</span>
+                              </h6>
+                              <h6>
+                                <span
+                                    *ngIf="getInTouch.controls['phone_no'].hasError('pattern') && myform.submitted">Mobile
+                                    number is not 10 digit </span>
+                            </h6>
+                        </div>
+                        <div class="col-md-12 pe-md-0">
+                           <textarea class="form-control" cols="10" rows="3" formControlName="message" placeholder="Type Message!"></textarea>
+                           <h6>
+                            <span *ngIf="getInTouch.controls['message'].hasError('required') && myform.submitted">Message is Required</span>
+                          </h6>
+                        </div>
+
+                        <button mat-button (click)="userEnquiry()" >Send Message</button>
+
+                   </form>
+                 
+                </div>
+            </div>
+
+        </div>
+        <div class="row  copy-right">
+            <div class="col-md-6">
+                <h6>© 2023 Just Dial Law. All Rights Reserved. <span>Design By <a class="mbr-link" (click)="goMbrSite()" >MBR Informatics Pvt Ltd </a> </span></h6>
+            </div>
+            <div class="col-md-6">
+                <div class="social_media d-flex justify-content-end">
+                    <i (click)="gotofb()" class="bi bi-facebook"></i>
+                <i (click)="gotoLi()" class="bi bi-linkedin"></i>
+                <i (click)="gotoTw()" class="bi bi-twitter"></i>
+                <i (click)="gotoIns()" class="bi bi-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="row justify-content-center">
+
+            <div class="col-md-11 ">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>© 2023 Just Dial Law. All Rights Reserved. <span>Design By <a class="mbr-link" (click)="goMbrSite()" >MBR Informatics Pvt Ltd </a> </span></h6>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social_media d-flex justify-content-end">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-linkedin"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</footer>
+</div>

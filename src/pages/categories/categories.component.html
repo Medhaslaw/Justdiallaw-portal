@@ -1,0 +1,35 @@
+<div class="header" id="myHeader">
+    <app-sub-nav></app-sub-nav>
+</div>
+<div app-theme>
+    <div class="category">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <div class="sec-header d-flex justify-content-between" data-aos="fade-up" data-aos-duration="800">
+                        <h2>All Categories</h2>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-2 col-6" *ngFor="let category of categoryList">
+                            <div class="category-card" data-aos="fade-up" data-aos-duration="800"
+                                (click)="categoryWise(category)">
+                                <div class="img">
+                                    <div class="category-img"
+                                        [ngStyle]="{'background': 'url('+  category.category_pic_url + ')'}"></div>
+                                </div>
+                                <div class="title middle">
+                                    <h3> {{category.category_name}}</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<app-footer></app-footer>

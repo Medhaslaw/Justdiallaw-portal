@@ -1,0 +1,2088 @@
+.search-bar {
+    background-color: #01204e;
+    padding: 0.7vw;
+
+    .search-menu {
+        background-color: #fff;
+        border-radius: 10vw;
+        padding: 0.2vw 0.6vw;
+        position: relative;
+
+        .form-select {
+            border: inherit;
+            padding: 0.3vw 0;
+            margin: 0;
+            font-size: 0.9vw;
+        }
+
+        .form-control {
+            border: inherit;
+            border-radius: 0px !important;
+            border-left: 0.1vw solid #666;
+            padding: 0.3vw 0 0.3vw 0.5vw;
+            margin: 0;
+            font-size: 0.9vw;
+            font-family: "Manrope";
+
+        }
+
+        .search_btn {
+            position: absolute;
+            top: 0.2vw;
+            right: 0.5vw;
+            background-color: var(--primary);
+            min-width: 1vw !important;
+            height: 1.9vw;
+            border-radius: 5vw;
+            padding: 0 0.4vw;
+            width: 2vw;
+            font-size: 0.9vw;
+
+            i {
+                color: #fff;
+                font-size: 1vw;
+
+            }
+
+        }
+    }
+}
+
+
+.lawyers-section {
+    padding: 3vw;
+    position: relative;
+
+    .breadcrumb {
+
+        // position: absolute;
+        // top: 0.7vw;
+        font-size: 0.8vw;
+        margin: 0;
+        padding: 0;
+
+        .breadcrumb-item+.breadcrumb-item {
+            padding: 0 0.2vw;
+
+        }
+    }
+
+    .mat-card {
+        margin: 1vw 0;
+        padding: 1vw !important;
+        box-shadow: 0px -0.3vw 0.8vw -0.1vw rgb(0 0 0 / 20%), 0px 0.1vw 0.1vw 0px rgb(0 0 0 / 14%), 0px 0.1vw 0.3vw 0px rgb(0 0 0 / 12%) !important;
+
+    }
+
+    .lawfram {
+        margin: 1.5vw 0;
+        padding: 0.25vw;
+
+        h1 {
+            color: #171c25;
+            font-family: "Manrope";
+            padding: 0;
+            margin: 0 0 1vw;
+            font-size: 1.3vw;
+            font-weight: 600;
+        }
+
+        mat-card {
+            padding: 1vw !important;
+            box-shadow: 0px -0.3vw 0.8vw -0.1vw rgb(0 0 0 / 20%), 0px 0.1vw 0.1vw 0px rgb(0 0 0 / 14%), 0px 0.1vw 0.3vw 0px rgb(0 0 0 / 12%) !important;
+
+            .title1 {
+                h6 {
+                    font-size: 0.85vw;
+                    padding: 0;
+                    margin: 0;
+                    color: #2d2d32;
+                    font-family: "Manrope";
+                    font-weight: 400;
+                    line-height: initial;
+                }
+
+                h4 {
+                    color: #23345d;
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 700;
+                    font-family: "Manrope";
+                    font-size: 1vw;
+                    line-height: initial;
+                }
+            }
+
+            hr {
+                padding: 0;
+                margin: 0.7vw 0;
+            }
+
+            .lawfram-content {
+                padding: 0 2vw 0 0;
+
+                p {
+                    font-size: 0.85vw;
+                    font-weight: 400;
+                    color: #666666;
+                    font-family: "Manrope";
+                    line-height: 1.5vw !important;
+                    padding: 0;
+                    margin: 0 0 1vw;
+
+                    b {
+                        color: #01204e;
+                    }
+
+                }
+            }
+
+            .free-card {
+                background-color: #f6fbff;
+                padding: 1vw;
+
+                h6 {
+                    font-size: 0.9vw;
+                    font-weight: 700;
+                    color: #2d2d32;
+                    padding: 0;
+                    margin: 0 0 1vw;
+
+                    mat-icon {
+                        font-size: 1.1vw;
+                        color: var(--primary);
+                        margin-right: 0.3vw;
+                        vertical-align: middle;
+                        height: inherit;
+                        width: inherit;
+                    }
+
+                }
+
+                p {
+                    font-size: 0.9vw;
+                    color: #666666;
+                    padding: 0;
+                    margin: 0;
+                    font-family: "Manrope";
+
+                    span {
+                        color: #171c25;
+                        font-size: 1.02vw;
+                        font-weight: 800;
+                    }
+                }
+            }
+
+            .fee-schedule {
+                background-color: #e4f0f9;
+                padding: 1vw;
+
+                .fee-time {
+                    display: flex;
+                    margin: 0.5vw 0;
+
+                    .clock-icon {
+                        mat-icon {
+                            font-size: 1.1vw;
+                            margin-right: 0.3vw;
+                            height: inherit;
+                            width: inherit;
+                        }
+
+                    }
+
+                    span {
+                        p {
+                            color: #2d2d32;
+                            padding: 0;
+                            margin: 0 0 0.3vw;
+                            font-size: 0.8vw;
+                            font-weight: 500;
+                        }
+
+                        h6 {
+                            color: #2d2d32;
+                            font-size: 0.8vw;
+                            padding: 0;
+                            margin: 0;
+                            font-weight: 500;
+                        }
+
+                    }
+                }
+
+                button {
+                    padding: 1.2vw 0;
+                    margin: 0.5vw 0 0 1.5vw;
+                    border: inherit;
+                    background-color: inherit;
+                    color: #01204e;
+                    font-size: 0.85vw;
+                    font-weight: 500;
+                }
+
+            }
+        }
+    }
+
+    .reviews {
+        padding: 0.25vw;
+
+        .reviews-title {
+            h1 {
+                color: #171c25;
+                font-family: "Manrope";
+                padding: 0;
+                margin: 0 0 1vw;
+                font-size: 1.3vw;
+                font-weight: 600;
+            }
+        }
+
+        .Profile-icon {
+            display: flex;
+
+            .profile-letter {
+                min-width: 3vw;
+                width: 3vw;
+                height: 3vw;
+                margin-right: 1vw;
+
+                border-radius: 19vw;
+                padding: 0.5vw 0;
+                text-align: center;
+
+                border: 0.1vw solid #cde6ae;
+
+                h1 {
+                    font-size: 1.5vw;
+                    font-weight: 500;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .review-content {
+                padding: 0 0;
+
+                h6 {
+                    color: #2d2d32;
+                    font-family: "Manrope";
+                    font-size: 1.1vw;
+                    padding: 0;
+                    margin: 0 0 0.7vw;
+                    font-weight: 500;
+
+                }
+
+                p {
+                    color: #66666b;
+                    padding: 0;
+                    margin: 0 0 0.5vw;
+                    font-size: 0.9vw;
+
+                    // line-height: 1.5vw !important;
+                    span {
+                        color: #666666;
+                        margin-top: 0.7vw;
+                    }
+
+                    mat-icon {
+                        color: #48a765;
+                        font-size: 0.9vw;
+                        margin-right: 0.5vw;
+                        vertical-align: text-top;
+                        height: inherit;
+                        width: 1vw;
+                    }
+                }
+
+                h5 {
+                    color: #2d2d32;
+                    padding: 0;
+                    margin: 0.3vw 0 0.5vw;
+                    font-size: 1vw;
+                    font-weight: 800;
+                    font-family: "Manrope";
+                }
+            }
+        }
+    }
+
+    .time-slot {
+        padding: 0 2vw;
+
+        h1 {
+            color: #171c25;
+            font-family: "Manrope";
+            padding: 0;
+            margin: 0 0 1vw;
+            font-size: 1.3vw;
+            font-weight: 600;
+        }
+
+        .pick-time-slot {
+            background-color: #f1fbfe;
+            padding: 1vw;
+
+            h3 {
+                color: #5f5f65;
+                font-size: 0.8vw;
+                font-weight: 500;
+                padding: 0;
+                margin: 0;
+                text-transform: uppercase;
+                line-height: initial;
+            }
+
+            h2 {
+                padding: 0;
+                margin: 0;
+                font-size: 1vw;
+                font-weight: 500;
+                color: #2d2d32;
+                line-height: initial;
+            }
+
+            .percent-bar {
+                display: flex;
+                margin: 1.2vw 0;
+
+                .bi-hand-thumbs-up {
+                    font-size: 1.2vw;
+                    color: #e86d1f;
+                    padding: 0;
+                    margin-right: 1vw;
+                }
+
+                .badge {
+                    width: 2.5vw;
+                    height: 1.2vw;
+                    font-size: 0.75vw;
+                    color: #fff;
+                    border-radius: 0.2vw;
+                    background-color: var(--primary);
+                    padding: 0.2vw;
+                    margin: 0 0.5vw 0 0;
+                    font-weight: 500;
+                }
+
+                p {
+
+                    margin: 0 !important;
+                    font-size: 0.85vw;
+                    padding: 0;
+                }
+            }
+
+            mat-tab-group {
+                height: auto;
+                overflow: auto;
+
+                .tabs-time {
+                    padding: 0;
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        font-size: 1vw;
+                    }
+
+                    h6 {
+                        padding: 0;
+                        margin: 0;
+                        font-size: 0.9vw;
+                    }
+                }
+
+                .schedule-slot {
+                    transform: none;
+                    overflow-x: hidden;
+                    padding: 1vw;
+
+                    p {
+                        font-size: 1vw;
+                        padding: 0;
+                        margin: 0 0 1vw;
+                    }
+
+                    .slot-btn {
+                        margin: 0.5vw 0;
+
+                        button {
+                            background-color: #fff;
+                            border: inherit;
+                            font-size: 0.9vw;
+                            font-weight: 600;
+                            padding: 1.2vw 1vw;
+
+                            &:hover {
+                                background-color: #01204e;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+
+
+
+
+        }
+
+    }
+
+
+
+}
+
+.color1 {
+    background-color: #e4f7e1 !important;
+    border-color: #d1e9b7 !important;
+}
+
+.color2 {
+    background-color: #dfe9f3 !important;
+    border-color: #d3dee8 !important;
+}
+
+.color3 {
+    background-color: #f7f0e0 !important;
+    border-color: #f9d0b5 !important;
+}
+ 
+.color4 {
+    background-color: #dfe9f3 !important;
+    border-color: #d3dee8 !important;
+}
+.color5 {
+    background-color: #e4f7e1 !important;
+    border-color: #d1e9b7 !important;
+}
+
+.isClassActive {
+    button {
+        background-color: #dddd !important;
+        cursor: no-drop;
+        // &:hover{
+        //     color: #000 !important;
+        // }
+    }
+
+    //     button:disabled,
+    //    button[disabled]{
+    //   border: 1px solid #999999;
+    //   background-color: #cccccc;
+    //   color: #666666;
+    //   }
+
+
+}
+
+.mat-tab-label-active {}
+
+.active {
+    // background-color: #000 !important;
+    // color: #fff !important;
+    // opacity: 1 !important;
+}
+
+.proceed-to-book {
+    button {
+        background-color: var(--primary);
+        color: #fff;
+        font-size: 1vw;
+        font-family: "Manrope";
+        font-weight: 600;
+        text-transform: uppercase;
+        border: inherit;
+        padding: 1.2vw 2vw;
+        border-radius: 0.3vw;
+        margin-top: 1.2vw;
+        width: 100%;
+    }
+
+}
+
+
+
+.lawyer-img {
+    position: relative;
+
+    img {
+        width: 100%;
+        min-height: 13vw;
+    }
+
+    button {
+        position: absolute;
+        bottom: 0.3vw;
+        width: 95%;
+        left: 0.3vw;
+        border: inherit;
+        background-color: rgb(85 87 90 / 81%);
+        color: #fff;
+        font-size: 1vw;
+        padding: 0.8vw;
+        border-radius: 0.3vw;
+
+        i {
+
+            color: #36ea50;
+            font-size: 0.9vw;
+            margin-right: 0.5vw;
+        }
+    }
+}
+
+.lawyer-name {
+    h1 {
+        font-size: 1.4vw;
+        font-weight: 800;
+        padding: 0;
+        margin: 0 !important;
+        font-family: 'Manrope';
+        line-height: initial;
+    }
+
+    p {
+        color: #272727;
+        font-family: 'Manrope';
+        font-weight: 500;
+        padding: 0;
+        margin: 0.5vw 0 !important;
+        font-size: 0.95vw;
+        line-height: initial;
+    }
+
+    .percent-bar {
+        display: flex;
+        margin: 1.2vw 0;
+
+        .bi-hand-thumbs-up {
+            font-size: 1.2vw;
+            color: var(--primary);
+            padding: 0;
+            margin-right: 1vw;
+        }
+
+        .badge {
+            width: 2.5vw;
+            height: 1.2vw;
+            font-size: 0.75vw;
+            color: #fff;
+            border-radius: 0.2vw;
+            background-color: var(--primary);
+            padding: 0.2vw;
+            margin: 0 0.5vw 0 0;
+            font-weight: 500;
+        }
+
+        p {
+            margin: 0 !important;
+        }
+    }
+
+}
+
+.lawyer-acceptance {
+    display: flex;
+    margin: 0.5vw 0;
+
+    .vedio-icon {
+        background-color: #8b8d92;
+        width: 1.2vw;
+        height: 1.2vw;
+        border-radius: 10vw;
+        padding: 0 0.15vw;
+        line-height: 1.7vw;
+        margin-right: 0.6vw;
+
+        mat-icon {
+            color: #fff;
+            padding: 0;
+            font-size: 0.9vw;
+            height: inherit;
+            width: inherit;
+        }
+
+        svg {
+            width: 0.9vw;
+            height: 0.9vw;
+            margin-bottom: 0.4vw;
+        }
+    }
+
+    p {
+        font-size: 0.9vw;
+        color: #272727;
+        font-family: 'Manrope';
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.lawyer-details {
+    display: flex;
+    padding: 0 0 0 2vw;
+    margin: 0.6vw 0;
+
+    .location-icon {
+        margin-right: 0.7vw;
+
+        svg {
+            width: 1.1vw;
+            height: 1.1vw;
+
+        }
+
+        mat-icon {
+            color: #76787b;
+            font-size: 1.15vw;
+            height: inherit;
+            width: inherit;
+        }
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+        font-size: 0.9vw;
+        font-family: 'Manrope';
+        font-weight: 500;
+        color: #171c25;
+        line-break: anywhere;
+    }
+
+    button {
+        background-color: var(--primary);
+        color: #fff;
+        font-size: 1vw;
+        font-family: "Manrope";
+        font-weight: 600;
+        text-transform: uppercase;
+        border: inherit;
+        padding: 1.2vw 2vw;
+        border-radius: 0.3vw;
+        margin-top: 1.2vw;
+        width: 100%;
+    }
+}
+
+.slotsActive {
+    button {
+        // background-color: #dddd !important;
+        cursor: no-drop;
+        color: #fff;
+        background-color: #01204e !important;
+    }
+}
+
+
+
+
+
+.all-blogs {
+    padding: 0.3vw;
+
+    // background-color: #f3f3f3;
+    .blog-row {
+        .empty_blog {
+
+            min-height: 91vh;
+            text-align: center;
+            background: #f7f7f7;
+            padding: 10vw 7vw;
+
+            h6 {
+                font-size: 1.5vw;
+                color: red;
+                line-height: 30px !important;
+            }
+
+        }
+
+        .all-details {
+            padding: 1vw;
+
+            .mat-card {
+                padding: 0 !important;
+            }
+
+            .example-card {
+
+                img {
+                    height: 20vh;
+                    width: 100%;
+                }
+
+                .mat-card-content {
+                    padding: 1vw;
+                }
+
+                .blog-blocks {
+                    font-weight: 500;
+                    font-size: 0.9vw;
+                    color: rgb(174, 172, 172);
+
+                    .date-block {
+                        span {}
+                    }
+
+                    .name-block {
+                        span {}
+
+                        margin-left: 1vw;
+                    }
+                }
+
+                .all-blogs-headr {
+                    min-height: 3.3vw;
+
+                    h2 {
+                        font-size: 0.85vw;
+                        font-weight: 500;
+                    }
+                }
+
+                .view-btn {
+                    color: var(--primary);
+                    /* color: #fff; */
+                    padding: 0.5vw;
+                    border-radius: 8vw;
+                    width: 8vw;
+                    font-size: 0.9vw;
+                    border: 0.1vw solid;
+                    // margin-top: 1vw;
+                }
+            }
+        }
+    }
+
+}
+
+mat-card.mat-card.mat-focus-indicator.example-card {
+    // box-shadow: none !important;
+    // border-radius: 0 !important;
+    min-height: 19vw;
+    height: 19vw;
+
+}
+
+.BlockedActiveClass {
+    display: none;
+}
+
+.activeClass {
+    button {
+        cursor: no-drop;
+        color: #fff;
+        background-color: #620807dd !important;
+    }
+}
+
+.todayAvailable {
+    display: none;
+}
+
+.appTypeActiveClass{
+    color: #fff;
+    background-color: #23345d !important;
+    padding: 0.4vw;
+    border-radius: 0.6vw
+}
+.app-type-btn{
+    padding: 0.4vw;
+}
+.lawyerVaction{
+h6{
+    color: #e86d1f;
+    text-align: center;
+    margin-top: 3vw;
+    font-size: 1.3vw;
+}
+}
+
+
+.call-div{
+    margin: 0 !important;
+    padding: 2vw !important;
+    }
+    .just-law-num{
+        .num{
+            h1{
+                font-size: 1.1vw;
+                text-align: center;
+                font-weight: 500;
+                color: #01204e;
+                span{
+                    color: #e86d1f;
+                    font-size: 1.4vw;
+                }
+            }
+          
+        }
+        .call-now{
+            justify-content: center;
+           margin-bottom: 0vw !important;
+           width: 100%;
+           .call-now-btn{
+            font-size: 1vw;
+            font-weight: 500;
+            color: #fff;
+            justify-content: center;
+            padding: 0.8vw 2vw;
+                background-color: #e86d1f;
+                border: inherit;
+                text-transform: uppercase;
+                border-radius: 5vw;
+                text-decoration: none;
+    
+                i{
+                    margin-left: 1vw;
+                }
+               
+            }
+            .whatsapp-icon{
+                font-size: 2vw;
+                font-weight: 500;
+                color: #03b547;
+                margin-left: 2vw;
+            } 
+        }
+    }
+    .sign_up{
+       .clip_patharea{
+        h1{
+            font-size: 1.5vw;
+                text-align: center;
+                font-weight: 500; 
+                color: #01204e;
+                margin: 1vw 0;
+        }
+        h3{
+            text-align: end;
+            margin: 0 1vw;
+            font-size: 1.5vw;
+            color: red;
+            position: absolute;
+            right: -2.5vw;
+            top: -1.5vw;
+        }
+       } 
+    }
+
+
+
+@media (max-width: 575.98px){
+    .lawyer-acceptance{
+        p{
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    }
+
+    .all-blogs{
+        .blog-row{
+            .empty_blog{
+                height: auto;
+                min-height: auto;
+                h6{
+                    font-size: 20px;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            .all-details{
+                .example-card{
+                    height: auto;
+                    margin: 10px 0;
+                    border-radius: 5px;
+                    .blog-blocks{
+                        font-size: 15px;
+                    }
+                    .mat-card-content{
+                        padding: 10px;
+                    }
+                    .all-blogs-headr{
+                        h2{
+                            font-size: 16px;
+                        }
+                    }
+                    .view-btn{
+                        font-size: 15px;
+                        padding: 10px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .mat_label_1{
+        margin: 10px 0 0;
+        font-size: 17px;
+    }
+    .proceed-to-book{
+        button{
+            font-size: 15px;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+    .app-type-btn{
+        padding: 10px;
+    }
+    .form-control_1{
+        font-size: 14px;
+    }
+    .call-div{
+        width: 330px;
+        padding: 15px 24px !important;
+    }
+    .lawyers-section{
+        padding: 20px 10px;
+        .time-slot{
+            h1{
+                margin: 0 0 10px;
+                font-size: 20px;
+            }
+            .pick-time-slot{
+                padding: 10px;
+                h3{
+                    font-size: 14px;
+                    margin: 5px 0;
+                }
+                h2{
+                    margin: 5px 0 20px;
+                    font-size: 20px;
+                }
+                .percent-bar{
+                    .badge{
+                        width: auto;
+                        height: max-content;
+                        font-size: 12px;
+                        border-radius: 4px;
+                        padding: 3px;
+                        margin: 0 8px 0;
+                    }
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                mat-tab-group{
+                    .tabs-time{
+                        p{
+                            font-size: 14px;
+                            margin: 0 0 2px;
+                        }
+                        h6{
+                            font-size: 12px;
+                        }
+                    }
+                    .schedule-slot{
+                        padding: 20px 10px;
+                        p{
+                            font-size: 18px;
+                            margin: 10px 0;
+                        
+                        }
+                        .slot-btn{
+                            button{
+                                font-size: 12px;
+                                padding: 10px;
+                                margin: 5px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mat-card{
+            margin: 10px 0;
+            padding: 10px!important;
+        }
+        .reviews{
+            .reviews-title{
+                h1{
+                    font-size: 20px;
+                    margin: 10px 0 20px;
+                }
+            }
+            .Profile-icon{
+                .profile-letter{
+                    min-width: 30px;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 15px;
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+                .review-content{
+                    h6{
+                        font-size: 18px;
+                        margin: 5px 0;
+                    }
+                    p{
+                        padding: 0;
+                        margin: 5px 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .lawfram{
+            mat-card{
+                padding: 10px !important;
+                 margin: 10px 0;
+                 .title1{
+                    h6{
+                        font-size: 18px;
+                    }
+                    h4{
+                        margin: 5px 0;
+                        font-size: 12px;
+                    }
+                 }
+                 .lawfram-content{
+                    p{
+                        font-size: 14px;
+                        margin: 7px 0 15px;
+                    }
+                 }
+                 .free-card{
+                    h6{
+                        font-size: 17px;
+                        mat-icon{
+                            font-size: 17px;
+                            margin-right: 8px;
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        margin: 7px 0;
+                        span{
+                            font-size: 20px;
+                        }
+                    }
+                 }
+                 .fee-schedule{
+                    .fee-time{
+                        .clock-icon{
+                            mat-icon{
+                                font-size: 15px;
+                                margin-right: 8px;
+                            }
+                        }
+                        span{
+                            p{
+                                font-size: 13px;
+                            }
+                            h6{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    button{
+                        margin: 10px;
+                        font-size: 15px;
+                    }
+                 }
+            }
+        }
+        .breadcrumb{
+            font-size: 11px;
+            margin: 0px 0 20px;
+        }
+    }
+    .lawyer-img{
+        button{
+            width: 100%;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            i{
+                font-size: 16px;
+            }
+        }
+    }
+    .lawyer-name{
+        padding: 20px 5px;
+        h1{
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        p{
+            margin: 5px 0 !important;
+            font-size: 14px;
+        }
+        .percent-bar{
+            .badge{
+                width: auto;
+                height: auto;
+                font-size: 12px;
+                border-radius: 4px;
+                padding: 4px;
+                margin: 0 11px 0 0;
+            }
+        }
+    }
+    .lawyer-details{
+        margin: 15px 0;
+        .location-icon{
+            mat-icon{
+                font-size: 23px;
+                margin-right: 10px;
+            }
+            svg{
+                width: 22px;
+                height: 22px;
+                margin-right: 10px;
+            }
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    .lawyerVaction{
+        h6{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    }
+
+    .sign_up{
+        .clip_patharea{
+            h1{
+                font-size: 20px;
+                margin: 10px 0 0;
+            }
+            h3{
+                font-size: 25px;
+                color: red;
+                position: absolute;
+                right: -16px;
+                top: -14px;
+            }
+        }
+    }
+    .just-law-num{
+        .num{
+            h1{
+                font-size: 16px;
+                margin: 15px 0;
+                span{
+                    font-size: 15px;
+                }
+            }
+        }
+        .call-now{
+            .call-now-btn{
+                font-size: 12px;
+                padding: 7px 20px;
+            }
+            .whatsapp-icon{
+                font-size: 24px;
+                margin-left: 20px;
+            }
+        }
+    }
+   
+    
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    .all-blogs{
+        .blog-row{
+            .all-details{
+                .example-card{
+                    height: auto;
+                    margin: 10px 0;
+                    border-radius: 5px;
+                    img{
+                        height: 50vh;
+                    }
+                    .blog-blocks{
+                        font-size: 15px;
+                    }
+                    .mat-card-content{
+                        padding: 10px;
+                    }
+                    .all-blogs-headr{
+                        h2{
+                            font-size: 16px;
+                        }
+                    }
+                    .view-btn{
+                        font-size: 15px;
+                        padding: 10px;
+                        width: 100%;
+                        margin: 30px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .mat_label_1{
+        margin: 10px 0 0;
+        font-size: 17px;
+    }
+    .proceed-to-book{
+        button{
+            font-size: 15px;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+    .app-type-btn{
+        padding: 10px;
+    }
+    .form-control_1{
+        font-size: 14px;
+    }
+    .lawyers-section{
+        .time-slot{
+            h1{
+                margin: 0 0 10px;
+                font-size: 20px;
+            }
+            .pick-time-slot{
+                padding: 10px;
+                h3{
+                    font-size: 14px;
+                    margin: 5px 0;
+                }
+                h2{
+                    margin: 5px 0 20px;
+                    font-size: 20px;
+                }
+                .percent-bar{
+                    .badge{
+                        width: auto;
+                        height: max-content;
+                        font-size: 12px;
+                        border-radius: 4px;
+                        padding: 3px;
+                        margin: 0 8px 0;
+                    }
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                mat-tab-group{
+                    .tabs-time{
+                        p{
+                            font-size: 14px;
+                            margin: 0 0 2px;
+                        }
+                        h6{
+                            font-size: 12px;
+                        }
+                    }
+                    .schedule-slot{
+                        padding: 20px 10px;
+                        p{
+                            font-size: 18px;
+                            margin: 10px 0;
+                        
+                        }
+                        .slot-btn{
+                            button{
+                                font-size: 12px;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mat-card{
+            margin: 10px 0;
+            padding: 10px!important;
+        }
+        .reviews{
+            .reviews-title{
+                h1{
+                    font-size: 20px;
+                    margin: 10px 0 20px;
+                }
+            }
+            .Profile-icon{
+                .profile-letter{
+                    min-width: 30px;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 15px;
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+                .review-content{
+                    h6{
+                        font-size: 18px;
+                        margin: 5px 0;
+                    }
+                    p{
+                        padding: 0;
+                        margin: 5px 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .lawfram{
+            mat-card{
+                padding: 10px !important;
+                 margin: 10px 0;
+                 .lawfram-content{
+                    p{
+                        font-size: 14px;
+                        margin: 7px 0 15px;
+                    }
+                 }
+                 .title1{
+                    h6{
+                        font-size: 18px;
+                    }
+                    h4{
+                        margin: 5px 0;
+                        font-size: 12px;
+                    }
+                 }
+                 .free-card{
+                    h6{
+                        font-size: 17px;
+                        mat-icon{
+                            font-size: 17px;
+                            margin-right: 8px;
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        margin: 7px 0;
+                        span{
+                            font-size: 18px;
+                        }
+                    }
+                 }
+                 .fee-schedule{
+                    .fee-time{
+                        .clock-icon{
+                            mat-icon{
+                                font-size: 15px;
+                                margin-right: 8px;
+                            }
+                        }
+                        span{
+                            p{
+                                font-size: 13px;
+                            }
+                            h6{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    button{
+                        margin: 10px;
+                        font-size: 15px;
+                    }
+                 }
+            }
+        }
+        .breadcrumb{
+            font-size: 11px;
+            margin: 0px 0 20px;
+        }
+    }
+    .lawyer-img{
+        button{
+            width: 100%;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            i{
+                font-size: 16px;
+            }
+        }
+    }
+    .lawyer-name{
+        padding: 20px 5px;
+        h1{
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        p{
+            margin: 5px 0 !important;
+            font-size: 14px;
+        }
+        .percent-bar{
+            .badge{
+                width: auto;
+                height: auto;
+                font-size: 12px;
+                border-radius: 4px;
+                padding: 4px;
+                margin: 0 11px 0 0;
+            }
+        }
+    }
+    .lawyer-details{
+        margin: 15px 0;
+        .location-icon{
+            mat-icon{
+                font-size: 23px;
+                margin-right: 10px;
+            }
+            svg{
+                width: 22px;
+                height: 22px;
+                margin-right: 10px;
+            }
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    .lawyerVaction{
+        h6{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    }
+
+    .sign_up{
+        .clip_patharea{
+            h1{
+                font-size: 20px;
+                margin: 15px 0;
+            }
+            h3{
+                font-size: 25px;
+                color: red;
+                position: absolute;
+                right: -20px;
+                top: 0;
+            }
+        }
+    }
+    .just-law-num{
+        .num{
+            h1{
+                font-size: 16px;
+                margin: 15px 0;
+                span{
+                    font-size: 15px;
+                }
+            }
+        }
+        .call-now{
+            .call-now-btn{
+                font-size: 12px;
+                padding: 7px 20px;
+            }
+            .whatsapp-icon{
+                font-size: 24px;
+                margin-left: 20px;
+            }
+        }
+    }
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .all-blogs{
+        .blog-row{
+            .all-details{
+                .example-card{
+                    height: auto;
+                    margin: 10px 0;
+                    border-radius: 5px;
+                    .blog-blocks{
+                        font-size: 15px;
+                    }
+                    .mat-card-content{
+                        padding: 10px;
+                    }
+                    .all-blogs-headr{
+                        h2{
+                            font-size: 16px;
+                        }
+                    }
+                    .view-btn{
+                        font-size: 15px;
+                        padding: 10px;
+                        width: 100%;
+                        margin: 30px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .mat_label_1{
+        margin: 10px 0 0;
+        font-size: 17px;
+    }
+    .proceed-to-book{
+        button{
+            font-size: 15px;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+    .app-type-btn{
+        padding: 10px;
+    }
+    .form-control_1{
+        font-size: 14px;
+    }
+    .lawyers-section{
+        .time-slot{
+            h1{
+                margin: 0 0 10px;
+                font-size: 17px;
+            }
+            .pick-time-slot{
+                padding: 10px;
+                h3{
+                    font-size: 12px;
+                    margin: 5px 0;
+                }
+                h2{
+                    margin: 5px 0 20px;
+                    font-size: 17px;
+                }
+                .percent-bar{
+                    .badge{
+                        width: auto;
+                        height: max-content;
+                        font-size: 10px;
+                        border-radius: 4px;
+                        padding: 3px;
+                        margin: 0 8px 0;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                mat-tab-group{
+                    .tabs-time{
+                        p{
+                            font-size: 14px;
+                            margin: 0 0 2px;
+                        }
+                        h6{
+                            font-size: 12px;
+                        }
+                    }
+                    .schedule-slot{
+                        padding: 20px 10px;
+                        p{
+                            font-size: 18px;
+                            margin: 10px 0;
+                        
+                        }
+                        .slot-btn{
+                            button{
+                                font-size: 12px;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mat-card{
+            margin: 10px 0;
+            padding: 10px!important;
+        }
+        .reviews{
+            .reviews-title{
+                h1{
+                    font-size: 20px;
+                    margin: 10px 0 20px;
+                }
+            }
+            .Profile-icon{
+                .profile-letter{
+                    min-width: 30px;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 15px;
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+                .review-content{
+                    h6{
+                        font-size: 18px;
+                        margin: 5px 0;
+                    }
+                    p{
+                        padding: 0;
+                        margin: 5px 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .lawfram{
+            mat-card{
+                padding: 10px !important;
+                 margin: 10px 0;
+                 .title1{
+                    h6{
+                        font-size: 18px;
+                    }
+                    h4{
+                        margin: 5px 0;
+                        font-size: 12px;
+                    }
+                 }
+                 .free-card{
+                    h6{
+                        font-size: 17px;
+                        mat-icon{
+                            font-size: 17px;
+                            margin-right: 8px;
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        margin: 7px 0;
+                    }
+                 }
+                 .fee-schedule{
+                    .fee-time{
+                        .clock-icon{
+                            mat-icon{
+                                font-size: 15px;
+                                margin-right: 8px;
+                            }
+                        }
+                        span{
+                            p{
+                                font-size: 13px;
+                            }
+                            h6{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    button{
+                        margin: 10px;
+                        font-size: 15px;
+                    }
+                 }
+            }
+        }
+        .breadcrumb{
+            font-size: 11px;
+            margin: 0px 0 20px;
+        }
+    }
+    .lawyer-img{
+        button{
+            width: 100%;
+            font-size: 11px;
+            padding: 10px 5px;
+            border-radius: 3px;
+            i{
+                font-size: 10px;
+                display: none;
+            }
+        }
+    }
+    .lawyer-name{
+        padding: 0px 5px;
+        h1{
+            font-size: 16px;
+            margin: 0px 0;
+        }
+        p{
+            margin: 5px 0 !important;
+            font-size: 12px;
+        }
+        .percent-bar{
+            .badge{
+                width: auto;
+                height: auto;
+                font-size: 10px;
+                border-radius: 4px;
+                padding: 2px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+    .lawyer-details{
+        margin: 5px 0;
+        .location-icon{
+            mat-icon{
+                font-size: 15px;
+                margin-right: 10px;
+            }
+            svg{
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+    .lawyerVaction{
+        h6{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    }
+
+    .sign_up{
+        .clip_patharea{
+            h1{
+                font-size: 20px;
+                margin: 15px 0;
+            }
+            h3{
+                font-size: 25px;
+                color: red;
+                position: absolute;
+                right: -20px;
+                top: 0;
+            }
+        }
+    }
+    .just-law-num{
+        .num{
+            h1{
+                font-size: 16px;
+                margin: 15px 0;
+                span{
+                    font-size: 15px;
+                }
+            }
+        }
+        .call-now{
+            .call-now-btn{
+                font-size: 12px;
+                padding: 7px 20px;
+                width: fit-content;
+            }
+            .whatsapp-icon{
+                font-size: 24px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+
+    .all-blogs{
+        .blog-row{
+            .all-details{
+                .example-card{
+                    height: auto;
+                    margin: 10px 0;
+                    border-radius: 5px;
+                    .blog-blocks{
+                        font-size: 15px;
+                    }
+                    .mat-card-content{
+                        padding: 10px;
+                    }
+                    .all-blogs-headr{
+                        h2{
+                            font-size: 16px;
+                        }
+                    }
+                    .view-btn{
+                        font-size: 15px;
+                        padding: 10px;
+                        width: 100%;
+                        margin: 30px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .mat_label_1{
+        margin: 10px 0 0;
+        font-size: 17px;
+    }
+    .proceed-to-book{
+        button{
+            font-size: 15px;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+    .app-type-btn{
+        padding: 10px;
+    }
+    .form-control_1{
+        font-size: 14px;
+    }
+    .lawyers-section{
+        .time-slot{
+            h1{
+                margin: 0 0 10px;
+                font-size: 17px;
+            }
+            .pick-time-slot{
+                padding: 10px;
+                h3{
+                    font-size: 12px;
+                    margin: 5px 0;
+                }
+                h2{
+                    margin: 5px 0 20px;
+                    font-size: 17px;
+                }
+                .percent-bar{
+                    .badge{
+                        width: auto;
+                        height: max-content;
+                        font-size: 10px;
+                        border-radius: 4px;
+                        padding: 3px;
+                        margin: 0 8px 0;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                mat-tab-group{
+                    .tabs-time{
+                        p{
+                            font-size: 14px;
+                            margin: 0 0 2px;
+                        }
+                        h6{
+                            font-size: 12px;
+                        }
+                    }
+                    .schedule-slot{
+                        padding: 20px 10px;
+                        p{
+                            font-size: 18px;
+                            margin: 10px 0;
+                        
+                        }
+                        .slot-btn{
+                            button{
+                                font-size: 12px;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mat-card{
+            margin: 10px 0;
+            padding: 10px!important;
+        }
+        .reviews{
+            .reviews-title{
+                h1{
+                    font-size: 20px;
+                    margin: 10px 0 20px;
+                }
+            }
+            .Profile-icon{
+                .profile-letter{
+                    min-width: 30px;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 15px;
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+                .review-content{
+                    h6{
+                        font-size: 18px;
+                        margin: 5px 0;
+                    }
+                    p{
+                        padding: 0;
+                        margin: 5px 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .lawfram{
+            mat-card{
+                padding: 10px !important;
+                 margin: 10px 0;
+                 .title1{
+                    h6{
+                        font-size: 18px;
+                    }
+                    h4{
+                        margin: 5px 0;
+                        font-size: 12px;
+                    }
+                 }
+                 .free-card{
+                    h6{
+                        font-size: 17px;
+                        mat-icon{
+                            font-size: 17px;
+                            margin-right: 8px;
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        margin: 7px 0;
+                    }
+                 }
+                 .fee-schedule{
+                    .fee-time{
+                        .clock-icon{
+                            mat-icon{
+                                font-size: 15px;
+                                margin-right: 8px;
+                            }
+                        }
+                        span{
+                            p{
+                                font-size: 13px;
+                            }
+                            h6{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    button{
+                        margin: 10px;
+                        font-size: 15px;
+                    }
+                 }
+            }
+        }
+        .breadcrumb{
+            font-size: 11px;
+            margin: 0px 0 20px;
+        }
+    }
+    .lawyer-img{
+        button{
+            width: 100%;
+            font-size: 11px;
+            padding: 10px 5px;
+            border-radius: 3px;
+            i{
+                font-size: 10px;
+                display: none;
+            }
+        }
+    }
+    .lawyer-name{
+        padding: 0px 5px;
+        h1{
+            font-size: 16px;
+            margin: 0px 0;
+        }
+        p{
+            margin: 5px 0 !important;
+            font-size: 12px;
+        }
+        .percent-bar{
+            .badge{
+                width: auto;
+                height: auto;
+                font-size: 10px;
+                border-radius: 4px;
+                padding: 2px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+    .lawyer-details{
+        margin: 5px 0;
+        .location-icon{
+            mat-icon{
+                font-size: 15px;
+                margin-right: 10px;
+            }
+            svg{
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+    .lawyerVaction{
+        h6{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    }
+
+    .sign_up{
+        .clip_patharea{
+            h1{
+                font-size: 20px;
+                margin: 15px 0;
+            }
+            h3{
+                font-size: 25px;
+                color: red;
+                position: absolute;
+                right: -20px;
+                top: 0;
+            }
+        }
+    }
+    .just-law-num{
+        .num{
+            h1{
+                font-size: 16px;
+                margin: 15px 0;
+                span{
+                    font-size: 15px;
+                }
+            }
+        }
+        .call-now{
+            .call-now-btn{
+                font-size: 12px;
+                padding: 7px 20px;
+                width: fit-content;
+            }
+            .whatsapp-icon{
+                font-size: 24px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+}

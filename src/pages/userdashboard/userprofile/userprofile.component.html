@@ -1,0 +1,194 @@
+<div app-theme>
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="invoice_heading">
+                <h1>Profile</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <form class="add_invoice_form" [formGroup]="profileForm" #myform="ngForm">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">First Name<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="first_name" value="">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['first_name'].hasError('required') && myform.submitted">First
+                                    Name is Required</span>
+                            </h6>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">Last Name<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="last_name">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['last_name'].hasError('required') && myform.submitted">Last
+                                    Name is Required</span>
+                            </h6>
+                        </div>
+                    </div>
+                  
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">Email Address<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="email"
+                                    aria-disabled="true">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['email'].hasError('required') && myform.submitted">Email
+                                    Id is Required</span>
+                            </h6>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">Mobile Number<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" maxlength="10" class="mat_input" formControlName="phone_no">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['phone_no'].hasError('required') && myform.submitted">Mobile
+                                    Numbar is Required</span>
+                            </h6>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['phone_no'].hasError('pattern') && myform.submitted">Mobile
+                                    number is not 10 digit </span>
+                            </h6>
+                        </div>
+
+                        <ng-container >
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <div class="radio_mat_btn">
+                                <label class="mat_label_1">Mobile Number Same As WhatsApp Number<span>*</span></label>
+                                <mat-radio-group class="mat_radio"  [(ngModel)]="radioValue1" [ngModelOptions]="{standalone: true}"
+                                      name="group1" (change)="whatsAppNumber()">
+                                    <mat-radio-button class="radio_btn"    value="Yes">Yes</mat-radio-button>
+                                    <mat-radio-button class="radio_btn"   value="No">No</mat-radio-button>
+                                </mat-radio-group>
+                                <h6>
+                                    <span
+                                        *ngIf="profileForm.controls['phone_no_same_as_whatsapp_no'].hasError('required') && myform.submitted">Selected
+                                        the Mobile Numbar Same As WhatsApp Number is Required</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">WhatsApp Number<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" maxlength="10" class="mat_input" formControlName="whatsapp_no">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['whatsapp_no'].hasError('required') && myform.submitted">WhatsApp
+                                    Numbar is Required</span>
+                            </h6>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['whatsapp_no'].hasError('pattern') && myform.submitted">WhatsApp
+                                    number is not 10 digit </span>
+                            </h6>
+                        </div>
+                  
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="radio_mat_btn">
+                                <label class="mat_label_1">Your Gender<span>*</span></label>
+                                <mat-radio-group class="mat_radio" 
+                                     [(ngModel)]="radioValue2" [ngModelOptions]="{standalone: true}" name="group2">
+                                    <mat-radio-button class="radio_btn" value="Male">Male</mat-radio-button>
+                                    <mat-radio-button class="radio_btn" value="Female">Female</mat-radio-button>
+                                    <mat-radio-button class="radio_btn" value="Others">Others</mat-radio-button>
+                                </mat-radio-group>
+                                <h6>
+                                    <span
+                                        *ngIf="profileForm.controls['gender'].hasError('required') && myform.submitted">Selected
+                                        the Gender is Required</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">Location<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="address">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['address'].hasError('required') && myform.submitted">Address
+                                    is Required</span>
+                            </h6>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">State<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" formControlName="state"
+                                    (selectionChange)="getCities($event)">
+                                    <mat-option *ngFor="let state of stateList"
+                                        [value]="state.name">{{state.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['state'].hasError('required') && myform.submitted">State
+                                    Name is Required</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">City<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" formControlName="city_name">
+                                    <mat-option *ngFor="let city of cityList"
+                                        [value]="city.name">{{city.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['city_name'].hasError('required') && myform.submitted">Cite
+                                    Name is Required</span>
+                            </h6>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label class="mat_label">Postal Code<span>*</span></label>
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="zip_code">
+                            </mat-form-field>
+                            <h6>
+                                <span
+                                    *ngIf="profileForm.controls['zip_code'].hasError('required') && myform.submitted">Zip
+                                    Code is Required</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <button mat-button type="submit" class="sub_btn" (click)="save()">Save
+                                        Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,439 @@
+.sign_up {
+    background-color: #fff;
+    padding: 2vw;
+    border-radius: 0.5vw;
+
+    .clip_patharea {
+        height: auto;
+
+        h3{
+            text-align: end;
+            font-size: 1.5vw;
+            color: red;
+            position: absolute;
+            top: 0.3vw;
+            right: 2vw;
+        }
+
+        h1 {
+            text-align: center;
+            color: #223871;
+            font-size: 1.5vw;
+            font-weight: 500;
+            padding: 0;
+            margin: 0 0 1vw;
+        }
+    }
+
+    .add_invoice_form {
+        padding: 0vw 1.5vw;
+
+        .mat_label {
+            color: #707074;
+            font-size: 0.95vw;
+            padding: 0;
+            margin: 0 0 0.5vw;
+            font-weight: 500;
+
+            span {
+                color: red;
+            }
+        }
+
+        .mat_label_1 {
+            color: #707074;
+            font-size: 0.95vw;
+            padding: 0;
+            margin: 0 0 0vw;
+            font-weight: 500;
+            display: block;
+
+            span {
+                color: red;
+            }
+        }
+
+        .radio_mat_btn {
+            margin-bottom: 0.5vw;
+
+            .mat_radio {
+                .radio_btn {
+                    width: 6vw;
+                    margin: 0.8vw 0;
+                    font-size: 0.95vw;
+                    color: #222;
+                }
+            }
+        }
+
+        .mat_form_filed {
+            width: 100% !important;
+
+            .mat_input {
+                border: 0.1vw solid #e3e3e3;
+                padding: 0.8vw;
+                font-size: 0.9VW;
+                border-radius: 0.2VW;
+                background-color: #f9f9f9;
+                width: 90%;
+            }
+
+            .mat_input1 {
+                width: 25.8vw;
+            }
+
+            .time_picker {
+                position: absolute;
+                right: 1vw;
+                top: 0.7vw;
+            }
+
+            button {
+                top: -2.0vw;
+                position: absolute;
+                right: 0.8vw;
+                font-size: 1.3vw;
+            }
+        }
+
+        .alert-danger {
+            padding: 0;
+            margin: 0;
+            border: inherit;
+            background-color: inherit;
+
+            color: red;
+        }
+
+    }
+
+    .sub_btn {
+        font-size: 1.1vw;
+        font-weight: 500;
+        color: #fff;
+        padding: 0.8vw 0.8vw;
+        background-color: var(--primary);
+        border: inherit;
+        margin: 0;
+        text-transform: uppercase;
+        width: 100%;
+        border-radius: 5vw;
+    }
+.forgot_pwd{
+    text-align: center;
+    .ftp_btn {
+        background-color: #fff;
+        border: inherit;
+        padding: 0.8vw 0;
+        // width: 100%;
+        color: var(--primary);
+        margin-top: 0;
+        font-size: 0.8vw;
+        font-weight: 500;
+        width: fit-content;
+    }
+
+}
+  
+    p {
+        text-align: center;
+    font-size: 0.95vw;
+    color: #707074;
+    font-weight: 500;
+    margin-bottom: 2vw
+        // margin: 0.8vw 0;
+
+        a {
+            text-decoration: none;
+            color: #e46c26;
+        }
+    }
+}
+
+.cancle_btn {
+    position: absolute;
+    top: -0.8vw;
+    right: -2vw;
+    color: red;
+    font-size: 1.5vw;
+    background-color: inherit;
+    border: inherit;
+    padding: 0;
+}
+
+h6 {
+    color: red;
+}
+
+p {
+    // font-family: Lato;
+}
+
+small {
+    padding: 0 0.25rem
+}
+
+.errors {
+    color: red;
+}
+
+.otp_sucess {
+    text-align: center;
+    font-size: 1.1vw;
+    font-weight: 500;
+    color: var(--primary);
+    padding: 0;
+    margin: 0 0 1.6vw;
+}
+
+.original-div{
+    z-index: 1;
+    position: relative;
+}
+
+.overlapped-div{
+  opacity: 0.6;
+    z-index: 4;
+top: 2.5vw;
+left: 5vw;
+position: absolute;
+
+}
+
+.accept-btn{
+    background: #e86d1f;
+    border: inherit;
+    font-size: 1vw;
+    font-weight: 0500;
+    color: #fff;
+    padding: 0.7vw 3vw;
+    margin: 1vw 0.5vw 0 0;
+    border-radius: 0.5vw;
+  
+}
+.close-btn{
+    background: #fff;
+    border: 1px solid #e86d1f;
+    font-size: 1vw;
+    font-weight: 500;
+    color: #e86d1f;
+    padding: 0.7vw 3vw;
+    margin: 1vw 0.5vw 0 0;
+    border-radius: 0.5vw;
+}
+
+
+
+
+@media (max-width: 575.98px){
+
+    .accept-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin: 10px 5px 0 0;
+        border-radius: 3px;
+    }
+    .close-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin: 10px 0px 0 5px;
+        border-radius: 3px;
+    }
+
+    .sign_up{
+        padding: 20px;
+        .clip_patharea{
+            h1{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            h3{
+                width: fit-content;
+                font-size: 25px;
+                position: absolute;
+                right: 10px;
+                top: 2px;
+            }
+        }
+        .forgot_pwd{
+            .ftp_btn{
+                font-size: 12px;
+            }
+        }
+        p{
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        .sub_btn{
+            font-size: 19px;
+            padding: 13px;
+            margin: 10px 0;
+            border-radius: 50px;
+        }
+        .ftp_btn{
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+    .accept-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin: 10px 5px 0 0;
+        border-radius: 3px;
+    }
+    .close-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin: 10px 0px 0 5px;
+        border-radius: 3px;
+    }
+
+    .sign_up{
+        padding: 20px;
+        .clip_patharea{
+            h1{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            h3{
+                width: fit-content;
+                font-size: 25px;
+                position: absolute;
+                right: 10px;
+                top: 2px;
+            }
+        }
+        .forgot_pwd{
+            .ftp_btn{
+                font-size: 12px;
+            }
+        }
+        p{
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        .sub_btn{
+            font-size: 19px;
+            padding: 13px;
+            margin: 10px 0;
+            border-radius: 50px;
+        }
+        .ftp_btn{
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+
+    .accept-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin: 10px 5px 0 0;
+        border-radius: 3px;
+    }
+    .close-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin: 10px 0px 0 5px;
+        border-radius: 3px;
+    }
+
+    .sign_up{
+        padding: 20px 0;
+        .clip_patharea{
+            h1{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            h3{
+                width: fit-content;
+                font-size: 25px;
+                position: absolute;
+                right: 2px;
+                top: 2px;
+            }
+        }
+        .forgot_pwd{
+            .ftp_btn{
+                font-size: 12px;
+            }
+        }
+        p{
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        .sub_btn{
+            font-size: 19px;
+            padding: 13px;
+            margin: 10px 0;
+            border-radius: 50px;
+        }
+        .ftp_btn{
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .accept-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin: 10px 5px 0 0;
+        border-radius: 3px;
+    }
+    .close-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin: 10px 0px 0 5px;
+        border-radius: 3px;
+    }
+
+    .sign_up{
+        padding: 20px;
+        .clip_patharea{
+            h1{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            h3{
+                width: fit-content;
+                font-size: 25px;
+                position: absolute;
+                right: 2px;
+                top: 2px;
+            }
+        }
+        .forgot_pwd{
+            .ftp_btn{
+                font-size: 12px;
+            }
+        }
+        p{
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        .sub_btn{
+            font-size: 19px;
+            padding: 13px;
+            margin: 10px 0;
+            border-radius: 50px;
+        }
+        .ftp_btn{
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+}
+

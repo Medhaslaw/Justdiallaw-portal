@@ -1,0 +1,148 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/profile'" ><a>Profile</a></li>
+                        <li class="breadcrumb-item active"><a>Edit Profile</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="invoice_heading">
+                <h1>Edit Profile</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <mat-card class="mat_card_invoice">
+                <div mat-dialog-title class="dialog_title">
+                    <h1>Profile Information</h1>
+                </div>
+                <form [formGroup]="profileInfoForm"  #myform="ngForm"  class="add_invoice_form">
+                    <div class="row">
+                        <div class="col-md-12 mb-4">
+                            <label class="mat_label">Few Lines About You<span>*</span></label> 
+                            <div class="NgxEditor__Wrapper">
+                                <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+                                <ngx-editor
+                                  [editor]="editor"
+                                  [ngModel]="html"
+                                  formControlName="about"
+                                  [disabled]="false"
+                                  [placeholder]="'Type here...'"
+                                ></ngx-editor>
+                              </div>
+                              <h6>
+                                <span *ngIf="profileInfoForm.controls['about'].hasError('required') && myform.submitted">Your About  is Required</span>
+                              </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Designation<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <mat-select class="mat_input mat_input1" formControlName="designation">
+                                    <mat-option value="Advocate">Advocate</mat-option>
+                                    <mat-option value="Lawyer">Lawyer</mat-option>
+                                  </mat-select> 
+                            </mat-form-field>
+                            <h6>
+                                <span *ngIf="profileInfoForm.controls['designation'].hasError('required') && myform.submitted">Designation is Required</span>
+                              </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Practising Since<span>*</span></label> 
+                              <mat-form-field class="mat_form_filed">
+                                <input matInput [matDatepicker]="picker" class="mat_input" formControlName="practicing"> 
+                                <mat-datepicker-toggle class="time_picker" matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker 
+                                startView="multi-year"
+                                (yearSelected)="setMonthAndYear($event, picker)"
+                                panelClass="example-month-picker">
+                                ></mat-datepicker>
+                              </mat-form-field>
+                              <h6>
+                                <span *ngIf="profileInfoForm.controls['practicing'].hasError('required') && myform.submitted">Practicing is Required</span>
+                              </h6>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="mat_label">Languages Known<span>*</span></label> 
+                            <ng-multiselect-dropdown
+                            [placeholder]="'Select Languages'"
+                            [settings]="dropdownSettings"
+                            [data]="dropdownList"
+                            [(ngModel)]="selectedItems"
+                            [ngModelOptions]="{standalone: true}"
+                            (onSelect)="onItemSelect($event)"
+                            (onSelectAll)="onSelectAll($event)"  >
+                          </ng-multiselect-dropdown>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Number Of Cases Completed<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="number_of_cases_completed">
+                            </mat-form-field>
+                            <h6>
+                                <span *ngIf="profileInfoForm.controls['number_of_cases_completed'].hasError('required') && myform.submitted">Address is Required</span>
+                              </h6>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Address<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="address">
+                            </mat-form-field>
+                            <h6>
+                                <span *ngIf="profileInfoForm.controls['address'].hasError('required') && myform.submitted">Address is Required</span>
+                              </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Your Chamber Address<span>*</span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="chamber_address">
+                            </mat-form-field>
+                            <h6>
+                                <span *ngIf="profileInfoForm.controls['chamber_address'].hasError('required') && myform.submitted">Chamber Address is Required</span>
+                              </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="mat_label">Facebook<span></span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="facebook">
+                            </mat-form-field>
+                            <h6>
+                                <span *ngIf="profileInfoForm.controls['facebook'].hasError('required') && myform.submitted">Facebook Id is Required</span>
+                              </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="mat_label">Twitter<span></span></label> 
+                            <mat-form-field class="mat_form_filed">
+                                <input matInput type="text" class="mat_input" formControlName="twitter">
+                            </mat-form-field>
+                            <h6>
+                                <span *ngIf="profileInfoForm.controls['twitter'].hasError('required') && myform.submitted">Twitter Id is Required</span>
+                              </h6>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between">
+                                    <button mat-button (click)="submit()" class="sub_btn">Update</button>
+                                
+                                    <button mat-button (click)="cancelBtn()" class="cancel_btn">Cancel</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

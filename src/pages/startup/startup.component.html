@@ -1,0 +1,267 @@
+
+<app-sub-nav></app-sub-nav>
+
+<div class="breadcrumbs-card">
+    <div class="container">
+        <ul class="nav">
+            <li>
+                <a> <i class="bi bi-house-door"></i><span>Home</span></a>
+            </li>
+            <li>
+                <a><i class="bi bi-chevron-right"></i><span>Startup</span></a>
+            </li>
+            <li>
+                <a><i class="bi bi-chevron-right"></i><span>{{documentDetailsObj?.startup_category}}</span></a>
+            </li>
+            <li>
+                <i class="bi bi-chevron-right"></i>
+                <span>{{documentTitle | titlecase}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="document-brief">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8 document-brief-left">
+                        <div class="course-info">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3>{{documentDetailsObj?.title}}
+                                                </h3>
+                                                <h6> {{documentDetailsObj?.description}}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-4">
+                                    <div class="img">
+                                        <img [src]="imgUrl + documentDetailsObj?.startup_banner"
+                                            alt="">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- <div class="course-features">
+                            <div class="course-header d-flex align-items-center">
+                                <h6>How It Works</h6>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-6 margin_bottom">
+                                    <div class="course-features-card"
+                                        style="background: linear-gradient(176deg, #680480 0%, #3f0072 93%);">
+                                        <div class="icon">
+                                            <i class="bi bi-journal-text"></i>
+                                        </div>
+                                        <h2>Choose your required Document & pay</h2>
+                                        <p>
+                                            Choose any document you require and proceed to checkout
+                                        </p>
+                                        <div class="img">
+                                            <img src="assets/img/layers.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6 margin_bottom">
+                                    <div class="course-features-card"
+                                        style="background: linear-gradient(176deg, #fa5870 0%, #f22d7c 93%);">
+                                        <div class="icon">
+                                            <i class="bi bi-journal-text"></i>
+                                        </div>
+                                        <h2>Fill required details</h2>
+                                        <p>
+                                            Fill your personal details on success page
+                                        </p>
+                                        <div class="img">
+                                            <img src="assets/img/layers.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6 margin_bottom">
+                                    <div class="course-features-card"
+                                        style="background: linear-gradient(176deg, #00c9ff 0%, #018dfb 93%);">
+                                        <div class="icon">
+                                            <i class="bi bi-journal-text"></i>
+                                        </div>
+                                        <h2>Schedule Call with Lawyer</h2>
+                                        <p>
+                                            Select time slot to speak to the Lawyer to discuss your requirements
+                                        </p>
+                                        <div class="img">
+                                            <img src="assets/img/layers.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6 margin_bottom">
+                                    <div class="course-features-card"
+                                        style="background: linear-gradient(176deg, #f44e9a 0%, #c02cb6 93%);">
+                                        <div class="icon">
+                                            <i class="bi bi-journal-text"></i>
+                                        </div>
+                                        <h2>Delivery of your Document</h2>
+                                        <p>
+                                            Get the document delivered on your registered email ID within the promised
+                                            time
+                                        </p>
+                                        <div class="img">
+                                            <img src="assets/img/layers.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="text-card" *ngFor="let content of documentDetailsObj?.startup_content">
+                            <h6>{{content.content_titel}}</h6>
+                           <div [innerHTML]="content.content_text | safeHtml"></div>
+                        </div> -->
+
+                        <div>
+                            <div class="text-card" >
+                                 <p [innerHTML]="documentDetailsObj?.content | safeHtml" > </p>
+                            </div>
+                        </div>
+
+                        <!-- <div id="faqs" class="faq py-md-5 py-5">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2 class="mb-4">Frequently Asked Questions </h2>
+                                </div>
+                            </div>
+
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-12">
+                                    <div class="faqcard">
+                                        <ul id="accordion" class="accordion">
+                                            <li *ngFor="let menu of documentDetailsObj?.faq; let i = index" [class.active]="menu.active">
+                                                <div class="menu" (click)="toggle(i)">
+                                                    <span>Q{{i+1}}.</span>
+                                                    {{ menu.faq_que }}
+                                                    <i class="fa fa-plus" *ngIf="!menu.active"></i>
+                                                    <i class="fa fa-minus" aria-hidden="true" *ngIf="menu.active"></i>
+                                                </div>
+                                                <div class="submenu" #submenu
+                                                    [style.height.px]="menu.active ? submenu.scrollHeight : 0">
+                                                    <div class="acco_info">
+                                                            <div [innerHTML]="menu.faq_ans | safeHtml"></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col-md-4 pr-md-0 document-brief-right mobile-none">
+
+                        
+                        <div class="document-brief-container sticky-top">
+
+                            <div>
+                                <div class="img" *ngIf="documentDetailsObj?.banner"  >
+                                    <!-- <img [src]="imgUrl + documentDetailsObj?.banner"
+                                        alt=""> -->
+                                        <div class="doc_bg" [ngStyle]="{'background': 'url('+  documentDetailsObj?.startup_banner_url + ')'}">
+
+                                        </div>
+
+                                </div>
+                            </div>
+    
+
+                            <h2>{{documentDetailsObj?.startup_category}}
+                            </h2>
+                            <div class="product-addons">
+                                <!-- <div class="d-flex justify-content-between"> -->
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h3>
+                                                {{documentTitle | titlecase}}
+                                            </h3>
+                                        </div>
+                                        <div class="col-md-4 text-right"  *ngIf="country == 'India'">
+                                            <del>{{documentDetailsObj?.actual_price | currency}}</del>
+                                            <p>{{documentDetailsObj?.offer_price | currency}}</p>
+                                        </div>
+                                        <div class="col-md-4 text-right"  *ngIf="country == 'United States'">
+                                            <del>$ {{documentDetailsObj?.us_actual_price }}</del>
+                                            <p>$ {{documentDetailsObj?.us_offer_price }}</p>
+                                        </div>
+                                        <div class="col-md-4 text-right"  *ngIf="!country">
+                                            <del>$ {{documentDetailsObj?.us_actual_price }}</del>
+                                            <p>$ {{documentDetailsObj?.us_offer_price }}</p>
+                                        </div>
+                                    </div>
+
+
+                                <!-- </div> -->
+
+                            </div>
+
+
+
+
+                            <!-- <div class="product-addons" *ngIf="documentDetailsObj?.addons"> 
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <mat-checkbox>sdsdsd
+                                            </mat-checkbox>
+                                        </div>
+                                        <span>34434</span>
+
+
+                                    </li>
+
+                                </ul>
+                            </div> -->
+
+                            <div class="price-coupom d-flex justify-content-between">
+                                <div class="couponCode">
+                                    <h6>Gross Total</h6>
+                                </div>
+                                <div class="priceCard" *ngIf="country == 'India'">
+                                    <h3>{{totalAmount | currency}}</h3>
+                                </div>
+                                <div class="priceCard" *ngIf="country == 'United States'">
+                                    <h3>$ {{ustotalAmount}}</h3>
+                                </div>
+                                <div class="priceCard" *ngIf="!country">
+                                    <h3>$ {{ustotalAmount}}</h3>
+                                </div>
+                            </div>
+
+                            <!-- <hr>
+
+                            <div class="product-info-cart">
+                                <h6>Deliverables *</h6>
+                               <div [innerHTML]="documentDetailsObj?.deliverables_content | safeHtml"></div>
+                            </div> -->
+
+                            <div class="cart-actions justify-content-center">
+                                <button class="buy_now" (click)="buyDocument()" mat-button>Buy Now</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+</div>
+
+
+<app-footer></app-footer>

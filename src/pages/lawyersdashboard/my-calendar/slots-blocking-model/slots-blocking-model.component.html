@@ -1,0 +1,67 @@
+<div class="slot_card">
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="clip_patharea middle ">
+                <h3 class="cancel_btn"><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+                <h1>Slots Blocking </h1>
+            </div>
+            <div class="mat_card_invoice">
+    
+                <form [formGroup]="slotsBlockingForm" #myform="ngForm" *ngIf="dateInputShow" class="add_invoice_form">
+                    <div class="col-md-12 p-0">
+                        <label class="mat_label">Select<span>*</span></label>
+                        <mat-form-field class="mat_form_filed">
+                            <input matInput [matDatepicker]="picker" [min]="todayDate" class="mat_input"
+                                formControlName="date">
+                            <mat-datepicker-toggle class="time_picker" matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker startView="year"></mat-datepicker>
+                        </mat-form-field>
+                        <h6>
+                            <span *ngIf="slotsBlockingForm.controls['date'].hasError('required') && myform.submitted">Date
+                                is Required</span>
+                        </h6>
+                    </div>
+                    <div class="col sel-btn">
+                        <button mat-button (click)="selectDate()" class="sub_btn">Select Date</button>
+                    </div>
+                </form>
+    
+                <div class="schedule-slot" *ngIf="slotShow">
+                    <div class="row time-slots-row justify-content-center">
+                        <div class="col-md-3" *ngFor="let time_slots of allTimeSlots">
+                            <div class="slot-btn" [ngClass]="{'isClassActive': bookingSlots.includes(time_slots.id)}">
+                                <button mat-stroked-button
+                                    [ngClass]="{'isActive': selectedTimeSlotsId.includes(time_slots.id)}"
+                                    [ngClass]="{'activeClass': blockedSlots.includes(time_slots.id)}"
+                                    [disabled]="blockedSlots.includes(time_slots.id)"
+                                    (click)="selectblockTimeSlots(time_slots.id)">{{time_slots.Advocate_timing_slot}}</button>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col d-flex boocked">
+                            <h3>Booked</h3>
+                            <p></p>
+                        </div>
+                        <div class="col d-flex available ">
+                            <h3>Available</h3>
+                            <p></p>
+                        </div>
+                        <div class="col d-flex blooked">
+                            <h3>Blocked</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col proceed-to-block">
+                            <button (click)="proceedToBlock()">Proceed to Block</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</div>

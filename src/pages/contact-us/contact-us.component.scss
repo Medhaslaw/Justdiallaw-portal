@@ -1,0 +1,612 @@
+.contact-header{
+    background:  url('../../assets/img/contact-bg.jpg') no-repeat ;
+    background-color: #656b7c;
+    background-blend-mode: multiply;
+    height: 56vh;
+    width: 100%;
+    background-size: cover;
+    padding-top: 7.5vw;
+    .wel-jus-law{
+        padding-top: 2vw;
+        padding-left: 3.2vw;
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+      h2{  color: #fff;
+        font-size: 3.2vw;
+        font-weight: 600;
+    
+        font-family: "Circular Std Book";
+        margin: 0;
+    }
+    p{
+        color: #fff;
+       opacity: 0.7;
+        letter-spacing: 0.2vw;
+        font-size: 1vw;
+        margin-top: 0.7vw;
+        font-family: "Circular";
+    }
+    h3 {
+        color: #fff;
+        text-align: center;
+        opacity: 0.9;
+        background: rgba(51, 51, 51, 0.5);
+        padding: 0.8vw;
+        font-size: 1vw;
+font-weight: 700;
+margin: 0 0 2vw;
+font-family: Poppins,sans-serif!important;
+width: 16vw;
+    }
+    i {
+        margin-left: 1vw;
+
+    }
+
+    .about-span {
+        color: var(--primary);
+        margin-left: 1vw;
+    }
+    }
+    .home-to-about{
+        padding-top: 2.5vw;
+        padding-left: 2.5vw;
+        h3{
+            color: #fff;
+            text-align: center;
+            margin-top: 1.2vw;
+            opacity: 0.9;
+            background: rgba(51, 51, 51, 0.5);
+            padding: 0.8vw;
+            width: 70%;
+            font-size: 0.85vw;
+            font-family: "Circular Std-Bold";
+            font-family: "Circular Std Bold";
+        }
+        i{
+      margin-left: 1vw;
+    
+        }
+        .about-span{
+            color: var(--primary);
+            margin-left: 1vw ;
+           
+
+        }
+
+    }
+}
+
+.more-que{
+    padding: 0.7vw 8.4vw;
+    .more-que-row{
+        padding: 6vw;
+        .jus-law-address{
+            h2{
+                font-size: 2.2vw;
+                color: var(--primary);
+                font-family: "Circular Std-Bold";
+                font-family: "Circular Std Bold";
+            }
+            .address-div{
+                padding-top: 2.5vw;
+                h3{
+                   margin: 0;
+                    i{
+                        color: #fff;
+                        background-color: var(--primary);
+                        border-radius: 50%;
+                        font-size: 1.5vw;
+                        padding: 0.5vw;
+                    }
+                    span{
+                        color: #000000;
+                        font-size: 1.5vw;
+                        font-weight: 500;
+                        margin-left: 1vw;
+                       
+                    }
+                }
+                p{
+                    padding: 0;
+                    color: #706e6e;
+                    font-size: 0.85vw;
+                    font-weight: 500;
+                    margin-left: 4vw;
+                    cursor: pointer;
+                    width: fit-content;
+                    a{
+                        text-decoration: none;
+                       color: #706e6e;
+                       margin: 0;
+                       padding: 0;
+                    }
+                }
+            }
+        }
+        .send-form{
+            h2{
+                font-size: 2.2vw;
+                color: var(--primary);
+            } 
+            .footer_nav {
+                // padding: 0.7vw 0.5vw;
+        
+                .mat_label{
+                    font-size: 0.85vw;
+                   margin-bottom: 0.6vw;
+                }
+
+                h5 {
+                    font-size: 1vw;
+                    margin: 0 0 1.5vw;
+                    padding: 0;
+                    color: #a9afc0;
+                    font-family: "Circular Std Bold";
+                    text-transform: uppercase;
+                   
+                }
+        
+                ul {
+                    margin: 0;
+                    padding: 0;
+        
+                    li {
+                        margin: .8vw 0;
+                        padding: 0;
+                        font-size: 1vw;
+                        color: #ffffff;
+                        list-style: none;
+                        cursor: pointer;
+                        font-family: "Circular Std Book";
+                    }
+                }
+        
+        
+                form {
+                    margin-top: 1.5vw !important;
+                    padding-right: 2vw;
+        
+                    .form-control {
+                        padding: .7vw 1vw;
+                      
+                        font-size: .9vw;
+                        margin: 0;
+                        font-weight: 400;
+                        border-radius: .2vw;
+                        height: auto;
+                        background: #fff;
+                       
+                        margin-bottom: .7vw;
+        
+                        &::placeholder {
+                            color: #727375;
+                        }
+                    }
+        
+                    button {
+                        background: var(--primary);
+                        font-size: 0.9vw;
+                        font-weight: 500;
+                        padding: 1.2vw 1.7vw 1.1vw;
+                        height: 100%;
+                        border-radius: 10vw;
+                        line-height: 100%;
+                        color: #fff;
+                        text-transform: uppercase;
+                        width: 40%;
+                        margin-left: .7vw;
+                        margin-top: .5vw;
+                    }
+        
+                }
+        
+            }
+        }
+    }
+}
+h6 {
+color: red;
+}
+
+
+
+h1 h3 h4 h4 h6 p span i {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+@media (max-width: 575.98px){
+    .mapouter{
+        .gmap_canvas{
+            padding: 15px;
+        }
+    }
+    .contact-header{
+        height: auto;
+        .home-to-about{
+            h3{
+                font-size: 10px;
+            }
+        }
+        .wel-jus-law{
+            h2{
+                font-size: 25px;
+                margin: 5px 0;
+            }
+            p{
+                font-size: 16px;
+                margin: 10px 0;
+            }
+        }
+    }
+    .more-que{
+        padding: 30px 20px;
+        .more-que-row{
+            padding: 0;
+            .jus-law-address{
+                h2{
+                    font-size: 22px;
+                }
+                .address-div{
+                    h3{
+                        span{
+                            font-size: 18px;
+                        margin-left: 10px;
+                        }
+                        i{
+                            font-size: 16px;
+                            padding: 4px 6px;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin: 5px 0 0 36px;
+                    }
+                }
+            }
+            .send-form{
+                margin: 30px 0 20px;
+                h2{
+                    margin: 20px 0 10px;
+                    font-size: 20px;
+                }
+                
+                .footer_nav{
+                    .mat_label{
+                        font-size: 14px;
+                        margin: 5px 0;
+                    }
+                    form{
+                        .form-control{
+                            padding: 10px;
+                            font-size: 16px;
+                            border-radius: 5px;
+                        }
+                        button{
+                            font-size: 20px;
+                            font-weight: 500;
+                            padding: 15px;
+                            width: 100%;
+                            margin: 20px 0 0;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+    .contact-header{
+        .wel-jus-law{
+            h3{
+                font-size: 8px;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+
+    .contact-header{
+        .wel-jus-law{
+            h3{
+                font-size: 8px;
+                width: fit-content;
+            }
+        }
+    }
+
+
+    .mapouter{
+        .gmap_canvas{
+            padding: 15px;
+        }
+    }
+    .contact-header{
+        height: auto;
+        padding: 40px 0;
+        .home-to-about{
+            h3{
+                font-size: 10px;
+            }
+        }
+        .wel-jus-law{
+            h2{
+                font-size: 25px;
+                margin: 5px 0;
+            }
+            p{
+                font-size: 16px;
+                margin: 10px 0;
+            }
+        }
+    }
+    .more-que{
+        padding: 40px 20px;
+        .more-que-row{
+            padding: 0;
+            .jus-law-address{
+                h2{
+                    font-size: 22px;
+                }
+                .address-div{
+                    h3{
+                        span{
+                            font-size: 18px;
+                        margin-left: 10px;
+                        }
+                        i{
+                            font-size: 16px;
+                            padding: 4px 6px;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin: 5px 0 0 36px;
+                    }
+                }
+            }
+            .send-form{
+                margin: 30px 0 20px;
+                h2{
+                    margin: 20px 0 10px;
+                    font-size: 20px;
+                }
+                
+                .footer_nav{
+                    .mat_label{
+                        font-size: 14px;
+                        margin: 5px 0;
+                    }
+                    form{
+                        .form-control{
+                            padding: 10px;
+                            font-size: 16px;
+                            border-radius: 5px;
+                        }
+                        button{
+                            font-size: 20px;
+                            font-weight: 500;
+                            padding: 15px;
+                            width: 100%;
+                            margin: 20px 0 0;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .contact-header{
+        .wel-jus-law{
+            h3{
+                font-size: 8px;
+                width: fit-content;
+            }
+        }
+    }
+    
+    .mapouter{
+        .gmap_canvas{
+            padding: 15px;
+        }
+    }
+    .contact-header{
+        height: auto;
+        padding: 60px 0;
+        .home-to-about{
+            h3{
+                font-size: 10px;
+                margin: 0;
+                width: fit-content;
+            }
+        }
+        .wel-jus-law{
+            h2{
+                font-size: 25px;
+                margin: 5px 0;
+            }
+            p{
+                font-size: 16px;
+                margin: 10px 0;
+            }
+        }
+    }
+    .more-que{
+        padding: 30px 20px;
+        .more-que-row{
+            padding: 0;
+            .jus-law-address{
+                h2{
+                    font-size: 22px;
+                }
+                .address-div{
+                    h3{
+                        span{
+                            font-size: 18px;
+                        margin-left: 10px;
+                        }
+                        i{
+                            font-size: 16px;
+                            padding: 4px 6px;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin: 5px 0 0 36px;
+                    }
+                }
+            }
+            .send-form{
+                margin: 30px 0 20px;
+                h2{
+                    margin: 20px 0 10px;
+                    font-size: 20px;
+                }
+                
+                .footer_nav{
+                    .mat_label{
+                        font-size: 14px;
+                        margin: 5px 0;
+                    }
+                    form{
+                        .form-control{
+                            padding: 10px;
+                            font-size: 16px;
+                            border-radius: 5px;
+                        }
+                        button{
+                            font-size: 20px;
+                            font-weight: 500;
+                            padding: 15px;
+                            width: 100%;
+                            margin: 20px 0 0;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+    .contact-header{
+        .wel-jus-law{
+            h3{
+                font-size: 8px;
+                width: fit-content;
+            }
+        }
+    }
+    
+    
+    .mapouter{
+        .gmap_canvas{
+            padding: 15px;
+        }
+    }
+    .contact-header{
+        height: auto;
+        padding: 60px 0;
+        .home-to-about{
+            h3{
+                font-size: 10px;
+                margin: 0;
+                width: fit-content;
+            }
+        }
+        .wel-jus-law{
+            h2{
+                font-size: 25px;
+                margin: 5px 0;
+            }
+            p{
+                font-size: 16px;
+                margin: 10px 0;
+            }
+        }
+    }
+    .more-que{
+        padding: 30px 20px;
+        .more-que-row{
+            padding: 0;
+            .jus-law-address{
+                h2{
+                    font-size: 22px;
+                }
+                .address-div{
+                    h3{
+                        span{
+                            font-size: 18px;
+                        margin-left: 10px;
+                        }
+                        i{
+                            font-size: 16px;
+                            padding: 4px 6px;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin: 5px 0 0 36px;
+                    }
+                }
+            }
+            .send-form{
+                margin: 30px 0 20px;
+                h2{
+                    margin: 20px 0 10px;
+                    font-size: 20px;
+                }
+                
+                .footer_nav{
+                    .mat_label{
+                        font-size: 14px;
+                        margin: 5px 0;
+                    }
+                    form{
+                        .form-control{
+                            padding: 10px;
+                            font-size: 16px;
+                            border-radius: 5px;
+                        }
+                        button{
+                            font-size: 20px;
+                            font-weight: 500;
+                            padding: 15px;
+                            width: 100%;
+                            margin: 20px 0 0;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+    
+}

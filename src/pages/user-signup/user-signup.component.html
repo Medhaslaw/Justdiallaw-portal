@@ -1,0 +1,248 @@
+
+<!-- <app-sub-nav></app-sub-nav>
+<div app-theme> -->
+
+<div class="singup_landing middle">
+    <div class="close_btn" (click)="closeDialog()"><i class="bi bi-x-circle"></i></div>
+    <!-- <div class="container"> -->
+        <div class="row justify-content-between">
+            <!-- <div class="col-md-5 mobile-none">
+                <div class="signup_content">
+                    <li class="d-flex">
+                        <div class="icon_1">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <span>
+                            <h1>It’s secure and confidential</h1>
+                            <p>We maintain full data security & confidentiality
+                                of your personal details. Please check our
+                                Terms of Use and Privacy Policy for details.</p>
+                        </span>
+                    </li>
+                    <li class="d-flex">
+                        <div class="icon_1">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <span>
+                            <h1>How does Just Dial Law Work?</h1>
+                            <p>Get expert advice from top rated lawyers in
+                                India – Contact Now</p>
+                            <button (click)="knowMore()" mat-button>Know More</button>
+                        </span>
+                    </li>
+                </div>
+            </div> -->
+            <div class="col-md-12">
+                <div class="sign_up" *ngIf="showform">
+                    <div class="clip_patharea middle">
+                        <h1>Welcome to Just Dial Law</h1>
+                    </div>
+                    
+                    <form   class="add_invoice_form" [formGroup]="userSignUpForm" #myform="ngForm">
+                        <div *ngIf="show">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <mat-form-field class="mat_form_filed">
+                                        <mat-label class="mat_label">First Name</mat-label>
+                                        <input matInput type="text" (keypress)="keyPressAlphaNumeric($event)" class="mat_input" formControlName="first_name">
+                                    </mat-form-field>
+                                    <h6>
+                                        <span
+                                            *ngIf="userSignUpForm.controls['first_name'].hasError('required') && myform.submitted">First
+                                            Name is Required</span>
+                                    </h6>
+                                </div>
+                                <div class="col-md-12">
+                                    <mat-form-field class="mat_form_filed">
+                                        <mat-label class="mat_label">Last Name </mat-label>
+                                        <input matInput type="text" (keypress)="keyPressAlphaNumeric($event)" class="mat_input" formControlName="last_name">
+                                    </mat-form-field>
+                                    <h6>
+                                        <span
+                                            *ngIf="userSignUpForm.controls['last_name'].hasError('required') && myform.submitted">Last
+                                            Name is Required</span>
+                                    </h6>
+                                </div>
+                                <div class="col-md-12">
+                                    <mat-form-field class="mat_form_filed">
+                                        <mat-label class="mat_label">Mobile Number </mat-label>
+                                        <input matInput type="text" class="mat_input" formControlName="phone_no">
+                                    </mat-form-field>
+                                    <h6>
+                                        <span
+                                            *ngIf="userSignUpForm.controls['phone_no'].hasError('required') && myform.submitted">Mobile
+                                            No is Required</span>
+                                    </h6>
+                                    <h6>
+                                        <span
+                                            *ngIf="userSignUpForm.controls['phone_no'].hasError('pattern') && myform.submitted">Mobile
+                                            number is not 10 digit </span>
+                                    </h6>
+                                </div>
+                                <div class="col-md-12">
+                                    <mat-form-field class="mat_form_filed">
+                                        <mat-label class="mat_label">Email Address </mat-label>
+                                        <input matInput type="email" class="mat_input" formControlName="email">
+                                    </mat-form-field>
+                                    <h6>
+                                        <span
+                                            *ngIf="userSignUpForm.controls['email'].hasError('required') && myform.submitted">Email
+                                            Id is Required</span>
+                                    </h6>
+                                    <h6>
+                                        <span
+                                            *ngIf="userSignUpForm.controls['email'].hasError('pattern') && myform.submitted">Email Pattern Was wrong </span>
+                                    </h6>
+                                </div>
+                                <div class="col-md-12">
+                                    <mat-form-field class="mat_form_filed">
+                                        <mat-label class="mat_label">Password</mat-label>
+                                        <input matInput [type]="hide ? 'password' : 'text'" class="mat_input"
+                                            formControlName="password" #pwd>
+                                        <button mat-icon-button matSuffix (click)="hide = !hide"
+                                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                        </button>
+                                    </mat-form-field>
+                                    <h6>
+                                        <span
+                                            *ngIf="userSignUpForm.controls['password'].hasError('required') && myform.submitted">Password
+                                            is Required</span>
+                                    </h6>
+                                    <div class="alert alert-danger"
+                                        *ngIf="userSignUpForm.controls['password'].hasError('passwordStrength')">
+                                        {{userSignUpForm.controls['password'].errors&&['Upper case,lower case,number,specialcharacter required']}}
+                                    </div>
+                                </div>
+                                <p class="text-danger">{{errData}}</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button mat-button class="sub_btn" (click)="regsave()">Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12" *ngIf="show1">
+                                <h1 class="otp_sucess">Otp Sent Successfully</h1>
+                                <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:4}" class="otp_check"></ng-otp-input>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <p class="text-danger">{{errData}}</p>
+                                        <p>Didn't get the code?<a (click)="save()">Resend OTP</a></p>
+                                        <button mat-button type="submit" class="sub_btn" (click)="userSingUp()">Submit</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </form>
+              
+               
+                </div>
+
+                <!-- <div *ngIf="!showform">
+                    <div class="successdiv">
+                        <div class="img"> -->
+                            <!-- <img src="assets/img/success.png"> -->
+                            <!-- <h5>Congratulations! Your account has been Registered Successfully.
+                                Account will be approved in 24 hours after your Profile updation. Login with Credentials to continue.
+                            </h5>
+                           
+                        </div> -->
+                        <!-- <button mat-button [routerLink]="'/home'">Go to Home</button> -->
+                    <!-- </div>
+        
+
+
+                </div> -->
+            </div>
+
+            <!-- <div class="col-md-5 desk-top-none">
+                <div class="signup_content">
+                    <li class="d-flex">
+                        <div class="icon_1">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <span>
+                            <h1>It’s secure and confidential</h1>
+                            <p>We maintain full data security & confidentiality
+                                of your personal details. Please check our
+                                Terms of Use and Privacy Policy for details.</p>
+                        </span>
+                    </li>
+                    <li class="d-flex">
+                        <div class="icon_1">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <span>
+                            <h1>How does Just Dial Law Work?</h1>
+                            <p>Get expert advice from top rated lawyers in
+                                India – Contact Now</p>
+                            <button (click)="knowMore()" mat-button>Know More</button>
+                        </span>
+                    </li>
+                </div>
+            </div> -->
+        </div>
+    <!-- </div> -->
+</div>
+
+<div *ngIf="enabled" class="overlapped-div">
+    <sa-spinner-round-filled [size]="380" [thickness]="100" [speed]="60" color="rgba(232, 109, 31, 1)" ></sa-spinner-round-filled>
+  </div>
+
+<!-- <div class="faqs">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-7">
+                <div class="faqs_title">
+                    <h1>Frequently Asked Questions</h1>
+                </div>
+                <div class="qustion">
+                    <h3>What is Just Dial Law?</h3>
+                    <p>Just Dial Law is a legal portal for all your law-related needs! We are a curated online
+                        marketplace that connects our network of high-quality lawyers with business clients. We are a
+                        one-stop platform to ask, answer, discuss legal questions, and from time to time, we even post
+                        legal updates and news for those of you who can’t get enough of law-related newsbytes!</p>
+                </div>
+                <hr>
+                <div class="qustion">
+                    <h3>How Just Dial Law works?</h3>
+                    <p>Well, it's as easy as 1-2-3</p>
+                    <p>1. Search and Select the Lawyer based on your need – Search by Specialization, City or Court
+                        Name.</p>
+                    <p>2. Contact with the selected Lawyer via Phone.</p>
+                    <p>3. We will provide the contact detail your selected Lawyer, the way you want it.</p>
+                </div>
+                <hr>
+                <div class="qustion">
+                    <h3>How do I request legal services?</h3>
+                    <p>Lawyers on Just Dial Law have different and unique expertise. We work to serve your question to
+                        the right lawyer for a quick and useful response. You can expect to get a response in 24 working
+                        hours after
+                        posting your question. Lawyers on Just Dial Law are active and are passionate about helping you
+                        solve
+                        your legal problems, meaning you won’t have to wait very long to get answers.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img">
+                    <img src="../../assets/img/signup_img1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- </div>
+
+<app-footer></app-footer> -->

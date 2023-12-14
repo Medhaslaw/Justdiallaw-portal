@@ -1,0 +1,82 @@
+<div class="add_new_topic">
+    <div class="row m-0">
+        <div class="col-md-12 p-0">
+            <div  class="dialog_title d-flex justify-content-between">
+                <h1>Send Meeting Link</h1>
+
+                <h3 ><i (click)="cloceDialog()" class="bi bi-x-circle"></i> </h3>
+                
+            </div>
+            <div class="form_meet">
+                <div mat-dialog-content class="dialog_content radio_btn">
+                    <div class="links-radio-btn">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button  [checked]="true" (change)="meetingType($event)" value="online">Online</mat-radio-button>
+                            <mat-radio-button (change)="meetingType($event)" value="offline">Offline</mat-radio-button>
+                          </mat-radio-group>
+                    </div>
+                    <form class="add_invoice_form" [formGroup]="meetingLinsFrom"  #myform="ngForm">
+                       
+                        <div class="row">
+                            <div class="col-md-12" *ngIf="meetingLinkInput" >
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Meeting Link <span>*</span> </label>
+                                    <input type="text" class="form-control" formControlName="meet_link"  placeholder="Meeting Link">
+                                  </div>
+                                  <h6>
+                                    <span *ngIf="meetingLinsFrom.controls['meet_link'].hasError('required') && myform.submitted">Meeting link is Required</span>
+                                  </h6>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Meeting Date <span>*</span></label>
+                                    <input type="date" class="form-control"  formControlName="meet_date" placeholder="Meeting Date">
+                                  </div>
+                                  <h6>
+                                    <span *ngIf="meetingLinsFrom.controls['meet_date'].hasError('required') && myform.submitted">Meeting date is Required</span>
+                                  </h6>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Meeting Time <span>*</span></label>
+                                    <input type="time" class="form-control" formControlName="meet_time"  placeholder="Meeting Time">
+                                  </div>
+                                  <h6>
+                                    <span *ngIf="meetingLinsFrom.controls['meet_time'].hasError('required') && myform.submitted">Meeting Time is Required</span>
+                                  </h6>
+                            </div>
+                     
+                            <div class="col-md-12">
+                                <div class="mb-3">
+    
+                                    <label for="exampleFormControlInput1" class="form-label">Agenda  <span>*</span></label>
+                                    <textarea class="form-control" formControlName="meet_details" placeholder="Enter Agenda"></textarea>
+                                
+                                </div>
+                                <h6>
+                                    <span *ngIf="meetingLinsFrom.controls['meet_details'].hasError('required') && myform.submitted">Agenda is Required</span>
+                                  </h6>
+                            </div>
+                   
+                        </div>
+                     
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row  justify-content-center">
+                                    <div class="col-md-7">
+                                        <button mat-button (click)="sendMeetings()" class="sub_btn">Send Link</button>
+                                      
+                                    </div>
+                                   
+                                </div>
+                            </div>                        
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+

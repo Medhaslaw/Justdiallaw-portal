@@ -1,0 +1,33 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-10">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/lawyer-jdl/home'"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>My Calendar</a></li>
+                    </ol>
+                </nav>
+            </div>
+            
+        </div>
+        <div class="col-md-12">
+           <div class="d-flex justify-content-between">
+            <div class="invoice_heading">
+                <h1>Calendar</h1>
+            </div>
+            <div>
+                <button mat-button  class="sub_btn" (click)="openSlotsBlockinDialog()">Slots Blocking</button>
+             </div>
+           </div>
+        </div>
+    </div>
+<div class="lawyerCalendar" >
+    <full-calendar [options]="calendarOptions"   [events]="eventsPromise | async">
+        <ng-template #eventContent let-arg>
+          <b>{{arg.timeText}}</b>
+          <i>{{arg.event.title}}</i>
+        </ng-template>
+      </full-calendar>
+    </div>
+    </div>

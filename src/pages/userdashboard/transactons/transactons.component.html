@@ -1,0 +1,82 @@
+<div class="Add_Invoice">
+    <div class="row m-0">
+        <div class="col-md-8">
+            <div class="pagination-header">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" [routerLink]="'/my-jdl/profiledashboard'"><a>Home</a></li>
+                        <li class="breadcrumb-item active"><a>My Payments</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="invoice_heading">
+                <h1>My Payments</h1>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- <form   class="add_invoice_form add_invoice_form1">
+                <div class="row">
+                    <div class="col-md-8">
+                        <mat-form-field class="mat_form_filed">
+                            <button mat-button><i class="bi bi-search"></i> </button>
+                            <mat-label class="mat_label">Search</mat-label>
+                            <input matInput type="text" class="mat_input" (keyup)="applyFilter($event)" #input >
+                        </mat-form-field>
+                    </div>
+                   
+                </div>
+                
+            </form> -->
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="transactions_tables" id="content" #content>
+                <div class="table-responsive">
+                    <table mat-table [dataSource]="dataSource" class="  table_width">
+
+                        <!--- Note that these columns can be defined in any order.
+                              The actual rendered columns are set as a property on the row definition" -->
+
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="date">
+                            <th mat-header-cell *matHeaderCellDef> Date </th>
+                            <td mat-cell *matCellDef="let element"> {{element.pay_date | date:'dd,YYY MMM'}} </td>
+                        </ng-container>
+
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="amount">
+                            <th mat-header-cell *matHeaderCellDef> Amount </th>
+                            <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+                        </ng-container>
+
+                        <!-- Weight Column -->
+
+
+                        <!-- Symbol Column -->
+
+                        <ng-container matColumnDef="paynent_for">
+                            <th mat-header-cell *matHeaderCellDef> Paynent For </th>
+                            <td mat-cell *matCellDef="let element"> {{element.payment_for}}</td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="payment_status">
+                            <th mat-header-cell *matHeaderCellDef> Payment Status </th>
+                            <td mat-cell *matCellDef="let element"> {{element.payment_status}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header_bg"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
